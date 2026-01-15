@@ -1,0 +1,5 @@
+[0] Config.pm:328> INFO - This is Biber 2.21
+[0] Config.pm:331> INFO - Logfile is 'dissertation.blg'
+[29] biber:342> INFO - === Tue Jan  6, 2026, 18:25:19
+[113] Utils.pm:479> ERROR - Cannot find 'dissertation.bcf'!
+[113] Biber.pm:137> INFO - ERRORS: 1
