@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.28 (TeX Live 2025) (preloaded format=pdflatex 2025.9.18)  16 JAN 2026 18:19
+This is pdfTeX, Version 3.141592653-2.6-1.40.28 (TeX Live 2025) (preloaded format=pdflatex 2025.9.18)  19 JAN 2026 12:56
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -976,21 +976,33 @@ Overfull \hbox (4.92555pt too wide) in paragraph at lines 24--24
  [][] [][]\LY1/qpl/m/n/12 (-20) What time scales does Sweet-Parker 
  []
 
+
+Overfull \hbox (1.1108pt too wide) in paragraph at lines 38--38
+ [][] [][]\LY1/qpl/m/n/12 (-20) How does pres-sure anisotropy change what 
+ []
+
+
+
+[3]
+Overfull \hbox (10.87093pt too wide) in paragraph at lines 66--66
+ [][] [][]\LY1/qpl/m/n/12 (-20) Zone's be-tween coils as plasma sources[] []  
+ []
+
 )
 
-[3] (./dissertation.lot)
-
-[4
-
-
-] (./dissertation.lof)
+[4] (./dissertation.lot)
 
 [5
 
 
-] (./frontmatter/abstract.tex)
+] (./dissertation.lof)
 
 [6
+
+
+] (./frontmatter/abstract.tex)
+
+[7
 
 
 ])
@@ -1006,14 +1018,20 @@ Overfull \hbox (4.92555pt too wide) in paragraph at lines 24--24
 
 ]
 
-[2])
+[2]
 
 [3]
+
+[4]
+
+[5])
+
+[6]
 \openout2 = `chapter_pressure_wave/pressure_wave.aux'.
 
  (./chapter_pressure_wave/pressure_wave.tex)
 
-[4
+[7
 
 
 
@@ -1023,7 +1041,7 @@ Overfull \hbox (4.92555pt too wide) in paragraph at lines 24--24
 
  (./chapter_te_probe/te_probe.tex)
 
-[5
+[8
 
 
 
@@ -1033,7 +1051,7 @@ Overfull \hbox (4.92555pt too wide) in paragraph at lines 24--24
 
  (./chapter_pa_probe/pa_probe.tex)
 
-[6
+[9
 
 
 
@@ -1043,7 +1061,7 @@ Overfull \hbox (4.92555pt too wide) in paragraph at lines 24--24
 
  (./chapter_conclusion/conclusion.tex)
 
-[7
+[10
 
 
 
@@ -1051,16 +1069,16 @@ Overfull \hbox (4.92555pt too wide) in paragraph at lines 24--24
 ]
 
 
-pdfTeX warning (ext4): destination with the same identifier (name{page.7}) has been already used, duplicate ignored
+pdfTeX warning (ext4): destination with the same identifier (name{page.10}) has been already used, duplicate ignored
 <to be read again> 
                    \relax 
 l.72 \begin{colophon}
-                      [7
+                      [10
 
 
 ] (./backmatter/colophon.tex)
 
-[8
+[11
 
 ] (./dissertation.bbl)
 \tf@toc=\write6
@@ -1078,21 +1096,21 @@ LaTeX2e <2025-06-01> patch level 1
 L3 programming layer <2020/03/25>
  ***********
 Package rerunfilecheck Info: File `dissertation.out' has not changed.
-(rerunfilecheck)             Checksum: 83829D67F1CCCACFB708DA406BCA02D6;8128.
+(rerunfilecheck)             Checksum: D0FF8BE8F40B9D0403C44FCA48852FA9;14436.
  ) 
 Here is how much of TeX's memory you used:
- 19126 strings out of 467797
- 299818 string characters out of 5431809
- 754750 words of memory out of 5000000
- 47303 multiletter control sequences out of 15000+600000
- 665799 words of font info for 118 fonts, out of 8000000 for 9000
+ 19224 strings out of 467797
+ 301588 string characters out of 5431809
+ 755791 words of memory out of 5000000
+ 47340 multiletter control sequences out of 15000+600000
+ 666711 words of font info for 125 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  85i,12n,93p,1103b,519s stack positions out of 10000i,1000n,20000p,200000b,200000s
 </usr/local/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/euler/eurm10.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/euler/eurm7.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/lm/lmtt12.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/tex-gyre/qplb.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/tex-gyre/qplr.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/tex-gyre/qplri.pfb>
-Output written on dissertation.pdf (17 pages, 216275 bytes).
+Output written on dissertation.pdf (21 pages, 232668 bytes).
 PDF statistics:
- 350 PDF objects out of 1000 (max. 8388607)
- 314 compressed objects within 4 object streams
- 67 named destinations out of 1000 (max. 500000)
- 27441 words of extra memory for PDF output out of 29859 (max. 10000000)
+ 566 PDF objects out of 1000 (max. 8388607)
+ 524 compressed objects within 6 object streams
+ 114 named destinations out of 1000 (max. 500000)
+ 27705 words of extra memory for PDF output out of 29859 (max. 10000000)
 

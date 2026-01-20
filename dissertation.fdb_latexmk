@@ -1,5 +1,5 @@
 # Fdb version 4
-["bibtex dissertation"] 0 "dissertation.aux" "dissertation.bbl" "dissertation" 1768609144.02016 0
+["bibtex dissertation"] 0 "dissertation.aux" "dissertation.bbl" "dissertation" 1768848995.32954 0
   "./mcbride.bst" 1767564576.39621 33782 3a32231a05795da7a9258c66ea27d70c ""
   "chapter_conclusion/conclusion.aux" 1768496272.46986 2122 a9df8535d33ef2b46484e18ccff0a9e6 "pdflatex"
   "chapter_introduction/introduction.aux" 1767745520.24281 2635 d0870c4f6635bf9dcc97598e419ac873 "pdflatex"
@@ -13,13 +13,13 @@
   "dissertation.bbl"
   "dissertation.blg"
   (rewritten before read)
-["makeindex dissertation.idx"] 1768496271.94921 "dissertation.idx" "dissertation.ind" "dissertation" 1768609144.02006 0
-  "dissertation.idx" 1768609143.64797 0 d41d8cd98f00b204e9800998ecf8427e "pdflatex"
+["makeindex dissertation.idx"] 1768496271.94921 "dissertation.idx" "dissertation.ind" "dissertation" 1768848995.32946 0
+  "dissertation.idx" 1768848994.91101 0 d41d8cd98f00b204e9800998ecf8427e "pdflatex"
   (generated)
   "dissertation.ilg"
   "dissertation.ind"
   (rewritten before read)
-["pdflatex"] 1768609143.37647 "/home/cameronkuchta/Documents/Academics/Research/Egedal_Carry/My_Documents/wi-thesis-template/dissertation.tex" "dissertation.pdf" "dissertation" 1768609144.02031 0
+["pdflatex"] 1768848994.62355 "/home/cameronkuchta/Documents/Academics/Research/Egedal_Carry/My_Documents/wi-thesis-template/dissertation.tex" "dissertation.pdf" "dissertation" 1768848995.32968 0
   "/home/cameronkuchta/Documents/Academics/Research/Egedal_Carry/My_Documents/wi-thesis-template/dissertation.tex" 1768496271.54869 2577 fb5c07365e608b7f3123900ce8f43856 ""
   "/usr/local/texlive/2025/texmf-dist/fonts/enc/dvips/lm/lm-texnansi.enc" 1202520719 2479 c2589d4e4d8b8d14343ee3d0e016af45 ""
   "/usr/local/texlive/2025/texmf-dist/fonts/enc/dvips/tex-gyre/q-texnansi-sc.enc" 1529098226 2909 f14034c01bf79823b60508c0c1109d65 ""
@@ -154,29 +154,29 @@
   "/usr/local/texlive/2025/texmf-var/web2c/pdftex/pdflatex.fmt" 1758238528 3621362 49baf3f55359f839fe9d47d3b1c43f27 ""
   "/usr/local/texlive/2025/texmf.cnf" 1758238424.8341 455 5b996dcaa0eb4ef14a83b026bc0a008c ""
   "backmatter/colophon.tex" 1767564576.39121 343 bc32f039e25a079c3532325ecb227ba1 ""
-  "chapter_conclusion/conclusion.aux" 1768609143.80496 2122 329033a721595fffa5fa2ddeedd7445e "pdflatex"
+  "chapter_conclusion/conclusion.aux" 1768848995.09801 2125 34a884d7f81b994a7092f86944cbbac0 "pdflatex"
   "chapter_conclusion/conclusion.tex" 1768496158.58511 21 dbf604a680aa1192b3965f0ae024a5d0 ""
-  "chapter_introduction/introduction.aux" 1768609143.78716 7105 0f04565f974e3d4b1aebf082445ee2bc "pdflatex"
-  "chapter_introduction/introduction.tex" 1768609142.56097 1935 c853ff16a7e9241dd296ec2e57448f7e ""
-  "chapter_pa_probe/pa_probe.aux" 1768609143.80096 2133 b4055971446ba8d3343c5884d297f804 "pdflatex"
+  "chapter_introduction/introduction.aux" 1768848995.08001 13287 4a5775504f933edb2e8b34692c9bfacc "pdflatex"
+  "chapter_introduction/introduction.tex" 1768848993.10102 4077 5e12073ddc562a059667ffca5cb735f6 ""
+  "chapter_pa_probe/pa_probe.aux" 1768848995.09401 2135 e000f11ebf0f275c1f1a466707a25db3 "pdflatex"
   "chapter_pa_probe/pa_probe.tex" 1768496178.63318 36 0eff7896b47d9f712d134440d82e85b1 ""
-  "chapter_pressure_wave/pressure_wave.aux" 1768609143.79096 2310 04e7533a10595f493ddff313c98ad24b "pdflatex"
+  "chapter_pressure_wave/pressure_wave.aux" 1768848995.08501 2311 19c7f6979ecedcf69046d50c1937776a "pdflatex"
   "chapter_pressure_wave/pressure_wave.tex" 1768608620.34107 132 f1a9101c493799df13ee829fc660eb52 ""
-  "chapter_te_probe/te_probe.aux" 1768609143.79596 2132 fbf61be108490b985b91eb7d6454eb54 "pdflatex"
+  "chapter_te_probe/te_probe.aux" 1768848995.09001 2133 33d4f33aea044bc61f61ff4fc6e28274 "pdflatex"
   "chapter_te_probe/te_probe.tex" 1768496218.8039 35 98fb6a2fbb7bfc3aed5da2dd6ea8248a ""
-  "dissertation.aux" 1768609143.80939 648 8f3a1a10e53dbd35c16aa66a0d590bcb "pdflatex"
+  "dissertation.aux" 1768848995.10326 650 87bc0b9298be179e8f2290832b0a8362 "pdflatex"
   "dissertation.bbl" 1767745519.73682 0 d41d8cd98f00b204e9800998ecf8427e "bibtex dissertation"
   "dissertation.ind" 1768496272.03287 0 d41d8cd98f00b204e9800998ecf8427e "makeindex dissertation.idx"
-  "dissertation.lof" 1768609143.81109 836 bbdbcd4bb4539adc554fb3bb9e06bc19 "pdflatex"
-  "dissertation.lot" 1768609143.81109 90 410f4e3885105b1a4cfecfe9ac0691ce "pdflatex"
-  "dissertation.out" 1768609143.81091 8128 83829d67f1cccacfb708da406bca02d6 "pdflatex"
+  "dissertation.lof" 1768848995.10533 1458 cb9e5a6580e1baf56351af87e2d00204 "pdflatex"
+  "dissertation.lot" 1768848995.10533 342 725c34a3162617a90c079aeb53d92ba9 "pdflatex"
+  "dissertation.out" 1768848995.10513 14436 d0ff8be8f40b9d0403c44fca48852fa9 "pdflatex"
   "dissertation.tex" 1768496271.54869 2577 fb5c07365e608b7f3123900ce8f43856 ""
-  "dissertation.toc" 1768609143.81109 3682 c243007ee5b577251235de70e8cb6de0 "pdflatex"
+  "dissertation.toc" 1768848995.10533 7227 d4ab22400a323197bc286e9e79b02b29 "pdflatex"
   "enumitem.sty" 1767564576.39301 19535 288bd5532bc5b28f8c7e24a199a658b1 ""
   "frontmatter/abstract.tex" 1767564576.39421 548 d393013a2cb50e0924702045466f6540 ""
   "frontmatter/acks.tex" 1767564576.39519 1023 ab1f463ee475fe1e618c14f12d3c1b6b ""
-  "frontmatter/frontmatter.aux" 1768609143.76396 2308 3653a28e1647abbcb3599bf4eadc1f30 "pdflatex"
-  "frontmatter/frontmatter.tex" 1768608281.90822 2908 eebd1ec865c2ac08fe63396e41f181f9 ""
+  "frontmatter/frontmatter.aux" 1768848995.03901 2311 56be12d9775fe3fccf075c6998b85479 "pdflatex"
+  "frontmatter/frontmatter.tex" 1768847772.70173 2908 65e5fff280fd47b5bf24091802caa2ed ""
   "includes/defs.tex" 1767564576.39521 1724 26a0a85ec3c06a1d11a8df361ef2bfc2 ""
   "includes/preamble.tex" 1768596185.28584 5267 2ac90f439ae413a327fe02402894d569 ""
   "includes/thesisdefs.tex" 1767564576.39521 17848 44325a99b2ac79933a4f314b774b3f01 ""
