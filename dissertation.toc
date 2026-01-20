@@ -1,7 +1,7 @@
 \contentsline {chapter}{Contents}{ii}{section*.3}%
-\contentsline {chapter}{List of Tables}{v}{section*.5}%
-\contentsline {chapter}{List of Figures}{vi}{section*.7}%
-\contentsline {chapter}{Abstract}{vii}{chapter*.9}%
+\contentsline {chapter}{List of Tables}{vi}{section*.5}%
+\contentsline {chapter}{List of Figures}{vii}{section*.7}%
+\contentsline {chapter}{Abstract}{viii}{chapter*.9}%
 \contentsline {chapter}{\chapternumberline {1}Introduction}{1}{chapter.1}%
 \contentsline {section}{\numberline {1.1}What the heck is a plasma}{1}{section.1.1}%
 \contentsline {subsection}{\numberline {1.1.1}Plasmas in the universe}{1}{subsection.1.1.1}%
@@ -26,49 +26,83 @@
 \contentsline {subsection}{\numberline {1.2.4}Hall Reconnection}{2}{subsection.1.2.4}%
 \contentsline {subsubsection}{\numberline {1.2.4.1}Why should the Hall term appear?}{2}{subsubsection.1.2.4.1}%
 \contentsline {paragraph}{\numberline {1.2.4.1.1}What is the relevant physics that sets when the hall term matters}{2}{paragraph.1.2.4.1.1}%
-\contentsline {paragraph}{\numberline {1.2.4.1.2}In what kind of plasmas does the hall term appear and when does it not?}{2}{figure.1.3}%
+\contentsline {paragraph}{\numberline {1.2.4.1.2}In what kind of plasmas does the hall term appear and when does it not?}{2}{figure.1.4}%
 \contentsline {subsection}{\numberline {1.2.5}Kinetic Reconnection}{3}{subsection.1.2.5}%
 \contentsline {subsubsection}{\numberline {1.2.5.1}What makes kinetic reconnection ``kinetic''?}{3}{subsubsection.1.2.5.1}%
+\contentsline {paragraph}{\numberline {1.2.5.1.1}What do collisions do?}{3}{paragraph.1.2.5.1.1}%
+\contentsline {subparagraph}{\numberline {1.2.5.1.1.1}How quickly do collisions damp out non-Maxwellian features?}{3}{subparagraph.1.2.5.1.1.1}%
+\contentsline {paragraph}{\numberline {1.2.5.1.2}What makes a system kinetic?}{3}{paragraph.1.2.5.1.2}%
+\contentsline {subparagraph}{\numberline {1.2.5.1.2.1}What parameters set this?}{3}{subparagraph.1.2.5.1.2.1}%
+\contentsline {subparagraph}{\numberline {1.2.5.1.2.2}What should we do in the lab to get this?}{3}{subparagraph.1.2.5.1.2.2}%
 \contentsline {subsubsection}{\numberline {1.2.5.2}Where does Pressure Anisotropy come from?}{3}{subsubsection.1.2.5.2}%
-\contentsline {paragraph}{\numberline {1.2.5.2.1}Movement of flux tube}{3}{figure.1.4}%
+\contentsline {paragraph}{\numberline {1.2.5.2.1}Movement of flux tube}{3}{figure.1.5}%
 \contentsline {paragraph}{\numberline {1.2.5.2.2}Effect of background field}{3}{paragraph.1.2.5.2.2}%
 \contentsline {subparagraph}{\numberline {1.2.5.2.2.1}Too low of background field does...}{3}{subparagraph.1.2.5.2.2.1}%
 \contentsline {subparagraph}{\numberline {1.2.5.2.2.2}Too high of field does\dots }{3}{subparagraph.1.2.5.2.2.2}%
-\contentsline {subparagraph}{\numberline {1.2.5.2.2.3}Goldilocks!}{3}{figure.1.5}%
-\contentsline {subsubsection}{\numberline {1.2.5.3}How does pressure anisotropy change what the reconnection looks like}{3}{subsubsection.1.2.5.3}%
-\contentsline {paragraph}{\numberline {1.2.5.3.1}Thinner reconnection layer?}{3}{paragraph.1.2.5.3.1}%
+\contentsline {subparagraph}{\numberline {1.2.5.2.2.3}Goldilocks!}{3}{figure.1.6}%
+\contentsline {subsubsection}{\numberline {1.2.5.3}How does pressure anisotropy change what the reconnection looks like}{4}{subsubsection.1.2.5.3}%
+\contentsline {paragraph}{\numberline {1.2.5.3.1}Thinner reconnection layer?}{4}{paragraph.1.2.5.3.1}%
 \contentsline {paragraph}{\numberline {1.2.5.3.2}Marginal Firehose Condition}{4}{paragraph.1.2.5.3.2}%
 \contentsline {paragraph}{\numberline {1.2.5.3.3}Concluding: what features should we look for in the data?}{4}{paragraph.1.2.5.3.3}%
 \contentsline {subsubsection}{\numberline {1.2.5.4}Why do we want to measure it?}{4}{subsubsection.1.2.5.4}%
-\contentsline {section}{\numberline {1.3}Experimental Setup}{4}{section.1.3}%
-\contentsline {subsection}{\numberline {1.3.1}Overall how does our experiment progress}{4}{subsection.1.3.1}%
-\contentsline {subsection}{\numberline {1.3.2}Initial field}{4}{subsection.1.3.2}%
-\contentsline {subsubsection}{\numberline {1.3.2.1}Helmholtz}{4}{subsubsection.1.3.2.1}%
-\contentsline {subsubsection}{\numberline {1.3.2.2}Permanent magnets}{4}{subsubsection.1.3.2.2}%
-\contentsline {subsubsection}{\numberline {1.3.2.3}Toroidal}{4}{subsubsection.1.3.2.3}%
-\contentsline {paragraph}{\numberline {1.3.2.3.1}Shifted coil}{4}{paragraph.1.3.2.3.1}%
-\contentsline {paragraph}{\numberline {1.3.2.3.2}Axial coil}{4}{paragraph.1.3.2.3.2}%
-\contentsline {subsubsection}{\numberline {1.3.2.4}Perturbation coils}{4}{subsubsection.1.3.2.4}%
-\contentsline {subsection}{\numberline {1.3.3}Plasma Generation}{4}{subsection.1.3.3}%
-\contentsline {subsubsection}{\numberline {1.3.3.1}How do our guns work}{4}{subsubsection.1.3.3.1}%
-\contentsline {paragraph}{\numberline {1.3.3.1.1}Gas lines}{4}{paragraph.1.3.3.1.1}%
-\contentsline {paragraph}{\numberline {1.3.3.1.2}PFNs}{4}{figure.1.8}%
-\contentsline {paragraph}{\numberline {1.3.3.1.3}Puff trigger}{4}{paragraph.1.3.3.1.3}%
-\contentsline {paragraph}{\numberline {1.3.3.1.4}How to breakdown}{5}{figure.1.9}%
-\contentsline {subsubsection}{\numberline {1.3.3.2}How are the guns placed for injection?}{5}{subsubsection.1.3.3.2}%
-\contentsline {subsubsection}{\numberline {1.3.3.3}What goes wrong with them}{5}{subsubsection.1.3.3.3}%
-\contentsline {paragraph}{\numberline {1.3.3.3.1}Burning up}{5}{figure.1.10}%
-\contentsline {paragraph}{\numberline {1.3.3.3.2}Burn holes in wall because of background field}{5}{paragraph.1.3.3.3.2}%
-\contentsline {paragraph}{\numberline {1.3.3.3.3}Air cooling}{5}{paragraph.1.3.3.3.3}%
-\contentsline {paragraph}{\numberline {1.3.3.3.4}Optimizing gun operation}{5}{paragraph.1.3.3.3.4}%
-\contentsline {subsection}{\numberline {1.3.4}Drive field}{5}{subsection.1.3.4}%
-\contentsline {subsubsection}{\numberline {1.3.4.1}Individual coils}{5}{subsubsection.1.3.4.1}%
-\contentsline {paragraph}{\numberline {1.3.4.1.1}Zone's between coils as plasma sources}{5}{paragraph.1.3.4.1.1}%
-\contentsline {subsubsection}{\numberline {1.3.4.2}Drive Cylinder}{5}{subsubsection.1.3.4.2}%
-\contentsline {subsection}{\numberline {1.3.5}Diagnostics Overview}{6}{subsection.1.3.5}%
-\contentsline {subsection}{\numberline {1.3.6}How does this compare to space}{6}{subsection.1.3.6}%
-\contentsline {chapter}{\chapternumberline {2}Pressure Wave}{7}{chapter.2}%
-\contentsline {chapter}{\chapternumberline {3}Multi-tip Langmuir Probe}{8}{chapter.3}%
-\contentsline {chapter}{\chapternumberline {4}Pressure Anisotropy Probe}{9}{chapter.4}%
-\contentsline {chapter}{\chapternumberline {5}Conclusion}{10}{chapter.5}%
-\contentsline {chapter}{Colophon}{11}{chapter*.10}%
+\contentsline {section}{\numberline {1.3}Experimental Setup}{6}{section.1.3}%
+\contentsline {subsection}{\numberline {1.3.1}Overall how does our experiment progress}{6}{subsection.1.3.1}%
+\contentsline {subsection}{\numberline {1.3.2}Initial field}{6}{subsection.1.3.2}%
+\contentsline {subsubsection}{\numberline {1.3.2.1}Helmholtz}{6}{subsubsection.1.3.2.1}%
+\contentsline {subsubsection}{\numberline {1.3.2.2}Permanent magnets}{6}{subsubsection.1.3.2.2}%
+\contentsline {subsubsection}{\numberline {1.3.2.3}Toroidal}{6}{subsubsection.1.3.2.3}%
+\contentsline {paragraph}{\numberline {1.3.2.3.1}Shifted coil}{6}{paragraph.1.3.2.3.1}%
+\contentsline {paragraph}{\numberline {1.3.2.3.2}Axial coil}{6}{paragraph.1.3.2.3.2}%
+\contentsline {subsubsection}{\numberline {1.3.2.4}Perturbation coils}{6}{subsubsection.1.3.2.4}%
+\contentsline {subsection}{\numberline {1.3.3}Plasma Generation}{6}{subsection.1.3.3}%
+\contentsline {subsubsection}{\numberline {1.3.3.1}How do our guns work}{6}{subsubsection.1.3.3.1}%
+\contentsline {paragraph}{\numberline {1.3.3.1.1}Gas lines}{6}{paragraph.1.3.3.1.1}%
+\contentsline {paragraph}{\numberline {1.3.3.1.2}PFNs}{6}{figure.1.10}%
+\contentsline {paragraph}{\numberline {1.3.3.1.3}Puff trigger}{6}{paragraph.1.3.3.1.3}%
+\contentsline {paragraph}{\numberline {1.3.3.1.4}How to breakdown}{6}{figure.1.11}%
+\contentsline {subsubsection}{\numberline {1.3.3.2}How are the guns placed for injection?}{7}{subsubsection.1.3.3.2}%
+\contentsline {paragraph}{\numberline {1.3.3.2.1}How much do they fill the machine}{7}{paragraph.1.3.3.2.1}%
+\contentsline {paragraph}{\numberline {1.3.3.2.2}What sits the filling fraction}{7}{paragraph.1.3.3.2.2}%
+\contentsline {subsubsection}{\numberline {1.3.3.3}What goes wrong with them}{7}{subsubsection.1.3.3.3}%
+\contentsline {paragraph}{\numberline {1.3.3.3.1}Burning up}{7}{figure.1.12}%
+\contentsline {paragraph}{\numberline {1.3.3.3.2}Burn holes in wall because of background field}{7}{paragraph.1.3.3.3.2}%
+\contentsline {paragraph}{\numberline {1.3.3.3.3}Air cooling}{7}{paragraph.1.3.3.3.3}%
+\contentsline {paragraph}{\numberline {1.3.3.3.4}Optimizing gun operation}{7}{paragraph.1.3.3.3.4}%
+\contentsline {subsection}{\numberline {1.3.4}Drive field}{7}{subsection.1.3.4}%
+\contentsline {subsubsection}{\numberline {1.3.4.1}Individual coils}{7}{subsubsection.1.3.4.1}%
+\contentsline {paragraph}{\numberline {1.3.4.1.1}Zone's between coils as plasma sources}{7}{paragraph.1.3.4.1.1}%
+\contentsline {subsubsection}{\numberline {1.3.4.2}Drive Cylinder}{7}{subsubsection.1.3.4.2}%
+\contentsline {subsection}{\numberline {1.3.5}Diagnostics Overview}{8}{subsection.1.3.5}%
+\contentsline {subsubsection}{\numberline {1.3.5.1}Bdot probes}{8}{subsubsection.1.3.5.1}%
+\contentsline {paragraph}{\numberline {1.3.5.1.1}Basic principles}{8}{paragraph.1.3.5.1.1}%
+\contentsline {paragraph}{\numberline {1.3.5.1.2}Probe types}{8}{paragraph.1.3.5.1.2}%
+\contentsline {subparagraph}{\numberline {1.3.5.1.2.1}Linear probe}{8}{subparagraph.1.3.5.1.2.1}%
+\contentsline {subparagraph}{\numberline {1.3.5.1.2.2}Hook probe}{8}{subparagraph.1.3.5.1.2.2}%
+\contentsline {subparagraph}{\numberline {1.3.5.1.2.3}Speed probe}{8}{subparagraph.1.3.5.1.2.3}%
+\contentsline {subparagraph}{\numberline {1.3.5.1.2.4}Flux array 1}{8}{subparagraph.1.3.5.1.2.4}%
+\contentsline {subparagraph}{\numberline {1.3.5.1.2.5}Flux array 2}{8}{subparagraph.1.3.5.1.2.5}%
+\contentsline {paragraph}{\numberline {1.3.5.1.3}Data Interpretation}{8}{paragraph.1.3.5.1.3}%
+\contentsline {subsubsection}{\numberline {1.3.5.2}Hall probes}{8}{subsubsection.1.3.5.2}%
+\contentsline {paragraph}{\numberline {1.3.5.2.1}Basic principles}{8}{paragraph.1.3.5.2.1}%
+\contentsline {paragraph}{\numberline {1.3.5.2.2}Issues and feasibility}{8}{paragraph.1.3.5.2.2}%
+\contentsline {subsubsection}{\numberline {1.3.5.3}Langmuir probes}{8}{subsubsection.1.3.5.3}%
+\contentsline {paragraph}{\numberline {1.3.5.3.1}Basic principles}{8}{paragraph.1.3.5.3.1}%
+\contentsline {paragraph}{\numberline {1.3.5.3.2}What do we need to do to make them work for our device?}{8}{paragraph.1.3.5.3.2}%
+\contentsline {paragraph}{\numberline {1.3.5.3.3}Look into XXX chapter}{8}{paragraph.1.3.5.3.3}%
+\contentsline {subsubsection}{\numberline {1.3.5.4}Fast camera}{9}{subsubsection.1.3.5.4}%
+\contentsline {paragraph}{\numberline {1.3.5.4.1}What can we see with it?}{9}{paragraph.1.3.5.4.1}%
+\contentsline {paragraph}{\numberline {1.3.5.4.2}Potential use cases}{9}{paragraph.1.3.5.4.2}%
+\contentsline {subsection}{\numberline {1.3.6}How does the experiment compare to space}{9}{subsection.1.3.6}%
+\contentsline {subsubsection}{\numberline {1.3.6.1}Benefits of lab vs. space vs. simulation}{9}{subsubsection.1.3.6.1}%
+\contentsline {paragraph}{\numberline {1.3.6.1.1}Simulation benefits and results}{9}{paragraph.1.3.6.1.1}%
+\contentsline {paragraph}{\numberline {1.3.6.1.2}Space benefits and results}{9}{paragraph.1.3.6.1.2}%
+\contentsline {paragraph}{\numberline {1.3.6.1.3}Lab benefits and results}{9}{paragraph.1.3.6.1.3}%
+\contentsline {subsection}{\numberline {1.3.7}Other lab reconnection experiments}{9}{subsection.1.3.7}%
+\contentsline {subsubsection}{\numberline {1.3.7.1}VTF, MRX, FLARE}{9}{subsubsection.1.3.7.1}%
+\contentsline {subsubsection}{\numberline {1.3.7.2}Exploding wire arrays}{9}{subsubsection.1.3.7.2}%
+\contentsline {subsubsection}{\numberline {1.3.7.3}Laser based}{9}{subsubsection.1.3.7.3}%
+\contentsline {chapter}{\chapternumberline {2}Pressure Wave}{10}{chapter.2}%
+\contentsline {chapter}{\chapternumberline {3}Multi-tip Langmuir Probe}{11}{chapter.3}%
+\contentsline {chapter}{\chapternumberline {4}Pressure Anisotropy Probe}{12}{chapter.4}%
+\contentsline {chapter}{\chapternumberline {5}Conclusion}{13}{chapter.5}%
+\contentsline {chapter}{Colophon}{14}{chapter*.10}%

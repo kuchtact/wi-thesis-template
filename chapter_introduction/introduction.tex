@@ -24,6 +24,10 @@ i.e. why do we use $S$ and $L / d_i$ to characterize reconnection regimes?
 
 \subsubsection{Where do various systems line up?}
 
+\begin{figure}
+  \caption{Cartoon of places where reconnection can happen.}
+\end{figure}
+
 \subsubsection{What are we interested in?}
 
 \begin{figure}
@@ -66,6 +70,16 @@ i.e. why do we use $S$ and $L / d_i$ to characterize reconnection regimes?
 
 \subsubsection{What makes kinetic reconnection ``kinetic''?}
 
+\paragraph{What do collisions do?}
+
+\subparagraph{How quickly do collisions damp out non-Maxwellian features?}
+
+\paragraph{What makes a system kinetic?}
+
+\subparagraph{What parameters set this?}
+
+\subparagraph{What should we do in the lab to get this?}
+
 \subsubsection{Where does Pressure Anisotropy come from?}
 
 \paragraph{Movement of flux tube}
@@ -106,9 +120,114 @@ Use results from Jan's more recent papers.
 
 \subsubsection{Why do we want to measure it?}
 
+At the end of experimental setup I'll talk about why we want to do it in the lab but I think motivating why we care about kinetic reconnection as a process would be good here.
+
 \section{Experimental Setup}
 
 \subsection{Overall how does our experiment progress}
+
+\begin{figure}[!ht]
+\centering
+\resizebox{1\textwidth}{!}{%
+\begin{circuitikz}
+\tikzstyle{every node}=[font=\LARGE]
+\draw [ color={rgb,255:red,153; green,193; blue,241} , fill={rgb,255:red,153; green,193; blue,241}] (10,19.25) rectangle (25,18.75);
+\draw [ color={rgb,255:red,119; green,118; blue,123}, short] (15,12.25) -- (15,11.25);
+\draw [ color={rgb,255:red,119; green,118; blue,123}, short] (13.75,16.25) -- (13.75,13.5);
+\draw [short] (10,19.25) -- (25,19.25);
+\draw [short] (10,18.75) -- (25,18.75);
+\node [font=\normalsize] at (17.5,19.5) {permanent magnets};
+\draw [ fill={rgb,255:red,143; green,240; blue,164} ] (11.25,18) rectangle (23.75,17.5);
+\draw [ fill={rgb,255:red,143; green,240; blue,164} ] (17.25,19.5) rectangle (17.25,19.5);
+\node [font=\normalsize] at (17.5,18.25) {Helmholtz coil};
+\draw [ fill={rgb,255:red,143; green,240; blue,164} ] (16.5,18.75) rectangle (16.5,18.75);
+\draw [ fill={rgb,255:red,143; green,240; blue,164} ] (16.5,18.5) rectangle (16.5,18.5);
+\draw [ fill={rgb,255:red,220; green,138; blue,221} ] (13.75,16) rectangle (21.25,15.5);
+\node [font=\normalsize] at (17.5,16.25) {plasma guns};
+\draw [ fill={rgb,255:red,220; green,138; blue,221} , dashed] (17.25,16.25) rectangle  (17.25,16.25);
+\draw [ fill={rgb,255:red,220; green,138; blue,221} , dashed] (17.25,16.25) rectangle  (17.25,16.25);
+\draw [ fill={rgb,255:red,220; green,138; blue,221} , dashed] (17.25,16.25) rectangle  (17.25,16.25);
+\draw [ fill={rgb,255:red,249; green,240; blue,107} , dashed] (13.75,14.75) rectangle  (21.25,14.25);
+\node [font=\normalsize] at (17.5,15) {toroidal \& perturbation coils};
+\draw [ fill={rgb,255:red,220; green,138; blue,221} , dashed] (17.25,15) rectangle  (17.25,15);
+\draw [ fill={rgb,255:red,220; green,138; blue,221} , dashed] (17.25,15) rectangle  (17.25,15);
+\draw [ fill={rgb,255:red,220; green,138; blue,221} , dashed] (17.25,15) rectangle  (17.25,15);
+\draw [ fill={rgb,255:red,249; green,240; blue,107} , dashed] (17,15) rectangle  (17,15);
+\draw [ fill={rgb,255:red,249; green,240; blue,107} , dashed] (17,15) rectangle  (17,15);
+\draw [ fill={rgb,255:red,249; green,240; blue,107} , dashed] (16.75,15) rectangle  (16.75,15);
+\draw [ fill={rgb,255:red,249; green,240; blue,107} , dashed] (16.75,15) rectangle  (16.75,15);
+\draw [ fill={rgb,255:red,249; green,240; blue,107} , dashed] (16.5,15.25) rectangle  (16.5,15.25);
+\draw [ color={rgb,255:red,119; green,118; blue,123}, short] (15.25,20) -- (15.25,17.25);
+\node [font=\normalsize] at (15.25,20.25) {0 s};
+\draw [short] (13.25,16.25) -- (13.25,16.25);
+\node [font=\normalsize] at (13.75,13.25) {12 ms};
+\draw [ color={rgb,255:red,119; green,118; blue,123}, short] (21.25,16.25) -- (21.25,13.5);
+\node [font=\normalsize] at (21.25,13.25) {25 ms};
+\draw [ color={rgb,255:red,119; green,118; blue,123}, short] (13.75,16.25) -- (15.5,17.25);
+\draw [ color={rgb,255:red,119; green,118; blue,123}, short] (15.5,17.25) -- (15.5,17.5);
+\draw [ color={rgb,255:red,119; green,118; blue,123}, short] (21.25,16.25) -- (19.5,17.25);
+\draw [ color={rgb,255:red,119; green,118; blue,123}, short] (19.5,17.25) -- (19.5,17.5);
+\draw [ color={rgb,255:red,119; green,118; blue,123}, short] (11.25,20) -- (11.25,17.25);
+\node [font=\normalsize] at (11.25,20.25) {-3 s};
+\draw [ color={rgb,255:red,119; green,118; blue,123}, short] (23.75,20) -- (23.75,17.25);
+\node [font=\normalsize] at (23.75,20.25) {4 s};
+\draw [ color={rgb,255:red,119; green,118; blue,123}, short] (17.25,14) -- (17.25,14.25);
+\draw [ color={rgb,255:red,119; green,118; blue,123}, short] (17.75,14) -- (17.75,14.25);
+\draw [ color={rgb,255:red,119; green,118; blue,123}, short] (17.25,14) -- (14.25,13);
+\draw [ color={rgb,255:red,119; green,118; blue,123}, short] (17.75,14) -- (20.5,13);
+\draw [ color={rgb,255:red,119; green,118; blue,123}, short] (14.25,13) -- (14.25,11.75);
+\draw [ color={rgb,255:red,119; green,118; blue,123}, short] (20.5,13) -- (20.5,11.75);
+\node [font=\normalsize] at (14.25,11.5) {18 ms};
+\node [font=\normalsize] at (20.5,11.5) {19 ms};
+\draw [ color={rgb,255:red,246; green,97; blue,81} , fill={rgb,255:red,246; green,97; blue,81}] (15,12.75) rectangle (15.5,12.25);
+\draw [ color={rgb,255:red,246; green,97; blue,81} , fill={rgb,255:red,246; green,97; blue,81}] (16,12.75) rectangle (16.5,12.25);
+\draw [ color={rgb,255:red,246; green,97; blue,81} , fill={rgb,255:red,246; green,97; blue,81}] (17,12.75) rectangle (17.5,12.25);
+\draw [ color={rgb,255:red,246; green,97; blue,81} , fill={rgb,255:red,246; green,97; blue,81}] (18,12.75) rectangle (18.5,12.25);
+\draw [ color={rgb,255:red,246; green,97; blue,81} , fill={rgb,255:red,246; green,97; blue,81}] (19,12.75) rectangle (19.5,12.25);
+\draw [ color={rgb,255:red,224; green,27; blue,36} , fill={rgb,255:red,224; green,27; blue,36}] (15.5,12.75) rectangle (16,12.25);
+\draw [ color={rgb,255:red,224; green,27; blue,36} , fill={rgb,255:red,224; green,27; blue,36}] (16.5,12.75) rectangle (17,12.25);
+\draw [ color={rgb,255:red,224; green,27; blue,36} , fill={rgb,255:red,224; green,27; blue,36}] (17.5,12.75) rectangle (18,12.25);
+\draw [ color={rgb,255:red,224; green,27; blue,36} , fill={rgb,255:red,224; green,27; blue,36}] (18.5,12.75) rectangle (19,12.25);
+\draw [ color={rgb,255:red,224; green,27; blue,36} , fill={rgb,255:red,224; green,27; blue,36}] (19.5,12.75) rectangle (20,12.25);
+\draw [short] (15,12.75) -- (20,12.75);
+\draw [short] (20,12.75) -- (20,12.25);
+\draw [short] (20,12.25) -- (15,12.25);
+\draw [short] (15,12.25) -- (15,12.75);
+\node [font=\normalsize] at (17.5,13) {drive coils};
+\draw [ fill={rgb,255:red,220; green,138; blue,221} , dashed] (17.25,13) rectangle  (17.25,13);
+\draw [ fill={rgb,255:red,220; green,138; blue,221} , dashed] (17.25,13) rectangle  (17.25,13);
+\draw [ fill={rgb,255:red,220; green,138; blue,221} , dashed] (17.25,13) rectangle  (17.25,13);
+\draw [ color={rgb,255:red,119; green,118; blue,123}, short] (15.25,12.25) -- (15.25,11.25);
+\draw [ color={rgb,255:red,119; green,118; blue,123}, short] (15,11.25) -- (14.5,10.5);
+\draw [ color={rgb,255:red,119; green,118; blue,123}, short] (15.25,11.25) -- (20.5,10.5);
+\draw [ color={rgb,255:red,119; green,118; blue,123}, short] (14.5,10.5) -- (14.5,8);
+\draw [ color={rgb,255:red,119; green,118; blue,123}, short] (20.5,10.5) -- (20.5,8);
+\draw [ color={rgb,255:red,181; green,131; blue,90} , fill={rgb,255:red,181; green,131; blue,90}] (14.5,10.25) rectangle (17,9.75);
+\draw [ color={rgb,255:red,255; green,163; blue,72} , fill={rgb,255:red,255; green,163; blue,72}] (16.25,9.5) rectangle (18.75,9);
+\draw [ color={rgb,255:red,46; green,194; blue,126} , fill={rgb,255:red,46; green,194; blue,126}] (17.5,8.75) rectangle (20.5,8.25);
+\draw [short] (14.5,10.25) -- (17,10.25);
+\draw [short] (14.5,9.75) -- (17,9.75);
+\draw [short] (16.25,9.5) -- (18.75,9.5);
+\draw [short] (16.25,9) -- (18.75,9);
+\draw [short] (17.5,8.75) -- (20.5,8.75);
+\draw [short] (17.5,8.25) -- (20.5,8.25);
+\draw [dashed] (14.5,10.25) -- (14.5,9.75);
+\draw [dashed] (17,9.75) -- (17,10.25);
+\draw [dashed] (16.25,9.5) -- (16.25,9);
+\draw [dashed] (18.75,9) -- (18.75,9.5);
+\draw [dashed] (17.5,8.75) -- (17.5,8.25);
+\draw [dashed] (20.5,8.25) -- (20.5,8.75);
+\draw [dashed] (10,12.5) -- (10,12.5);
+\node [font=\normalsize] at (14.5,7.75) {18100 us};
+\node [font=\normalsize] at (20.5,7.75) {18110 us};
+\node [font=\normalsize, align=left, anchor=east] at (14.5,10) {pressure wave};
+\node [font=\normalsize, align=left, anchor=east] at (14.5,9.25) {shock};
+\node [font=\normalsize, align=left, anchor=east] at (14.5,8.5) {reconnection};
+\end{circuitikz}
+}%
+\label{fig:my_label}
+  \caption{Timeline of experimental sequence.}
+\end{figure}
 
 \subsection{Initial field}
 
@@ -146,6 +265,10 @@ Use results from Jan's more recent papers.
 
 \subsubsection{How are the guns placed for injection?}
 
+\paragraph{How much do they fill the machine}
+
+\paragraph{What sits the filling fraction}
+  
 \subsubsection{What goes wrong with them}
 
 \paragraph{Burning up}
@@ -178,8 +301,64 @@ Reference Paul's RSI + thesis.
   \caption{List of diagnostics used in the experiment and what they can measure.}
 \end{table}
 
-\subsection{How does this compare to space}
+\subsubsection{Bdot probes}
+
+\paragraph{Basic principles}
+
+\paragraph{Probe types}
+
+\subparagraph{Linear probe}
+
+\subparagraph{Hook probe}
+
+\subparagraph{Speed probe}
+
+\subparagraph{Flux array 1}
+
+\subparagraph{Flux array 2}
+
+\paragraph{Data Interpretation}
+
+How do we convert the raw data into something useful?
+
+\subsubsection{Hall probes}
+
+\paragraph{Basic principles}
+
+\paragraph{Issues and feasibility}
+
+\subsubsection{Langmuir probes}
+
+\paragraph{Basic principles}
+
+\paragraph{What do we need to do to make them work for our device?}
+
+\paragraph{Look into XXX chapter}
+
+\subsubsection{Fast camera}
+
+\paragraph{What can we see with it?}
+
+\paragraph{Potential use cases}
+
+\subsection{How does the experiment compare to space}
 
 \begin{table}
   \caption{Comparison of lab and space parameters.}
 \end{table}
+
+\subsubsection{Benefits of lab vs. space vs. simulation}
+
+\paragraph{Simulation benefits and results}
+
+\paragraph{Space benefits and results}
+
+\paragraph{Lab benefits and results}
+
+\subsection{Other lab reconnection experiments}
+
+\subsubsection{VTF, MRX, FLARE}
+
+\subsubsection{Exploding wire arrays}
+
+\subsubsection{Laser based}
