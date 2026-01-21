@@ -477,6 +477,9 @@ INPUT /usr/local/texlive/2025/texmf-dist/fonts/tfm/public/cm/cmmi7.tfm
 INPUT /usr/local/texlive/2025/texmf-dist/fonts/tfm/public/cm/cmbx7.tfm
 INPUT /usr/local/texlive/2025/texmf-dist/fonts/tfm/public/cm/cmsy7.tfm
 INPUT /usr/local/texlive/2025/texmf-dist/fonts/tfm/public/cm/cmr7.tfm
+INPUT /usr/local/texlive/2025/texmf-dist/fonts/vf/public/eulervm/zeusm10.vf
+INPUT /usr/local/texlive/2025/texmf-dist/fonts/tfm/public/amsfonts/euler/eufm10.tfm
+INPUT /usr/local/texlive/2025/texmf-dist/fonts/tfm/public/amsfonts/euler/eusm10.tfm
 INPUT ./chapter_pressure_wave/pressure_wave.tex
 OUTPUT chapter_pressure_wave/pressure_wave.aux
 INPUT ./chapter_pressure_wave/pressure_wave.tex
@@ -529,6 +532,7 @@ INPUT ./chapter_conclusion/conclusion.aux
 INPUT chapter_conclusion/conclusion.aux
 INPUT ./dissertation.out
 INPUT ./dissertation.out
+INPUT /usr/local/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/euler/eufm10.pfb
 INPUT /usr/local/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/euler/eurm10.pfb
 INPUT /usr/local/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/euler/eurm7.pfb
 INPUT /usr/local/texlive/2025/texmf-dist/fonts/type1/public/lm/lmtt12.pfb

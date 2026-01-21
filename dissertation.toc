@@ -1,7 +1,7 @@
 \contentsline {chapter}{Contents}{ii}{section*.3}%
-\contentsline {chapter}{List of Tables}{vi}{section*.5}%
-\contentsline {chapter}{List of Figures}{vii}{section*.7}%
-\contentsline {chapter}{Abstract}{viii}{chapter*.9}%
+\contentsline {chapter}{List of Tables}{viii}{section*.5}%
+\contentsline {chapter}{List of Figures}{ix}{section*.7}%
+\contentsline {chapter}{Abstract}{x}{chapter*.9}%
 \contentsline {chapter}{\chapternumberline {1}Introduction}{1}{chapter.1}%
 \contentsline {section}{\numberline {1.1}What the heck is a plasma}{1}{section.1.1}%
 \contentsline {subsection}{\numberline {1.1.1}Plasmas in the universe}{1}{subsection.1.1.1}%
@@ -57,14 +57,14 @@
 \contentsline {subsection}{\numberline {1.3.3}Plasma Generation}{6}{subsection.1.3.3}%
 \contentsline {subsubsection}{\numberline {1.3.3.1}How do our guns work}{6}{subsubsection.1.3.3.1}%
 \contentsline {paragraph}{\numberline {1.3.3.1.1}Gas lines}{6}{paragraph.1.3.3.1.1}%
-\contentsline {paragraph}{\numberline {1.3.3.1.2}PFNs}{6}{figure.1.10}%
+\contentsline {paragraph}{\numberline {1.3.3.1.2}PFNs}{6}{figure.1.11}%
 \contentsline {paragraph}{\numberline {1.3.3.1.3}Puff trigger}{6}{paragraph.1.3.3.1.3}%
-\contentsline {paragraph}{\numberline {1.3.3.1.4}How to breakdown}{6}{figure.1.11}%
+\contentsline {paragraph}{\numberline {1.3.3.1.4}How to breakdown}{6}{figure.1.12}%
 \contentsline {subsubsection}{\numberline {1.3.3.2}How are the guns placed for injection?}{7}{subsubsection.1.3.3.2}%
 \contentsline {paragraph}{\numberline {1.3.3.2.1}How much do they fill the machine}{7}{paragraph.1.3.3.2.1}%
 \contentsline {paragraph}{\numberline {1.3.3.2.2}What sits the filling fraction}{7}{paragraph.1.3.3.2.2}%
 \contentsline {subsubsection}{\numberline {1.3.3.3}What goes wrong with them}{7}{subsubsection.1.3.3.3}%
-\contentsline {paragraph}{\numberline {1.3.3.3.1}Burning up}{7}{figure.1.12}%
+\contentsline {paragraph}{\numberline {1.3.3.3.1}Burning up}{7}{figure.1.13}%
 \contentsline {paragraph}{\numberline {1.3.3.3.2}Burn holes in wall because of background field}{7}{paragraph.1.3.3.3.2}%
 \contentsline {paragraph}{\numberline {1.3.3.3.3}Air cooling}{7}{paragraph.1.3.3.3.3}%
 \contentsline {paragraph}{\numberline {1.3.3.3.4}Optimizing gun operation}{7}{paragraph.1.3.3.3.4}%
@@ -102,7 +102,54 @@
 \contentsline {subsubsection}{\numberline {1.3.7.2}Exploding wire arrays}{9}{subsubsection.1.3.7.2}%
 \contentsline {subsubsection}{\numberline {1.3.7.3}Laser based}{9}{subsubsection.1.3.7.3}%
 \contentsline {chapter}{\chapternumberline {2}Pressure Wave}{10}{chapter.2}%
-\contentsline {chapter}{\chapternumberline {3}Multi-tip Langmuir Probe}{11}{chapter.3}%
-\contentsline {chapter}{\chapternumberline {4}Pressure Anisotropy Probe}{12}{chapter.4}%
-\contentsline {chapter}{\chapternumberline {5}Conclusion}{13}{chapter.5}%
-\contentsline {chapter}{Colophon}{14}{chapter*.10}%
+\contentsline {section}{\numberline {2.1}Introduction}{10}{section.2.1}%
+\contentsline {section}{\numberline {2.2}Observations that lead us to look at this wave}{11}{section.2.2}%
+\contentsline {subsection}{\numberline {2.2.1}Speed probe measurements}{11}{subsection.2.2.1}%
+\contentsline {subsubsection}{\numberline {2.2.1.1}Flux expansion before shock layer}{11}{subsubsection.2.2.1.1}%
+\contentsline {subsubsection}{\numberline {2.2.1.2}Wavefront that depends on configuration}{11}{subsubsection.2.2.1.2}%
+\contentsline {subsection}{\numberline {2.2.2}Simulations}{11}{subsection.2.2.2}%
+\contentsline {subsubsection}{\numberline {2.2.2.1}Different n and drive change feature}{11}{subsubsection.2.2.2.1}%
+\contentsline {subsubsection}{\numberline {2.2.2.2}Change reconnection layer post reflection}{11}{subsubsection.2.2.2.2}%
+\contentsline {section}{\numberline {2.3}Physical understanding of wave}{11}{section.2.3}%
+\contentsline {subsection}{\numberline {2.3.1}Initial plasma configuration}{11}{subsection.2.3.1}%
+\contentsline {subsection}{\numberline {2.3.2}Release in magnetic pressure}{11}{subsection.2.3.2}%
+\contentsline {subsubsection}{\numberline {2.3.2.1}What would happen if plasma was immobile (replaced with perfect conductor)}{11}{subsubsection.2.3.2.1}%
+\contentsline {subsection}{\numberline {2.3.3}Wavefront tells plasma about pressure Release}{11}{subsection.2.3.3}%
+\contentsline {subsubsection}{\numberline {2.3.3.1}Analogous system}{11}{subsubsection.2.3.3.1}%
+\contentsline {section}{\numberline {2.4}Wave Simulation}{12}{section.2.4}%
+\contentsline {subsection}{\numberline {2.4.1}Approximations}{12}{subsection.2.4.1}%
+\contentsline {subsection}{\numberline {2.4.2}Linearizing MHD}{12}{subsection.2.4.2}%
+\contentsline {subsection}{\numberline {2.4.3}Plasma Equilibrium + Symmetries}{12}{subsection.2.4.3}%
+\contentsline {subsubsection}{\numberline {2.4.3.1}Types of Equilibrium}{12}{subsubsection.2.4.3.1}%
+\contentsline {paragraph}{\numberline {2.4.3.1.1}theta-pinch}{12}{paragraph.2.4.3.1.1}%
+\contentsline {paragraph}{\numberline {2.4.3.1.2}screw-pinch}{12}{paragraph.2.4.3.1.2}%
+\contentsline {subsubsection}{\numberline {2.4.3.2}Types of Symmetries}{12}{subsubsection.2.4.3.2}%
+\contentsline {paragraph}{\numberline {2.4.3.2.1}z-symmetry}{12}{paragraph.2.4.3.2.1}%
+\contentsline {paragraph}{\numberline {2.4.3.2.2}toroidal-symmetry}{12}{paragraph.2.4.3.2.2}%
+\contentsline {subsection}{\numberline {2.4.4}Simplified 1D equation}{12}{subsection.2.4.4}%
+\contentsline {subsubsection}{\numberline {2.4.4.1}What does this look like?}{12}{subsubsection.2.4.4.1}%
+\contentsline {subsubsection}{\numberline {2.4.4.2}Normalizations}{13}{subsubsection.2.4.4.2}%
+\contentsline {subsubsection}{\numberline {2.4.4.3}Normalized equation}{13}{subsubsection.2.4.4.3}%
+\contentsline {subsection}{\numberline {2.4.5}Boundary conditions}{13}{subsection.2.4.5}%
+\contentsline {subsubsection}{\numberline {2.4.5.1}r = 0 Boundary}{13}{subsubsection.2.4.5.1}%
+\contentsline {paragraph}{\numberline {2.4.5.1.1}v = 0 option}{13}{paragraph.2.4.5.1.1}%
+\contentsline {paragraph}{\numberline {2.4.5.1.2}xi = 0 option}{13}{paragraph.2.4.5.1.2}%
+\contentsline {paragraph}{\numberline {2.4.5.1.3}What do we choose?}{13}{paragraph.2.4.5.1.3}%
+\contentsline {subsubsection}{\numberline {2.4.5.2}r = R Boundary}{13}{subsubsection.2.4.5.2}%
+\contentsline {paragraph}{\numberline {2.4.5.2.1}What is physically happening at high radius in the coils?}{13}{paragraph.2.4.5.2.1}%
+\contentsline {paragraph}{\numberline {2.4.5.2.2}Loop voltage sets dBz/dt}{13}{paragraph.2.4.5.2.2}%
+\contentsline {paragraph}{\numberline {2.4.5.2.3}Assuming MHD so far so let's keep assuming!}{13}{paragraph.2.4.5.2.3}%
+\contentsline {paragraph}{\numberline {2.4.5.2.4}Vloop signal shape}{13}{paragraph.2.4.5.2.4}%
+\contentsline {subsection}{\numberline {2.4.6}Initial conditions}{13}{subsection.2.4.6}%
+\contentsline {subsubsection}{\numberline {2.4.6.1}What form can we expect plasma to take?}{13}{subsubsection.2.4.6.1}%
+\contentsline {subsubsection}{\numberline {2.4.6.2}What form do we use for these results}{13}{subsubsection.2.4.6.2}%
+\contentsline {subsection}{\numberline {2.4.7}What does our simulation show?}{13}{subsection.2.4.7}%
+\contentsline {subsubsection}{\numberline {2.4.7.1}There is a wavefront traveling inwards at fast magnetosonic}{13}{subsubsection.2.4.7.1}%
+\contentsline {paragraph}{\numberline {2.4.7.1.1}Low beta approximation giving Alfven}{13}{paragraph.2.4.7.1.1}%
+\contentsline {subsubsection}{\numberline {2.4.7.2}Once wavefront passes, plasma moves out}{14}{subsubsection.2.4.7.2}%
+\contentsline {subsubsection}{\numberline {2.4.7.3}Converting to Bdot}{14}{subsubsection.2.4.7.3}%
+\contentsline {subsubsection}{\numberline {2.4.7.4}In Bdot we see flux moving outwards}{14}{subsubsection.2.4.7.4}%
+\contentsline {chapter}{\chapternumberline {3}Multi-tip Langmuir Probe}{15}{chapter.3}%
+\contentsline {chapter}{\chapternumberline {4}Pressure Anisotropy Probe}{16}{chapter.4}%
+\contentsline {chapter}{\chapternumberline {5}Conclusion}{17}{chapter.5}%
+\contentsline {chapter}{Colophon}{18}{chapter*.10}%
