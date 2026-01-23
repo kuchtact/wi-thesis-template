@@ -44,6 +44,10 @@ Sound wave.
 
 How does a sound wave propogate in a plasma? Fast magnetosonic wave!
 
+\begin{figure}
+    \caption{Simple diagram of sound wave in container}
+\end{figure}
+
 \section{Wave Simulation}
 
 \subsection{Approximations}
@@ -146,9 +150,33 @@ As expected from MHD assumption.
 
 \subsection{Minimum measurable density}
 
+\subsubsection{Assuming sample resolution}
+
+\paragraph{What does this assumption derive}
+
+\paragraph{How does it compare to the data}
+
+\paragraph{We need a better approximation}
+
+\subsubsection{Assuming sub-sample resolution}
+
+\begin{figure}
+    \caption{Data vs. crude minimum density vs. empirical minimum density}
+\end{figure}
+
+\subsubsection{A more complex model assuming the plasma is a step function * linear}
+
+\begin{figure}
+    \caption{Diagram of what the more complex model looks like.}
+\end{figure}
+
 \section{Does it reproduce langmuir probe results}
 
 \subsection{Experimental setup}
+
+\begin{figure}
+    \caption{CAD rendering of BRB w/ drive cylinder, flux probes, and Te probe.}
+\end{figure}
 
 \subsubsection{Drive cylinder}
 
@@ -167,6 +195,24 @@ As expected from MHD assumption.
 \end{figure}
 
 \subsubsection{Impacts of simple Langmuir model vs BRL}
+
+\subsubsection{What happens to the wave shape in simulation vs. experiment}
+
+\paragraph{Two-fluid dispersion}
+
+\begin{figure}
+    \caption{Plot of two-fluid dispresion relation}
+\end{figure}
+
+\paragraph{How might we expect this to change the wave}
+
+\paragraph{How to simulate evolution approximately}
+
+\paragraph{Dispersion simulation results}
+
+\begin{figure}
+    \caption{Results of simulating application of dispresion relation to pressure wave}
+\end{figure}
 
 \section{Applications}
 
@@ -198,7 +244,15 @@ LAPD \& MRX
 
 \subsubsection{Diffusion theoretical model}
 
+\begin{figure}
+    \caption{Diagram of flux mechanisms.}
+\end{figure}
+
 \subsubsection{Diffusion simulations}
+
+\begin{figure}
+    \caption{Example diffusion simulation}
+\end{figure}
 
 \subsubsection{Applications of pressure wave model}
 
@@ -210,6 +264,18 @@ I think I need to do a bit more research here to show that we can actually extra
 
 \subsubsection{Cross-correlation}
 
+\begin{figure}
+    \caption{Example of cross-correlation}
+\end{figure}
+
 \subsubsection{Dynamic Time Warping}
 
+\begin{figure}
+    \caption{Example of DTW}
+\end{figure}
+
+\subsubsection{Using a model of what the wave looks like}
+
 \subsection{Using fast-magnetosonic speed instead of alfven}
+
+\subsubsection{Will this iteratively converge?}
