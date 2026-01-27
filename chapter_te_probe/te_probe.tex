@@ -1,1 +1,177 @@
 \chapter{Multi-tip Langmuir Probe}
+
+\section{What's a Langmuir probe}
+
+\section{Hardware}
+
+\subsection{Shaft Components}
+
+\subsubsection{Garages}
+
+\begin{figure}
+    \caption{Figure 2.6 from Joe's thesis}
+\end{figure}
+
+\subsubsection{Shaft materials}
+
+\subsubsection{Centering Collet}
+
+\subsubsection{Feed-thru}
+
+\subsection{Tip Components}
+
+\begin{figure}
+    \caption{Picture of end of probe}
+\end{figure}
+
+\subsubsection{Probe body}
+
+\begin{figure}
+    \caption{Probe body from engineering sketch}
+\end{figure}
+
+\subsubsection{Tip material + size}
+
+\subsubsection{Tip Shielding}
+
+\subsection{Bdot Coils}
+
+\begin{table}
+    \caption{Length scales of probe}
+\end{table}
+
+\section{Circuitry}
+
+\subsection{Bias Source}
+
+\subsubsection{Manually Controlled}
+
+\paragraph{Principles of operation}
+
+- Equation to use for bias calculation
+
+\begin{figure}
+    \caption{Circuit diagram of old setup. Add switches.}
+\end{figure}
+
+\begin{figure}
+    \caption{Image of old setup}
+\end{figure}
+
+\paragraph{Problems}
+
+- Had to be manually controlled for drastic bias changes
+- Wires often contacted each other or parts would lose contact
+
+\subsubsection{Remote Controlled}
+
+\paragraph{Principles of operation}
+
+- Equation to use for calculation
+
+\begin{figure}
+    \caption{Circuit diagram of new setup. Add switches.}
+\end{figure}
+
+\begin{figure}
+    \caption{Image of new setup}
+\end{figure}
+
+\begin{table}
+    \caption{Bias circuit component values}
+\end{table}
+
+\paragraph{Problems}
+
+- Destroyed a power supply
+- A resistor was designed and thus burnt out
+
+\subsection{Probe Circuit}
+
+\subsubsection{Single-ended measurement}
+
+\subsubsection{Differential measurement}
+
+\begin{table}
+    \caption{Probe circuit component values}
+\end{table}
+
+\section{Plasma Theory}
+
+\subsection{Simple Plasma Theory (Hutchinson)}
+
+\subsubsection{Derivation}
+
+\subsubsection{Pros \& Cons}
+
+\subsection{BRL}
+
+\subsubsection{Idea behind it}
+
+\subsubsection{Approximations of it}
+
+\paragraph{Planar probe}
+
+\paragraph{Chen Approximation}
+
+\begin{table}
+    \caption{Chen parameters}
+\end{table}
+
+\paragraph{Even more approximation}
+
+\subsection{Inductive electric fields}
+
+\begin{figure}
+    \caption{What does an inductive electric field do to the tip measurements diagram.}
+\end{figure}
+
+\begin{figure}
+    \caption{Comparison of expected E from Ohm's law and measured E.}
+\end{figure}
+
+\section{Curve Fitting}
+
+\subsection{Least squares Fitting}
+
+\subsubsection{Benefits (easy)}
+
+\subsubsection{Issues (not representative of error)}
+
+\subsection{ODR}
+
+\subsubsection{What does error look like in our signals}
+
+\subsubsection{How does ODR take that into account}
+
+\subsection{Monte-carlo Fitting}
+
+\begin{figure}
+    \caption{Diagram of local minimums}
+\end{figure}
+
+\subsection{Combining multiple shots}
+
+\subsubsection{Using some time points from each shot}
+
+\subsubsection{Combining all IV points and fitting that}
+
+\section{Results}
+
+What is the benefit of doing all this work?
+
+\begin{figure}
+    \caption{Example fit using many shots, multiple local parameter fits, and errors}
+\end{figure}
+
+\subsection{Measurement of low densities}
+
+\subsection{Noise resilience}
+
+\subsection{Fits more accurate}
+
+- Each fit uses many data points
+
+- Don't have to arbitrarily cutoff data points
+
+\subsection{Extracting electric fields}
