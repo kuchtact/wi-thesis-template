@@ -86,6 +86,8 @@
 - Destroyed a power supply
 - A resistor was designed and thus burnt out
 
+\paragraph{Calibration}
+
 \subsection{Probe Circuit}
 
 \subsubsection{Single-ended measurement}
@@ -95,6 +97,14 @@
 \begin{table}
     \caption{Probe circuit component values}
 \end{table}
+
+\subsubsection{Calibration}
+
+\paragraph{Calibrating in isat}
+
+\paragraph{Calibrating on the exponential}
+
+\paragraph{Bayesian calibration}
 
 \section{Plasma Theory}
 
@@ -120,15 +130,37 @@
 
 \paragraph{Even more approximation}
 
-\subsection{Inductive electric fields}
+\subsection{Effect of electric fields}
+
+\subsubsection{Where does the electric field come from}
+
+\paragraph{Majority inductive}
+
+\paragraph{Some static}
+
+\subparagraph{What is the expected static magnitude}
+
+\subsubsection{What does it do to the tip measurements}
+
+\paragraph{Theoretical understanding}
 
 \begin{figure}
-    \caption{What does an inductive electric field do to the tip measurements diagram.}
+    \caption{What does an electric field do to the tip measurements diagram.}
 \end{figure}
 
+\paragraph{Physical reality}
+
 \begin{figure}
-    \caption{Comparison of expected E from Ohm's law and measured E.}
+    \caption{Example plot where E splitting tips}
 \end{figure}
+
+\subsection{Minimum measurable density}
+
+\subsubsection{What's the debye Length}
+
+\subsubsection{Sheath scale}
+
+\subsubsection{Tip-tip sheath overlap}
 
 \section{Curve Fitting}
 
@@ -144,17 +176,37 @@
 
 \subsubsection{How does ODR take that into account}
 
+\subsubsection{How to apply parameter bounds}
+
+\paragraph{Our method}
+
+\paragraph{Other options}
+
 \subsection{Monte-carlo Fitting}
 
 \begin{figure}
     \caption{Diagram of local minimums}
 \end{figure}
 
+\subsubsection{What kind of fits do we get if we just trust a local minimum}
+
+\subsubsection{How do we sample initial conditions}
+
+\subsubsection{More robust methods for getting global minimums}
+
 \subsection{Combining multiple shots}
 
 \subsubsection{Using some time points from each shot}
 
 \subsubsection{Combining all IV points and fitting that}
+
+\subsubsection{Problems}
+
+\paragraph{Timing alignment}
+
+We'll go into this more in the PA section.
+
+\paragraph{Variability of plasma parameters}
 
 \section{Results}
 
@@ -166,7 +218,23 @@ What is the benefit of doing all this work?
 
 \subsection{Measurement of low densities}
 
+\subsubsection{How does Hutchinson vs BRL treat ion saturation}
+
+\subsubsection{What are the experimental predictions that Hutchinson vs BRL have}
+
+\begin{figure}
+    \caption{Plot of isat currents from BRL}
+\end{figure}
+
+\subsubsection{How does that change the results}
+
+\begin{figure}
+    \caption{Radial chord of initial density with Hutchinson vs BRL.}
+\end{figure}
+
 \subsection{Noise resilience}
+
+Not sure how best I should show this.
 
 \subsection{Fits more accurate}
 
@@ -175,3 +243,11 @@ What is the benefit of doing all this work?
 - Don't have to arbitrarily cutoff data points
 
 \subsection{Extracting electric fields}
+
+\subsubsection{Where do we expect electric fields to be}
+
+\subsubsection{Do we see them there}
+
+\begin{figure}
+    \caption{Comparison of expected E from Ohm's law and measured E.}
+\end{figure}

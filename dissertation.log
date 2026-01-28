@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.28 (TeX Live 2025) (preloaded format=pdflatex 2025.9.18)  27 JAN 2026 16:24
+This is pdfTeX, Version 3.141592653-2.6-1.40.28 (TeX Live 2025) (preloaded format=pdflatex 2025.9.18)  28 JAN 2026 16:42
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -1270,23 +1270,25 @@ Overfull \hbox (19.56665pt too wide) in paragraph at lines 187--187
 
 [9]
 
-[10])
+[10]
 
-[11] (./dissertation.lot)
+[11])
 
-[12
-
-
-] (./dissertation.lof
+[12] (./dissertation.lot)
 
 [13
 
 
+] (./dissertation.lof
+
+[14
+
+
 ])
 
-[14] (./frontmatter/abstract.tex)
+[15] (./frontmatter/abstract.tex)
 
-[15
+[16
 
 
 ])
@@ -1343,38 +1345,42 @@ Overfull \hbox (19.56665pt too wide) in paragraph at lines 187--187
 [17])
 
 [18]
+
+[19]
 \openout2 = `chapter_te_probe/te_probe.aux'.
 
  (./chapter_te_probe/te_probe.tex
 
-[19
+[20
 
 
 
 
 ]
-
-[20]
 
 [21]
 
 [22]
 
-[23])
+[23]
 
 [24]
+
+[25])
+
+[26]
 \openout2 = `chapter_pa_probe/pa_probe.aux'.
 
  (./chapter_pa_probe/pa_probe.tex)
 
-[25
+[27
 
 
 
 
 ]
 
-[26
+[28
 
 
 
@@ -1383,22 +1389,22 @@ Overfull \hbox (19.56665pt too wide) in paragraph at lines 187--187
 
  (./chapter_conclusion/conclusion.tex)
 
-[27
+[29
 
 
 ]
 
 
-pdfTeX warning (ext4): destination with the same identifier (name{page.27}) has been already used, duplicate ignored
+pdfTeX warning (ext4): destination with the same identifier (name{page.29}) has been already used, duplicate ignored
 <to be read again> 
                    \relax 
 l.73 \begin{colophon}
-                      [27
+                      [29
 
 
 ] (./backmatter/colophon.tex)
 
-[28
+[30
 
 ] (./dissertation.bbl)
 \tf@toc=\write7
@@ -1416,21 +1422,21 @@ LaTeX2e <2025-06-01> patch level 1
 L3 programming layer <2020/03/25>
  ***********
 Package rerunfilecheck Info: File `dissertation.out' has not changed.
-(rerunfilecheck)             Checksum: EB4D6BACA88DB215FAF9FEC205059283;48728.
+(rerunfilecheck)             Checksum: 2474CC04CC4428BC899CF5C3830DC6BA;55027.
  ) 
 Here is how much of TeX's memory you used:
- 48323 strings out of 467797
- 1084541 string characters out of 5431809
- 1783858 words of memory out of 5000000
- 75909 multiletter control sequences out of 15000+600000
- 667745 words of font info for 132 fonts, out of 8000000 for 9000
+ 48394 strings out of 467797
+ 1085912 string characters out of 5431809
+ 1784002 words of memory out of 5000000
+ 75938 multiletter control sequences out of 15000+600000
+ 668131 words of font info for 135 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  89i,12n,94p,1103b,683s stack positions out of 10000i,1000n,20000p,200000b,200000s
 </usr/local/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/euler/eufm10.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/euler/eurm10.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/euler/eurm7.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/lm/lmtt12.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/tex-gyre/qplb.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/tex-gyre/qplr.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/tex-gyre/qplri.pfb>
-Output written on dissertation.pdf (46 pages, 294176 bytes).
+Output written on dissertation.pdf (49 pages, 301357 bytes).
 PDF statistics:
- 1699 PDF objects out of 1728 (max. 8388607)
- 1619 compressed objects within 17 object streams
- 355 named destinations out of 1000 (max. 500000)
- 29101 words of extra memory for PDF output out of 29859 (max. 10000000)
+ 1875 PDF objects out of 2073 (max. 8388607)
+ 1791 compressed objects within 18 object streams
+ 391 named destinations out of 1000 (max. 500000)
+ 29333 words of extra memory for PDF output out of 29859 (max. 10000000)
 
