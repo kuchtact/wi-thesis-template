@@ -2,6 +2,10 @@
 
 \section{What's a Langmuir probe}
 
+\begin{figure}
+    \caption{Diagram of simple langmuir probe.}
+\end{figure}
+
 \section{Hardware}
 
 \subsection{Shaft Components}
@@ -32,9 +36,23 @@
 
 \subsubsection{Tip material + size}
 
+\paragraph{Why use Mo}
+
+\paragraph{Why use the size we chose}
+
 \subsubsection{Tip Shielding}
 
+\paragraph{Why shield at all?}
+
+\paragraph{First order mach effects to avoid}
+
 \subsection{Bdot Coils}
+
+\subsubsection{How many wraps}
+
+\subsubsection{Approximate area}
+
+\subsection{Length Scales}
 
 \begin{table}
     \caption{Length scales of probe}
@@ -90,13 +108,47 @@
 
 \subsection{Probe Circuit}
 
+\subsubsection{Principles of operation}
+
+\begin{figure}
+    \caption{Simple circuit diagram}
+\end{figure}
+
+\paragraph{Plasma draws current}
+
+\paragraph{Voltage drop across sense resistor}
+
+\paragraph{Measure high frequency voltage drop}
+
 \subsubsection{Single-ended measurement}
 
+\begin{figure}
+    \caption{Image of old circuit board}
+\end{figure}
+
 \subsubsection{Differential measurement}
+
+\begin{figure}
+    \caption{Image of new circuit board}
+\end{figure}
 
 \begin{table}
     \caption{Probe circuit component values}
 \end{table}
+
+\subsubsection{Circuit Solution}
+
+\paragraph{How do we solve this}
+
+\subparagraph{Kirkoff's laws}
+
+\subparagraph{System of equations}
+
+\subparagraph{SymPy}
+
+\paragraph{equations}
+
+\paragraph{Assumptions}
 
 \subsubsection{Calibration}
 
@@ -105,6 +157,24 @@
 \paragraph{Calibrating on the exponential}
 
 \paragraph{Bayesian calibration}
+
+\paragraph{Calibration using pressure wave}
+
+\subsection{Bdot coils}
+
+\subsubsection{In-shaft circuit}
+
+\paragraph{Why do we have that?}
+
+\paragraph{Where is it placed approximately?}
+
+\subsubsection{Circuit model}
+
+\subsubsection{Calibration}
+
+\paragraph{Directional}
+
+\paragraph{Transfer Function}
 
 \section{Plasma Theory}
 

@@ -1,1 +1,393 @@
 \chapter{Pressure Anisotropy Probe}
+
+\section{How can we measure Pressure Anisotropy}
+
+\subsection{Thomson Scattering}
+
+\subsubsection{Pros}
+
+\subsubsection{Cons}
+
+\begin{itemize}
+    \item Requires a lot of playing around with optics
+    \item Size of machine
+    \item Don't have much in-lab expertise
+    \item Getting all the photons is tough
+    \item Don't have optics stuff setup
+\end{itemize}
+
+\subsection{Directional Langmuir Probe}
+
+\subsubsection{Pros}
+
+\begin{itemize}
+    \item Simplicity
+    \item Cost
+    \item Mobility
+\end{itemize}
+
+\subsubsection{Cons}
+
+\begin{itemize}
+    \item Difficult to interpret results precisely (luckily only need relative stuff)
+    \item Can't perfectly model
+    \item Requires a lot of playing around with circuits
+\end{itemize}
+
+\section{Hardware}
+
+\subsection{Shaft Components}
+
+\subsubsection{Garages}
+
+\subsubsection{Shaft materials}
+
+\subsubsection{Centering Collet}
+
+\subsubsection{Feed-thru}
+
+\begin{figure}
+    \caption{Picture of feed thru along with drawings of cross-sections.}
+\end{figure}
+
+\subsection{Tip Components}
+
+\begin{figure}
+    \caption{Picture of end of probe}
+\end{figure}
+
+\subsubsection{Probe body}
+
+\begin{figure}
+    \caption{CAD diagram of full body}
+\end{figure}
+
+\paragraph{3D printed}
+
+\paragraph{Both sides fit together}
+
+\subsubsection{Tip material + size}
+
+\begin{figure}
+    \caption{CAD diagram of probe tip}
+\end{figure}
+
+\paragraph{Shell material}
+
+\paragraph{Core material}
+
+\subsubsection{Tip Shielding}
+
+\paragraph{Shell Shielding}
+
+\paragraph{Core Shielding}
+
+\subsection{Bdot Coils}
+
+Same as Te probe
+
+\subsection{Connecting Bdot - Probe - Shaft}
+
+\subsection{Length Scales}
+
+\begin{table}
+    \caption{Length scales of probe}
+\end{table}
+
+\section{Circuitry}
+
+\subsection{Bias Source}
+
+\subsubsection{Principles of operation}
+
+\paragraph{Charging}
+
+\paragraph{Discharging}
+
+\paragraph{Swapping polarity}
+
+\begin{figure}
+    \caption{Simple circuit diagram of how bias works.}
+\end{figure}
+
+\subsubsection{How do we do this}
+
+\paragraph{Cannibalization}
+
+\paragraph{Discharging}
+
+\paragraph{Safety}
+
+Diodes for discharging the wrong way.
+
+\paragraph{Cap arcing}
+
+\subparagraph{What happened}
+
+\subparagraph{Solution}
+
+\paragraph{Reducing voltage drop due to inductance}
+
+\subparagraph{Twisting Wires}
+
+\subparagraph{Adding cap next to board}
+
+\paragraph{Reversing polarity}
+
+\subparagraph{Why we break relay}
+
+\subparagraph{How do we fix this problem}
+
+\paragraph{LabView (ew)}
+
+\subparagraph{Controls CRIO}
+
+\subparagraph{Countdown if too high of voltage for swapping}
+
+\begin{figure}
+    \caption{Full circuit diagram of how bias works.}
+\end{figure}
+
+\begin{figure}
+    \caption{Image of power supply setup}
+\end{figure}
+
+\begin{table}
+    \caption{Bias circuit component values}
+\end{table}
+
+\subsubsection{Calibration}
+
+\paragraph{Calibrating power supply output}
+
+\paragraph{Calibrating cap bank output}
+
+\subsection{Probe Circuit}
+
+\subsubsection{Single-ended measurement}
+
+\paragraph{TREX cells}
+
+\paragraph{Why was this bad}
+
+\paragraph{How long did we spend on this :(}
+
+\subsubsection{Differential measurement}
+
+\paragraph{Parallel circuitry}
+
+\begin{table}
+    \caption{Probe circuit component values}
+\end{table}
+
+\subsubsection{Figuring out grounds}
+
+\paragraph{Types of grounds on the ACQ}
+
+\paragraph{Routing grounds}
+
+\begin{figure}
+    \caption{Schematic of grounding diagram}
+\end{figure}
+
+\subsubsection{Swapping current paths}
+
+\paragraph{Why do we want to do this}
+
+\subparagraph{Takes care of small differences in resistors}
+
+\paragraph{Circuitry to do this}
+
+\subparagraph{Only swap core stuff}
+
+\subparagraph{Many relays}
+
+\subparagraph{Remote control}
+
+\begin{figure}
+    \caption{Image of swapping box}
+\end{figure}
+
+\begin{figure}
+    \caption{Diagram of swapping}
+\end{figure}
+
+\paragraph{How does this change results}
+
+\begin{figure}
+    \caption{Time frame for core movie of IV with separation between relay}
+\end{figure}
+
+\subsubsection{Circuit Solution}
+
+\paragraph{Solution}
+
+\paragraph{Assumptions}
+
+\subsubsection{Calibration}
+
+\paragraph{Calibrating in isat}
+
+\paragraph{Calibrating on the exponential}
+
+\paragraph{Rotation calibration}
+
+\subsubsection{The path to ground}
+
+\paragraph{Why do we have to care}
+
+\paragraph{How do we set it}
+
+\begin{figure}
+    \caption{Circuit diagram of probe circuitry}
+\end{figure}
+
+\begin{figure}
+    \caption{Image of probe circuitry}
+\end{figure}
+
+\subsubsection{Capacitive coupling}
+
+\paragraph{Where does it come from}
+
+\paragraph{Where do we see it}
+
+\begin{figure}
+    \caption{Probe signals showing coupling}
+\end{figure}
+
+\paragraph{Magnitude of effect}
+
+\paragraph{Removing effect}
+
+\section{Plasma Theory}
+
+\subsection{A full model}
+
+\subsubsection{Plasma Distribution}
+
+\subsubsection{Ion particle flux}
+
+\paragraph{Mach effects}
+
+\subsubsection{Electron particle flux}
+
+\paragraph{Minimum velocity}
+
+\paragraph{Area}
+
+\paragraph{Particle Flux}
+
+\subsubsection{Theoretical JV curves}
+
+\paragraph{Reading radar plots}
+
+\subparagraph{Radar axis}
+
+\subparagraph{Solutions}
+
+\begin{figure}
+    \caption{Figure of theoretial plasma distributions and JV curves}
+\end{figure}
+
+\subsection{Individual tip fitting}
+
+\subsubsection{Why do this instead}
+
+\subsubsection{Methods}
+
+\paragraph{Aforementioned methods}
+
+\paragraph{Exponential}
+
+\subparagraph{Ions don't hit core}
+
+\begin{figure}
+    \caption{Simple drawing of what might happen to ions}
+\end{figure}
+
+\subparagraph{Take care of this by allowing free parameters}
+
+\subparagraph{Converting from plasma parameters to exponential}
+
+\subparagraph{Converting back}
+
+\subparagraph{Taking care of errors}
+
+\subsubsection{Extracting plasma parameters}
+
+\paragraph{Spherical harmonics}
+
+\paragraph{Error bars}
+
+\subparagraph{Monte-carlo}
+
+\subparagraph{Other options}
+
+\subparagraph{Why can we ignore non-bi-maxwellian features}
+
+\section{Curve Fitting}
+
+We will use ODR like mentioned in Te section.
+
+\subsection{Combining multiple shots}
+
+\subsubsection{Timing alignment}
+
+\paragraph{Bz = 0 alignment}
+
+\subparagraph{Aligns where we expect Anisotropy}
+
+\subparagraph{Depends heavily on prior bdot data}
+
+\paragraph{Bdot cross correlation}
+
+\subparagraph{Still requires smoothing to get rid of initial oscillation impact}
+
+\paragraph{Result comparison}
+
+\begin{figure}
+    \caption{Comparison of alignment using Bz = 0 or bdot cross correlation}
+\end{figure}
+
+\subsubsection{Averaging of core data}
+
+\paragraph{Weighted average of relay on/off}
+
+\subsection{Fitting shell}
+
+\subsubsection{Use all shell data}
+
+\subsubsection{Fit using BRL}
+
+\subsubsection{Fits pretty good}
+
+\subsection{Fitting core}
+
+\subsubsection{Fitting using full routine}
+
+\subsubsection{Fitting tips independently}
+
+\section{Results}
+
+Figure out what my results are once I have some reasonable results
+
+\subsection{Drive cylinder}
+
+\subsubsection{What did we try}
+
+\subsubsection{Why didn't we see pressure anisotropy}
+
+\paragraph{In the bdot data}
+
+\paragraph{In the PA data}
+
+\subsection{3 coil}
+
+\subsubsection{How much anisotropy should we expect}
+
+\subsubsection{What setups did we try}
+
+\subsubsection{Old results of just comparing radar plots}
+
+\subsubsection{New results using independent fitting}
