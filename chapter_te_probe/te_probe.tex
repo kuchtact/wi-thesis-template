@@ -2,36 +2,140 @@
 
 \section{What's a Langmuir probe}
 
-\begin{figure}
-    \caption{Diagram of simple langmuir probe.}
+% TODO: space out the below references for this section.
+Hershkowitz: \cite{Hershkowitz_1989}
+Hutchinson: \cite{Hutchinson_2002}
+Olson: \cite{Olson_2020}
+
+Plasma diagnostics make a broad phylogenetic tree ranging from the variety of plasma parameters they can measure to their size and complexity. In the Big Red Ball we prefer simplicity and cheapness to some of the wilder diagnostic varieties so a common probe that we use is a Langmuir probe.
+
+\subsection{Basic Construction}
+
+These Langmuir probes are quite basic in construction. At it's simplest, a conductor is placed in contact with the plasma and a voltage is applied relative to ground which we will call the probe voltage, $V_{\text{probe}}$. This will locally perturb the plasma and collect a current, $I_\text{probe}$, which can be seen in figure \ref{fig:simple_langmuir_probe}. If $V_\text{probe} < V_\text{plasma}$, an electric field is formed that repells electrons and attracts ions and the inverse for $V_\text{probe} > V_\text{plasma}$.
+
+\begin{figure}[]
+    \centering
+    \begin{circuitikz}
+        \draw [ color={rgb,255:red,220; green,138; blue,221} , fill={rgb,255:red,220; green,138; blue,221}] (4,2) circle (1cm);
+        \draw (0,0) node[ground]{} to[american voltage source,l={$V_\text{probe}$}, invert] ++(0,2) to[rmeter, t=A, i<=$I_\text{probe}$] ++(3,0) to[short, -o] ++(1,0) coordinate(probe);
+    \end{circuitikz}
+    \caption[*Diagram of simple langmuir probe]{A circuit for a very simple Langmuir probe. The probe is biased to the probe voltage, $V_\text{probe}$, relative to ground by the power supply. The conductor (white circle) collects ions and electrons from the plasma (pink circle) causing a current to the probe, $I_\text{probe}$.}
+    \label{fig:simple_langmuir_probe}
 \end{figure}
+
+Langmuir probes have been developed to work in a very wide range of plasma parameter configurations that well encompass the plasma parameters TREX achieves (see table \ref{tab:lab_vs_space_parameters}).
+% TODO: Add references of other langmuir probes.
+
+\subsection{Extracting Plasma Parameters}
+
+The most challenging part of these probes is the conversion of measured current to plasma parameters. Since we are trying to get a local measurement of the plasma parameters and we are also perturbing the plasma locally by touching it with a probe, we need to create a theory that correctly takes into account that perturbation such that we can get the plasma parameters. This often consists of a fitting procedure where the difference between the theoretical and experimental I-V curves is minimized.
+
+Additionally, many a probe theory is purpose built for plasmas with no magnetic field. As we are studying magnetic reconnection in which there are in fact magnetic fields, this could change the I-V characteristic in unexpected ways. We'll discuss below why these effects are not very impactful and in future sections describe the theories we use for extracting the plasma parameters.
+
+\subsection{Plasma Perturbation}
+
+A problem often found in highly magnetized plasma devices is the long range perturbation to the plasma by the probe. In the Big Red Ball there are times where we have a relatively strong field and times when we don't so let's examine both cases.
+
+\subsubsection{Unmagnetized Perturbation}
+
+Let's examine this from an unmagnetized starting point. In this configuration, the probe collects nearly isotropically to an extent limited by the Debye length which creates a sheath around the probe and operates to shield the electric field caused by the difference between $V_\text{probe}$ and $V_\text{plasma}$. This length scale is very short and plasma can easily refill the sheath in this unmagnetized system.
+
+\subsubsection{Magnetic Field Effects}
+Now in a highly magnetized system (gyroradius far smaller than probe length scale) the plasma interacting with the probe comes from a flux tube approximately the size of the probe area projected into the magnetic field direction. Because of this, the probe can start ``emptying out'' the flux tube because of the difficulty of plasma to diffuse across field lines into the flux tube. This means the extend of the probe perturbation is far longer.
+
+\subsubsection{Perturbations in our System}
+
+We are quite lucky in that our system geometry reduces the impacts of flux tube emptying and the plasmas we are studying are often relatively unmagnetized.
+
+\paragraph{Geometric Considerations}
+The TREX experiment is (often) cylindrically symmetric and our probes are placed in different toroidal planes (see figure \ref{fig:brb_cad_rendering} for coordinate system reference). This means that without any toroidal field, any emptying only occurs in the plane of the probe which may still affect the probe I-V characteristic but is not affecting other probes measurements in a significant manner. When we do have a toroidal field, we also often have non-uniform $B_r$ and $B_z$ which means the flux tube passes through many different plasma parameters. This may help to average out any flux tube emptying because at different points along the flux tube more plasma may be able to enter the tube than just what is expected at the probe causing a reduced perturbation length.
+
+\paragraph{Magnetic Field Considerations}
+As we have magnetic fields in our system, we do need to worry about these flux tube effects. Fortunately, our magnetic field are relatively small and in the region we are often most interested in (where reconnection is occurring) the magnetic field is far smaller than the initial background field. We characterize this smallness by the ratio of the gyroradius to the radius of the probe area which is on the order of ???.
+% TODO: Figure out what the ratio of the probe area to gyroradius is.
+
+\begin{table}
+    \centering
+    \begin{tabular}{|l|r|r|}
+        
+    \end{tabular}
+    \caption{Langmuir probe characteristic scales.}
+    \label{tab:langmuir_probe_plasma_scales}
+\end{table}
 
 \section{Hardware}
 
+There has been a long and storied history of probe building on the Big Red Ball expecially for the development of multi-tip Langmuir probes. For some more information about our probes, see \cite{Olson_2020}.
+
+\subsection{Physical Constraints}
+
+Our Langmuir probes need to satisfy a number of requirements.
+\begin{itemize}
+    \item \textbf{Length}: The probe is attached to a port on the surface of the machine. This means it starts at a spherical radius of 1.5 m and must be inserted from there. Thus the insertable length should be fairly long and must be stable. This is described in \ref{sss:multitip_shaft_components}.
+    \item \textbf{Material}: We want our probe to survive the plasma exposure and not affect our vacuum pressure via offgassing. We also don't want to have to worry about secondary electron emission. We discuss this in \ref{sss:multitip_tip_components}.
+    \item \textbf{Probe Size}: We want to measure the plasma locally so our probe body needs to be small relative to the plasma gradients. It also needs to be able to fit through ball joints that can be mounted to the machine that have a radius of ???. These considerations are taken into account in \ref{sss:multitip_tip_components}.
+\end{itemize}
+
 \subsection{Shaft Components}
+\label{sss:multitip_shaft_components}
+
+For our probe to reach everywhere we want and also actually be in the position we desire we need a long shaft with a sufficient amount of support to be accurate to a few centimeters. Why a few centimeters? Our plasma dynamics are reproducible but not to such an extreme that a centimeter is noticeably different. Also it's difficult with the probe length to achieve too much better.
+
+\begin{figure}
+    \centering
+    \includegraphics[width=\textwidth]{chapter_te_probe/figures/probe_shaft_cad.png}
+    \caption[*Probe Shaft CAD Diagram]{Three stage probe shaft with an outer and inner garage and the main stainless steel shaft that connects to the probe.}
+    \label{fig:probe_shaft_cad}
+\end{figure}
 
 \subsubsection{Garages}
 
-\begin{figure}
-    \caption{Figure 2.6 from Joe's thesis}
-\end{figure}
+As can be seen in figure \ref{fig:probe_shaft_cad}, the probe shaft is a multistage system. Each stage consists of some tubing where connections between different stages are made using quick-connect high-vacuum fittings (like \href{https://www.mcmaster.com/3486N32}{part 3486N32 from McMaster-Carr}).
+
+We mount the probe to the machine using a flange on the outer garage or a ball joint (as seen in the figure). Then we can move each garage independently to insert the probe a desired length.
 
 \subsubsection{Shaft materials}
 
+We need to sufficiently support our probe and the shafts themselves so we use stainless steel until we enter the plasma region in which we change to alumina.
+
+For the shafts, stainless steel is vacuum safe, tolerant to plasma interaction, and can support the weight of the structure easily without excessive flexing. Unfortunately, as a conductor, it will act as a long Langmuir probe that will create a ray in the machine at a single potential. This will perturb the plasma much more significantly than using an insulator.
+
+To that end we use alumina, a high temperature ceramic who's surface will accumulate charge such that it'll be left at the floating potential (the potential at which the ion and electron currents balance). This helps to perturb the plasma less as there is no net current to the shaft and thus the plasma should (hopefully) be less perturbed.
+
+Right near the end of the probe shaft, we use stainless steel tubing to connect from the alumina to the probe body. This is to reduce the overall size of the shaft in perturbing the plasma at the probe and is only for ~10 cm of length.
+
 \subsubsection{Centering Collet}
+
+Each shaft/garage, is held in place by the sliding vacuum seal that connects it to it's larger garage. Unfortunately this gives only a single point of contact for making the shafts concentric. This would cause excessive drooping of the probe and may be so bad as to cause the probe to hit the edge of the machine when being inserted/removed.
+
+To fix this issue, we have used centering collets that allow the inner shaft/garage to move while being held in place by the outer garage. These can be both machined or 3D printed. When 3D printed we can make these to also hold the o-rings so they are double-acting.
 
 \subsubsection{Feed-thru}
 
+We need some way to extract the signals from the probe tip. Because of the construction of our probe and for simplicity purposes, the probe shaft is at vacuum pressure. Thus we attach a feed-thru to the end of the can from figure \ref{fig:probe_shaft_cad}. This is constructed using two DB-25 hermetically sealed connectors where we solder the wires directly to the vacuum side of the can and then can easily move and connect the probe externally.
+
 \subsection{Tip Components}
+\label{sss:multitip_tip_components}
 
 \begin{figure}
-    \caption{Picture of end of probe}
+    \centering
+    \includegraphics[width=\textwidth]{./chapter_te_probe/figures/annotated_te_image.png}
+    \caption[*Picture of multi-tip Langmuir Probe]{Picture of the end of the multi-tip Langmuir probe. Image from \cite{Gradney_2025}.}
+    \label{fig:multitip_image}
 \end{figure}
 
 \subsubsection{Probe body}
 
+Our probe does not need to withstand extreme heat fluxes and our vacuum conditions don't need to be perfect so we are lucky enough to be able to use a 3D printed probe body.
+
+This is constructed using stereolithography which gives a sufficient resolution for the probe. Additionally the plastic used holds up well in vacuum. The body must connect to two different diameter stainless steel tubes (as can be seen in figure \ref{fig:multitip_image}). Thus we use two annuli whose inner/outer radii match the tubing.
+
+The tubing exists to connect the probe to the main shaft holding it up and also a small B-dot coil which is discussed in \ref{sss:multitip_bdot}.
+
 \begin{figure}
-    \caption{Probe body from engineering sketch}
+    \includegraphics[width=\textwidth]{chapter_te_probe/figures/Plastic Body v2.pdf}
+    \caption[*Multi-tip Langmuir Probe Body Schematic]{Probe body from engineering sketch. Created by Joe Olson.}
+    \label{fig:multitip_body_schematic}
 \end{figure}
 
 \subsubsection{Tip material + size}
@@ -46,7 +150,8 @@
 
 \paragraph{First order mach effects to avoid}
 
-\subsection{Bdot Coils}
+\subsection{B-dot Coils}
+\label{sss:multitip_bdot}
 
 \subsubsection{How many wraps}
 

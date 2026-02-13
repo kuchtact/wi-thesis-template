@@ -1,7 +1,7 @@
 \contentsline {chapter}{Contents}{ii}{section*.3}%
-\contentsline {chapter}{List of Tables}{xviii}{section*.5}%
-\contentsline {chapter}{List of Figures}{xix}{section*.7}%
-\contentsline {chapter}{Abstract}{xxii}{chapter*.9}%
+\contentsline {chapter}{List of Tables}{xix}{section*.5}%
+\contentsline {chapter}{List of Figures}{xx}{section*.7}%
+\contentsline {chapter}{Abstract}{xxiii}{chapter*.9}%
 \contentsline {chapter}{\chapternumberline {1}Introduction}{1}{chapter.1}%
 \contentsline {section}{\numberline {1.1}What the heck is a plasma}{1}{section.1.1}%
 \contentsline {subsection}{\numberline {1.1.1}Plasmas in the universe}{1}{subsection.1.1.1}%
@@ -191,7 +191,7 @@
 \contentsline {subsubsection}{\numberline {2.6.2.2}Impacts of simple Langmuir model vs BRL}{16}{subsubsection.2.6.2.2}%
 \contentsline {subsubsection}{\numberline {2.6.2.3}What happens to the wave shape in simulation vs. experiment}{16}{subsubsection.2.6.2.3}%
 \contentsline {paragraph}{\numberline {2.6.2.3.1}Two-fluid dispersion}{16}{figure.2.9}%
-\contentsline {paragraph}{\numberline {2.6.2.3.2}How might we expect this to change the wave}{17}{paragraph.2.6.2.3.2}%
+\contentsline {paragraph}{\numberline {2.6.2.3.2}How might we expect this to change the wave}{16}{paragraph.2.6.2.3.2}%
 \contentsline {paragraph}{\numberline {2.6.2.3.3}How to simulate evolution approximately}{17}{paragraph.2.6.2.3.3}%
 \contentsline {paragraph}{\numberline {2.6.2.3.4}Dispersion simulation results}{17}{figure.2.10}%
 \contentsline {section}{\numberline {2.7}Applications}{17}{section.2.7}%
@@ -213,268 +213,284 @@
 \contentsline {subsubsection}{\numberline {2.8.2.1}Will this iteratively converge?}{19}{subsubsection.2.8.2.1}%
 \contentsline {chapter}{\chapternumberline {3}Multi-tip Langmuir Probe}{20}{chapter.3}%
 \contentsline {section}{\numberline {3.1}What's a Langmuir probe}{20}{section.3.1}%
-\contentsline {section}{\numberline {3.2}Hardware}{20}{section.3.2}%
-\contentsline {subsection}{\numberline {3.2.1}Shaft Components}{20}{subsection.3.2.1}%
-\contentsline {subsubsection}{\numberline {3.2.1.1}Garages}{20}{subsubsection.3.2.1.1}%
-\contentsline {subsubsection}{\numberline {3.2.1.2}Shaft materials}{20}{subsubsection.3.2.1.2}%
-\contentsline {subsubsection}{\numberline {3.2.1.3}Centering Collet}{20}{subsubsection.3.2.1.3}%
-\contentsline {subsubsection}{\numberline {3.2.1.4}Feed-thru}{20}{subsubsection.3.2.1.4}%
-\contentsline {subsection}{\numberline {3.2.2}Tip Components}{20}{subsection.3.2.2}%
-\contentsline {subsubsection}{\numberline {3.2.2.1}Probe body}{20}{subsubsection.3.2.2.1}%
-\contentsline {subsubsection}{\numberline {3.2.2.2}Tip material + size}{20}{subsubsection.3.2.2.2}%
-\contentsline {paragraph}{\numberline {3.2.2.2.1}Why use Mo}{20}{paragraph.3.2.2.2.1}%
-\contentsline {paragraph}{\numberline {3.2.2.2.2}Why use the size we chose}{20}{paragraph.3.2.2.2.2}%
-\contentsline {subsubsection}{\numberline {3.2.2.3}Tip Shielding}{20}{subsubsection.3.2.2.3}%
-\contentsline {paragraph}{\numberline {3.2.2.3.1}Why shield at all?}{20}{paragraph.3.2.2.3.1}%
-\contentsline {paragraph}{\numberline {3.2.2.3.2}First order mach effects to avoid}{20}{paragraph.3.2.2.3.2}%
-\contentsline {subsection}{\numberline {3.2.3}Bdot Coils}{21}{subsection.3.2.3}%
-\contentsline {subsubsection}{\numberline {3.2.3.1}How many wraps}{21}{subsubsection.3.2.3.1}%
-\contentsline {subsubsection}{\numberline {3.2.3.2}Approximate area}{21}{subsubsection.3.2.3.2}%
-\contentsline {subsection}{\numberline {3.2.4}Length Scales}{21}{subsection.3.2.4}%
-\contentsline {section}{\numberline {3.3}Circuitry}{21}{section.3.3}%
-\contentsline {subsection}{\numberline {3.3.1}Bias Source}{21}{subsection.3.3.1}%
-\contentsline {subsubsection}{\numberline {3.3.1.1}Manually Controlled}{21}{subsubsection.3.3.1.1}%
-\contentsline {paragraph}{\numberline {3.3.1.1.1}Principles of operation}{21}{paragraph.3.3.1.1.1}%
-\contentsline {paragraph}{\numberline {3.3.1.1.2}Problems}{21}{paragraph.3.3.1.1.2}%
-\contentsline {subsubsection}{\numberline {3.3.1.2}Remote Controlled}{21}{subsubsection.3.3.1.2}%
-\contentsline {paragraph}{\numberline {3.3.1.2.1}Principles of operation}{21}{paragraph.3.3.1.2.1}%
-\contentsline {paragraph}{\numberline {3.3.1.2.2}Problems}{21}{paragraph.3.3.1.2.2}%
-\contentsline {paragraph}{\numberline {3.3.1.2.3}Calibration}{22}{paragraph.3.3.1.2.3}%
-\contentsline {subsection}{\numberline {3.3.2}Probe Circuit}{22}{subsection.3.3.2}%
-\contentsline {subsubsection}{\numberline {3.3.2.1}Principles of operation}{22}{subsubsection.3.3.2.1}%
-\contentsline {paragraph}{\numberline {3.3.2.1.1}Plasma draws current}{22}{paragraph.3.3.2.1.1}%
-\contentsline {paragraph}{\numberline {3.3.2.1.2}Voltage drop across sense resistor}{22}{paragraph.3.3.2.1.2}%
-\contentsline {paragraph}{\numberline {3.3.2.1.3}Measure high frequency voltage drop}{22}{paragraph.3.3.2.1.3}%
-\contentsline {subsubsection}{\numberline {3.3.2.2}Single-ended measurement}{22}{subsubsection.3.3.2.2}%
-\contentsline {subsubsection}{\numberline {3.3.2.3}Differential measurement}{22}{subsubsection.3.3.2.3}%
-\contentsline {subsubsection}{\numberline {3.3.2.4}Circuit Solution}{22}{subsubsection.3.3.2.4}%
-\contentsline {paragraph}{\numberline {3.3.2.4.1}How do we solve this}{22}{paragraph.3.3.2.4.1}%
-\contentsline {subparagraph}{\numberline {3.3.2.4.1.1}Kirkoff's laws}{22}{subparagraph.3.3.2.4.1.1}%
-\contentsline {subparagraph}{\numberline {3.3.2.4.1.2}System of equations}{22}{subparagraph.3.3.2.4.1.2}%
-\contentsline {subparagraph}{\numberline {3.3.2.4.1.3}SymPy}{22}{subparagraph.3.3.2.4.1.3}%
-\contentsline {paragraph}{\numberline {3.3.2.4.2}equations}{23}{paragraph.3.3.2.4.2}%
-\contentsline {paragraph}{\numberline {3.3.2.4.3}Assumptions}{23}{paragraph.3.3.2.4.3}%
-\contentsline {subsubsection}{\numberline {3.3.2.5}Calibration}{23}{subsubsection.3.3.2.5}%
-\contentsline {paragraph}{\numberline {3.3.2.5.1}Calibrating in isat}{23}{paragraph.3.3.2.5.1}%
-\contentsline {paragraph}{\numberline {3.3.2.5.2}Calibrating on the exponential}{23}{paragraph.3.3.2.5.2}%
-\contentsline {paragraph}{\numberline {3.3.2.5.3}Bayesian calibration}{23}{paragraph.3.3.2.5.3}%
-\contentsline {paragraph}{\numberline {3.3.2.5.4}Calibration using pressure wave}{23}{paragraph.3.3.2.5.4}%
-\contentsline {subsection}{\numberline {3.3.3}Bdot coils}{23}{subsection.3.3.3}%
-\contentsline {subsubsection}{\numberline {3.3.3.1}In-shaft circuit}{23}{subsubsection.3.3.3.1}%
-\contentsline {paragraph}{\numberline {3.3.3.1.1}Why do we have that?}{23}{paragraph.3.3.3.1.1}%
-\contentsline {paragraph}{\numberline {3.3.3.1.2}Where is it placed approximately?}{23}{paragraph.3.3.3.1.2}%
-\contentsline {subsubsection}{\numberline {3.3.3.2}Circuit model}{24}{subsubsection.3.3.3.2}%
-\contentsline {subsubsection}{\numberline {3.3.3.3}Calibration}{24}{subsubsection.3.3.3.3}%
-\contentsline {paragraph}{\numberline {3.3.3.3.1}Directional}{24}{paragraph.3.3.3.3.1}%
-\contentsline {paragraph}{\numberline {3.3.3.3.2}Transfer Function}{24}{paragraph.3.3.3.3.2}%
-\contentsline {section}{\numberline {3.4}Plasma Theory}{24}{section.3.4}%
-\contentsline {subsection}{\numberline {3.4.1}Simple Plasma Theory (Hutchinson)}{24}{subsection.3.4.1}%
-\contentsline {subsubsection}{\numberline {3.4.1.1}Derivation}{24}{subsubsection.3.4.1.1}%
-\contentsline {subsubsection}{\numberline {3.4.1.2}Pros \& Cons}{24}{subsubsection.3.4.1.2}%
-\contentsline {subsection}{\numberline {3.4.2}BRL}{24}{subsection.3.4.2}%
-\contentsline {subsubsection}{\numberline {3.4.2.1}Idea behind it}{24}{subsubsection.3.4.2.1}%
-\contentsline {subsubsection}{\numberline {3.4.2.2}Approximations of it}{24}{subsubsection.3.4.2.2}%
-\contentsline {paragraph}{\numberline {3.4.2.2.1}Planar probe}{24}{paragraph.3.4.2.2.1}%
-\contentsline {paragraph}{\numberline {3.4.2.2.2}Chen Approximation}{24}{table.3.4}%
-\contentsline {paragraph}{\numberline {3.4.2.2.3}Even more approximation}{24}{paragraph.3.4.2.2.3}%
-\contentsline {subsection}{\numberline {3.4.3}Effect of electric fields}{24}{subsection.3.4.3}%
-\contentsline {subsubsection}{\numberline {3.4.3.1}Where does the electric field come from}{24}{subsubsection.3.4.3.1}%
-\contentsline {paragraph}{\numberline {3.4.3.1.1}Majority inductive}{24}{paragraph.3.4.3.1.1}%
-\contentsline {paragraph}{\numberline {3.4.3.1.2}Some static}{25}{paragraph.3.4.3.1.2}%
-\contentsline {subparagraph}{\numberline {3.4.3.1.2.1}What is the expected static magnitude}{25}{subparagraph.3.4.3.1.2.1}%
-\contentsline {subsubsection}{\numberline {3.4.3.2}What does it do to the tip measurements}{25}{subsubsection.3.4.3.2}%
-\contentsline {paragraph}{\numberline {3.4.3.2.1}Theoretical understanding}{25}{figure.3.12}%
-\contentsline {paragraph}{\numberline {3.4.3.2.2}Physical reality}{25}{figure.3.13}%
-\contentsline {subsection}{\numberline {3.4.4}Minimum measurable density}{26}{subsection.3.4.4}%
-\contentsline {subsubsection}{\numberline {3.4.4.1}What's the debye Length}{26}{subsubsection.3.4.4.1}%
-\contentsline {subsubsection}{\numberline {3.4.4.2}Sheath scale}{26}{subsubsection.3.4.4.2}%
-\contentsline {subsubsection}{\numberline {3.4.4.3}Tip-tip sheath overlap}{26}{subsubsection.3.4.4.3}%
-\contentsline {section}{\numberline {3.5}Curve Fitting}{26}{section.3.5}%
-\contentsline {subsection}{\numberline {3.5.1}Least squares Fitting}{26}{subsection.3.5.1}%
-\contentsline {subsubsection}{\numberline {3.5.1.1}Benefits (easy)}{26}{subsubsection.3.5.1.1}%
-\contentsline {subsubsection}{\numberline {3.5.1.2}Issues (not representative of error)}{26}{subsubsection.3.5.1.2}%
-\contentsline {subsection}{\numberline {3.5.2}ODR}{26}{subsection.3.5.2}%
-\contentsline {subsubsection}{\numberline {3.5.2.1}What does error look like in our signals}{26}{subsubsection.3.5.2.1}%
-\contentsline {subsubsection}{\numberline {3.5.2.2}How does ODR take that into account}{26}{subsubsection.3.5.2.2}%
-\contentsline {subsubsection}{\numberline {3.5.2.3}How to apply parameter bounds}{26}{subsubsection.3.5.2.3}%
-\contentsline {paragraph}{\numberline {3.5.2.3.1}Our method}{26}{paragraph.3.5.2.3.1}%
-\contentsline {paragraph}{\numberline {3.5.2.3.2}Other options}{26}{paragraph.3.5.2.3.2}%
-\contentsline {subsection}{\numberline {3.5.3}Monte-carlo Fitting}{27}{subsection.3.5.3}%
-\contentsline {subsubsection}{\numberline {3.5.3.1}What kind of fits do we get if we just trust a local minimum}{27}{subsubsection.3.5.3.1}%
-\contentsline {subsubsection}{\numberline {3.5.3.2}How do we sample initial conditions}{27}{subsubsection.3.5.3.2}%
-\contentsline {subsubsection}{\numberline {3.5.3.3}More robust methods for getting global minimums}{27}{subsubsection.3.5.3.3}%
-\contentsline {subsection}{\numberline {3.5.4}Combining multiple shots}{27}{subsection.3.5.4}%
-\contentsline {subsubsection}{\numberline {3.5.4.1}Using some time points from each shot}{27}{subsubsection.3.5.4.1}%
-\contentsline {subsubsection}{\numberline {3.5.4.2}Combining all IV points and fitting that}{27}{subsubsection.3.5.4.2}%
-\contentsline {subsubsection}{\numberline {3.5.4.3}Problems}{27}{subsubsection.3.5.4.3}%
-\contentsline {paragraph}{\numberline {3.5.4.3.1}Timing alignment}{27}{paragraph.3.5.4.3.1}%
-\contentsline {paragraph}{\numberline {3.5.4.3.2}Variability of plasma parameters}{27}{paragraph.3.5.4.3.2}%
-\contentsline {section}{\numberline {3.6}Results}{27}{section.3.6}%
-\contentsline {subsection}{\numberline {3.6.1}Measurement of low densities}{28}{subsection.3.6.1}%
-\contentsline {subsubsection}{\numberline {3.6.1.1}How does Hutchinson vs BRL treat ion saturation}{28}{subsubsection.3.6.1.1}%
-\contentsline {subsubsection}{\numberline {3.6.1.2}What are the experimental predictions that Hutchinson vs BRL have}{28}{subsubsection.3.6.1.2}%
-\contentsline {subsubsection}{\numberline {3.6.1.3}How does that change the results}{28}{subsubsection.3.6.1.3}%
-\contentsline {subsection}{\numberline {3.6.2}Noise resilience}{28}{subsection.3.6.2}%
-\contentsline {subsection}{\numberline {3.6.3}Fits more accurate}{28}{subsection.3.6.3}%
-\contentsline {subsection}{\numberline {3.6.4}Extracting electric fields}{28}{subsection.3.6.4}%
-\contentsline {subsubsection}{\numberline {3.6.4.1}Where do we expect electric fields to be}{28}{subsubsection.3.6.4.1}%
-\contentsline {subsubsection}{\numberline {3.6.4.2}Do we see them there}{28}{subsubsection.3.6.4.2}%
-\contentsline {chapter}{\chapternumberline {4}Pressure Anisotropy Probe}{29}{chapter.4}%
-\contentsline {section}{\numberline {4.1}How can we measure Pressure Anisotropy}{29}{section.4.1}%
-\contentsline {subsection}{\numberline {4.1.1}Thomson Scattering}{29}{subsection.4.1.1}%
-\contentsline {subsubsection}{\numberline {4.1.1.1}Pros}{29}{subsubsection.4.1.1.1}%
-\contentsline {subsubsection}{\numberline {4.1.1.2}Cons}{29}{subsubsection.4.1.1.2}%
-\contentsline {subsection}{\numberline {4.1.2}Directional Langmuir Probe}{29}{subsection.4.1.2}%
-\contentsline {subsubsection}{\numberline {4.1.2.1}Pros}{29}{subsubsection.4.1.2.1}%
-\contentsline {subsubsection}{\numberline {4.1.2.2}Cons}{29}{subsubsection.4.1.2.2}%
-\contentsline {section}{\numberline {4.2}Hardware}{30}{section.4.2}%
-\contentsline {subsection}{\numberline {4.2.1}Shaft Components}{30}{subsection.4.2.1}%
-\contentsline {subsubsection}{\numberline {4.2.1.1}Garages}{30}{subsubsection.4.2.1.1}%
-\contentsline {subsubsection}{\numberline {4.2.1.2}Shaft materials}{30}{subsubsection.4.2.1.2}%
-\contentsline {subsubsection}{\numberline {4.2.1.3}Centering Collet}{30}{subsubsection.4.2.1.3}%
-\contentsline {subsubsection}{\numberline {4.2.1.4}Feed-thru}{30}{subsubsection.4.2.1.4}%
-\contentsline {subsection}{\numberline {4.2.2}Tip Components}{30}{subsection.4.2.2}%
-\contentsline {subsubsection}{\numberline {4.2.2.1}Probe body}{30}{subsubsection.4.2.2.1}%
-\contentsline {paragraph}{\numberline {4.2.2.1.1}3D printed}{30}{paragraph.4.2.2.1.1}%
-\contentsline {paragraph}{\numberline {4.2.2.1.2}Both sides fit together}{30}{paragraph.4.2.2.1.2}%
-\contentsline {subsubsection}{\numberline {4.2.2.2}Tip material + size}{30}{subsubsection.4.2.2.2}%
-\contentsline {paragraph}{\numberline {4.2.2.2.1}Shell material}{30}{paragraph.4.2.2.2.1}%
-\contentsline {paragraph}{\numberline {4.2.2.2.2}Core material}{30}{paragraph.4.2.2.2.2}%
-\contentsline {subsubsection}{\numberline {4.2.2.3}Tip Shielding}{31}{subsubsection.4.2.2.3}%
-\contentsline {paragraph}{\numberline {4.2.2.3.1}Shell Shielding}{31}{paragraph.4.2.2.3.1}%
-\contentsline {paragraph}{\numberline {4.2.2.3.2}Core Shielding}{31}{paragraph.4.2.2.3.2}%
-\contentsline {subsection}{\numberline {4.2.3}Bdot Coils}{31}{subsection.4.2.3}%
-\contentsline {subsection}{\numberline {4.2.4}Connecting Bdot - Probe - Shaft}{31}{subsection.4.2.4}%
-\contentsline {subsection}{\numberline {4.2.5}Length Scales}{31}{subsection.4.2.5}%
-\contentsline {section}{\numberline {4.3}Circuitry}{31}{section.4.3}%
-\contentsline {subsection}{\numberline {4.3.1}Bias Source}{31}{subsection.4.3.1}%
-\contentsline {subsubsection}{\numberline {4.3.1.1}Principles of operation}{31}{subsubsection.4.3.1.1}%
-\contentsline {paragraph}{\numberline {4.3.1.1.1}Charging}{31}{paragraph.4.3.1.1.1}%
-\contentsline {paragraph}{\numberline {4.3.1.1.2}Discharging}{31}{paragraph.4.3.1.1.2}%
-\contentsline {paragraph}{\numberline {4.3.1.1.3}Swapping polarity}{31}{figure.4.5}%
-\contentsline {subsubsection}{\numberline {4.3.1.2}How do we do this}{31}{subsubsection.4.3.1.2}%
-\contentsline {paragraph}{\numberline {4.3.1.2.1}Cannibalization}{31}{paragraph.4.3.1.2.1}%
-\contentsline {paragraph}{\numberline {4.3.1.2.2}Discharging}{32}{paragraph.4.3.1.2.2}%
-\contentsline {paragraph}{\numberline {4.3.1.2.3}Safety}{32}{paragraph.4.3.1.2.3}%
-\contentsline {paragraph}{\numberline {4.3.1.2.4}Cap arcing}{32}{paragraph.4.3.1.2.4}%
-\contentsline {subparagraph}{\numberline {4.3.1.2.4.1}What happened}{32}{subparagraph.4.3.1.2.4.1}%
-\contentsline {subparagraph}{\numberline {4.3.1.2.4.2}Solution}{32}{subparagraph.4.3.1.2.4.2}%
-\contentsline {paragraph}{\numberline {4.3.1.2.5}Reducing voltage drop due to inductance}{32}{paragraph.4.3.1.2.5}%
-\contentsline {subparagraph}{\numberline {4.3.1.2.5.1}Twisting Wires}{32}{subparagraph.4.3.1.2.5.1}%
-\contentsline {subparagraph}{\numberline {4.3.1.2.5.2}Adding cap next to board}{32}{subparagraph.4.3.1.2.5.2}%
-\contentsline {paragraph}{\numberline {4.3.1.2.6}Reversing polarity}{32}{paragraph.4.3.1.2.6}%
-\contentsline {subparagraph}{\numberline {4.3.1.2.6.1}Why we break relay}{32}{subparagraph.4.3.1.2.6.1}%
-\contentsline {subparagraph}{\numberline {4.3.1.2.6.2}How do we fix this problem}{32}{subparagraph.4.3.1.2.6.2}%
-\contentsline {paragraph}{\numberline {4.3.1.2.7}LabView (ew)}{32}{paragraph.4.3.1.2.7}%
-\contentsline {subparagraph}{\numberline {4.3.1.2.7.1}Controls CRIO}{32}{subparagraph.4.3.1.2.7.1}%
-\contentsline {subparagraph}{\numberline {4.3.1.2.7.2}Countdown if too high of voltage for swapping}{32}{table.4.2}%
-\contentsline {subsubsection}{\numberline {4.3.1.3}Calibration}{33}{subsubsection.4.3.1.3}%
-\contentsline {paragraph}{\numberline {4.3.1.3.1}Calibrating power supply output}{33}{paragraph.4.3.1.3.1}%
-\contentsline {paragraph}{\numberline {4.3.1.3.2}Calibrating cap bank output}{33}{paragraph.4.3.1.3.2}%
-\contentsline {subsection}{\numberline {4.3.2}Probe Circuit}{33}{subsection.4.3.2}%
-\contentsline {subsubsection}{\numberline {4.3.2.1}Single-ended measurement}{33}{subsubsection.4.3.2.1}%
-\contentsline {paragraph}{\numberline {4.3.2.1.1}TREX cells}{33}{paragraph.4.3.2.1.1}%
-\contentsline {paragraph}{\numberline {4.3.2.1.2}Why was this bad}{33}{paragraph.4.3.2.1.2}%
-\contentsline {paragraph}{\numberline {4.3.2.1.3}How long did we spend on this :(}{33}{paragraph.4.3.2.1.3}%
-\contentsline {subsubsection}{\numberline {4.3.2.2}Differential measurement}{33}{subsubsection.4.3.2.2}%
-\contentsline {paragraph}{\numberline {4.3.2.2.1}Parallel circuitry}{33}{table.4.3}%
-\contentsline {subsubsection}{\numberline {4.3.2.3}Figuring out grounds}{33}{subsubsection.4.3.2.3}%
-\contentsline {paragraph}{\numberline {4.3.2.3.1}Types of grounds on the ACQ}{33}{paragraph.4.3.2.3.1}%
-\contentsline {paragraph}{\numberline {4.3.2.3.2}Routing grounds}{33}{figure.4.8}%
-\contentsline {subsubsection}{\numberline {4.3.2.4}Swapping current paths}{34}{subsubsection.4.3.2.4}%
-\contentsline {paragraph}{\numberline {4.3.2.4.1}Why do we want to do this}{34}{paragraph.4.3.2.4.1}%
-\contentsline {subparagraph}{\numberline {4.3.2.4.1.1}Takes care of small differences in resistors}{34}{subparagraph.4.3.2.4.1.1}%
-\contentsline {paragraph}{\numberline {4.3.2.4.2}Circuitry to do this}{34}{paragraph.4.3.2.4.2}%
-\contentsline {subparagraph}{\numberline {4.3.2.4.2.1}Only swap core stuff}{34}{subparagraph.4.3.2.4.2.1}%
-\contentsline {subparagraph}{\numberline {4.3.2.4.2.2}Many relays}{34}{subparagraph.4.3.2.4.2.2}%
-\contentsline {subparagraph}{\numberline {4.3.2.4.2.3}Remote control}{34}{figure.4.10}%
-\contentsline {paragraph}{\numberline {4.3.2.4.3}How does this change results}{34}{figure.4.11}%
-\contentsline {subsubsection}{\numberline {4.3.2.5}Circuit Solution}{34}{subsubsection.4.3.2.5}%
-\contentsline {paragraph}{\numberline {4.3.2.5.1}Solution}{34}{paragraph.4.3.2.5.1}%
-\contentsline {paragraph}{\numberline {4.3.2.5.2}Assumptions}{34}{paragraph.4.3.2.5.2}%
-\contentsline {subsubsection}{\numberline {4.3.2.6}Calibration}{34}{subsubsection.4.3.2.6}%
-\contentsline {paragraph}{\numberline {4.3.2.6.1}Calibrating in isat}{34}{paragraph.4.3.2.6.1}%
-\contentsline {paragraph}{\numberline {4.3.2.6.2}Calibrating on the exponential}{35}{paragraph.4.3.2.6.2}%
-\contentsline {paragraph}{\numberline {4.3.2.6.3}Rotation calibration}{35}{paragraph.4.3.2.6.3}%
-\contentsline {subsubsection}{\numberline {4.3.2.7}The path to ground}{35}{subsubsection.4.3.2.7}%
-\contentsline {paragraph}{\numberline {4.3.2.7.1}Why do we have to care}{35}{paragraph.4.3.2.7.1}%
-\contentsline {paragraph}{\numberline {4.3.2.7.2}How do we set it}{35}{figure.4.13}%
-\contentsline {subsubsection}{\numberline {4.3.2.8}Capacitive coupling}{35}{subsubsection.4.3.2.8}%
-\contentsline {paragraph}{\numberline {4.3.2.8.1}Where does it come from}{35}{paragraph.4.3.2.8.1}%
-\contentsline {paragraph}{\numberline {4.3.2.8.2}Where do we see it}{35}{figure.4.14}%
-\contentsline {paragraph}{\numberline {4.3.2.8.3}Magnitude of effect}{35}{paragraph.4.3.2.8.3}%
-\contentsline {paragraph}{\numberline {4.3.2.8.4}Removing effect}{35}{paragraph.4.3.2.8.4}%
-\contentsline {section}{\numberline {4.4}Plasma Theory}{36}{section.4.4}%
-\contentsline {subsection}{\numberline {4.4.1}A full model}{36}{subsection.4.4.1}%
-\contentsline {subsubsection}{\numberline {4.4.1.1}Plasma Distribution}{36}{subsubsection.4.4.1.1}%
-\contentsline {subsubsection}{\numberline {4.4.1.2}Ion particle flux}{36}{subsubsection.4.4.1.2}%
-\contentsline {paragraph}{\numberline {4.4.1.2.1}Mach effects}{36}{paragraph.4.4.1.2.1}%
-\contentsline {subsubsection}{\numberline {4.4.1.3}Electron particle flux}{36}{subsubsection.4.4.1.3}%
-\contentsline {paragraph}{\numberline {4.4.1.3.1}Minimum velocity}{36}{paragraph.4.4.1.3.1}%
-\contentsline {paragraph}{\numberline {4.4.1.3.2}Area}{36}{paragraph.4.4.1.3.2}%
-\contentsline {paragraph}{\numberline {4.4.1.3.3}Particle Flux}{36}{paragraph.4.4.1.3.3}%
-\contentsline {subsubsection}{\numberline {4.4.1.4}Theoretical JV curves}{36}{subsubsection.4.4.1.4}%
-\contentsline {paragraph}{\numberline {4.4.1.4.1}Reading radar plots}{36}{paragraph.4.4.1.4.1}%
-\contentsline {subparagraph}{\numberline {4.4.1.4.1.1}Radar axis}{36}{subparagraph.4.4.1.4.1.1}%
-\contentsline {subparagraph}{\numberline {4.4.1.4.1.2}Solutions}{36}{figure.4.15}%
-\contentsline {subsection}{\numberline {4.4.2}Individual tip fitting}{36}{subsection.4.4.2}%
-\contentsline {subsubsection}{\numberline {4.4.2.1}Why do this instead}{36}{subsubsection.4.4.2.1}%
-\contentsline {subsubsection}{\numberline {4.4.2.2}Methods}{36}{subsubsection.4.4.2.2}%
-\contentsline {paragraph}{\numberline {4.4.2.2.1}Aforementioned methods}{36}{paragraph.4.4.2.2.1}%
-\contentsline {paragraph}{\numberline {4.4.2.2.2}Exponential}{37}{paragraph.4.4.2.2.2}%
-\contentsline {subparagraph}{\numberline {4.4.2.2.2.1}Ions don't hit core}{37}{figure.4.16}%
-\contentsline {subparagraph}{\numberline {4.4.2.2.2.2}Take care of this by allowing free parameters}{37}{subparagraph.4.4.2.2.2.2}%
-\contentsline {subparagraph}{\numberline {4.4.2.2.2.3}Converting from plasma parameters to exponential}{37}{subparagraph.4.4.2.2.2.3}%
-\contentsline {subparagraph}{\numberline {4.4.2.2.2.4}Converting back}{37}{subparagraph.4.4.2.2.2.4}%
-\contentsline {subparagraph}{\numberline {4.4.2.2.2.5}Taking care of errors}{37}{subparagraph.4.4.2.2.2.5}%
-\contentsline {subsubsection}{\numberline {4.4.2.3}Extracting plasma parameters}{37}{subsubsection.4.4.2.3}%
-\contentsline {paragraph}{\numberline {4.4.2.3.1}Spherical harmonics}{37}{paragraph.4.4.2.3.1}%
-\contentsline {paragraph}{\numberline {4.4.2.3.2}Error bars}{37}{paragraph.4.4.2.3.2}%
-\contentsline {subparagraph}{\numberline {4.4.2.3.2.1}Monte-carlo}{37}{subparagraph.4.4.2.3.2.1}%
-\contentsline {subparagraph}{\numberline {4.4.2.3.2.2}Other options}{37}{subparagraph.4.4.2.3.2.2}%
-\contentsline {subparagraph}{\numberline {4.4.2.3.2.3}Why can we ignore non-bi-maxwellian features}{37}{subparagraph.4.4.2.3.2.3}%
-\contentsline {section}{\numberline {4.5}Curve Fitting}{37}{section.4.5}%
-\contentsline {subsection}{\numberline {4.5.1}Combining multiple shots}{38}{subsection.4.5.1}%
-\contentsline {subsubsection}{\numberline {4.5.1.1}Timing alignment}{38}{subsubsection.4.5.1.1}%
-\contentsline {paragraph}{\numberline {4.5.1.1.1}Bz = 0 alignment}{38}{paragraph.4.5.1.1.1}%
-\contentsline {subparagraph}{\numberline {4.5.1.1.1.1}Aligns where we expect Anisotropy}{38}{subparagraph.4.5.1.1.1.1}%
-\contentsline {subparagraph}{\numberline {4.5.1.1.1.2}Depends heavily on prior bdot data}{38}{subparagraph.4.5.1.1.1.2}%
-\contentsline {paragraph}{\numberline {4.5.1.1.2}Bdot cross correlation}{38}{paragraph.4.5.1.1.2}%
-\contentsline {subparagraph}{\numberline {4.5.1.1.2.1}Still requires smoothing to get rid of initial oscillation impact}{38}{subparagraph.4.5.1.1.2.1}%
-\contentsline {paragraph}{\numberline {4.5.1.1.3}Result comparison}{38}{figure.4.17}%
-\contentsline {subsubsection}{\numberline {4.5.1.2}Averaging of core data}{38}{subsubsection.4.5.1.2}%
-\contentsline {paragraph}{\numberline {4.5.1.2.1}Weighted average of relay on/off}{38}{paragraph.4.5.1.2.1}%
-\contentsline {subsection}{\numberline {4.5.2}Fitting shell}{39}{subsection.4.5.2}%
-\contentsline {subsubsection}{\numberline {4.5.2.1}Use all shell data}{39}{subsubsection.4.5.2.1}%
-\contentsline {subsubsection}{\numberline {4.5.2.2}Fit using BRL}{39}{subsubsection.4.5.2.2}%
-\contentsline {subsubsection}{\numberline {4.5.2.3}Fits pretty good}{39}{subsubsection.4.5.2.3}%
-\contentsline {subsection}{\numberline {4.5.3}Fitting core}{39}{subsection.4.5.3}%
-\contentsline {subsubsection}{\numberline {4.5.3.1}Fitting using full routine}{39}{subsubsection.4.5.3.1}%
-\contentsline {subsubsection}{\numberline {4.5.3.2}Fitting tips independently}{39}{subsubsection.4.5.3.2}%
-\contentsline {section}{\numberline {4.6}Results}{39}{section.4.6}%
-\contentsline {subsection}{\numberline {4.6.1}Drive cylinder}{39}{subsection.4.6.1}%
-\contentsline {subsubsection}{\numberline {4.6.1.1}What did we try}{39}{subsubsection.4.6.1.1}%
-\contentsline {subsubsection}{\numberline {4.6.1.2}Why didn't we see pressure anisotropy}{39}{subsubsection.4.6.1.2}%
-\contentsline {paragraph}{\numberline {4.6.1.2.1}In the bdot data}{39}{paragraph.4.6.1.2.1}%
-\contentsline {paragraph}{\numberline {4.6.1.2.2}In the PA data}{39}{paragraph.4.6.1.2.2}%
-\contentsline {subsection}{\numberline {4.6.2}3 coil}{39}{subsection.4.6.2}%
-\contentsline {subsubsection}{\numberline {4.6.2.1}How much anisotropy should we expect}{39}{subsubsection.4.6.2.1}%
-\contentsline {subsubsection}{\numberline {4.6.2.2}What setups did we try}{39}{subsubsection.4.6.2.2}%
-\contentsline {subsubsection}{\numberline {4.6.2.3}Old results of just comparing radar plots}{39}{subsubsection.4.6.2.3}%
-\contentsline {subsubsection}{\numberline {4.6.2.4}New results using independent fitting}{39}{subsubsection.4.6.2.4}%
-\contentsline {chapter}{\chapternumberline {5}Conclusion}{40}{chapter.5}%
-\contentsline {section}{\numberline {5.1}Summary of thesis}{40}{section.5.1}%
-\contentsline {subsection}{\numberline {5.1.1}Using pressure waves to measure density}{40}{subsection.5.1.1}%
-\contentsline {subsection}{\numberline {5.1.2}Upgrading langmuir probe analysis and new possibilities}{40}{subsection.5.1.2}%
-\contentsline {subsection}{\numberline {5.1.3}Using directional langmuir probes for measuring pressure anisotropy}{40}{subsection.5.1.3}%
-\contentsline {section}{\numberline {5.2}Future work}{40}{section.5.2}%
-\contentsline {subsection}{\numberline {5.2.1}Pressure wave}{40}{subsection.5.2.1}%
-\contentsline {subsubsection}{\numberline {5.2.1.1}Aforementioned future work}{40}{subsubsection.5.2.1.1}%
-\contentsline {subsubsection}{\numberline {5.2.1.2}Extracting cross-field diffusion}{40}{subsubsection.5.2.1.2}%
-\contentsline {subsection}{\numberline {5.2.2}Langmuir Probe}{40}{subsection.5.2.2}%
-\contentsline {subsubsection}{\numberline {5.2.2.1}Prepared to analyze lots of cool data}{40}{subsubsection.5.2.2.1}%
-\contentsline {subsubsection}{\numberline {5.2.2.2}Extract out electric field}{40}{subsubsection.5.2.2.2}%
-\contentsline {subsection}{\numberline {5.2.3}PA Probe}{40}{subsection.5.2.3}%
-\contentsline {subsubsection}{\numberline {5.2.3.1}Try more configurations}{40}{subsubsection.5.2.3.1}%
-\contentsline {subsubsection}{\numberline {5.2.3.2}Map out full pressure anisotropy during shot}{40}{subsubsection.5.2.3.2}%
-\contentsline {chapter}{Colophon}{41}{chapter*.10}%
+\contentsline {subsection}{\numberline {3.1.1}Basic Construction}{20}{subsection.3.1.1}%
+\contentsline {subsection}{\numberline {3.1.2}Extracting Plasma Parameters}{21}{subsection.3.1.2}%
+\contentsline {subsection}{\numberline {3.1.3}Plasma Perturbation}{21}{subsection.3.1.3}%
+\contentsline {subsubsection}{\numberline {3.1.3.1}Unmagnetized Perturbation}{21}{subsubsection.3.1.3.1}%
+\contentsline {subsubsection}{\numberline {3.1.3.2}Magnetic Field Effects}{22}{subsubsection.3.1.3.2}%
+\contentsline {subsubsection}{\numberline {3.1.3.3}Perturbations in our System}{22}{subsubsection.3.1.3.3}%
+\contentsline {paragraph}{\numberline {3.1.3.3.1}Geometric Considerations}{22}{paragraph.3.1.3.3.1}%
+\contentsline {paragraph}{\numberline {3.1.3.3.2}Magnetic Field Considerations}{23}{paragraph.3.1.3.3.2}%
+\contentsline {section}{\numberline {3.2}Hardware}{23}{section.3.2}%
+\contentsline {subsection}{\numberline {3.2.1}Physical Constraints}{23}{subsection.3.2.1}%
+\contentsline {subsection}{\numberline {3.2.2}Shaft Components}{24}{subsection.3.2.2}%
+\contentsline {subsubsection}{\numberline {3.2.2.1}Garages}{24}{subsubsection.3.2.2.1}%
+\contentsline {subsubsection}{\numberline {3.2.2.2}Shaft materials}{25}{subsubsection.3.2.2.2}%
+\contentsline {subsubsection}{\numberline {3.2.2.3}Centering Collet}{25}{subsubsection.3.2.2.3}%
+\contentsline {subsubsection}{\numberline {3.2.2.4}Feed-thru}{26}{subsubsection.3.2.2.4}%
+\contentsline {subsection}{\numberline {3.2.3}Tip Components}{26}{subsection.3.2.3}%
+\contentsline {subsubsection}{\numberline {3.2.3.1}Probe body}{26}{subsubsection.3.2.3.1}%
+\contentsline {subsubsection}{\numberline {3.2.3.2}Tip material + size}{27}{subsubsection.3.2.3.2}%
+\contentsline {paragraph}{\numberline {3.2.3.2.1}Why use Mo}{27}{paragraph.3.2.3.2.1}%
+\contentsline {paragraph}{\numberline {3.2.3.2.2}Why use the size we chose}{28}{paragraph.3.2.3.2.2}%
+\contentsline {subsubsection}{\numberline {3.2.3.3}Tip Shielding}{28}{subsubsection.3.2.3.3}%
+\contentsline {paragraph}{\numberline {3.2.3.3.1}Why shield at all?}{28}{paragraph.3.2.3.3.1}%
+\contentsline {paragraph}{\numberline {3.2.3.3.2}First order mach effects to avoid}{28}{paragraph.3.2.3.3.2}%
+\contentsline {subsection}{\numberline {3.2.4}B-dot Coils}{28}{subsection.3.2.4}%
+\contentsline {subsubsection}{\numberline {3.2.4.1}How many wraps}{28}{subsubsection.3.2.4.1}%
+\contentsline {subsubsection}{\numberline {3.2.4.2}Approximate area}{28}{subsubsection.3.2.4.2}%
+\contentsline {subsection}{\numberline {3.2.5}Length Scales}{28}{subsection.3.2.5}%
+\contentsline {section}{\numberline {3.3}Circuitry}{28}{section.3.3}%
+\contentsline {subsection}{\numberline {3.3.1}Bias Source}{28}{subsection.3.3.1}%
+\contentsline {subsubsection}{\numberline {3.3.1.1}Manually Controlled}{28}{subsubsection.3.3.1.1}%
+\contentsline {paragraph}{\numberline {3.3.1.1.1}Principles of operation}{28}{paragraph.3.3.1.1.1}%
+\contentsline {paragraph}{\numberline {3.3.1.1.2}Problems}{28}{paragraph.3.3.1.1.2}%
+\contentsline {subsubsection}{\numberline {3.3.1.2}Remote Controlled}{29}{subsubsection.3.3.1.2}%
+\contentsline {paragraph}{\numberline {3.3.1.2.1}Principles of operation}{29}{paragraph.3.3.1.2.1}%
+\contentsline {paragraph}{\numberline {3.3.1.2.2}Problems}{29}{paragraph.3.3.1.2.2}%
+\contentsline {paragraph}{\numberline {3.3.1.2.3}Calibration}{29}{paragraph.3.3.1.2.3}%
+\contentsline {subsection}{\numberline {3.3.2}Probe Circuit}{29}{subsection.3.3.2}%
+\contentsline {subsubsection}{\numberline {3.3.2.1}Principles of operation}{29}{subsubsection.3.3.2.1}%
+\contentsline {paragraph}{\numberline {3.3.2.1.1}Plasma draws current}{29}{paragraph.3.3.2.1.1}%
+\contentsline {paragraph}{\numberline {3.3.2.1.2}Voltage drop across sense resistor}{29}{paragraph.3.3.2.1.2}%
+\contentsline {paragraph}{\numberline {3.3.2.1.3}Measure high frequency voltage drop}{29}{paragraph.3.3.2.1.3}%
+\contentsline {subsubsection}{\numberline {3.3.2.2}Single-ended measurement}{29}{subsubsection.3.3.2.2}%
+\contentsline {subsubsection}{\numberline {3.3.2.3}Differential measurement}{29}{subsubsection.3.3.2.3}%
+\contentsline {subsubsection}{\numberline {3.3.2.4}Circuit Solution}{29}{subsubsection.3.3.2.4}%
+\contentsline {paragraph}{\numberline {3.3.2.4.1}How do we solve this}{29}{paragraph.3.3.2.4.1}%
+\contentsline {subparagraph}{\numberline {3.3.2.4.1.1}Kirkoff's laws}{30}{subparagraph.3.3.2.4.1.1}%
+\contentsline {subparagraph}{\numberline {3.3.2.4.1.2}System of equations}{30}{subparagraph.3.3.2.4.1.2}%
+\contentsline {subparagraph}{\numberline {3.3.2.4.1.3}SymPy}{30}{subparagraph.3.3.2.4.1.3}%
+\contentsline {paragraph}{\numberline {3.3.2.4.2}equations}{30}{paragraph.3.3.2.4.2}%
+\contentsline {paragraph}{\numberline {3.3.2.4.3}Assumptions}{30}{paragraph.3.3.2.4.3}%
+\contentsline {subsubsection}{\numberline {3.3.2.5}Calibration}{30}{subsubsection.3.3.2.5}%
+\contentsline {paragraph}{\numberline {3.3.2.5.1}Calibrating in isat}{30}{paragraph.3.3.2.5.1}%
+\contentsline {paragraph}{\numberline {3.3.2.5.2}Calibrating on the exponential}{30}{paragraph.3.3.2.5.2}%
+\contentsline {paragraph}{\numberline {3.3.2.5.3}Bayesian calibration}{30}{paragraph.3.3.2.5.3}%
+\contentsline {paragraph}{\numberline {3.3.2.5.4}Calibration using pressure wave}{30}{paragraph.3.3.2.5.4}%
+\contentsline {subsection}{\numberline {3.3.3}Bdot coils}{30}{subsection.3.3.3}%
+\contentsline {subsubsection}{\numberline {3.3.3.1}In-shaft circuit}{30}{subsubsection.3.3.3.1}%
+\contentsline {paragraph}{\numberline {3.3.3.1.1}Why do we have that?}{30}{paragraph.3.3.3.1.1}%
+\contentsline {paragraph}{\numberline {3.3.3.1.2}Where is it placed approximately?}{30}{paragraph.3.3.3.1.2}%
+\contentsline {subsubsection}{\numberline {3.3.3.2}Circuit model}{31}{subsubsection.3.3.3.2}%
+\contentsline {subsubsection}{\numberline {3.3.3.3}Calibration}{31}{subsubsection.3.3.3.3}%
+\contentsline {paragraph}{\numberline {3.3.3.3.1}Directional}{31}{paragraph.3.3.3.3.1}%
+\contentsline {paragraph}{\numberline {3.3.3.3.2}Transfer Function}{31}{paragraph.3.3.3.3.2}%
+\contentsline {section}{\numberline {3.4}Plasma Theory}{31}{section.3.4}%
+\contentsline {subsection}{\numberline {3.4.1}Simple Plasma Theory (Hutchinson)}{31}{subsection.3.4.1}%
+\contentsline {subsubsection}{\numberline {3.4.1.1}Derivation}{31}{subsubsection.3.4.1.1}%
+\contentsline {subsubsection}{\numberline {3.4.1.2}Pros \& Cons}{31}{subsubsection.3.4.1.2}%
+\contentsline {subsection}{\numberline {3.4.2}BRL}{31}{subsection.3.4.2}%
+\contentsline {subsubsection}{\numberline {3.4.2.1}Idea behind it}{31}{subsubsection.3.4.2.1}%
+\contentsline {subsubsection}{\numberline {3.4.2.2}Approximations of it}{31}{subsubsection.3.4.2.2}%
+\contentsline {paragraph}{\numberline {3.4.2.2.1}Planar probe}{31}{paragraph.3.4.2.2.1}%
+\contentsline {paragraph}{\numberline {3.4.2.2.2}Chen Approximation}{31}{table.3.5}%
+\contentsline {paragraph}{\numberline {3.4.2.2.3}Even more approximation}{31}{paragraph.3.4.2.2.3}%
+\contentsline {subsection}{\numberline {3.4.3}Effect of electric fields}{31}{subsection.3.4.3}%
+\contentsline {subsubsection}{\numberline {3.4.3.1}Where does the electric field come from}{31}{subsubsection.3.4.3.1}%
+\contentsline {paragraph}{\numberline {3.4.3.1.1}Majority inductive}{31}{paragraph.3.4.3.1.1}%
+\contentsline {paragraph}{\numberline {3.4.3.1.2}Some static}{32}{paragraph.3.4.3.1.2}%
+\contentsline {subparagraph}{\numberline {3.4.3.1.2.1}What is the expected static magnitude}{32}{subparagraph.3.4.3.1.2.1}%
+\contentsline {subsubsection}{\numberline {3.4.3.2}What does it do to the tip measurements}{32}{subsubsection.3.4.3.2}%
+\contentsline {paragraph}{\numberline {3.4.3.2.1}Theoretical understanding}{32}{figure.3.12}%
+\contentsline {paragraph}{\numberline {3.4.3.2.2}Physical reality}{32}{figure.3.13}%
+\contentsline {subsection}{\numberline {3.4.4}Minimum measurable density}{33}{subsection.3.4.4}%
+\contentsline {subsubsection}{\numberline {3.4.4.1}What's the debye Length}{33}{subsubsection.3.4.4.1}%
+\contentsline {subsubsection}{\numberline {3.4.4.2}Sheath scale}{33}{subsubsection.3.4.4.2}%
+\contentsline {subsubsection}{\numberline {3.4.4.3}Tip-tip sheath overlap}{33}{subsubsection.3.4.4.3}%
+\contentsline {section}{\numberline {3.5}Curve Fitting}{33}{section.3.5}%
+\contentsline {subsection}{\numberline {3.5.1}Least squares Fitting}{33}{subsection.3.5.1}%
+\contentsline {subsubsection}{\numberline {3.5.1.1}Benefits (easy)}{33}{subsubsection.3.5.1.1}%
+\contentsline {subsubsection}{\numberline {3.5.1.2}Issues (not representative of error)}{33}{subsubsection.3.5.1.2}%
+\contentsline {subsection}{\numberline {3.5.2}ODR}{33}{subsection.3.5.2}%
+\contentsline {subsubsection}{\numberline {3.5.2.1}What does error look like in our signals}{33}{subsubsection.3.5.2.1}%
+\contentsline {subsubsection}{\numberline {3.5.2.2}How does ODR take that into account}{33}{subsubsection.3.5.2.2}%
+\contentsline {subsubsection}{\numberline {3.5.2.3}How to apply parameter bounds}{33}{subsubsection.3.5.2.3}%
+\contentsline {paragraph}{\numberline {3.5.2.3.1}Our method}{33}{paragraph.3.5.2.3.1}%
+\contentsline {paragraph}{\numberline {3.5.2.3.2}Other options}{33}{paragraph.3.5.2.3.2}%
+\contentsline {subsection}{\numberline {3.5.3}Monte-carlo Fitting}{34}{subsection.3.5.3}%
+\contentsline {subsubsection}{\numberline {3.5.3.1}What kind of fits do we get if we just trust a local minimum}{34}{subsubsection.3.5.3.1}%
+\contentsline {subsubsection}{\numberline {3.5.3.2}How do we sample initial conditions}{34}{subsubsection.3.5.3.2}%
+\contentsline {subsubsection}{\numberline {3.5.3.3}More robust methods for getting global minimums}{34}{subsubsection.3.5.3.3}%
+\contentsline {subsection}{\numberline {3.5.4}Combining multiple shots}{34}{subsection.3.5.4}%
+\contentsline {subsubsection}{\numberline {3.5.4.1}Using some time points from each shot}{34}{subsubsection.3.5.4.1}%
+\contentsline {subsubsection}{\numberline {3.5.4.2}Combining all IV points and fitting that}{34}{subsubsection.3.5.4.2}%
+\contentsline {subsubsection}{\numberline {3.5.4.3}Problems}{34}{subsubsection.3.5.4.3}%
+\contentsline {paragraph}{\numberline {3.5.4.3.1}Timing alignment}{34}{paragraph.3.5.4.3.1}%
+\contentsline {paragraph}{\numberline {3.5.4.3.2}Variability of plasma parameters}{34}{paragraph.3.5.4.3.2}%
+\contentsline {section}{\numberline {3.6}Results}{34}{section.3.6}%
+\contentsline {subsection}{\numberline {3.6.1}Measurement of low densities}{35}{subsection.3.6.1}%
+\contentsline {subsubsection}{\numberline {3.6.1.1}How does Hutchinson vs BRL treat ion saturation}{35}{subsubsection.3.6.1.1}%
+\contentsline {subsubsection}{\numberline {3.6.1.2}What are the experimental predictions that Hutchinson vs BRL have}{35}{subsubsection.3.6.1.2}%
+\contentsline {subsubsection}{\numberline {3.6.1.3}How does that change the results}{35}{subsubsection.3.6.1.3}%
+\contentsline {subsection}{\numberline {3.6.2}Noise resilience}{35}{subsection.3.6.2}%
+\contentsline {subsection}{\numberline {3.6.3}Fits more accurate}{35}{subsection.3.6.3}%
+\contentsline {subsection}{\numberline {3.6.4}Extracting electric fields}{35}{subsection.3.6.4}%
+\contentsline {subsubsection}{\numberline {3.6.4.1}Where do we expect electric fields to be}{35}{subsubsection.3.6.4.1}%
+\contentsline {subsubsection}{\numberline {3.6.4.2}Do we see them there}{35}{subsubsection.3.6.4.2}%
+\contentsline {chapter}{\chapternumberline {4}Pressure Anisotropy Probe}{36}{chapter.4}%
+\contentsline {section}{\numberline {4.1}How can we measure Pressure Anisotropy}{36}{section.4.1}%
+\contentsline {subsection}{\numberline {4.1.1}Thomson Scattering}{36}{subsection.4.1.1}%
+\contentsline {subsubsection}{\numberline {4.1.1.1}Pros}{36}{subsubsection.4.1.1.1}%
+\contentsline {subsubsection}{\numberline {4.1.1.2}Cons}{36}{subsubsection.4.1.1.2}%
+\contentsline {subsection}{\numberline {4.1.2}Directional Langmuir Probe}{36}{subsection.4.1.2}%
+\contentsline {subsubsection}{\numberline {4.1.2.1}Pros}{36}{subsubsection.4.1.2.1}%
+\contentsline {subsubsection}{\numberline {4.1.2.2}Cons}{36}{subsubsection.4.1.2.2}%
+\contentsline {section}{\numberline {4.2}Hardware}{37}{section.4.2}%
+\contentsline {subsection}{\numberline {4.2.1}Shaft Components}{37}{subsection.4.2.1}%
+\contentsline {subsubsection}{\numberline {4.2.1.1}Garages}{37}{subsubsection.4.2.1.1}%
+\contentsline {subsubsection}{\numberline {4.2.1.2}Shaft materials}{37}{subsubsection.4.2.1.2}%
+\contentsline {subsubsection}{\numberline {4.2.1.3}Centering Collet}{37}{subsubsection.4.2.1.3}%
+\contentsline {subsubsection}{\numberline {4.2.1.4}Feed-thru}{37}{subsubsection.4.2.1.4}%
+\contentsline {subsection}{\numberline {4.2.2}Tip Components}{37}{subsection.4.2.2}%
+\contentsline {subsubsection}{\numberline {4.2.2.1}Probe body}{37}{subsubsection.4.2.2.1}%
+\contentsline {paragraph}{\numberline {4.2.2.1.1}3D printed}{37}{paragraph.4.2.2.1.1}%
+\contentsline {paragraph}{\numberline {4.2.2.1.2}Both sides fit together}{37}{paragraph.4.2.2.1.2}%
+\contentsline {subsubsection}{\numberline {4.2.2.2}Tip material + size}{37}{subsubsection.4.2.2.2}%
+\contentsline {paragraph}{\numberline {4.2.2.2.1}Shell material}{37}{paragraph.4.2.2.2.1}%
+\contentsline {paragraph}{\numberline {4.2.2.2.2}Core material}{37}{paragraph.4.2.2.2.2}%
+\contentsline {subsubsection}{\numberline {4.2.2.3}Tip Shielding}{38}{subsubsection.4.2.2.3}%
+\contentsline {paragraph}{\numberline {4.2.2.3.1}Shell Shielding}{38}{paragraph.4.2.2.3.1}%
+\contentsline {paragraph}{\numberline {4.2.2.3.2}Core Shielding}{38}{paragraph.4.2.2.3.2}%
+\contentsline {subsection}{\numberline {4.2.3}Bdot Coils}{38}{subsection.4.2.3}%
+\contentsline {subsection}{\numberline {4.2.4}Connecting Bdot - Probe - Shaft}{38}{subsection.4.2.4}%
+\contentsline {subsection}{\numberline {4.2.5}Length Scales}{38}{subsection.4.2.5}%
+\contentsline {section}{\numberline {4.3}Circuitry}{38}{section.4.3}%
+\contentsline {subsection}{\numberline {4.3.1}Bias Source}{38}{subsection.4.3.1}%
+\contentsline {subsubsection}{\numberline {4.3.1.1}Principles of operation}{38}{subsubsection.4.3.1.1}%
+\contentsline {paragraph}{\numberline {4.3.1.1.1}Charging}{38}{paragraph.4.3.1.1.1}%
+\contentsline {paragraph}{\numberline {4.3.1.1.2}Discharging}{38}{paragraph.4.3.1.1.2}%
+\contentsline {paragraph}{\numberline {4.3.1.1.3}Swapping polarity}{38}{figure.4.5}%
+\contentsline {subsubsection}{\numberline {4.3.1.2}How do we do this}{38}{subsubsection.4.3.1.2}%
+\contentsline {paragraph}{\numberline {4.3.1.2.1}Cannibalization}{38}{paragraph.4.3.1.2.1}%
+\contentsline {paragraph}{\numberline {4.3.1.2.2}Discharging}{39}{paragraph.4.3.1.2.2}%
+\contentsline {paragraph}{\numberline {4.3.1.2.3}Safety}{39}{paragraph.4.3.1.2.3}%
+\contentsline {paragraph}{\numberline {4.3.1.2.4}Cap arcing}{39}{paragraph.4.3.1.2.4}%
+\contentsline {subparagraph}{\numberline {4.3.1.2.4.1}What happened}{39}{subparagraph.4.3.1.2.4.1}%
+\contentsline {subparagraph}{\numberline {4.3.1.2.4.2}Solution}{39}{subparagraph.4.3.1.2.4.2}%
+\contentsline {paragraph}{\numberline {4.3.1.2.5}Reducing voltage drop due to inductance}{39}{paragraph.4.3.1.2.5}%
+\contentsline {subparagraph}{\numberline {4.3.1.2.5.1}Twisting Wires}{39}{subparagraph.4.3.1.2.5.1}%
+\contentsline {subparagraph}{\numberline {4.3.1.2.5.2}Adding cap next to board}{39}{subparagraph.4.3.1.2.5.2}%
+\contentsline {paragraph}{\numberline {4.3.1.2.6}Reversing polarity}{39}{paragraph.4.3.1.2.6}%
+\contentsline {subparagraph}{\numberline {4.3.1.2.6.1}Why we break relay}{39}{subparagraph.4.3.1.2.6.1}%
+\contentsline {subparagraph}{\numberline {4.3.1.2.6.2}How do we fix this problem}{39}{subparagraph.4.3.1.2.6.2}%
+\contentsline {paragraph}{\numberline {4.3.1.2.7}LabView (ew)}{39}{paragraph.4.3.1.2.7}%
+\contentsline {subparagraph}{\numberline {4.3.1.2.7.1}Controls CRIO}{39}{subparagraph.4.3.1.2.7.1}%
+\contentsline {subparagraph}{\numberline {4.3.1.2.7.2}Countdown if too high of voltage for swapping}{39}{table.4.2}%
+\contentsline {subsubsection}{\numberline {4.3.1.3}Calibration}{40}{subsubsection.4.3.1.3}%
+\contentsline {paragraph}{\numberline {4.3.1.3.1}Calibrating power supply output}{40}{paragraph.4.3.1.3.1}%
+\contentsline {paragraph}{\numberline {4.3.1.3.2}Calibrating cap bank output}{40}{paragraph.4.3.1.3.2}%
+\contentsline {subsection}{\numberline {4.3.2}Probe Circuit}{40}{subsection.4.3.2}%
+\contentsline {subsubsection}{\numberline {4.3.2.1}Single-ended measurement}{40}{subsubsection.4.3.2.1}%
+\contentsline {paragraph}{\numberline {4.3.2.1.1}TREX cells}{40}{paragraph.4.3.2.1.1}%
+\contentsline {paragraph}{\numberline {4.3.2.1.2}Why was this bad}{40}{paragraph.4.3.2.1.2}%
+\contentsline {paragraph}{\numberline {4.3.2.1.3}How long did we spend on this :(}{40}{paragraph.4.3.2.1.3}%
+\contentsline {subsubsection}{\numberline {4.3.2.2}Differential measurement}{40}{subsubsection.4.3.2.2}%
+\contentsline {paragraph}{\numberline {4.3.2.2.1}Parallel circuitry}{40}{table.4.3}%
+\contentsline {subsubsection}{\numberline {4.3.2.3}Figuring out grounds}{40}{subsubsection.4.3.2.3}%
+\contentsline {paragraph}{\numberline {4.3.2.3.1}Types of grounds on the ACQ}{40}{paragraph.4.3.2.3.1}%
+\contentsline {paragraph}{\numberline {4.3.2.3.2}Routing grounds}{40}{figure.4.8}%
+\contentsline {subsubsection}{\numberline {4.3.2.4}Swapping current paths}{41}{subsubsection.4.3.2.4}%
+\contentsline {paragraph}{\numberline {4.3.2.4.1}Why do we want to do this}{41}{paragraph.4.3.2.4.1}%
+\contentsline {subparagraph}{\numberline {4.3.2.4.1.1}Takes care of small differences in resistors}{41}{subparagraph.4.3.2.4.1.1}%
+\contentsline {paragraph}{\numberline {4.3.2.4.2}Circuitry to do this}{41}{paragraph.4.3.2.4.2}%
+\contentsline {subparagraph}{\numberline {4.3.2.4.2.1}Only swap core stuff}{41}{subparagraph.4.3.2.4.2.1}%
+\contentsline {subparagraph}{\numberline {4.3.2.4.2.2}Many relays}{41}{subparagraph.4.3.2.4.2.2}%
+\contentsline {subparagraph}{\numberline {4.3.2.4.2.3}Remote control}{41}{figure.4.10}%
+\contentsline {paragraph}{\numberline {4.3.2.4.3}How does this change results}{41}{figure.4.11}%
+\contentsline {subsubsection}{\numberline {4.3.2.5}Circuit Solution}{41}{subsubsection.4.3.2.5}%
+\contentsline {paragraph}{\numberline {4.3.2.5.1}Solution}{41}{paragraph.4.3.2.5.1}%
+\contentsline {paragraph}{\numberline {4.3.2.5.2}Assumptions}{41}{paragraph.4.3.2.5.2}%
+\contentsline {subsubsection}{\numberline {4.3.2.6}Calibration}{41}{subsubsection.4.3.2.6}%
+\contentsline {paragraph}{\numberline {4.3.2.6.1}Calibrating in isat}{41}{paragraph.4.3.2.6.1}%
+\contentsline {paragraph}{\numberline {4.3.2.6.2}Calibrating on the exponential}{42}{paragraph.4.3.2.6.2}%
+\contentsline {paragraph}{\numberline {4.3.2.6.3}Rotation calibration}{42}{paragraph.4.3.2.6.3}%
+\contentsline {subsubsection}{\numberline {4.3.2.7}The path to ground}{42}{subsubsection.4.3.2.7}%
+\contentsline {paragraph}{\numberline {4.3.2.7.1}Why do we have to care}{42}{paragraph.4.3.2.7.1}%
+\contentsline {paragraph}{\numberline {4.3.2.7.2}How do we set it}{42}{figure.4.13}%
+\contentsline {subsubsection}{\numberline {4.3.2.8}Capacitive coupling}{42}{subsubsection.4.3.2.8}%
+\contentsline {paragraph}{\numberline {4.3.2.8.1}Where does it come from}{42}{paragraph.4.3.2.8.1}%
+\contentsline {paragraph}{\numberline {4.3.2.8.2}Where do we see it}{42}{figure.4.14}%
+\contentsline {paragraph}{\numberline {4.3.2.8.3}Magnitude of effect}{42}{paragraph.4.3.2.8.3}%
+\contentsline {paragraph}{\numberline {4.3.2.8.4}Removing effect}{42}{paragraph.4.3.2.8.4}%
+\contentsline {section}{\numberline {4.4}Plasma Theory}{43}{section.4.4}%
+\contentsline {subsection}{\numberline {4.4.1}A full model}{43}{subsection.4.4.1}%
+\contentsline {subsubsection}{\numberline {4.4.1.1}Plasma Distribution}{43}{subsubsection.4.4.1.1}%
+\contentsline {subsubsection}{\numberline {4.4.1.2}Ion particle flux}{43}{subsubsection.4.4.1.2}%
+\contentsline {paragraph}{\numberline {4.4.1.2.1}Mach effects}{43}{paragraph.4.4.1.2.1}%
+\contentsline {subsubsection}{\numberline {4.4.1.3}Electron particle flux}{43}{subsubsection.4.4.1.3}%
+\contentsline {paragraph}{\numberline {4.4.1.3.1}Minimum velocity}{43}{paragraph.4.4.1.3.1}%
+\contentsline {paragraph}{\numberline {4.4.1.3.2}Area}{43}{paragraph.4.4.1.3.2}%
+\contentsline {paragraph}{\numberline {4.4.1.3.3}Particle Flux}{43}{paragraph.4.4.1.3.3}%
+\contentsline {subsubsection}{\numberline {4.4.1.4}Theoretical JV curves}{43}{subsubsection.4.4.1.4}%
+\contentsline {paragraph}{\numberline {4.4.1.4.1}Reading radar plots}{43}{paragraph.4.4.1.4.1}%
+\contentsline {subparagraph}{\numberline {4.4.1.4.1.1}Radar axis}{43}{subparagraph.4.4.1.4.1.1}%
+\contentsline {subparagraph}{\numberline {4.4.1.4.1.2}Solutions}{43}{figure.4.15}%
+\contentsline {subsection}{\numberline {4.4.2}Individual tip fitting}{43}{subsection.4.4.2}%
+\contentsline {subsubsection}{\numberline {4.4.2.1}Why do this instead}{43}{subsubsection.4.4.2.1}%
+\contentsline {subsubsection}{\numberline {4.4.2.2}Methods}{43}{subsubsection.4.4.2.2}%
+\contentsline {paragraph}{\numberline {4.4.2.2.1}Aforementioned methods}{43}{paragraph.4.4.2.2.1}%
+\contentsline {paragraph}{\numberline {4.4.2.2.2}Exponential}{44}{paragraph.4.4.2.2.2}%
+\contentsline {subparagraph}{\numberline {4.4.2.2.2.1}Ions don't hit core}{44}{figure.4.16}%
+\contentsline {subparagraph}{\numberline {4.4.2.2.2.2}Take care of this by allowing free parameters}{44}{subparagraph.4.4.2.2.2.2}%
+\contentsline {subparagraph}{\numberline {4.4.2.2.2.3}Converting from plasma parameters to exponential}{44}{subparagraph.4.4.2.2.2.3}%
+\contentsline {subparagraph}{\numberline {4.4.2.2.2.4}Converting back}{44}{subparagraph.4.4.2.2.2.4}%
+\contentsline {subparagraph}{\numberline {4.4.2.2.2.5}Taking care of errors}{44}{subparagraph.4.4.2.2.2.5}%
+\contentsline {subsubsection}{\numberline {4.4.2.3}Extracting plasma parameters}{44}{subsubsection.4.4.2.3}%
+\contentsline {paragraph}{\numberline {4.4.2.3.1}Spherical harmonics}{44}{paragraph.4.4.2.3.1}%
+\contentsline {paragraph}{\numberline {4.4.2.3.2}Error bars}{44}{paragraph.4.4.2.3.2}%
+\contentsline {subparagraph}{\numberline {4.4.2.3.2.1}Monte-carlo}{44}{subparagraph.4.4.2.3.2.1}%
+\contentsline {subparagraph}{\numberline {4.4.2.3.2.2}Other options}{44}{subparagraph.4.4.2.3.2.2}%
+\contentsline {subparagraph}{\numberline {4.4.2.3.2.3}Why can we ignore non-bi-maxwellian features}{44}{subparagraph.4.4.2.3.2.3}%
+\contentsline {section}{\numberline {4.5}Curve Fitting}{44}{section.4.5}%
+\contentsline {subsection}{\numberline {4.5.1}Combining multiple shots}{45}{subsection.4.5.1}%
+\contentsline {subsubsection}{\numberline {4.5.1.1}Timing alignment}{45}{subsubsection.4.5.1.1}%
+\contentsline {paragraph}{\numberline {4.5.1.1.1}Bz = 0 alignment}{45}{paragraph.4.5.1.1.1}%
+\contentsline {subparagraph}{\numberline {4.5.1.1.1.1}Aligns where we expect Anisotropy}{45}{subparagraph.4.5.1.1.1.1}%
+\contentsline {subparagraph}{\numberline {4.5.1.1.1.2}Depends heavily on prior bdot data}{45}{subparagraph.4.5.1.1.1.2}%
+\contentsline {paragraph}{\numberline {4.5.1.1.2}Bdot cross correlation}{45}{paragraph.4.5.1.1.2}%
+\contentsline {subparagraph}{\numberline {4.5.1.1.2.1}Still requires smoothing to get rid of initial oscillation impact}{45}{subparagraph.4.5.1.1.2.1}%
+\contentsline {paragraph}{\numberline {4.5.1.1.3}Result comparison}{45}{figure.4.17}%
+\contentsline {subsubsection}{\numberline {4.5.1.2}Averaging of core data}{45}{subsubsection.4.5.1.2}%
+\contentsline {paragraph}{\numberline {4.5.1.2.1}Weighted average of relay on/off}{45}{paragraph.4.5.1.2.1}%
+\contentsline {subsection}{\numberline {4.5.2}Fitting shell}{46}{subsection.4.5.2}%
+\contentsline {subsubsection}{\numberline {4.5.2.1}Use all shell data}{46}{subsubsection.4.5.2.1}%
+\contentsline {subsubsection}{\numberline {4.5.2.2}Fit using BRL}{46}{subsubsection.4.5.2.2}%
+\contentsline {subsubsection}{\numberline {4.5.2.3}Fits pretty good}{46}{subsubsection.4.5.2.3}%
+\contentsline {subsection}{\numberline {4.5.3}Fitting core}{46}{subsection.4.5.3}%
+\contentsline {subsubsection}{\numberline {4.5.3.1}Fitting using full routine}{46}{subsubsection.4.5.3.1}%
+\contentsline {paragraph}{\numberline {4.5.3.1.1}Slow}{46}{paragraph.4.5.3.1.1}%
+\contentsline {paragraph}{\numberline {4.5.3.1.2}Model not perfectly representative}{46}{paragraph.4.5.3.1.2}%
+\contentsline {subsubsection}{\numberline {4.5.3.2}Fitting tips independently}{46}{subsubsection.4.5.3.2}%
+\contentsline {paragraph}{\numberline {4.5.3.2.1}Individual fitting method}{46}{paragraph.4.5.3.2.1}%
+\contentsline {paragraph}{\numberline {4.5.3.2.2}Holding Vprobe constant}{46}{paragraph.4.5.3.2.2}%
+\contentsline {paragraph}{\numberline {4.5.3.2.3}Exponential fitting method}{46}{paragraph.4.5.3.2.3}%
+\contentsline {paragraph}{\numberline {4.5.3.2.4}Spherical harmonics}{46}{paragraph.4.5.3.2.4}%
+\contentsline {section}{\numberline {4.6}Results}{46}{section.4.6}%
+\contentsline {subsection}{\numberline {4.6.1}Drive cylinder}{47}{subsection.4.6.1}%
+\contentsline {subsubsection}{\numberline {4.6.1.1}What did we try}{47}{subsubsection.4.6.1.1}%
+\contentsline {subsubsection}{\numberline {4.6.1.2}Why didn't we see pressure anisotropy}{47}{subsubsection.4.6.1.2}%
+\contentsline {paragraph}{\numberline {4.6.1.2.1}In the bdot data}{47}{paragraph.4.6.1.2.1}%
+\contentsline {paragraph}{\numberline {4.6.1.2.2}In the PA data}{47}{paragraph.4.6.1.2.2}%
+\contentsline {subsection}{\numberline {4.6.2}3 coil}{47}{subsection.4.6.2}%
+\contentsline {subsubsection}{\numberline {4.6.2.1}How much anisotropy should we expect}{47}{subsubsection.4.6.2.1}%
+\contentsline {subsubsection}{\numberline {4.6.2.2}What setups did we try}{47}{subsubsection.4.6.2.2}%
+\contentsline {subsubsection}{\numberline {4.6.2.3}Old results of just comparing radar plots}{47}{subsubsection.4.6.2.3}%
+\contentsline {subsubsection}{\numberline {4.6.2.4}New results using independent fitting}{47}{subsubsection.4.6.2.4}%
+\contentsline {chapter}{\chapternumberline {5}Conclusion}{48}{chapter.5}%
+\contentsline {section}{\numberline {5.1}Summary of thesis}{48}{section.5.1}%
+\contentsline {subsection}{\numberline {5.1.1}Using pressure waves to measure density}{48}{subsection.5.1.1}%
+\contentsline {subsection}{\numberline {5.1.2}Upgrading langmuir probe analysis and new possibilities}{48}{subsection.5.1.2}%
+\contentsline {subsection}{\numberline {5.1.3}Using directional langmuir probes for measuring pressure anisotropy}{48}{subsection.5.1.3}%
+\contentsline {section}{\numberline {5.2}Future work}{48}{section.5.2}%
+\contentsline {subsection}{\numberline {5.2.1}Pressure wave}{48}{subsection.5.2.1}%
+\contentsline {subsubsection}{\numberline {5.2.1.1}Aforementioned future work}{48}{subsubsection.5.2.1.1}%
+\contentsline {subsubsection}{\numberline {5.2.1.2}Extracting cross-field diffusion}{48}{subsubsection.5.2.1.2}%
+\contentsline {subsection}{\numberline {5.2.2}Langmuir Probe}{48}{subsection.5.2.2}%
+\contentsline {subsubsection}{\numberline {5.2.2.1}Prepared to analyze lots of cool data}{48}{subsubsection.5.2.2.1}%
+\contentsline {subsubsection}{\numberline {5.2.2.2}Extract out electric field}{48}{subsubsection.5.2.2.2}%
+\contentsline {subsection}{\numberline {5.2.3}PA Probe}{48}{subsection.5.2.3}%
+\contentsline {subsubsection}{\numberline {5.2.3.1}Try more configurations}{48}{subsubsection.5.2.3.1}%
+\contentsline {subsubsection}{\numberline {5.2.3.2}Map out full pressure anisotropy during shot}{48}{subsubsection.5.2.3.2}%
+\contentsline {chapter}{Colophon}{49}{chapter*.10}%
+\contentsline {chapter}{References}{50}{section*.12}%

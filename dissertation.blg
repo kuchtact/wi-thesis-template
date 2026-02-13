@@ -1,0 +1,54 @@
+This is BibTeX, Version 0.99d (TeX Live 2025)
+Capacity: max_strings=200000, hash_size=200000, hash_prime=170003
+The top-level auxiliary file: dissertation.aux
+A level-1 auxiliary file: frontmatter/frontmatter.aux
+A level-1 auxiliary file: chapter_introduction/introduction.aux
+A level-1 auxiliary file: chapter_pressure_wave/pressure_wave.aux
+A level-1 auxiliary file: chapter_te_probe/te_probe.aux
+A level-1 auxiliary file: chapter_pa_probe/pa_probe.aux
+A level-1 auxiliary file: chapter_conclusion/conclusion.aux
+The style file: mcbride.bst
+Database file #1: references.bib
+Reallocated wiz_functions (elt_size=4) to 6000 items from 3000.
+Reallocated singl_function (elt_size=4) to 100 items from 50.
+You've used 4 entries,
+            3317 wiz_defined-function locations,
+            705 strings with 6191 characters,
+and the built_in function-call counts, 2172 in all, are:
+= -- 171
+> -- 46
+< -- 6
++ -- 16
+- -- 12
+* -- 207
+:= -- 319
+add.period$ -- 17
+call.type$ -- 4
+change.case$ -- 32
+chr.to.int$ -- 10
+cite$ -- 4
+duplicate$ -- 176
+empty$ -- 176
+format.name$ -- 20
+if$ -- 428
+int.to.chr$ -- 1
+int.to.str$ -- 1
+missing$ -- 28
+newline$ -- 35
+num.names$ -- 16
+pop$ -- 40
+preamble$ -- 1
+purify$ -- 20
+quote$ -- 0
+skip$ -- 74
+stack$ -- 0
+substring$ -- 66
+swap$ -- 135
+text.length$ -- 0
+text.prefix$ -- 0
+top$ -- 0
+type$ -- 30
+warning$ -- 0
+while$ -- 14
+width$ -- 0
+write$ -- 67

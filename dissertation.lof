@@ -7,7 +7,7 @@
 \contentsline {figure}{\numberline {1.6}{\ignorespaces Simulated kinetic reconnection with changing guide field.}}{4}{figure.1.6}%
 \contentsline {figure}{\numberline {1.7}{\ignorespaces Diagram from Ohia of with and without pressure anisotropy in simulation.}}{4}{figure.1.7}%
 \contentsline {figure}{\numberline {1.8}{\ignorespaces Some figure from Jan's papers thowing effects of pressure anisotropy}}{4}{figure.1.8}%
-\contentsline {figure}{\numberline {1.9}{\ignorespaces Timeline of experimental sequence.}}{5}{figure.1.9}%
+\contentsline {figure}{\numberline {1.9}{\ignorespaces *Experimental Sequence Timeline}}{5}{figure.1.9}%
 \contentsline {figure}{\numberline {1.10}{\ignorespaces Panels from flux arrays of experiment happening.}}{5}{figure.1.10}%
 \contentsline {figure}{\numberline {1.11}{\ignorespaces Circuit diagram of plasma gun.}}{6}{figure.1.11}%
 \contentsline {figure}{\numberline {1.12}{\ignorespaces Simplified cut of plasma gun insides.}}{6}{figure.1.12}%
@@ -31,40 +31,40 @@
 \contentsline {figure}{\numberline {2.16}{\ignorespaces Example of cross-correlation}}{18}{figure.2.16}%
 \contentsline {figure}{\numberline {2.17}{\ignorespaces Example of DTW}}{19}{figure.2.17}%
 \addvspace {10pt}
-\contentsline {figure}{\numberline {3.1}{\ignorespaces Diagram of simple langmuir probe.}}{20}{figure.3.1}%
-\contentsline {figure}{\numberline {3.2}{\ignorespaces Figure 2.6 from Joe's thesis}}{20}{figure.3.2}%
-\contentsline {figure}{\numberline {3.3}{\ignorespaces Picture of end of probe}}{21}{figure.3.3}%
-\contentsline {figure}{\numberline {3.4}{\ignorespaces Probe body from engineering sketch}}{21}{figure.3.4}%
-\contentsline {figure}{\numberline {3.5}{\ignorespaces Circuit diagram of old setup. Add switches.}}{21}{figure.3.5}%
-\contentsline {figure}{\numberline {3.6}{\ignorespaces Image of old setup}}{22}{figure.3.6}%
-\contentsline {figure}{\numberline {3.7}{\ignorespaces Circuit diagram of new setup. Add switches.}}{22}{figure.3.7}%
-\contentsline {figure}{\numberline {3.8}{\ignorespaces Image of new setup}}{22}{figure.3.8}%
-\contentsline {figure}{\numberline {3.9}{\ignorespaces Simple circuit diagram}}{23}{figure.3.9}%
-\contentsline {figure}{\numberline {3.10}{\ignorespaces Image of old circuit board}}{23}{figure.3.10}%
-\contentsline {figure}{\numberline {3.11}{\ignorespaces Image of new circuit board}}{23}{figure.3.11}%
-\contentsline {figure}{\numberline {3.12}{\ignorespaces What does an electric field do to the tip measurements diagram.}}{25}{figure.3.12}%
-\contentsline {figure}{\numberline {3.13}{\ignorespaces Example plot where E splitting tips}}{25}{figure.3.13}%
-\contentsline {figure}{\numberline {3.14}{\ignorespaces Diagram of local minimums}}{26}{figure.3.14}%
-\contentsline {figure}{\numberline {3.15}{\ignorespaces Example fit using many shots, multiple local parameter fits, and errors}}{27}{figure.3.15}%
-\contentsline {figure}{\numberline {3.16}{\ignorespaces Plot of isat currents from BRL}}{27}{figure.3.16}%
-\contentsline {figure}{\numberline {3.17}{\ignorespaces Radial chord of initial density with Hutchinson vs BRL.}}{28}{figure.3.17}%
-\contentsline {figure}{\numberline {3.18}{\ignorespaces Comparison of expected E from Ohm's law and measured E.}}{28}{figure.3.18}%
+\contentsline {figure}{\numberline {3.1}{\ignorespaces *Diagram of simple langmuir probe}}{20}{figure.3.1}%
+\contentsline {figure}{\numberline {3.2}{\ignorespaces *Probe Shaft CAD Diagram}}{24}{figure.3.2}%
+\contentsline {figure}{\numberline {3.3}{\ignorespaces *Picture of multi-tip Langmuir Probe}}{26}{figure.3.3}%
+\contentsline {figure}{\numberline {3.4}{\ignorespaces *Multi-tip Langmuir Probe Body Schematic}}{27}{figure.3.4}%
+\contentsline {figure}{\numberline {3.5}{\ignorespaces Circuit diagram of old setup. Add switches.}}{28}{figure.3.5}%
+\contentsline {figure}{\numberline {3.6}{\ignorespaces Image of old setup}}{28}{figure.3.6}%
+\contentsline {figure}{\numberline {3.7}{\ignorespaces Circuit diagram of new setup. Add switches.}}{29}{figure.3.7}%
+\contentsline {figure}{\numberline {3.8}{\ignorespaces Image of new setup}}{29}{figure.3.8}%
+\contentsline {figure}{\numberline {3.9}{\ignorespaces Simple circuit diagram}}{29}{figure.3.9}%
+\contentsline {figure}{\numberline {3.10}{\ignorespaces Image of old circuit board}}{30}{figure.3.10}%
+\contentsline {figure}{\numberline {3.11}{\ignorespaces Image of new circuit board}}{30}{figure.3.11}%
+\contentsline {figure}{\numberline {3.12}{\ignorespaces What does an electric field do to the tip measurements diagram.}}{32}{figure.3.12}%
+\contentsline {figure}{\numberline {3.13}{\ignorespaces Example plot where E splitting tips}}{32}{figure.3.13}%
+\contentsline {figure}{\numberline {3.14}{\ignorespaces Diagram of local minimums}}{33}{figure.3.14}%
+\contentsline {figure}{\numberline {3.15}{\ignorespaces Example fit using many shots, multiple local parameter fits, and errors}}{34}{figure.3.15}%
+\contentsline {figure}{\numberline {3.16}{\ignorespaces Plot of isat currents from BRL}}{34}{figure.3.16}%
+\contentsline {figure}{\numberline {3.17}{\ignorespaces Radial chord of initial density with Hutchinson vs BRL.}}{35}{figure.3.17}%
+\contentsline {figure}{\numberline {3.18}{\ignorespaces Comparison of expected E from Ohm's law and measured E.}}{35}{figure.3.18}%
 \addvspace {10pt}
-\contentsline {figure}{\numberline {4.1}{\ignorespaces Picture of feed thru along with drawings of cross-sections.}}{30}{figure.4.1}%
-\contentsline {figure}{\numberline {4.2}{\ignorespaces Picture of end of probe}}{30}{figure.4.2}%
-\contentsline {figure}{\numberline {4.3}{\ignorespaces CAD diagram of full body}}{30}{figure.4.3}%
-\contentsline {figure}{\numberline {4.4}{\ignorespaces CAD diagram of probe tip}}{30}{figure.4.4}%
-\contentsline {figure}{\numberline {4.5}{\ignorespaces Simple circuit diagram of how bias works.}}{31}{figure.4.5}%
-\contentsline {figure}{\numberline {4.6}{\ignorespaces Full circuit diagram of how bias works.}}{32}{figure.4.6}%
-\contentsline {figure}{\numberline {4.7}{\ignorespaces Image of power supply setup}}{32}{figure.4.7}%
-\contentsline {figure}{\numberline {4.8}{\ignorespaces Schematic of grounding diagram}}{33}{figure.4.8}%
-\contentsline {figure}{\numberline {4.9}{\ignorespaces Image of swapping box}}{34}{figure.4.9}%
-\contentsline {figure}{\numberline {4.10}{\ignorespaces Diagram of swapping}}{34}{figure.4.10}%
-\contentsline {figure}{\numberline {4.11}{\ignorespaces Time frame for core movie of IV with separation between relay}}{34}{figure.4.11}%
-\contentsline {figure}{\numberline {4.12}{\ignorespaces Circuit diagram of probe circuitry}}{35}{figure.4.12}%
-\contentsline {figure}{\numberline {4.13}{\ignorespaces Image of probe circuitry}}{35}{figure.4.13}%
-\contentsline {figure}{\numberline {4.14}{\ignorespaces Probe signals showing coupling}}{35}{figure.4.14}%
-\contentsline {figure}{\numberline {4.15}{\ignorespaces Figure of theoretial plasma distributions and JV curves}}{36}{figure.4.15}%
-\contentsline {figure}{\numberline {4.16}{\ignorespaces Simple drawing of what might happen to ions}}{37}{figure.4.16}%
-\contentsline {figure}{\numberline {4.17}{\ignorespaces Comparison of alignment using Bz = 0 or bdot cross correlation}}{38}{figure.4.17}%
+\contentsline {figure}{\numberline {4.1}{\ignorespaces Picture of feed thru along with drawings of cross-sections.}}{37}{figure.4.1}%
+\contentsline {figure}{\numberline {4.2}{\ignorespaces Picture of end of probe}}{37}{figure.4.2}%
+\contentsline {figure}{\numberline {4.3}{\ignorespaces CAD diagram of full body}}{37}{figure.4.3}%
+\contentsline {figure}{\numberline {4.4}{\ignorespaces CAD diagram of probe tip}}{37}{figure.4.4}%
+\contentsline {figure}{\numberline {4.5}{\ignorespaces Simple circuit diagram of how bias works.}}{38}{figure.4.5}%
+\contentsline {figure}{\numberline {4.6}{\ignorespaces Full circuit diagram of how bias works.}}{39}{figure.4.6}%
+\contentsline {figure}{\numberline {4.7}{\ignorespaces Image of power supply setup}}{39}{figure.4.7}%
+\contentsline {figure}{\numberline {4.8}{\ignorespaces Schematic of grounding diagram}}{40}{figure.4.8}%
+\contentsline {figure}{\numberline {4.9}{\ignorespaces Image of swapping box}}{41}{figure.4.9}%
+\contentsline {figure}{\numberline {4.10}{\ignorespaces Diagram of swapping}}{41}{figure.4.10}%
+\contentsline {figure}{\numberline {4.11}{\ignorespaces Time frame for core movie of IV with separation between relay}}{41}{figure.4.11}%
+\contentsline {figure}{\numberline {4.12}{\ignorespaces Circuit diagram of probe circuitry}}{42}{figure.4.12}%
+\contentsline {figure}{\numberline {4.13}{\ignorespaces Image of probe circuitry}}{42}{figure.4.13}%
+\contentsline {figure}{\numberline {4.14}{\ignorespaces Probe signals showing coupling}}{42}{figure.4.14}%
+\contentsline {figure}{\numberline {4.15}{\ignorespaces Figure of theoretial plasma distributions and JV curves}}{43}{figure.4.15}%
+\contentsline {figure}{\numberline {4.16}{\ignorespaces Simple drawing of what might happen to ions}}{44}{figure.4.16}%
+\contentsline {figure}{\numberline {4.17}{\ignorespaces Comparison of alignment using Bz = 0 or bdot cross correlation}}{45}{figure.4.17}%
 \addvspace {10pt}
