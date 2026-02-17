@@ -505,6 +505,11 @@ INPUT ./chapter_te_probe/figures/Plastic Body v2.pdf
 INPUT ./chapter_te_probe/figures/Plastic Body v2.pdf
 INPUT ./chapter_te_probe/figures/Plastic Body v2.pdf
 INPUT ./chapter_te_probe/figures/Plastic Body v2.pdf
+INPUT ./chapter_te_probe/figures/te_mach_effect.pdf
+INPUT ./chapter_te_probe/figures/te_mach_effect.pdf
+INPUT ./chapter_te_probe/figures/te_mach_effect.pdf
+INPUT ./chapter_te_probe/figures/te_mach_effect.pdf
+INPUT ./chapter_te_probe/figures/te_mach_effect.pdf
 INPUT ./chapter_pa_probe/pa_probe.tex
 OUTPUT chapter_pa_probe/pa_probe.aux
 INPUT ./chapter_pa_probe/pa_probe.tex

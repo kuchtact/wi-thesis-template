@@ -1,4 +1,4 @@
-\begin{wb-bib}{4}
+\begin{wb-bib}{6}
 \expandafter\ifx\csname natexlab\endcsname\relax\def\natexlab#1{#1}\fi
 \expandafter\ifx\csname bibnamefont\endcsname\relax
   \def\bibnamefont#1{#1}\fi
@@ -11,6 +11,11 @@
 \expandafter\ifx\csname urlprefix\endcsname\relax\def\urlprefix{URL }\fi
 \providecommand{\bibinfo}[2]{#2}
 \providecommand{\eprint}[2][]{\url{#2}}
+
+\bibitem[{\citenamefont{Chung}(2012)}]{Chung_2012}
+\bibinfo{author}{\bibnamefont{Chung}, \bibfnamefont{Kyu-Sun}}. \bibinfo{year}{2012}.
+\newblock \bibinfo{title}{Mach probes}.
+\newblock \emph{\bibinfo{journal}{Plasma Sources Science and Technology}} \bibinfo{volume}{21}(\bibinfo{number}{6}):\penalty0 \bibinfo{pages}{063001}.
 
 \bibitem[{\citenamefont{Gradney}(2025)}]{Gradney_2025}
 \bibinfo{author}{\bibnamefont{Gradney}, \bibfnamefont{Paul}}. \bibinfo{year}{2025}.
@@ -26,6 +31,11 @@
 \bibinfo{author}{\bibnamefont{Hutchinson}, \bibfnamefont{I.~H.}} \bibinfo{year}{2002}.
 \newblock \emph{\bibinfo{title}{Principles of plasma diagnostics}}.
 \newblock \bibinfo{edition}{2nd} ed. \bibinfo{address}{Cambridge; New York}:\@ \bibinfo{publisher}{Cambridge University Press}.
+
+\bibitem[{\citenamefont{Merlino and D'Angelo}(1987)}]{Merlino_D'Angelo_1987}
+\bibinfo{author}{\bibnamefont{Merlino}, \bibfnamefont{R.~L.}}, \bibnamefont{and} \bibinfo{author}{\bibfnamefont{N.}~\bibnamefont{D'Angelo}}. \bibinfo{year}{1987}.
+\newblock \bibinfo{title}{The interaction of a conducting object with a supersonic plasma flow: ion deflection near a negatively charged obstacle}.
+\newblock \emph{\bibinfo{journal}{Journal of Plasma Physics}} \bibinfo{volume}{37}(\bibinfo{number}{2}):\penalty0 \bibinfo{pages}{185--198}.
 
 \bibitem[{\citenamefont{Olson}(2020)}]{Olson_2020}
 \bibinfo{author}{\bibnamefont{Olson}, \bibfnamefont{Joseph}}. \bibinfo{year}{2020}.

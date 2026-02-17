@@ -140,18 +140,37 @@ The tubing exists to connect the probe to the main shaft holding it up and also 
 
 \subsubsection{Tip material + size}
 
-\paragraph{Why use Mo}
+To collect current, we use 16 separate tips which each sample a point on the IV curve. We make these tips out of Molybdenum which requires us to connect the tips to the signal wire using a friction fit.
 
-\paragraph{Why use the size we chose}
+\paragraph{Why use Mo}
+Even though Molybdenum has it's difficulties with connections, it has a high work function which helps to reduce secondary electron emission which can change the shape of the IV-characteristic. % TODO: Is there any other reason for Mo?
+
+\paragraph{Size considerations}
+We expect the current to the tips to be on the order of $1 \, \text{kA}/\text{m}^2$. We measure the current across a `sense' resistor (as discussed thoroughly in \ref{sss:multitip_probe_circuit}) but we don't want to have to use high power resistors for this. Thus we choose our current to be on the order of 10 mA which is feasible by having a tip area on the order of 10 mm$^2$. This amount of current also gives a reasonable signal-to-noise ratio.
+
+Unfortunately, the probe is not all that cylindrical which means that the idealized probe theories we use are not as precise as we may have hoped. Future probe designs could use longer and smaller diameter tips to avoid this issue.
 
 \subsubsection{Tip Shielding}
 
-\paragraph{Why shield at all?}
+We protect each tip from the base of the probe body using PTFE/teflon. Teflon isn't great in a vacuum environment because of offgassing but does the trick and is cheap and easy to use. % TODO: Is this true?
+After inserting the tip into the probe body we push the teflon on and apply a small amount of vacuum-safe epoxy at the base to hold the shielding in place.
+
+\paragraph{Why shield at all?} We could potentially shorten each tip so the collecting area extends all the way to the probe body. Unfortunately because of the increased size of the body this can cause shadowing effects where tips on one side of the probe have a different IV-characteristic than those on the other. This `shadowing' is caused by plasma flow parallel to the tip direction whcih gets intercepted by the probe body.
 
 \paragraph{First order mach effects to avoid}
+Another reason to shield the probe is to avoid mach effects that would cause different IV-characteristics for tips on opposite sides. As can be seen in figure \ref{fig:multitip_mach_effect}, in an ideal mach probe the ions are prevented from easily accessing the ``shadowed'' side of the probe (right side) because of their inertia. If we shrink the probe body and increase the distance the tip is from the probe the mach effect is reduced because ion inertia is not sufficient to prevent collection. This is only approximate though and we sometimes do see effects that could be caused by shadowing. For an in depth discussion of mach probes we refer the interested reader to \cite{Chung_2012}.
+
+\begin{figure}
+    \centering
+    \includegraphics{chapter_te_probe/figures/te_mach_effect.pdf}
+    \caption[Mach Effect Diagram]{Simplified cartoon of the expected mach effect for the multitip probe. Left panel inspired by \cite{Merlino_D'Angelo_1987}, Fig. 10.}
+    \label{fig:multitip_mach_effect}
+\end{figure}
 
 \subsection{B-dot Coils}
 \label{sss:multitip_bdot}
+
+Since we don't know the exact location of the probe and the plasma is not perfectly reproducable, it's especially useful to have measurements we can compare to other diagnostics to locate the probe in space and around the reconnection region. To do this we use hand wound three axis Bdot coils that can measure the change in magnetic field near the tips.
 
 \subsubsection{How many wraps}
 
@@ -212,6 +231,7 @@ The tubing exists to connect the probe to the main shaft holding it up and also 
 \paragraph{Calibration}
 
 \subsection{Probe Circuit}
+\label{sss:multitip_probe_circuit}
 
 \subsubsection{Principles of operation}
 
