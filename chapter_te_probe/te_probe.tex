@@ -51,17 +51,17 @@ We are quite lucky in that our system geometry reduces the impacts of flux tube 
 The TREX experiment is (often) cylindrically symmetric and our probes are placed in different toroidal planes (see figure \ref{fig:brb_cad_rendering} for coordinate system reference). This means that without any toroidal field, any emptying only occurs in the plane of the probe which may still affect the probe I-V characteristic but is not affecting other probes measurements in a significant manner. When we do have a toroidal field, we also often have non-uniform $B_r$ and $B_z$ which means the flux tube passes through many different plasma parameters. This may help to average out any flux tube emptying because at different points along the flux tube more plasma may be able to enter the tube than just what is expected at the probe causing a reduced perturbation length.
 
 \paragraph{Magnetic Field Considerations}
-As we have magnetic fields in our system, we do need to worry about these flux tube effects. Fortunately, our magnetic field are relatively small and in the region we are often most interested in (where reconnection is occurring) the magnetic field is far smaller than the initial background field. We characterize this smallness by the ratio of the gyroradius to the radius of the probe area which is on the order of ???.
+As we have magnetic fields in our system, we do need to worry about these flux tube effects. Fortunately, our magnetic field are relatively small and in the region we are often most interested in (where reconnection is occurring) the magnetic field is far smaller than the initial background field. We characterize this smallness by the ratio of the gyroradius to the radius of the probe area which is on the order of ??? (see \ref{tab:multitip_length_scales}).
 % TODO: Figure out what the ratio of the probe area to gyroradius is.
 
-\begin{table}
-    \centering
-    \begin{tabular}{|l|r|r|}
+% \begin{table}
+%     \centering
+%     \begin{tabular}{|l|r|r|}
         
-    \end{tabular}
-    \caption{Langmuir probe characteristic scales.}
-    \label{tab:langmuir_probe_plasma_scales}
-\end{table}
+%     \end{tabular}
+%     \caption{Langmuir probe characteristic scales.}
+%     \label{tab:langmuir_probe_plasma_scales}
+% \end{table} % TODO: I don't think I need this table since I have a table lower down.
 
 \section{Hardware}
 
@@ -172,29 +172,93 @@ Another reason to shield the probe is to avoid mach effects that would cause dif
 
 Since we don't know the exact location of the probe and the plasma is not perfectly reproducable, it's especially useful to have measurements we can compare to other diagnostics to locate the probe in space and around the reconnection region. To do this we use hand wound three axis Bdot coils that can measure the change in magnetic field near the tips.
 
-\subsubsection{How many wraps}
+\subsubsection{Size Considerations}
 
-\subsubsection{Approximate area}
+Through past trial and error and many a day spent hand winding coils for past students, we've found a reasonable vector area magnitude to use for the B-dot coils. During reconnection the largest $\partial_t \vb{B}$ is on the order of 10 kT/s. Thus, from Faraday's law,
+\begin{equation}
+    \mathcal{E} = \vb{A} \cdot \partial_t \vb{B}
+\end{equation}
+where $\mathcal{E}$ is the electromotive force and $\vb{A}$ is the vector area of the coil \cite{Jackson_1999}. % TODO: Check this reference.
+This means that for a signal of ~1 V we are looking for a cross-sectional area of $10^{-4}$ m$^2$.
+
+Using a 3D-printed B-dot body (seen in right in figure \ref{fig:multitip_image}) we wrap wire around a square shaped center six times giving an area of $\sim 5 \times 10^{-5}$ m$^2$. Although smaller than that required for a 1 V measurement, this makes sure the signal doesn't become too large should some kind of resonance exist in the circuit.
+
+\subsubsection{Noise Reduction}
+
+Since common mode noise can relatively easily couple to the coils, we use twisted pair for each wrapping direction. This gives us two circuits that have nearly opposite vector area, $\vb{A}_1 \approx -\vb{A}_2$, such that we can subtract the two measurements and thus remove common mode contributions. We will discuss this more in \ref{ss2:multitip_bdot_signal_interp}.
 
 \subsection{Length Scales}
 
+Table \ref{tab:multitip_length_scales} contains all information that helps us decide on our Langmuir probe theory and signal interpretation. There are a few key features to note that let us validate the use of finite area B-dot coils and multiple tips.
+
+Our ion and electron gyroradii are both relatively large compared to the probe tips and B-dot coils. This means that if we assume the plasma is relatively uniform in a flux tube, the entire probe is sampling a quite uniform plasma. % TODO: Are there other scales to lookinto to account for uniformity (or lack thereof?)
+
 \begin{table}
-    \caption{Length scales of probe}
+\begin{center}
+\begin{tabular}{|r|c|c|c|}
+    \hline
+    Name & Symbol & Equation & Value \\
+    \hline\hline
+    Tip radius & $r$ & --- & 5e-4 \\
+    \hline
+    Tip length & $l$ & --- & 2e-3 \\
+    \hline
+    Neighboring tip separation & --- & --- & 2e-3 \\
+    \hline
+    Across probe tip separation & --- & --- & 1.5e-2 \\
+    \hline
+    B-dot coil side length & --- & --- & 3e-3 \\
+    \hline
+    Debye length & $\lambda_D$ & $\sqrt{\frac{\epsilon_0 T_e}{n e}}$ & 3e-5 \\
+    \hline
+    Ion Gyroradius & $r_i$ & $\frac{m_i \sqrt{2 m_i \bar{v}_i}}{e B}$ & 6e-1 \\
+    \hline
+    Electron Gyroradius & $r_e$ & $\frac{m_e \sqrt{2 m_e \bar{v}_e}}{e B}$ & 1.5e-1 \\
+    \hline
+    Ion mean free path & $\lambda_i$ & $\frac{\bar{v}_i}{\nu_{i,i}}$ & 9e-4 \\
+    \hline
+    Electron mean free path & $\lambda_e$ & $\frac{\bar{v}_e}{\nu_{e,e}}$ & 4.5 \\
+    \hline
+    Electron energy relaxation length & $\lambda_\mathcal{E}$ & * Eq. 5 & 4.5 \\
+    \hline
+    Sheath thickness & $h$ & $\sim \lambda_D$ & 3e-5 \\
+    \hline
+\end{tabular}
+\end{center}
+\caption[Multitip Langmuir Probe Length Scales]{Length scales of the multitip probe. All lengths are in meters and are approximate. For the interested reader and for the energy relaxation length, please refer to \cite{Demidov_Ratynskaia_Rypdal_2002} for Langmuir probe relevant physics of these scales. These parameters were calculated with $n = 10^{18}$ m$^{-3}$, $T_e = 20$ eV, $T_i = 0.1 \times T_e$, and $B = 10^{-4}$ T. For the mean free paths we have chosen the frequency that gives the shortest length.}
+\label{tab:multitip_length_scales}
 \end{table}
 
 \section{Circuitry}
 
+The multitip Langmuir probe consists of a number of circuits that work together to give us some nice measurements. Here we enumerate their operation methods, upgrades, signal extraction, and calibration techniques.
+
 \subsection{Bias Source}
+
+We have thus far had two different circuits that we've used for biasing each tip relative to the laboratory ground. The first, made by Jan Egedal while at VTF is manually controlled, while the second, made by me is remotely operated. We'll discuss how they work and their pros and cons.
 
 \subsubsection{Manually Controlled}
 
+Our previous setup consisted of multiple electrolytic capacitors who's voltage is set by a series of resistors that split the voltage between the negative power supply ($V_-$), ground, and the postivie power supply ($V_+$).
+
 \paragraph{Principles of operation}
 
-- Equation to use for bias calculation
-
 \begin{figure}
-    \caption{Circuit diagram of old setup. Add switches.}
+  \centering
+  \includegraphics{chapter_te_probe/figures/Old_biasing_circuit_cropped.pdf}
+  \caption[*Old Multitip Biasing Circuit]{Old biasing circuit for the multitip Langmuir probe.}
+  \label{fig:multitip_old_bias_circuit}
 \end{figure}
+
+Figure \ref{fig:multitip_old_bias_circuit} shows a 4 tip biasing circuit (our circuit uses 16 tips but we have simplified it). The `rails' (which are the maximum and minimum voltage of the circuit) are set by power sources at $V_+$ and $V_-$ which are biased relative to the ground input connection labeled \texttt{Jgnd}. A series of resistors splits the voltage between the rails and we choose one of the tips to be at laboratory ground. This lets us set the maximum and minimum voltage along with setting how many tips are positively/negatively biased. Also, moving the ground changes the voltage separation between tips so we can get higher resolution. The voltage separation charges the respective capacitors for each tip to a bias voltage, $V_b = \texttt{Vb}$. The capacitors exist to keep the bias voltage of each tip nearly constant during an experimental shot.
+
+Now let's calculate the bias for each tip. Let $i, j \in \{1, \dots, N\}$ be the index of the tip and the index of the ground connection respectively. Then,
+\begin{equation}
+    V_{bi} = \begin{cases}
+        \frac{V_+}{j} (j - i) & \text{if } j \geq i \\
+        \frac{V_-}{j} (j - i) & \text{if } j < i % TODO: fix equation
+    \end{cases}
+\end{equation}
 
 \begin{figure}
     \caption{Image of old setup}
@@ -212,7 +276,7 @@ Since we don't know the exact location of the probe and the plasma is not perfec
 - Equation to use for calculation
 
 \begin{figure}
-    \caption{Circuit diagram of new setup. Add switches.}
+    \caption{Circuit diagram of new setup.}
 \end{figure}
 
 \begin{figure}
@@ -300,6 +364,9 @@ Since we don't know the exact location of the probe and the plasma is not perfec
 \paragraph{Directional}
 
 \paragraph{Transfer Function}
+
+\subsubsection{Signal Interpretation}
+\label{ss2:multitip_bdot_signal_interp}
 
 \section{Plasma Theory}
 

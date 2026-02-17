@@ -1,4 +1,4 @@
-\begin{wb-bib}{6}
+\begin{wb-bib}{8}
 \expandafter\ifx\csname natexlab\endcsname\relax\def\natexlab#1{#1}\fi
 \expandafter\ifx\csname bibnamefont\endcsname\relax
   \def\bibnamefont#1{#1}\fi
@@ -13,33 +13,70 @@
 \providecommand{\eprint}[2][]{\url{#2}}
 
 \bibitem[{\citenamefont{Chung}(2012)}]{Chung_2012}
-\bibinfo{author}{\bibnamefont{Chung}, \bibfnamefont{Kyu-Sun}}. \bibinfo{year}{2012}.
+\bibinfo{author}{\bibnamefont{Chung}, \bibfnamefont{Kyu-Sun}}.
+  \bibinfo{year}{2012}.
 \newblock \bibinfo{title}{Mach probes}.
-\newblock \emph{\bibinfo{journal}{Plasma Sources Science and Technology}} \bibinfo{volume}{21}(\bibinfo{number}{6}):\penalty0 \bibinfo{pages}{063001}.
+\newblock \emph{\bibinfo{journal}{Plasma Sources Science and Technology}}
+  \bibinfo{volume}{21}(\bibinfo{number}{6}):\penalty0 \bibinfo{pages}{063001}.
+
+\bibitem[{\citenamefont{Demidov et~al.}(2002)\citenamefont{Demidov, Ratynskaia,
+  and Rypdal}}]{Demidov_Ratynskaia_Rypdal_2002}
+\bibinfo{author}{\bibnamefont{Demidov}, \bibfnamefont{V.~I.}},
+  \bibinfo{author}{\bibfnamefont{S.~V.} \bibnamefont{Ratynskaia}},
+  \bibnamefont{and} \bibinfo{author}{\bibfnamefont{K.}~\bibnamefont{Rypdal}}.
+  \bibinfo{year}{2002}.
+\newblock \bibinfo{title}{Electric probes for plasmas: The link between theory
+  and instrument}.
+\newblock \emph{\bibinfo{journal}{Review of Scientific Instruments}}
+  \bibinfo{volume}{73}(\bibinfo{number}{10}):\penalty0
+  \bibinfo{pages}{3409--3439}.
 
 \bibitem[{\citenamefont{Gradney}(2025)}]{Gradney_2025}
-\bibinfo{author}{\bibnamefont{Gradney}, \bibfnamefont{Paul}}. \bibinfo{year}{2025}.
-\newblock \bibinfo{title}{Laboratory investigation of collisionless kinetic effects and 3d topological triggers for magnetic reconnection}.
-\newblock \bibinfo{type}{Dissertation/thesis}, \bibinfo{school}{University of Wisconsin-Madison}, \bibinfo{address}{Madison, WI}.
+\bibinfo{author}{\bibnamefont{Gradney}, \bibfnamefont{Paul}}.
+  \bibinfo{year}{2025}.
+\newblock \bibinfo{title}{Laboratory investigation of collisionless kinetic
+  effects and 3d topological triggers for magnetic reconnection}.
+\newblock \bibinfo{type}{Dissertation/thesis}, \bibinfo{school}{University of
+  Wisconsin-Madison}, \bibinfo{address}{Madison, WI}.
 
 \bibitem[{\citenamefont{Hershkowitz}(1989)}]{Hershkowitz_1989}
-\bibinfo{author}{\bibnamefont{Hershkowitz}, \bibfnamefont{Noah}}. \bibinfo{year}{1989}.
-\newblock \emph{\bibinfo{title}{How langmuir probes work}}, \bibinfo{pages}{113–183}.
+\bibinfo{author}{\bibnamefont{Hershkowitz}, \bibfnamefont{Noah}}.
+  \bibinfo{year}{1989}.
+\newblock \emph{\bibinfo{title}{How langmuir probes work}},
+  \bibinfo{pages}{113–183}.
 \newblock \bibinfo{publisher}{Elsevier}.
 
 \bibitem[{\citenamefont{Hutchinson}(2002)}]{Hutchinson_2002}
-\bibinfo{author}{\bibnamefont{Hutchinson}, \bibfnamefont{I.~H.}} \bibinfo{year}{2002}.
+\bibinfo{author}{\bibnamefont{Hutchinson}, \bibfnamefont{I.~H.}}
+  \bibinfo{year}{2002}.
 \newblock \emph{\bibinfo{title}{Principles of plasma diagnostics}}.
-\newblock \bibinfo{edition}{2nd} ed. \bibinfo{address}{Cambridge; New York}:\@ \bibinfo{publisher}{Cambridge University Press}.
+\newblock \bibinfo{edition}{2nd} ed. \bibinfo{address}{Cambridge; New York}:\@
+  \bibinfo{publisher}{Cambridge University Press}.
+
+\bibitem[{\citenamefont{Jackson}(1999)}]{Jackson_1999}
+\bibinfo{author}{\bibnamefont{Jackson}, \bibfnamefont{John~David}}.
+  \bibinfo{year}{1999}.
+\newblock \emph{\bibinfo{title}{Classical electrodynamics}}.
+\newblock \bibinfo{edition}{3rd} ed. \bibinfo{address}{New York}:\@
+  \bibinfo{publisher}{Wiley}.
 
 \bibitem[{\citenamefont{Merlino and D'Angelo}(1987)}]{Merlino_D'Angelo_1987}
-\bibinfo{author}{\bibnamefont{Merlino}, \bibfnamefont{R.~L.}}, \bibnamefont{and} \bibinfo{author}{\bibfnamefont{N.}~\bibnamefont{D'Angelo}}. \bibinfo{year}{1987}.
-\newblock \bibinfo{title}{The interaction of a conducting object with a supersonic plasma flow: ion deflection near a negatively charged obstacle}.
-\newblock \emph{\bibinfo{journal}{Journal of Plasma Physics}} \bibinfo{volume}{37}(\bibinfo{number}{2}):\penalty0 \bibinfo{pages}{185--198}.
+\bibinfo{author}{\bibnamefont{Merlino}, \bibfnamefont{R.~L.}},
+  \bibnamefont{and} \bibinfo{author}{\bibfnamefont{N.}~\bibnamefont{D'Angelo}}.
+  \bibinfo{year}{1987}.
+\newblock \bibinfo{title}{The interaction of a conducting object with a
+  supersonic plasma flow: ion deflection near a negatively charged obstacle}.
+\newblock \emph{\bibinfo{journal}{Journal of Plasma Physics}}
+  \bibinfo{volume}{37}(\bibinfo{number}{2}):\penalty0
+  \bibinfo{pages}{185--198}.
 
 \bibitem[{\citenamefont{Olson}(2020)}]{Olson_2020}
-\bibinfo{author}{\bibnamefont{Olson}, \bibfnamefont{Joseph}}. \bibinfo{year}{2020}.
-\newblock \bibinfo{title}{Exploring driven, high lundquist number magnetic reconnection in the laboratory: studies of sub-ion scale plasmoids, and the interplay between shocks and magnetic flux pileup}.
-\newblock \bibinfo{type}{Phd thesis}, \bibinfo{school}{University of Wisconsin-Madison}.
+\bibinfo{author}{\bibnamefont{Olson}, \bibfnamefont{Joseph}}.
+  \bibinfo{year}{2020}.
+\newblock \bibinfo{title}{Exploring driven, high lundquist number magnetic
+  reconnection in the laboratory: studies of sub-ion scale plasmoids, and the
+  interplay between shocks and magnetic flux pileup}.
+\newblock \bibinfo{type}{Phd thesis}, \bibinfo{school}{University of
+  Wisconsin-Madison}.
 
 \end{wb-bib}
