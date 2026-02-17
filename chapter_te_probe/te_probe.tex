@@ -163,7 +163,7 @@ Another reason to shield the probe is to avoid mach effects that would cause dif
 \begin{figure}
     \centering
     \includegraphics{chapter_te_probe/figures/te_mach_effect.pdf}
-    \caption[Mach Effect Diagram]{Simplified cartoon of the expected mach effect for the multitip probe. Left panel inspired by \cite{Merlino_D'Angelo_1987}, Fig. 10.}
+    \caption[*Mach Effect Diagram]{Simplified cartoon of the expected Mach effect for the multitip probe. The black arrows in the top figures are the approximate paths ions take due to the electric fields around the probe. The grey shaded region is where the ion density is significantly diminished. The left probe is a classic Mach probe geometry and the right probe is the multitip probe whose geometry is purpose built to avoid this Mach effect. Figure inspired by \cite{Merlino_D'Angelo_1987}, Fig. 10.}
     \label{fig:multitip_mach_effect}
 \end{figure}
 
@@ -225,7 +225,7 @@ Our ion and electron gyroradii are both relatively large compared to the probe t
     \hline
 \end{tabular}
 \end{center}
-\caption[Multitip Langmuir Probe Length Scales]{Length scales of the multitip probe. All lengths are in meters and are approximate. For the interested reader and for the energy relaxation length, please refer to \cite{Demidov_Ratynskaia_Rypdal_2002} for Langmuir probe relevant physics of these scales. These parameters were calculated with $n = 10^{18}$ m$^{-3}$, $T_e = 20$ eV, $T_i = 0.1 \times T_e$, and $B = 10^{-4}$ T. For the mean free paths we have chosen the frequency that gives the shortest length.}
+\caption[*Multitip Langmuir Probe Length Scales]{Length scales of the multitip probe. All lengths are in meters and are approximate. For the interested reader and for the energy relaxation length, please refer to \cite{Demidov_Ratynskaia_Rypdal_2002} for Langmuir probe relevant physics of these scales. These parameters were calculated with $n = 10^{18}$ m$^{-3}$, $T_e = 20$ eV, $T_i = 0.1 \times T_e$, and $B = 10^{-4}$ T. For the mean free paths we have chosen the frequency that gives the shortest length.}
 \label{tab:multitip_length_scales}
 \end{table}
 
@@ -256,66 +256,174 @@ Now let's calculate the bias for each tip. Let $i, j \in \{1, \dots, N\}$ be the
 \begin{equation}
     V_{bi} = \begin{cases}
         \frac{V_+}{j} (j - i) & \text{if } j \geq i \\
-        \frac{V_-}{j} (j - i) & \text{if } j < i % TODO: fix equation
+        \frac{V_-}{N + 1 - j} (i - j) & \text{if } j < i % TODO: fix equation
     \end{cases}
 \end{equation}
+where $V_{bi}$ is the bias voltage for tip $i$.
 
-\begin{figure}
-    \caption{Image of old setup}
-\end{figure}
+\paragraph{The good, the bad, and the ugly}
 
-\paragraph{Problems}
-
-- Had to be manually controlled for drastic bias changes
-- Wires often contacted each other or parts would lose contact
+Because of the simplicity of this system, it has proven to work relatively well since it's been built. Unfortunately since most of it's components are free-standing and the wired connections undergo some movement during travel and assembly, various solder joints are prone to breaking. Additionally because of the need to manually flip the polarity of each electrolytic capacitor using a switch mounted to a board and also move the ground via a banana connection, it is infeasible to remotely operate the bias supply. Additionally this circuit has no protection against setting the tip voltages extremely far apart which may cause arcing between wires or tips.
 
 \subsubsection{Remote Controlled}
 
+We've upgraded the previous setup by allowing the bias to be remotely controlled. This is done by removing the switches needed in the past setup and instead having one power supply set the voltage of the most negative tip and the other power supply set the maximum bias voltage difference between tips.
+
 \paragraph{Principles of operation}
 
-- Equation to use for calculation
+This system operates by having a large capacitor that is set to some negative voltage relative to ground. Then, all the other individual capacitors for each tip has it's negative terminal set to the output of the large capacitor. Thus we can change the bias of all the tips by the same amount by changing the negative bias. The splitting of the bias voltage is similar to the previous setup where the voltage from the positive power supply is split using a series of resistors. The circuit schematic and images of the circuit can be seen in figures \ref{fig:multitip_new_bias_schematic} and \ref{fig:multitip_new_bias_image} respectively.
+
+We can write out the individual tip biases mathematically as
+\begin{equation}
+    V_{bi} = \frac{V_+}{N + 1} i + V_-
+\end{equation}
+where $V_{bi}$ is the tip bias, $V_+ \geq 0$ and $V_- \leq 0$ are the applied biases, $i$ is the tip number, and $N$ is the number of tips.
 
 \begin{figure}
-    \caption{Circuit diagram of new setup.}
+    \includegraphics[width=\linewidth]{chapter_te_probe/figures/New_biasing_circuit_cropped.pdf}
+    \caption[*New Multitip Biasing Circuit]{Circuit diagram of the new biasing setup. The left side consists of capacitors with reverse voltage protection diodes. Each capacitor is separated from the next by a resistor. At the bottom is the large capacitor for setting the negative voltage and it's diode \& discharge resistor. The top right are connections necessary for dividing down the bias voltage for measurement and the bottom left are ribbon cable connections for applying voltage to the tips.}
+    \label{fig:multitip_new_bias_schematic}
 \end{figure}
 
 \begin{figure}
-    \caption{Image of new setup}
+\centering
+\begin{subfigure}{.5\textwidth}
+  \centering
+  \includegraphics[width=.95\linewidth]{chapter_te_probe/figures/new_biasing_circuit_image_top.jpeg}
+  \caption{Top view}
+  \label{fig:multitip_new_bias_top}
+\end{subfigure}%
+\begin{subfigure}{.5\textwidth}
+  \centering
+  \includegraphics[width=.95\linewidth]{chapter_te_probe/figures/new_biasing_circuit_image_front.jpeg}
+  \caption{Front view}
+  \label{fig:multitip_new_bias_front}
+\end{subfigure}
+\caption[*New Multitip Bias Circuitry Image]{An image of the circuitry for the new bias power supply. In panel \ref{fig:multitip_new_bias_top}: the top left is a fan for cooling the charging resistor hidden beneath a heat sink in black, the bottom left shows the negative capacitor that sets the ground of the rest of the circuit, the top right black cylinders are the individual tip capacitors and white rectangles are high power resistors for the voltage division, bottom right are connections to the front panel. In panel \ref{fig:multitip_new_bias_front}: the top left is the fan power, the red and black banana connections are to the power supplies, the rainbow ribbon cable is the connection to send bias to the tip circuit, the bottom right black cable is for measurement of the bias voltage, and the green banana is a connection to the laboratory ground.}
+\label{fig:multitip_new_bias_image}
 \end{figure}
 
 \begin{table}
-    \caption{Bias circuit component values}
+    \begin{center}
+        \begin{tabular}{|r|c|c|c|}
+            \hline
+            Name & Symbol & Value & Unit \\
+            \hline\hline
+            \multicolumn{4}{|c|}{Old Bias Circuit} \\
+            \hline
+            Positive bias voltage & $V_+$ & $0 \leq V_+ \leq 250$ & V \\
+            \hline
+            Negative bias voltage & $V_-$ & $-250 \leq V_- \leq 0$ & V \\
+            \hline
+            Tip capacitor & & 1.5 & mF \\
+            \hline
+            Divider Resistor & & ??? & $\Omega$ \\
+            \hline\hline
+            \multicolumn{4}{|c|}{New Bias Circuit} \\
+            \hline
+            Positive bias voltage & $V_+$ & $0 \leq V_+ \leq 250$ & V \\
+            \hline
+            Negative bias voltage & $V_-$ & $-250 \leq V_- \leq 0$ & V \\
+            \hline
+            Tip capacitor & & 1.6 & mF \\
+            \hline
+            Divider Resistor & & 1 & k$\Omega$ \\
+            \hline
+            Negative bias capacitor & & 24 & mF \\
+            \hline
+            Charging resistor & & 10 & $\Omega$ \\
+            \hline
+            Discharging resistor & & 1 & k$\Omega$ \\
+            \hline
+        \end{tabular}
+    \end{center}
+    \caption[*Multitip Bias Circuit Component Values]{Bias circuit component values}
 \end{table}
 
 \paragraph{Problems}
+Although this system works wonderfully to remotely control the bias such that we don't have to be running up and down the stairs all day long, it does come with it's own set of issues.
 
-- Destroyed a power supply
-- A resistor was designed and thus burnt out
+During running when the probe was at low radius and $V_- = -225$ V, the positive power supply broke and a short to ground was formed internal to the power supply between the negative and ground bananda connection terminals. This was most likely due to some transient that sent the positive power supply more than 300 V from ground which the power supply can not do.
+
+Additionally the 10 W discharge resistor initially used for discharging the negative capacitor burned out because the power load was higher than expected. We replaced it with a large carborundum resistor that can handle 50 W.
 
 \paragraph{Calibration}
+Calibration of the supply consists of two things:
+\begin{itemize}
+    \item The power supplies are remotely controlled through LabView which communicates with a CompactRIO analog output module that sends an isolated control voltage to the power supply. This output signal has a voltage offset and is not a perfect conversion between set voltage and output voltage that can be corrected by a multiplicative factor. We can do both these corrections by setting a voltage in LabView and seeing what voltage the power supply is outputting. This is just a problem of fitting a straight line with an offset.
+    \item We also need to calibrate the measurement of the bias voltage. Since the digitizers have an internal offset voltage and there is a resistor divider between bias and measurement we must correct for both of those. This is similarly a case of measuring the output bias voltage and correcting the digitizer measurement to match that value.
+\end{itemize}
 
 \subsection{Probe Circuit}
 \label{sss:multitip_probe_circuit}
 
-\subsubsection{Principles of operation}
+Now that we can apply a voltage to the tip, we need some way to measure the current to the probe. We do this using a commonly used circuit setup with a few additions for our setup which can be seen in figure \ref{fig:multitip_simple_tip_circuit}.
 
 \begin{figure}
-    \caption{Simple circuit diagram}
+  \centering
+  \begin{circuitikz}[american]
+    \draw (0,0) node[left]{$V_b$}
+    to[R=$R_s$, name=Rs, i=$I_s$, o-] ++(3,0) coordinate(split)
+    to[C, i>_=$I_d$] ++(0,-1.5) coordinate(alt split) 
+    (alt split) to[short] ++(0,-0.5) to[R=$R_1$, name=R1] ++(0,-1.5) coordinate(rsplit) to[R=$R_2$] ++(0,-1.5) node[ground]{}
+    (split) to[R=$R_w$, name=Rw, i<=$I_p$, *-o] ++(3,0) node[right]{$V_p$}
+    (rsplit) to[short, *-] ++(1.2,0) coordinate(dig connection) 
+    to[R=$R_D$, name=Rd] ++(0,-1.5) node[ground](dig gnd){}
+    (dig connection) to[short, *-] ++(1.4,0) coordinate(dig top) to[voltmeter, v^=$V_D$, name=dig] ++(0,-1.5) to[short, -*] (dig gnd)
+    ;
+    \draw[red, dashed] ([xshift=-0.2cm, yshift=0.2cm] R1.south west) rectangle ([xshift=0.7cm, yshift=-0.2cm] dig gnd.south -| dig-Vlab.center);
+    \draw[red] (alt split) -- (alt split -| Rs.center) -- (rsplit -| Rs.center) coordinate(alt dig connection) 
+    to[R=$R_d$, name=Rd] (dig gnd -| Rs.center) node[ground](alt dig gnd){}
+    (alt dig connection) to[short, *-] ++(-1.4,0) coordinate(alt dig top) to[voltmeter, v=$V_d$, name=alt dig] ++(0,-1.5) to[short, -*] (alt dig gnd)
+    ;
+  % \path (dig-Vlab.west) \coord(dig-Vlab.west);
+  \end{circuitikz}
+  \caption[*Tip Signal Circuit]{Circuit for a single tip on the multitip probe. We can reduce the circuit contained in the red dashed rectangle to the red circuit using the equation for a voltage divider.}
+  \label{fig:multitip_simple_tip_circuit}
 \end{figure}
 
-\paragraph{Plasma draws current}
+\subsubsection{Principles of operation}
 
-\paragraph{Voltage drop across sense resistor}
+We apply the bias at the node labeled $V_b$. When the probe pulls current from the plasma, $I_p$, this changes the tip voltage and pulls the voltage closer to the floating potential since there is a voltage drop across the sense resistor, $R_s$. The capacitor acts to shield the DC component of the probe voltage. The voltage difference across the sense resistor is measured by a digitizer which sees $V_D$ but that resistor divider can be simplified to a measured voltage of $V_d$. We want the probe voltage, $V_p$, and the probe current, $I_p$, to fit the plasma parameters.
 
-\paragraph{Measure high frequency voltage drop}
+\begin{figure}
+  \centering
+  \begin{circuitikz}[american]
+    \draw (0,0) node[left]{$V_b$}
+    to[R=$R_{ss}$, name=Rss, i=$I_{ss}$, o-] ++(3,0) coordinate(split sig)
+    to[C, i>_=$I_{ds}$] ++(0,-1.5) coordinate(dig sig connection) 
+    (dig sig connection) to[R=$R_{ds}$, name=Rds] ++(0,-1.5) node[ground](gnd sig){}
+    (split sig) to[R=$R_{ws}$, name=Rws, i<=$I_{ps} + I_{pn}$, *-o] ++(5,0) node[right]{$V_p$}
+    (dig sig connection) to[short, *-] ++(-1.4,0) coordinate() to[voltmeter, v=$V_{ds}$] ++(0,-1.5) to[short, -*] (gnd sig)
+    ;
+    \draw (0,-5) node[left]{$V_b$}
+    to[R=$R_{sn}$, name=Rsn, i=$I_{sn}$, o-] ++(3,0) coordinate(split noi)
+    to[C, i>_=$I_{dn}$] ++(0,-1.5) coordinate(dig noi connection) 
+    (dig noi connection) to[R=$R_{dn}$, name=Rdn] ++(0,-1.5) node[ground](gnd noi){}
+    (split noi) to[R=$R_{wn}$, name=Rwn, i<=$I_{pn}$, *-o] ++(5,0) node[right]{$V_n$}
+    (dig noi connection) to[short, *-] ++(-1.4,0) coordinate() to[voltmeter, v=$V_{dn}$] ++(0,-1.5) to[short, -*] (gnd noi)
+    ;
+  \end{circuitikz}
+  \caption[*Tip Circuit w/ Noise]{Circuit for a single tip on the Langmuir probe alongside the circuit for measuring noise. The $V_b$ inputs are the same for both circuits but since the bias not change during a shot we will ignore any currents flowing between the circuits. The subscripts are organized as (element, circuit) where the elements are $b$ = bias, $s$ = sense resistor, $w$ = wire, $p$ = probe, $d$ = digitizer and the circuits are $n$ = noise, $s$ = signal. In our equations we don't use the raw voltages from the digitizers ($V_{ds}$ and $V_{dn}$) and instead use the currents ($I_{ds}$ and $I_{dn}$) which we can find using $V=IR$.}
+  \label{fig:multitip_tip_circuit_w_noise}
+\end{figure}
 
 \subsubsection{Single-ended measurement}
 
+We've used the TREX cells in the past which are single ended digitizers that can sample between 2.5 MHz (32 channels) and 20 MHz (4 channels). These work pretty well for our lower frequency experiments like those with the drive coils. Unfortunately because of the high voltages and large currents, the ground of these digitizers can change a lot during a shot even if they are on isolation transformers to remove their reliance on the lab ground. This circuit can be seen in figure \ref{fig:multitip_single_ended_circuit_image}.
+
 \begin{figure}
-    \caption{Image of old circuit board}
+    \centering
+    \includegraphics[width=.85\textwidth]{chapter_te_probe/figures/single_ended_bias_board.jpeg}
+    \caption[Multitip Single Ended Tip Board]{Image of circuit board used for single-ended measurements. The top ribbon connector is where the bias comes in. Just below that connector are multiple sense resistors. Often those are replaced with hand soldered higher power resistor networks. The pink rectangles on the right are the capacitors as can be seen in figure \ref{fig:multitip_simple_tip_circuit}. The resistor networks in black and light blue in the bottom right are a resistor divider prior to measurement whose signals leave out the tan connector at bottom left.}
+    \label{fig:multitip_single_ended_circuit_image}
 \end{figure}
 
 \subsubsection{Differential measurement}
+
+We've developed a new circuit board to make use of our D-TACQ digitizers which measure using a differential input. Instead of measuring between the digitizer ground and the resistor divider output, we instead duplicate all the circuit elements on the board meaning each tip has two sense resistors, two capacitors, and two resistor dividers. One of the circuits is still connected to the probe tip through it's wire but the other is only connected to the bias voltage input. Thus we can measure the difference between these two signals.
+
+This vastly improves the signal quality and helps to remove much of the noise we previously saw when the capacitor banks were triggered.
 
 \begin{figure}
     \caption{Image of new circuit board}
