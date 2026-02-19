@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.28 (TeX Live 2025) (preloaded format=pdflatex 2025.9.18)  17 FEB 2026 17:54
+This is pdfTeX, Version 3.141592653-2.6-1.40.28 (TeX Live 2025) (preloaded format=pdflatex 2025.9.18)  19 FEB 2026 13:08
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -1420,7 +1420,7 @@ LaTeX Warning: No positions in optional float specifier.
 [22]
 
 [23]
-<chapter_te_probe/figures/probe_shaft_cad.png, id=2718, 1509.64pt x 335.2525pt>
+<chapter_te_probe/figures/probe_shaft_cad.png, id=2694, 1509.64pt x 335.2525pt>
 File: chapter_te_probe/figures/probe_shaft_cad.png Graphic file (type png)
 <use chapter_te_probe/figures/probe_shaft_cad.png>
 Package pdftex.def Info: chapter_te_probe/figures/probe_shaft_cad.png  used on input line 86.
@@ -1430,12 +1430,12 @@ Package pdftex.def Info: chapter_te_probe/figures/probe_shaft_cad.png  used on i
 [24 <./chapter_te_probe/figures/probe_shaft_cad.png>]
 
 [25]
-<./chapter_te_probe/figures/annotated_te_image.png, id=2734, 1740.5025pt x 764.8575pt>
+<./chapter_te_probe/figures/annotated_te_image.png, id=2711, 1740.5025pt x 764.8575pt>
 File: ./chapter_te_probe/figures/annotated_te_image.png Graphic file (type png)
 <use ./chapter_te_probe/figures/annotated_te_image.png>
 Package pdftex.def Info: ./chapter_te_probe/figures/annotated_te_image.png  used on input line 122.
 (pdftex.def)             Requested size: 383.0pt x 168.30417pt.
-<chapter_te_probe/figures/Plastic Body v2.pdf, id=2741, 794.97pt x 614.295pt>
+<chapter_te_probe/figures/Plastic Body v2.pdf, id=2718, 794.97pt x 614.295pt>
 File: chapter_te_probe/figures/Plastic Body v2.pdf Graphic file (type pdf)
 <use chapter_te_probe/figures/Plastic Body v2.pdf>
 Package pdftex.def Info: chapter_te_probe/figures/Plastic Body v2.pdf  used on input line 136.
@@ -1452,7 +1452,7 @@ Overfull \hbox (7.55026pt too wide) in paragraph at lines 146--147
 [27 <./chapter_te_probe/figures/Plastic Body v2.pdf>]
 
 [28]
-<chapter_te_probe/figures/te_mach_effect.pdf, id=2776, 250.78465pt x 139.99806pt>
+<chapter_te_probe/figures/te_mach_effect.pdf, id=2753, 250.78465pt x 139.99806pt>
 File: chapter_te_probe/figures/te_mach_effect.pdf Graphic file (type pdf)
 <use chapter_te_probe/figures/te_mach_effect.pdf>
 Package pdftex.def Info: chapter_te_probe/figures/te_mach_effect.pdf  used on input line 165.
@@ -1464,7 +1464,7 @@ Package pdftex.def Info: chapter_te_probe/figures/te_mach_effect.pdf  used on in
 [30]
 
 [31]
-<chapter_te_probe/figures/Old_biasing_circuit_cropped.pdf, id=2816, 230.97209pt x 466.73273pt>
+<chapter_te_probe/figures/Old_biasing_circuit_cropped.pdf, id=2793, 230.97209pt x 466.73273pt>
 File: chapter_te_probe/figures/Old_biasing_circuit_cropped.pdf Graphic file (type pdf)
 <use chapter_te_probe/figures/Old_biasing_circuit_cropped.pdf>
 Package pdftex.def Info: chapter_te_probe/figures/Old_biasing_circuit_cropped.pdf  used on input line 248.
@@ -1474,17 +1474,17 @@ Package pdftex.def Info: chapter_te_probe/figures/Old_biasing_circuit_cropped.pd
 [32]
 
 [33 <./chapter_te_probe/figures/Old_biasing_circuit_cropped.pdf>]
-<chapter_te_probe/figures/New_biasing_circuit_cropped.pdf, id=2835, 1690.10425pt x 1194.98447pt>
+<chapter_te_probe/figures/New_biasing_circuit_cropped.pdf, id=2811, 1690.10425pt x 1194.98447pt>
 File: chapter_te_probe/figures/New_biasing_circuit_cropped.pdf Graphic file (type pdf)
 <use chapter_te_probe/figures/New_biasing_circuit_cropped.pdf>
 Package pdftex.def Info: chapter_te_probe/figures/New_biasing_circuit_cropped.pdf  used on input line 283.
 (pdftex.def)             Requested size: 383.0pt x 270.79271pt.
-<chapter_te_probe/figures/new_biasing_circuit_image_top.jpeg, id=2836, 2055.68pt x 1541.76pt>
+<chapter_te_probe/figures/new_biasing_circuit_image_top.jpeg, id=2812, 2055.68pt x 1541.76pt>
 File: chapter_te_probe/figures/new_biasing_circuit_image_top.jpeg Graphic file (type jpg)
 <use chapter_te_probe/figures/new_biasing_circuit_image_top.jpeg>
 Package pdftex.def Info: chapter_te_probe/figures/new_biasing_circuit_image_top.jpeg  used on input line 292.
 (pdftex.def)             Requested size: 181.92441pt x 136.4234pt.
-<chapter_te_probe/figures/new_biasing_circuit_image_front.jpeg, id=2837, 2055.68pt x 1541.76pt>
+<chapter_te_probe/figures/new_biasing_circuit_image_front.jpeg, id=2813, 2055.68pt x 1541.76pt>
 File: chapter_te_probe/figures/new_biasing_circuit_image_front.jpeg Graphic file (type jpg)
 <use chapter_te_probe/figures/new_biasing_circuit_image_front.jpeg>
 Package pdftex.def Info: chapter_te_probe/figures/new_biasing_circuit_image_front.jpeg  used on input line 298.
@@ -1513,10 +1513,10 @@ Overfull \hbox (2.13904pt too wide) in paragraph at lines 344--345
 [38]
 
 [39]
-<chapter_te_probe/figures/single_ended_bias_board.jpeg, id=2875, 1541.76pt x 2055.68pt>
+<chapter_te_probe/figures/single_ended_bias_board.jpeg, id=2852, 1541.76pt x 2055.68pt>
 File: chapter_te_probe/figures/single_ended_bias_board.jpeg Graphic file (type jpg)
 <use chapter_te_probe/figures/single_ended_bias_board.jpeg>
-Package pdftex.def Info: chapter_te_probe/figures/single_ended_bias_board.jpeg  used on input line 417.
+Package pdftex.def Info: chapter_te_probe/figures/single_ended_bias_board.jpeg  used on input line 418.
 (pdftex.def)             Requested size: 325.55234pt x 434.05807pt.
 
 
@@ -1530,19 +1530,11 @@ Package pdftex.def Info: chapter_te_probe/figures/single_ended_bias_board.jpeg  
 
 [44]
 
-[45])
+[45]
 
 [46]
-\openout2 = `chapter_pa_probe/pa_probe.aux'.
 
- (./chapter_pa_probe/pa_probe.tex
-
-[47
-
-
-
-
-]
+[47]
 
 [48]
 
@@ -1550,11 +1542,19 @@ Package pdftex.def Info: chapter_te_probe/figures/single_ended_bias_board.jpeg  
 
 [50]
 
-[51]
+[51])
 
 [52]
+\openout2 = `chapter_pa_probe/pa_probe.aux'.
 
-[53]
+ (./chapter_pa_probe/pa_probe.tex
+
+[53
+
+
+
+
+]
 
 [54]
 
@@ -1562,14 +1562,26 @@ Package pdftex.def Info: chapter_te_probe/figures/single_ended_bias_board.jpeg  
 
 [56]
 
-[57])
+[57]
 
 [58]
+
+[59]
+
+[60]
+
+[61]
+
+[62]
+
+[63])
+
+[64]
 \openout2 = `chapter_conclusion/conclusion.aux'.
 
  (./chapter_conclusion/conclusion.tex)
 
-[59
+[65
 
 
 
@@ -1577,22 +1589,22 @@ Package pdftex.def Info: chapter_te_probe/figures/single_ended_bias_board.jpeg  
 ]
 
 
-pdfTeX warning (ext4): destination with the same identifier (name{page.59}) has been already used, duplicate ignored
+pdfTeX warning (ext4): destination with the same identifier (name{page.65}) has been already used, duplicate ignored
 <to be read again> 
                    \relax 
 l.72 \begin{colophon}
-                      [59
+                      [65
 
 
 ] (./backmatter/colophon.tex)
 
-[60
+[66
 
 ] (./dissertation.bbl
 bibitemlist
 )
 
-[61
+[67
 
 ]
 \tf@toc=\write7
@@ -1610,21 +1622,21 @@ LaTeX2e <2025-06-01> patch level 1
 L3 programming layer <2020/03/25>
  ***********
 Package rerunfilecheck Info: File `dissertation.out' has not changed.
-(rerunfilecheck)             Checksum: 842748BC4CAD1450AA4EB58232155193;86745.
+(rerunfilecheck)             Checksum: D06B710EAD57B5020E2C88834253778E;85979.
  ) 
 Here is how much of TeX's memory you used:
- 52733 strings out of 467797
- 1177011 string characters out of 5431809
- 1880854 words of memory out of 5000000
- 79903 multiletter control sequences out of 15000+600000
- 681098 words of font info for 182 fonts, out of 8000000 for 9000
+ 53293 strings out of 467797
+ 1194083 string characters out of 5431809
+ 1881819 words of memory out of 5000000
+ 80422 multiletter control sequences out of 15000+600000
+ 698020 words of font info for 219 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 89i,13n,94p,1103b,1076s stack positions out of 10000i,1000n,20000p,200000b,200000s
-</usr/local/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmex10.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy7.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/euler/euex10.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/euler/eufm10.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/euler/eufm7.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/euler/eurm10.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/euler/eurm7.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/euler/eusm10.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/euler/eusm7.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/lm/lmtt12.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/symbols/msam10.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/tex-gyre/qplb.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/tex-gyre/qplr.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/tex-gyre/qplri.pfb>
-Output written on dissertation.pdf (87 pages, 3428554 bytes).
+ 89i,15n,94p,1103b,1076s stack positions out of 10000i,1000n,20000p,200000b,200000s
+</usr/local/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmex10.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy7.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/euler/euex10.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/euler/eufm10.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/euler/eufm7.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/euler/eurm10.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/euler/eurm7.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/euler/eusm10.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/euler/eusm7.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/lm/lmtt12.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/symbols/msam10.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/symbols/msbm10.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/tex-gyre/qplb.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/tex-gyre/qplr.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/tex-gyre/qplri.pfb>
+Output written on dissertation.pdf (93 pages, 3448563 bytes).
 PDF statistics:
- 3233 PDF objects out of 3580 (max. 8388607)
- 3060 compressed objects within 31 object streams
- 675 named destinations out of 1000 (max. 500000)
- 37994 words of extra memory for PDF output out of 42996 (max. 10000000)
+ 3252 PDF objects out of 3580 (max. 8388607)
+ 3071 compressed objects within 31 object streams
+ 680 named destinations out of 1000 (max. 500000)
+ 50242 words of extra memory for PDF output out of 51595 (max. 10000000)
 

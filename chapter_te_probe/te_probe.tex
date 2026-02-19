@@ -384,7 +384,7 @@ Now that we can apply a voltage to the tip, we need some way to measure the curr
 
 \subsubsection{Principles of operation}
 
-We apply the bias at the node labeled $V_b$. When the probe pulls current from the plasma, $I_p$, this changes the tip voltage and pulls the voltage closer to the floating potential since there is a voltage drop across the sense resistor, $R_s$. The capacitor acts to shield the DC component of the probe voltage. The voltage difference across the sense resistor is measured by a digitizer which sees $V_D$ but that resistor divider can be simplified to a measured voltage of $V_d$. We want the probe voltage, $V_p$, and the probe current, $I_p$, to fit the plasma parameters.
+We apply the bias at the node labeled $V_b$. When the probe pulls current from the plasma, $I_p$, this changes the tip voltage and pulls the voltage closer to the floating potential since there is a voltage drop across the sense resistor, $R_s$. The capacitor and resistor divider RC times acts to shield the DC component of the probe bias voltage. The voltage difference across the sense resistor is measured by a digitizer which sees $V_D$ but that resistor divider can be simplified to a measured voltage of $V_d$. We want the probe voltage, $V_p$, and the probe current, $I_p$, to fit the plasma parameters.
 
 \begin{figure}
   \centering
@@ -392,19 +392,20 @@ We apply the bias at the node labeled $V_b$. When the probe pulls current from t
     \draw (0,0) node[left]{$V_b$}
     to[R=$R_{ss}$, name=Rss, i=$I_{ss}$, o-] ++(3,0) coordinate(split sig)
     to[C, i>_=$I_{ds}$] ++(0,-1.5) coordinate(dig sig connection) 
-    (dig sig connection) to[R=$R_{ds}$, name=Rds] ++(0,-1.5) node[ground](gnd sig){}
-    (split sig) to[R=$R_{ws}$, name=Rws, i<=$I_{ps} + I_{pn}$, *-o] ++(5,0) node[right]{$V_p$}
-    (dig sig connection) to[short, *-] ++(-1.4,0) coordinate() to[voltmeter, v=$V_{ds}$] ++(0,-1.5) to[short, -*] (gnd sig)
+    (dig sig connection) to[R=$R_{ds}$, name=Rds] ++(0,-1.5) coordinate(dig sig gnd connection)
+    (dig sig gnd connection) to[american voltage source, l=$V_c$] ++(0,-1.5) node[ground](gnd sig){}
+    (split sig) to[R=$R_{ws}$, name=Rws, i<=$I_{ps}$, *-o] ++(5,0) node[right]{$V_p$}
+    (dig sig connection) to[short, *-] ++(-1.4,0) coordinate() to[voltmeter, v=$V_{ds}$] ++(0,-1.5) to[short, -*] (dig sig gnd connection)
     ;
-    \draw (0,-5) node[left]{$V_b$}
+    \draw (0,-6) node[left]{$V_b$}
     to[R=$R_{sn}$, name=Rsn, i=$I_{sn}$, o-] ++(3,0) coordinate(split noi)
     to[C, i>_=$I_{dn}$] ++(0,-1.5) coordinate(dig noi connection) 
-    (dig noi connection) to[R=$R_{dn}$, name=Rdn] ++(0,-1.5) node[ground](gnd noi){}
-    (split noi) to[R=$R_{wn}$, name=Rwn, i<=$I_{pn}$, *-o] ++(5,0) node[right]{$V_n$}
-    (dig noi connection) to[short, *-] ++(-1.4,0) coordinate() to[voltmeter, v=$V_{dn}$] ++(0,-1.5) to[short, -*] (gnd noi)
+    (dig noi connection) to[R=$R_{dn}$, name=Rdn] ++(0,-1.5) coordinate(dig noi gnd connection)
+    (dig noi gnd connection) to[american voltage source, l=$V_c$] ++(0,-1.5) node[ground](gnd noi){}
+    (dig noi connection) to[short, *-] ++(-1.4,0) coordinate() to[voltmeter, v=$V_{dn}$] ++(0,-1.5) to[short, -*] (dig noi gnd connection)
     ;
   \end{circuitikz}
-  \caption[*Tip Circuit w/ Noise]{Circuit for a single tip on the Langmuir probe alongside the circuit for measuring noise. The $V_b$ inputs are the same for both circuits but since the bias not change during a shot we will ignore any currents flowing between the circuits. The subscripts are organized as (element, circuit) where the elements are $b$ = bias, $s$ = sense resistor, $w$ = wire, $p$ = probe, $d$ = digitizer and the circuits are $n$ = noise, $s$ = signal. In our equations we don't use the raw voltages from the digitizers ($V_{ds}$ and $V_{dn}$) and instead use the currents ($I_{ds}$ and $I_{dn}$) which we can find using $V=IR$.}
+  \caption[*Tip Circuit w/ Noise]{Circuit for a single tip on the Langmuir probe alongside the circuit for measuring noise. The $V_b$ inputs are the same for both circuits but since the bias not change during a shot we will ignore any currents flowing between the circuits. The subscripts are organized as (element, circuit) where the elements are $b$ = bias, $s$ = sense resistor, $w$ = wire, $p$ = probe, $d$ = digitizer and the circuits are $n$ = noise, $s$ = signal. In our equations we don't use the raw voltages from the digitizers ($V_{ds}$ and $V_{dn}$) and instead use the currents ($I_{ds}$ and $I_{dn}$) which we can find using $V=IR$. The noise is modeled as a changing chassis voltage.}
   \label{fig:multitip_tip_circuit_w_noise}
 \end{figure}
 
@@ -435,52 +436,142 @@ This vastly improves the signal quality and helps to remove much of the noise we
 
 \subsubsection{Circuit Solution}
 
+During a shot, noise is generated around the lab because of the high currents used to create the reversed magnetic field for reconnection. To remove this noise we use another circuit that has the same components but is not connected to a plasma facing tip which can be seen in figure \ref{fig:multitip_tip_circuit_w_noise}. We'll call this other circuit the \textbf{noise circuit} and the circuit that is connected to the tip the \textbf{signal circuit}. If there was no noise in the lab we would expect to measure no fluctuations on the noise circuit digitizer.
+
+In order to get the IV-curve needed for extracting out the plasma parameters we need to solve for the probe voltage and current. To do this, we'll take figure \ref{fig:multitip_tip_circuit_w_noise} as our model where we have modeled the noise as a fluctuating ground voltage\footnote{We've also tried modeling the noise using a fluctuating current that appears on both the probe signal and where a probe would attach in the noise circuit. This did not work as well as the ground voltage fluctation method though.}. This isn't a perfect model as it ignores other sources of noise from the digitizer or bias fluctuations (which it may actually account for) but it works well for our purposes. The capacitor in this circuit has nearly no time dependence over the shot so we treat it as having a constant voltage drop of $V_b$.
+
 \paragraph{How do we solve this}
 
-\subparagraph{Kirkoff's laws}
+Using Kirkoff's laws we can construct a system of linear equations. Kirkoff's current law gives us two equations for the nodes in the signal and noise circuits and Kirkoff's voltage law gives six equations connecting any end node combination in each circuit. We solve these equations using \texttt{SymPy}, a symbolic math library in Python. These give the following:
+\begin{align*}
+  I_{ps} =& \frac{1}{R_{ss}} [(R_{ds} + R_{ss}) I_{ds} - (R_{dn} + R_{sn}) I_{dn}] \\
+  V_{ps} =& \frac{1}{R_{ss}} [(R_{ds} R_{ss} + R_{ds} R_{ws} + R_{ss} R_{ws}) I_{ds} \\
+  & \quad - (R_{dn} R_{ss} + R_{dn} R_{ws} + R_{sn} R_{ss} + R_{sn} R_{ws}) I_{dn}] + V_b \\
+\end{align*}
 
-\subparagraph{System of equations}
+Since the digitizers are measuring the voltage output of the resistor divider we have replaced the measured voltages, $V_D$, with the currents, $I_d$, which is the total current flowing through the resistor divider. Since we know the measured voltage and the resistances of the divider and digitizer we can find the current using Fig. \ref{fig:multitip_simple_tip_circuit}:
 
-\subparagraph{SymPy}
+\begin{align*}
+  R_d &= R_1 + (R_2^{-1} + R_D^{-1})^{-1}, \\
+  V_D &= \frac{(R_2^{-1} + R_D^{-1})^{-1}}{R_d} V_d, \\
+  I_d &= \frac{V_d}{R_d}
+\end{align*}
 
-\paragraph{equations}
+Thus our final equations for the probe voltage and current are
+\begin{align*}
+  I_d =& \frac{V_d}{R_d} = \frac{V_D}{\left(R_2^{-1} + R_D^{-1}\right)^{-1}} \\
+  I_{ps} =& \frac{1}{R_{ss}} [(R_{ds} + R_{ss}) I_{ds} - (R_{dn} + R_{sn}) I_{dn}] \\
+  V_{ps} =& \frac{1}{R_{ss}} [(R_{ds} R_{ss} + R_{ds} R_{ws} + R_{ss} R_{ws}) I_{ds} \\
+  & \quad - (R_{dn} R_{ss} + R_{dn} R_{ws} + R_{sn} R_{ss} + R_{sn} R_{ws}) I_{dn}] + V_b \\
+\end{align*}
 
 \paragraph{Assumptions}
 
+Here we have assumed that all the noise is coming from a fluctuating ground which is an alright assumption as we do expect significant ground fluctuations that could easily change the measurement. We see less of these fluctuations during shots with no plasma which may mean part of this noise is coming from current drawn by the probe. It remains to be seen if there are better ways to model the common-mode noise or if we are accidentally removing bias voltage fluctuations that may be necessary for better IV-characteristic reconstructions.
+
 \subsubsection{Calibration}
 
-\paragraph{Calibrating in isat}
+Try as we might, we can't perfectly manufacture these probes such that the areas of each tip are the same and the various resistances all match. The best way to calibrate this probe is using the plasma itself.
+
+\paragraph{Calibrating in Ion Saturation Regime}
+
+When the current to the probe is dominated by the ions, the IV-characteristic is very flat. By setting all tips to the same very negative bias voltage we measure different currents to each tip. The relative difference between measurements is nearly the same as the relative area difference between those tips.
 
 \paragraph{Calibrating on the exponential}
 
+In the ion attracting regime but near the plasma potential, the shape of the IV-characteristic is approximately exponential. Since our initial plasma is very cold ($\sim4$ eV), the rise is very swift. Thus setting the tip potential to be near the plasma potential during the equilibrium plasma before the drive coils gives us the ability to calculate the wire resistance such that all the points on the IV-characteristic are at the same voltage.
+
 \paragraph{Bayesian calibration}
+
+We can actually do both of these calibrations using Bayesian statistics where we solve for the probability of the area (or resistance) based on the current to the probe. By finding the probability of the measured current for some area assuming some amount of noise and then applying a prior that forces the area to be in some resonable range let's us find the most probable area. The same can be done for the resistance.
 
 \paragraph{Calibration using pressure wave}
 
+Although we can calibrate the relative areas between probes we need some way to get the actual plasma parameters (not just the relative ones)! We do this using data from the previous chapter. Since that method works well to extract the initial density profile we can change the tip areas to best match those results.
+
 \subsection{Bdot coils}
+
+\begin{figure}
+\centering
+\resizebox{1\textwidth}{!}{%
+\begin{circuitikz}
+\draw (17,13.75) to[L,l={coil} ] (17,12);
+\draw (18.75,13.75) to[R,l={100$\Omega$}] (18.75,12);
+\draw (17,13.75) to[short] (20.5,13.75);
+\draw (20.5,13.75) to[short] (20.5,13);
+\draw (21.25,12.8) to[short] (21.25,12);
+\draw (21.25,12) to[short] (17,12);
+\draw (26.75,13) to[R,l=$R_1$] (26.75,11.5);
+\draw (26.75,11.5) to[R,l=$R_2$] (26.75,10);
+\draw (26.75,9) to[R,l=$R_1$] (26.75,7.5);
+\draw (26.75,7.5) to[R,l=$R_2$] (26.75,6);
+\draw (26,12.8) to[short] (26,9);
+\draw (26,9) to[short] (26.75,9);
+\draw (26.75,10) to (26.75,9.75) node[ground]{};
+\draw (26.75,6) to (26.75,5.75) node[ground]{};
+\draw (28.5,11.5) to[rmeter, t=V] (28.5,7.5);
+\draw (28.5,11.5) to[short] (26.75,11.5);
+\draw (26.75,7.5) to[short] (28.5,7.5);
+\draw (20.5,13) to[transmission line, bipoles/tline/width=3.75,l={twisted pair}] (26.75,13);
+\end{circuitikz}
+}%
+\caption[*Bdot coil circuit]{The Bdot coil circuit. The top left inductor and resistor and near the probe tip. The signals are extracted using twisted pair and then divided down before a differential measurement.}
+\label{fig:multitip_bdot_coil_circuit}
+\end{figure}
+
+The Bdot coils, while basic in theory, need some help to actually give physical results.
 
 \subsubsection{In-shaft circuit}
 
-\paragraph{Why do we have that?}
-
-\paragraph{Where is it placed approximately?}
+Inside the stainless shaft connected to the probe, there is another circuit containing some resistors and various through holes. Since each coil wrap is really two coils (as they are wrapped using twisted pair) this is where those two coil signals are separated. The resistor is in place to improve the system response to high frequency.
 
 \subsubsection{Circuit model}
 
+We model the circuit using figure \ref{fig:multitip_bdot_coil_circuit}. The small resistor near the coil does not come into play for analyzing the signal. As of this writing we assume a linear response between fluctuating magnetic fields and measured voltage but a better solution would be measurement of the transfer function.
+
 \subsubsection{Calibration}
 
-\paragraph{Directional}
-
-\paragraph{Transfer Function}
+Although we could use a handheld coil for calibrating the areas and directions of this coil, it is far easier and more accurate to use the drive coils as a calibration source. Without plasma, we can model the expected magnetic field assuming they induce current in the BRB walls such that no field can escape (this is true since the BRB shell is made of aluminum and the induced currents have continuous paths). Using these modeled fields we can match the measurement to the expected field and by rotating the probe and moving the probe figure out the vector areas.
 
 \subsubsection{Signal Interpretation}
 \label{ss2:multitip_bdot_signal_interp}
 
+Once we have the vector area of each coil, $\vb{A}_i$, we can now extract the Bdot signal. According to Faraday's law,
+\begin{equation}
+    \mathcal{E}_i = \vb{A}_i\cdot\dot{\vb{B}}.
+\end{equation}
+Now we measure a signal, $S_i$, where
+\begin{equation}
+    S_i = \frac{R_2}{R_1 + R_2} \mathcal{E}_i.
+\end{equation}
+Assuming the coils make a basis for $\mathbb{R}^3$, we can turn this into an inverse problem:
+\begin{align}
+    \begin{bmatrix}
+        S_1 \\
+        S_2 \\
+        \vdots \\
+        S_6
+    \end{bmatrix} &= \begin{bmatrix}
+        \vb{A}_1 \\
+        \vb{A}_2 \\
+        \vdots \\
+        \vb{A}_6 \\
+    \end{bmatrix} \cdot \dot{\vb{B}} \\
+    \vb{S} &= \vb{A} \cdot \dot{\vb{B}}
+\end{align}
+Now $\dot{\vb{B}}$ is overdefined since we have six measurements and three field components so using linear least squares\footnote{We've also tried using generalized least squares (since coils made of the same twisted pair may have more correlated noise) but we did not see a significant improvement.} we can solve for $\dot{\vb{B}}$ and also the standard deviation of $\dot{\vb{B}}$. This is useful in understanding where we might expect error in our signals and whether we need to smooth signals to get rid of noise caused by the firing of the capacitor banks (which is sometimes needed).
+
 \section{Plasma Theory}
+
+The depth of theory needed to correctly understand Langmuir probes is near endless with a menagerie of exciting physical effects one could account for. I'm prone to dive a bit too deep into some of these various theories but after much literature review and some misteps we've come to a theory that seems to work relatively well for our results. Here I'll discuss the prior method using a very simple model and another method that gives much better results.
 
 \subsection{Simple Plasma Theory (Hutchinson)}
 
+\cite{Hutchinson_2002} develops a simple model for the current to a Langmuir probe that we have used for a long time. It assumes that the ion current is constant and the electron current follows an exponential.
+
 \subsubsection{Derivation}
+
+We won't reproduce the derivation here but will instead describe the physical interpretation.
 
 \subsubsection{Pros \& Cons}
 
