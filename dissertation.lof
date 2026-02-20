@@ -44,29 +44,29 @@
 \contentsline {figure}{\numberline {3.11}{\ignorespaces Multitip Single Ended Tip Board}}{41}{figure.caption.55}%
 \contentsline {figure}{\numberline {3.12}{\ignorespaces Image of new circuit board}}{42}{figure.caption.56}%
 \contentsline {figure}{\numberline {3.13}{\ignorespaces *Bdot coil circuit}}{45}{figure.caption.58}%
-\contentsline {figure}{\numberline {3.14}{\ignorespaces What does an electric field do to the tip measurements diagram.}}{49}{figure.caption.60}%
-\contentsline {figure}{\numberline {3.15}{\ignorespaces Example plot where E splitting tips}}{49}{figure.caption.61}%
-\contentsline {figure}{\numberline {3.16}{\ignorespaces Diagram of local minimums}}{50}{figure.caption.62}%
-\contentsline {figure}{\numberline {3.17}{\ignorespaces Example fit using many shots, multiple local parameter fits, and errors}}{51}{figure.caption.63}%
-\contentsline {figure}{\numberline {3.18}{\ignorespaces Plot of isat currents from BRL}}{51}{figure.caption.64}%
-\contentsline {figure}{\numberline {3.19}{\ignorespaces Radial chord of initial density with Hutchinson vs BRL.}}{52}{figure.caption.65}%
-\contentsline {figure}{\numberline {3.20}{\ignorespaces Comparison of expected E from Ohm's law and measured E.}}{52}{figure.caption.66}%
+\contentsline {figure}{\numberline {3.14}{\ignorespaces What does an electric field do to the tip measurements diagram.}}{56}{figure.caption.60}%
+\contentsline {figure}{\numberline {3.15}{\ignorespaces Example plot where E splitting tips}}{56}{figure.caption.61}%
+\contentsline {figure}{\numberline {3.16}{\ignorespaces Diagram of local minimums}}{57}{figure.caption.62}%
+\contentsline {figure}{\numberline {3.17}{\ignorespaces Example fit using many shots, multiple local parameter fits, and errors}}{58}{figure.caption.63}%
+\contentsline {figure}{\numberline {3.18}{\ignorespaces Plot of isat currents from BRL}}{58}{figure.caption.64}%
+\contentsline {figure}{\numberline {3.19}{\ignorespaces Radial chord of initial density with Hutchinson vs BRL.}}{59}{figure.caption.65}%
+\contentsline {figure}{\numberline {3.20}{\ignorespaces Comparison of expected E from Ohm's law and measured E.}}{59}{figure.caption.66}%
 \addvspace {10pt}
-\contentsline {figure}{\numberline {4.1}{\ignorespaces Picture of feed thru along with drawings of cross-sections.}}{54}{figure.caption.67}%
-\contentsline {figure}{\numberline {4.2}{\ignorespaces Picture of end of probe}}{54}{figure.caption.68}%
-\contentsline {figure}{\numberline {4.3}{\ignorespaces CAD diagram of full body}}{54}{figure.caption.69}%
-\contentsline {figure}{\numberline {4.4}{\ignorespaces CAD diagram of probe tip}}{54}{figure.caption.70}%
-\contentsline {figure}{\numberline {4.5}{\ignorespaces Simple circuit diagram of how bias works.}}{55}{figure.caption.72}%
-\contentsline {figure}{\numberline {4.6}{\ignorespaces Full circuit diagram of how bias works.}}{56}{figure.caption.73}%
-\contentsline {figure}{\numberline {4.7}{\ignorespaces Image of power supply setup}}{56}{figure.caption.74}%
-\contentsline {figure}{\numberline {4.8}{\ignorespaces Schematic of grounding diagram}}{57}{figure.caption.77}%
-\contentsline {figure}{\numberline {4.9}{\ignorespaces Image of swapping box}}{58}{figure.caption.78}%
-\contentsline {figure}{\numberline {4.10}{\ignorespaces Diagram of swapping}}{58}{figure.caption.79}%
-\contentsline {figure}{\numberline {4.11}{\ignorespaces Time frame for core movie of IV with separation between relay}}{58}{figure.caption.80}%
-\contentsline {figure}{\numberline {4.12}{\ignorespaces Circuit diagram of probe circuitry}}{59}{figure.caption.81}%
-\contentsline {figure}{\numberline {4.13}{\ignorespaces Image of probe circuitry}}{59}{figure.caption.82}%
-\contentsline {figure}{\numberline {4.14}{\ignorespaces Probe signals showing coupling}}{59}{figure.caption.83}%
-\contentsline {figure}{\numberline {4.15}{\ignorespaces Figure of theoretial plasma distributions and JV curves}}{60}{figure.caption.84}%
-\contentsline {figure}{\numberline {4.16}{\ignorespaces Simple drawing of what might happen to ions}}{61}{figure.caption.85}%
-\contentsline {figure}{\numberline {4.17}{\ignorespaces Comparison of alignment using Bz = 0 or bdot cross correlation}}{62}{figure.caption.86}%
+\contentsline {figure}{\numberline {4.1}{\ignorespaces Picture of feed thru along with drawings of cross-sections.}}{61}{figure.caption.67}%
+\contentsline {figure}{\numberline {4.2}{\ignorespaces Picture of end of probe}}{61}{figure.caption.68}%
+\contentsline {figure}{\numberline {4.3}{\ignorespaces CAD diagram of full body}}{61}{figure.caption.69}%
+\contentsline {figure}{\numberline {4.4}{\ignorespaces CAD diagram of probe tip}}{61}{figure.caption.70}%
+\contentsline {figure}{\numberline {4.5}{\ignorespaces Simple circuit diagram of how bias works.}}{62}{figure.caption.72}%
+\contentsline {figure}{\numberline {4.6}{\ignorespaces Full circuit diagram of how bias works.}}{63}{figure.caption.73}%
+\contentsline {figure}{\numberline {4.7}{\ignorespaces Image of power supply setup}}{63}{figure.caption.74}%
+\contentsline {figure}{\numberline {4.8}{\ignorespaces Schematic of grounding diagram}}{64}{figure.caption.77}%
+\contentsline {figure}{\numberline {4.9}{\ignorespaces Image of swapping box}}{65}{figure.caption.78}%
+\contentsline {figure}{\numberline {4.10}{\ignorespaces Diagram of swapping}}{65}{figure.caption.79}%
+\contentsline {figure}{\numberline {4.11}{\ignorespaces Time frame for core movie of IV with separation between relay}}{65}{figure.caption.80}%
+\contentsline {figure}{\numberline {4.12}{\ignorespaces Circuit diagram of probe circuitry}}{66}{figure.caption.81}%
+\contentsline {figure}{\numberline {4.13}{\ignorespaces Image of probe circuitry}}{66}{figure.caption.82}%
+\contentsline {figure}{\numberline {4.14}{\ignorespaces Probe signals showing coupling}}{66}{figure.caption.83}%
+\contentsline {figure}{\numberline {4.15}{\ignorespaces Figure of theoretial plasma distributions and JV curves}}{67}{figure.caption.84}%
+\contentsline {figure}{\numberline {4.16}{\ignorespaces Simple drawing of what might happen to ions}}{68}{figure.caption.85}%
+\contentsline {figure}{\numberline {4.17}{\ignorespaces Comparison of alignment using Bz = 0 or bdot cross correlation}}{69}{figure.caption.86}%
 \addvspace {10pt}

@@ -567,37 +567,193 @@ The depth of theory needed to correctly understand Langmuir probes is near endle
 
 \subsection{Simple Plasma Theory (Hutchinson)}
 
-\cite{Hutchinson_2002} develops a simple model for the current to a Langmuir probe that we have used for a long time. It assumes that the ion current is constant and the electron current follows an exponential.
+\cite{Hutchinson_2002} develops a simple model for the current to a Langmuir probe that we have used for a long time. It assumes that the ion current is constant and the electron current follows an exponential and only looks at the electron repelling region.
 
 \subsubsection{Derivation}
 
 We won't reproduce the derivation here but will instead describe the physical interpretation.
 
+The volume surrounding the probe is split into two regions: \textbf{the plasma} where the electric field is very small, quasineutrality holds, and the potential is near the plasma potential vs. \textbf{the sheath} where the ion electron charge densities are different and the electric field is largs such that the potential quickly jumps to the probe potential.
+
+The ion current is just modeled by how many ions randomly cross the plasma-sheath interface (the interface will be denoted by subscript $s$). If the ions are cold (i.e. negligible initial kinetic energy) then they will only get to the probe via their random motion. The speed of these ions is set by the voltage at which the interface appears which is where
+\begin{equation}
+    V_s = -\frac{T_e}{2e}.
+\end{equation}
+$V_s$ is the potential at the interface relative to the plasma potential. Assuming the electrons are Boltzmann and quasineutrality holds at the interface then
+\begin{equation}
+    n_{is} = n_{es} = n_\infty \exp\left(\frac{e V_s}{T_e}\right).
+\end{equation}
+Now we can calculate the ion current as
+\begin{align}
+    I_i &= A_s v_{is} n_{is} \\
+    &= A_s \sqrt{-\frac{2eV_s}{m_i}} n_\infty \exp\left(\frac{e V_s}{T_e}\right) \\
+    &= \exp\left(-\frac{1}{2}\right) A_s n_\infty \sqrt{\frac{T_e}{m_i}}.
+\end{align}
+We often assume that the sheath area is the same as the probe area since the Debye length is so short.
+
+For the electron current, we are assuming they are Boltzmann and they will hit the probe due to random motion. Since they are repelled by the probe the density will be smaller than in the bulk plasma. We can write the electron current as
+\begin{equation}
+    I_e = A_p \frac{1}{4} \sqrt{\frac{2 T_e}{m_e}} n_\infty \exp\left(\frac{e V_\text{probe}}{T_e}\right)
+\end{equation}
+where the square root is the average electron velocity and the exponential is the factor the electron density is reduced.
+
+The total current to the probe for $V_\text{probe} < V_\text{plasma}$ is thus
+\begin{equation}
+    I = n_\infty e A_p \sqrt{T_e}{m_i} \left[ \frac{1}{2} \sqrt{\frac{2 m_i}{\pi m_e}} \exp\left(\frac{e V_\text{probe}}{T_e}\right) - \exp\left(-\frac{1}{2}\right)\right]. % TODO: Where does the pi come from?
+\end{equation}
+
 \subsubsection{Pros \& Cons}
+
+This method has the benefit of being exceedingly simple to implement and often widely applicable. As long as the tips stay below the plasma potential this usually nicely matches our measurements. Unfortunately there's the catch, during a shot the plasma potential changes quickly by up to 100 or more volts. One option is to select only probe tips that look like they are below the plasma potential but this is both time consuming and prone to bias. Thus we look for a new method.
 
 \subsection{BRL}
 
-\subsubsection{Idea behind it}
+\cite{Laframboise_1966} created a model for the current to a cylindrical probe in a plasma with maxwellian ions and electrons that works for probe voltages above and below the plasma potential. Unfortunately, to my knowledge nobody has redone these calculations nor made a public repository with the code. To sidestep this issue we've used two simplifying approximations.
 
-\subsubsection{Approximations of it}
+For probe potential greater than plasma potential, i.e. electrons attracted, we follow along with appendix F of \cite{Laframboise_1966}. We assume the ions have zero temperature. Although we have no way currently to calculate the ion temperature it is an assumption we commonly make for plasmas from our plasma guns. Additionaly we assume we assume that the probe radius is far larger than the debye length. This approximation is valid for the initial plasma but can change throughout the shot. We also assume that all particles that touch the probe are absorbed by it.
 
-\paragraph{Planar probe}
+Since the scale over which the potential changes is proportional to the debye length, we assume we have a planar probe. Thus Poisson's equation is given by
 
-\paragraph{Chen Approximation}
+\begin{equation}
+  \dv[2]{\varphi}{x} = -\frac{\rho}{\varepsilon}
+  \label{eq:planar_poissons}
+\end{equation}
+
+Since the ions have zero temperature, they can not enter the $\varphi(x) > \varphi_0$ region and thus for the plasma charge density, $\rho(x)$, they can be ignored. Without loss of generality we'll set the plasma potential, $\varphi_0$, equal to 0. Since this region of electrons only plasma physically can't extend to infinity let's define $x = 0$ to be this boundary and let $x$ increase towards the probe.
+
+As this is a one-dimensional system then we have three conserved quantities. $v_y$ and $v_z$ which denote the transverse velocity will not be changed by the potential and the kinetic energy in the $x$ direction along with the electrostatic potential, $E_x = m v_x^2/2 + e\varphi(x)$. $e$ is the elementary charge. As all electrons will be absorbed by the probe, we will only have flow into the $\varphi(x) > 0$ region. Thus our distribution function looks like
+\begin{equation}
+  f(x, E_x, E_t) = \begin{cases}
+    n_0 \left(\frac{m}{2\pi kT}\right)^{3/2} \exp(-\frac{E_x(x)}{kT}) \exp(-\frac{E_t}{kT}) & v_x > 0 \\
+    0 & v_x < 0
+  \end{cases}
+  \label{eq:planar_distribution_function}
+\end{equation}
+We can now write the density as
+\begin{align*}
+  n(x) =& \int_0^\infty dv_x \int_{-\infty}^\infty dv_y \int_{-\infty}^\infty dv_z f(x, E_x, E_t) \\
+  =& \int_0^\infty \dv{v_x}{E_x} dE_x \int_{-\infty}^\infty dv_y \int_{-\infty}^\infty dv_z f(x, E_x, E_t) \\
+  =& n_0 \left(\frac{m}{2\pi kT}\right)^{3/2} \int_0^\infty \frac{\exp(-\frac{E_x(x)}{kT})}{\sqrt{2m (E_x - e\varphi(x))}} dE_x \\
+  & \int_{-\infty}^\infty \exp(-\frac{mv_y^2}{2kT}) dv_y \int_{-\infty}^\infty \exp(-\frac{mv_z^2}{2kT}) dv_z \\
+  =& n_0 \sqrt{\frac{m}{2\pi kT}} \int_0^\infty \frac{\exp(-\frac{E_x(x)}{kT})}{\sqrt{2m (E_x - e\varphi(x))}} dE_x
+\end{align*}
+
+Let's define $\eta = n(x) / n_0$ where $n_0$ is the number density at infinity. Let's also define $\chi(x) = e\varphi(x) / kT$ and $\beta = E_x / kT$ as the normalized potential and energy respectively. Thus we can write the normalized density as
+\begin{align}
+  \eta(x) &= \frac{1}{2\sqrt{\pi}} \int_{0}^{\infty} \frac{\exp(-\beta)}{\sqrt{\beta - \chi(x)}} d\beta \nonumber \\
+  &= \frac{e^{-\chi(x)}}{2} (1 - \erf(\sqrt{-\chi(x)})) \label{eq:planar_normalized_density}
+\end{align}
+
+Using our now normalized quantities, let's plug them into Poisson's equation \ref{eq:planar_poissons} to find
+\begin{align}
+  \frac{\varepsilon kT}{e}\dv[2]{\chi}{x} &= e \eta(x) \nonumber \\
+  \lambda_D^2 \dv[2]{\chi}{x} &= \eta(\chi(x)) \nonumber \\
+  \dv[2]{\chi}{s} &= \eta(\chi(s))
+  \label{eq:planar_normalized_poissons}
+\end{align}
+where $s = x / \lambda_D$ and $\lambda_D = \sqrt{\varepsilon k T / n_0 e}$ is the Debye length in the undisturbed plasma.
+
+Since the potential is zero at the sheath boundary and the derivative is smooth, $\chi(0) = 0$ and $d_s \chi(0) = 0$. For all $s > 0$, the density of electrons should be non-zero, i.e. we should never achieve a full vacuum except at infinity. Thus,
+\begin{equation*}
+  \dv[2]{\chi}{s}(s) > 0, \, \dv{\chi}{s}(0) = 0 \Rightarrow \dv{\chi}{s}(s) > 0 \Rightarrow \left(\dv{\chi}{s}\right)^{-1} = \dv{s}{\chi}
+\end{equation*}
+
+This means
+\begin{align*}
+  \dv[2]{\chi}{s} &= \dv{}{s} \left(\dv{s}{\chi}\right)^{-1} \\
+  &= \dv{\chi}{s} \dv{}{\chi} \left(\dv{s}{\chi}\right)^{-1} \\
+  \eta(\chi) &= -\left(\dv{s}{\chi}\right)^{-3} \dv[2]{s}{\chi}\\
+  \Rightarrow \int_{0}^{\chi} \eta(\chi') d\chi' &= \frac{1}{2} \left(\dv{s}{\chi}\right)^{-2} \\
+  \Rightarrow \dv{s}{\chi} &= \frac{1}{2 \int_{0}^{\chi} \eta(\chi') d\chi'} \\
+  \Rightarrow s(\chi) &= \int_{0}^{\chi} \frac{d\chi'}{2 \int_{0}^{\chi'} \eta(\chi'') d\chi''}
+\end{align*}
+
+This integral can be evaluated numerically. Thus we can pass a probe potential, $\chi$, and after integrating get the distance from the probe to the start of the sheath.
+
+Since all particles that enter the sheath are collected, from equation \ref{eq:planar_distribution_function}, then we need only find how the surface area of the sheath changes for different potentials. Letting $I_0$ be the current collected from the electrons when the probe is at the plasma potential then the current to the probe is
+\begin{equation}
+  I(\chi) = I_0 \left(1 + \frac{\lambda_D}{R_p} s(\chi)\right)^2
+  \label{eq:planar_probe_current}
+\end{equation}
+
+Now that we have a model for the current to the probe for the electron attracted region, we move on to modeling the current to the probe for the ion attracted region. There has been much more work put into this region from Steinbr\"{u}chel et al. \cite{Steinbrüchel_1990} \cite{Karamcheti_Steinbrüchel_1999}, Mausbach \cite{Mausbach_1997}, and Chen \cite{Chen_1965}. Steinbr\"{u}chel fitted a model of the form
+\begin{equation*}
+  I = I_{i0} a (-\chi)^b + I_{e0} \exp(\chi) \quad \chi < 0
+\end{equation*}
+where $a$ and $b$ were fit to the data given by Laframboise. Mausbach used
+\begin{equation*}
+  I = \begin{cases}
+    I_{i0} a_i (b_i - \chi)^{c_i} + I_{e0} \exp(\chi) \quad & \chi < 0 \\
+    I_{e0} a_e (b_e + \chi)^{c_e} \quad & \chi \geq 0
+  \end{cases}
+\end{equation*}
+where $a_{i,e}$, $b_{i,e}$, and $c_{i,e}$ are fitted parameters for the ions and electrons. 
+
+Unfortunately neither of these correctly predict the ion current to the probe for large $\chi$ so we instead use the parametrization given by Chen \cite{Chen_2001} which better predicts ion current for $\chi < 0$. The total current to the probe is given by
+\begin{align*}
+  I &= I_{i0} i(\chi) + I_{e0} \exp(\chi) \\
+\frac{1}{i^4} &= \frac{1}{\left(A \chi^B\right)^4} + \frac{1}{\left(C \chi^D\right)^4}
+\end{align*}
+where $A$, $B$, $C$, and $D$ are functions of $\xi \equiv R_p / \lambda_D$. We will reproduce the work from Chen here for the sake of completeness
+
+$ABCD$ are defined in two different regimes. For large $\xi$ ($\xi > 3$),
+\begin{align*}
+  A, B, D(\xi) &= a + b(\xi-c)^d \exp[-f(\xi-c)^g] \\
+  C &= a + b \exp[-c \ln(\xi - d)] + f(1-g \ln \xi).
+\end{align*}
+This is accurate to within 3\%.
+
+Although not as accurate but useful for all $\xi$, we have
+\begin{align*}
+  A &= a + \frac{1}{\frac{1}{b \xi^c} - \frac{1}{d \ln(\xi / f)}} \\
+  B, D &= a + b \xi^c \exp(-d\xi^f) \\
+  C &= a + b \xi^{-c}
+\end{align*}
+
+The values for $a,\,b,\,c,\,d,\,f,$ and $g$ are given in table \ref{tab:chen_values}.
 
 \begin{table}
-    \caption{Chen parameters}
+  \centering
+  \begin{tabular}{c|c||c|c|c|c|c|c|c|}
+    & & $a$ & $b$ & $c$ & $d$ & $f$ & $g$ \\
+    \hline
+    \multirow{4}*{$\xi > 3$} & $A$ & 1.142 & 19.027 & 3.000 & 1.433 & 4.164 & 0.252 \\
+    & $B$ & 0.530 & 0.970 & 3.000 & 1.110 & 2.120 & 0.350 \\
+    & $C$ & 0.000 & 1.000 & 3.000 & 1.950 & 1.270 & 0.035 \\
+    & $D$ & 0.000 & 2.650 & 2.960 & 0.376 & 1.940 & 0.234 \\
+    \hline
+    \multirow{4}*{$\xi < 3$} & $A$ & 1.12 & .00034 & 6.87 & 0.145 & 110 & --- \\
+    & $B$ & 0.50 & 0.008 & 1.50 & 0.180 & 0.80 & --- \\
+    & $C$ & 1.07 & 0.95 & 1.01 & --- & --- & --- \\
+    & $D$ & 0.05 & 1.54 & 0.30 & 1.135 & 0.370 & --- \\
+    \hline
+  \end{tabular}
+  \caption[Chen BRL Parametrization]{Values for $abcdfg$ in the Chen parametrization of the ion current to a probe.}
+  \label{tab:chen_values}
 \end{table}
-
-\paragraph{Even more approximation}
 
 \subsection{Effect of electric fields}
 
+Electric fields during reconnection can change the average plasma potential all of the tips see which is extracted by fitting the plasma theory to the tip measurements. The effect of these electric fields is non-local because the measured plasma potential is integrated along the path of the probe shaft.
+
+This isn't all though; electric fields can also have a local effect directly measurable by the difference in measurement between tips on one side of the probe vs. the other (see figure \ref{fig:multitip_image}).
+
 \subsubsection{Where does the electric field come from}
 
-\paragraph{Majority inductive}
+There are two types of electric field to worry about:
 
-\paragraph{Some static}
+During reconnection we expect the magnetic field to be quickly changing along the axis of the machine as the $z$ directed field reconnects. Since we are dealing with a plasma we expect small static electric fields because of quasineutrality. Also, since the system is toroidally periodic there can be no net static field in the $\phi$ direction.
+
+\paragraph{Inductive Fields}
+
+These are generated by the change in magnetic field as the experiment progresses. Let's discuss what each direction magnetic field change can create:
+\begin{itemize}
+    \item $z$: This is the field that changes most during the experiment because it is reconnecting. Because of toroidal symmetry, the most general closed loop we can construct are annulus arcs. Because of that same symmetry the changing $z$ field will create a negligible $r$ directed electric field but can create toroidal electric fields (in fact the drive coils generate an immense toroidal electric field to drive reconnection).
+    \item $r$: This field can create either a $z$ or $\phi$ directed electric field. The $\phi$ electric field can be generated but once again, because of symmetry, the closed loop on the boundary of a cylinder arc causes $E_z$ to be minimal. One other detriment to $E_z$ is the small magnitudes of $B_r$ which can form in the outflow region of reconnection but are not large.
+    \item $\phi$: The source of $\phi$ field can come from two places: a guide field that is frozen into the plasma (see \ref{ss2:initial_toroidal_field}) or the hall fields when the ions and electrons decouple (see \ref{sss:hall_reconnection}). This allows for the formation of both $r$ and $z$ electric fields but because of the often small magnitude of $B_\phi$ we don't expect too large of fields.
+\end{itemize}
+
+\paragraph{Static Fields}
 
 \subparagraph{What is the expected static magnitude}
 
@@ -617,7 +773,7 @@ We won't reproduce the derivation here but will instead describe the physical in
 
 \subsection{Minimum measurable density}
 
-\subsubsection{What's the debye Length}
+\subsubsection{What's the Debye Length}
 
 \subsubsection{Sheath scale}
 

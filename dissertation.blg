@@ -11,44 +11,44 @@ The style file: mcbride.bst
 Database file #1: references.bib
 Reallocated wiz_functions (elt_size=4) to 6000 items from 3000.
 Reallocated singl_function (elt_size=4) to 100 items from 50.
-You've used 8 entries,
+You've used 14 entries,
             3317 wiz_defined-function locations,
-            738 strings with 6830 characters,
-and the built_in function-call counts, 4822 in all, are:
-= -- 364
-> -- 121
-< -- 14
-+ -- 43
-- -- 33
-* -- 543
-:= -- 679
-add.period$ -- 34
-call.type$ -- 8
-change.case$ -- 65
-chr.to.int$ -- 20
-cite$ -- 8
-duplicate$ -- 385
-empty$ -- 396
-format.name$ -- 61
-if$ -- 932
+            781 strings with 7951 characters,
+and the built_in function-call counts, 8365 in all, are:
+= -- 638
+> -- 197
+< -- 21
++ -- 72
+- -- 54
+* -- 968
+:= -- 1182
+add.period$ -- 58
+call.type$ -- 14
+change.case$ -- 109
+chr.to.int$ -- 26
+cite$ -- 14
+duplicate$ -- 662
+empty$ -- 698
+format.name$ -- 100
+if$ -- 1604
 int.to.chr$ -- 1
 int.to.str$ -- 1
-missing$ -- 63
-newline$ -- 55
-num.names$ -- 32
-pop$ -- 71
+missing$ -- 110
+newline$ -- 85
+num.names$ -- 56
+pop$ -- 99
 preamble$ -- 1
-purify$ -- 43
+purify$ -- 74
 quote$ -- 0
-skip$ -- 130
+skip$ -- 207
 stack$ -- 0
-substring$ -- 182
-swap$ -- 322
-text.length$ -- 3
+substring$ -- 373
+swap$ -- 569
+text.length$ -- 4
 text.prefix$ -- 0
 top$ -- 0
-type$ -- 63
+type$ -- 117
 warning$ -- 0
-while$ -- 30
+while$ -- 53
 width$ -- 0
-write$ -- 119
+write$ -- 198

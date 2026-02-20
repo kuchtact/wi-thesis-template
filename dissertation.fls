@@ -134,6 +134,8 @@ INPUT /usr/local/texlive/2025/texmf-dist/tex/latex/caption/caption3.sty
 INPUT /usr/local/texlive/2025/texmf-dist/tex/latex/caption/caption-memoir.sto
 INPUT /usr/local/texlive/2025/texmf-dist/tex/latex/caption/caption-memoir.sto
 INPUT /usr/local/texlive/2025/texmf-dist/tex/latex/caption/caption-memoir.sto
+INPUT /usr/local/texlive/2025/texmf-dist/tex/latex/multirow/multirow.sty
+INPUT /usr/local/texlive/2025/texmf-dist/tex/latex/multirow/multirow.sty
 INPUT /usr/local/texlive/2025/texmf-dist/tex/latex/mathpartir/mathpartir.sty
 INPUT /usr/local/texlive/2025/texmf-dist/tex/latex/mathpartir/mathpartir.sty
 INPUT /usr/local/texlive/2025/texmf-dist/tex/latex/mathpartir/mathpartir.sty
@@ -587,6 +589,9 @@ INPUT /usr/local/texlive/2025/texmf-dist/fonts/tfm/public/amsfonts/symbols/msam5
 INPUT /usr/local/texlive/2025/texmf-dist/fonts/tfm/public/amsfonts/symbols/msbm10.tfm
 INPUT /usr/local/texlive/2025/texmf-dist/fonts/tfm/public/amsfonts/symbols/msbm7.tfm
 INPUT /usr/local/texlive/2025/texmf-dist/fonts/tfm/public/amsfonts/symbols/msbm5.tfm
+INPUT /usr/local/texlive/2025/texmf-dist/fonts/vf/public/eulervm/zeuex10.vf
+INPUT /usr/local/texlive/2025/texmf-dist/fonts/tfm/public/cm/cmex10.tfm
+INPUT /usr/local/texlive/2025/texmf-dist/fonts/tfm/public/amsfonts/euler/euex10.tfm
 INPUT ./chapter_pa_probe/pa_probe.tex
 OUTPUT chapter_pa_probe/pa_probe.aux
 INPUT ./chapter_pa_probe/pa_probe.tex

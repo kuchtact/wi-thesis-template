@@ -1,4 +1,4 @@
-\begin{wb-bib}{8}
+\begin{wb-bib}{14}
 \expandafter\ifx\csname natexlab\endcsname\relax\def\natexlab#1{#1}\fi
 \expandafter\ifx\csname bibnamefont\endcsname\relax
   \def\bibnamefont#1{#1}\fi
@@ -11,6 +11,16 @@
 \expandafter\ifx\csname urlprefix\endcsname\relax\def\urlprefix{URL }\fi
 \providecommand{\bibinfo}[2]{#2}
 \providecommand{\eprint}[2][]{\url{#2}}
+
+\bibitem[{\citenamefont{Chen}(1965)}]{Chen_1965}
+\bibinfo{author}{\bibnamefont{Chen}, \bibfnamefont{F~F}}. \bibinfo{year}{1965}.
+\newblock \bibinfo{title}{Numerical computations for ion probe characteristics in a collisionless plasma}.
+\newblock \emph{\bibinfo{journal}{Journal of Nuclear Energy. Part C, Plasma Physics, Accelerators, Thermonuclear Research}} \bibinfo{volume}{7}(\bibinfo{number}{1}):\penalty0 \bibinfo{pages}{47--67}.
+
+\bibitem[{\citenamefont{Chen}(2001)}]{Chen_2001}
+\bibinfo{author}{\bibnamefont{Chen}, \bibfnamefont{Francis~F.}} \bibinfo{year}{2001}.
+\newblock \bibinfo{title}{Langmuir probe analysis for high density plasmas}.
+\newblock \emph{\bibinfo{journal}{Physics of Plasmas}} \bibinfo{volume}{8}(\bibinfo{number}{6}):\penalty0 \bibinfo{pages}{3029--3041}.
 
 \bibitem[{\citenamefont{Chung}(2012)}]{Chung_2012}
 \bibinfo{author}{\bibnamefont{Chung}, \bibfnamefont{Kyu-Sun}}. \bibinfo{year}{2012}.
@@ -42,6 +52,21 @@
 \newblock \emph{\bibinfo{title}{Classical electrodynamics}}.
 \newblock \bibinfo{edition}{3rd} ed. \bibinfo{address}{New York}:\@ \bibinfo{publisher}{Wiley}.
 
+\bibitem[{\citenamefont{Karamcheti and Steinbrüchel}(1999)}]{Karamcheti_Steinbrüchel_1999}
+\bibinfo{author}{\bibnamefont{Karamcheti}, \bibfnamefont{A.}}, \bibnamefont{and} \bibinfo{author}{\bibfnamefont{Ch.} \bibnamefont{Steinbrüchel}}. \bibinfo{year}{1999}.
+\newblock \bibinfo{title}{Parametrization of laframboise's results for spherical and cylindrical langmuir probes}.
+\newblock \emph{\bibinfo{journal}{Journal of Vacuum Science \& Technology A: Vacuum, Surfaces, and Films}} \bibinfo{volume}{17}(\bibinfo{number}{5}):\penalty0 \bibinfo{pages}{3051--3056}.
+
+\bibitem[{\citenamefont{Laframboise}(1966)}]{Laframboise_1966}
+\bibinfo{author}{\bibnamefont{Laframboise}, \bibfnamefont{James~Gerald}}. \bibinfo{year}{1966}.
+\newblock \bibinfo{title}{Theory of spherical and cylindrical langmuir probes in a collisionless, maxwellian plasma at rest}.
+\newblock \bibinfo{type}{Dissertation/thesis}, \bibinfo{school}{University of Toronto (Canada)}, \bibinfo{address}{Canada -- Ontario, CA}.
+
+\bibitem[{\citenamefont{Mausbach}(1997)}]{Mausbach_1997}
+\bibinfo{author}{\bibnamefont{Mausbach}, \bibfnamefont{Michael}}. \bibinfo{year}{1997}.
+\newblock \bibinfo{title}{Parametrization of the laframboise theory for cylindrical langmuir probe analysis}.
+\newblock \emph{\bibinfo{journal}{Journal of Vacuum Science \& Technology A: Vacuum, Surfaces, and Films}} \bibinfo{volume}{15}(\bibinfo{number}{6}):\penalty0 \bibinfo{pages}{2923--2929}.
+
 \bibitem[{\citenamefont{Merlino and D'Angelo}(1987)}]{Merlino_D'Angelo_1987}
 \bibinfo{author}{\bibnamefont{Merlino}, \bibfnamefont{R.~L.}}, \bibnamefont{and} \bibinfo{author}{\bibfnamefont{N.}~\bibnamefont{D'Angelo}}. \bibinfo{year}{1987}.
 \newblock \bibinfo{title}{The interaction of a conducting object with a supersonic plasma flow: ion deflection near a negatively charged obstacle}.
@@ -51,5 +76,10 @@
 \bibinfo{author}{\bibnamefont{Olson}, \bibfnamefont{Joseph}}. \bibinfo{year}{2020}.
 \newblock \bibinfo{title}{Exploring driven, high lundquist number magnetic reconnection in the laboratory: studies of sub-ion scale plasmoids, and the interplay between shocks and magnetic flux pileup}.
 \newblock \bibinfo{type}{Phd thesis}, \bibinfo{school}{University of Wisconsin-Madison}.
+
+\bibitem[{\citenamefont{Steinbrüchel}(1990)}]{Steinbrüchel_1990}
+\bibinfo{author}{\bibnamefont{Steinbrüchel}, \bibfnamefont{Christoph}}. \bibinfo{year}{1990}.
+\newblock \bibinfo{title}{A new method for analyzing langmuir probe data and the determination of ion densities and etch yields in an etching plasma}.
+\newblock \emph{\bibinfo{journal}{Journal of Vacuum Science \& Technology A: Vacuum, Surfaces, and Films}} \bibinfo{volume}{8}(\bibinfo{number}{3}):\penalty0 \bibinfo{pages}{1663--1667}.
 
 \end{wb-bib}
