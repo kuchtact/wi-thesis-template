@@ -1,4 +1,4 @@
-\begin{wb-bib}{14}
+\begin{wb-bib}{17}
 \expandafter\ifx\csname natexlab\endcsname\relax\def\natexlab#1{#1}\fi
 \expandafter\ifx\csname bibnamefont\endcsname\relax
   \def\bibnamefont#1{#1}\fi
@@ -11,6 +11,10 @@
 \expandafter\ifx\csname urlprefix\endcsname\relax\def\urlprefix{URL }\fi
 \providecommand{\bibinfo}[2]{#2}
 \providecommand{\eprint}[2][]{\url{#2}}
+
+\bibitem[{\citenamefont{Boggs et~al.}(2005)\citenamefont{Boggs, Byrd, Rogers, and Schnabel}}]{Boggs_Byrd_Rogers_Schnabel}
+\bibinfo{author}{\bibnamefont{Boggs}, \bibfnamefont{Paul~T}}, \bibinfo{author}{\bibfnamefont{Richard~H} \bibnamefont{Byrd}}, \bibinfo{author}{\bibfnamefont{Janet~E} \bibnamefont{Rogers}}, \bibnamefont{and} \bibinfo{author}{\bibfnamefont{Robert~B} \bibnamefont{Schnabel}}. \bibinfo{year}{2005}.
+\newblock \bibinfo{title}{User's reference guide for odrpack version 2.01 software for weighted orthogonal distance regression}.
 
 \bibitem[{\citenamefont{Chen}(1965)}]{Chen_1965}
 \bibinfo{author}{\bibnamefont{Chen}, \bibfnamefont{F~F}}. \bibinfo{year}{1965}.
@@ -31,6 +35,11 @@
 \bibinfo{author}{\bibnamefont{Demidov}, \bibfnamefont{V.~I.}}, \bibinfo{author}{\bibfnamefont{S.~V.} \bibnamefont{Ratynskaia}}, \bibnamefont{and} \bibinfo{author}{\bibfnamefont{K.}~\bibnamefont{Rypdal}}. \bibinfo{year}{2002}.
 \newblock \bibinfo{title}{Electric probes for plasmas: The link between theory and instrument}.
 \newblock \emph{\bibinfo{journal}{Review of Scientific Instruments}} \bibinfo{volume}{73}(\bibinfo{number}{10}):\penalty0 \bibinfo{pages}{3409--3439}.
+
+\bibitem[{\citenamefont{Egedal et~al.}(2009)\citenamefont{Egedal, Daughton, Drake, Katz, and Lê}}]{Egedal_Daughton_Drake_Katz_Lê_2009}
+\bibinfo{author}{\bibnamefont{Egedal}, \bibfnamefont{J.}}, \bibinfo{author}{\bibfnamefont{W.}~\bibnamefont{Daughton}}, \bibinfo{author}{\bibfnamefont{J.~F.} \bibnamefont{Drake}}, \bibinfo{author}{\bibfnamefont{N.}~\bibnamefont{Katz}}, \bibnamefont{and} \bibinfo{author}{\bibfnamefont{A.}~\bibnamefont{Lê}}. \bibinfo{year}{2009}.
+\newblock \bibinfo{title}{Formation of a localized acceleration potential during magnetic reconnection with a guide field}.
+\newblock \emph{\bibinfo{journal}{Physics of Plasmas}} \bibinfo{volume}{16}(\bibinfo{number}{5}):\penalty0 \bibinfo{pages}{050701}.
 
 \bibitem[{\citenamefont{Gradney}(2025)}]{Gradney_2025}
 \bibinfo{author}{\bibnamefont{Gradney}, \bibfnamefont{Paul}}. \bibinfo{year}{2025}.
@@ -81,5 +90,10 @@
 \bibinfo{author}{\bibnamefont{Steinbrüchel}, \bibfnamefont{Christoph}}. \bibinfo{year}{1990}.
 \newblock \bibinfo{title}{A new method for analyzing langmuir probe data and the determination of ion densities and etch yields in an etching plasma}.
 \newblock \emph{\bibinfo{journal}{Journal of Vacuum Science \& Technology A: Vacuum, Surfaces, and Films}} \bibinfo{volume}{8}(\bibinfo{number}{3}):\penalty0 \bibinfo{pages}{1663--1667}.
+
+\bibitem[{\citenamefont{Zwolak et~al.}(2007)\citenamefont{Zwolak, Boggs, and Watson}}]{Zwolak_et_al_2007}
+\bibinfo{author}{\bibnamefont{Zwolak}, \bibfnamefont{Jason~W.}}, \bibinfo{author}{\bibfnamefont{Paul~T.} \bibnamefont{Boggs}}, \bibnamefont{and} \bibinfo{author}{\bibfnamefont{Layne~T.} \bibnamefont{Watson}}. \bibinfo{year}{2007}.
+\newblock \bibinfo{title}{Algorithm 869: Odrpack95: A weighted orthogonal distance regression code with bound constraints}.
+\newblock \emph{\bibinfo{journal}{ACM Trans. Math. Softw.}} \bibinfo{volume}{33}(\bibinfo{number}{4}):\penalty0 \bibinfo{pages}{27--es}.
 
 \end{wb-bib}
