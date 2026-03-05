@@ -1,264 +1,627 @@
 \chapter{Pressure Anisotropy Probe}
 
+Pressure anisotropy, as discussed in \ref{ss2:intro_PA_what}, is a difference between the average kinetic energy parallel to the magnetic field vs. perpendicular to the field. During reconnection, our interest lies in understanding the electron anisotropy as simulations show that it can have major impacts on the reconnection dynamics \cite{Ohia_Egedal_Lukin_Daughton_Le_2012}.
+
 \section{How can we measure Pressure Anisotropy}
+
+We need some way of actually measuring the electron distribution function or at least the parallel and perpendicular temperatures so let's examine a number of possibilities.
 
 \subsection{Thomson Scattering}
 
-\subsubsection{Pros}
+Thomson scattering has long been used in the fusion plasma community for measuring electron distribution functions.
 
-\subsubsection{Cons}
+\subsubsection{Basics}
 
-\begin{itemize}
-    \item Requires a lot of playing around with optics
-    \item Size of machine
-    \item Don't have much in-lab expertise
-    \item Getting all the photons is tough
-    \item Don't have optics stuff setup
-\end{itemize}
-
-\subsection{Directional Langmuir Probe}
+Thomson scattering diagnostics use the Thomson scattering effect (a astutely named diagnostic) where a high energy laser scatters off of electrons. By measuring the spectrum of the scattered radiation for a single direction, the distribution function in that direction can be attained. Then, if the measurement direction is moved a new direction in the distribution function can be measured.
 
 \subsubsection{Pros}
 
-\begin{itemize}
-    \item Simplicity
-    \item Cost
-    \item Mobility
-\end{itemize}
+Thomson scattering is great in that it can be very localized (just based on the optics of the beam and the collection). Our system is not so reproducable that this high localization is necessary but it is nice nevertheless.
+
+Since Thomson scattering usually operates in a pulsed fashion, the timing and duration of pulses can be highly controlled to allow for very temporally localized measurements as well.
+
+It's also non-perturbative (except for the tiny effect it has on few electrons) since it's just a laser passing through the plasma. This is especially useful in a fusion device where physical probes are impossible. One nice thing about using lasers is there no need to build long probes (except potentially to mount collection optics on).
 
 \subsubsection{Cons}
 
+Unfortunately there are number of problems with Thomson scattering that we would need to face should we attempt to implement it:
 \begin{itemize}
-    \item Difficult to interpret results precisely (luckily only need relative stuff)
-    \item Can't perfectly model
-    \item Requires a lot of playing around with circuits
+    \item Thomson scattering requires a lot of work with optics and our lab lacks that expertise as of this writing. The startup cost for the laser and all the hardware needed would be large along with the training/learning required to get the system up and working.
+    \item A classic problem with Thomson scattering is getting enough photons to get through the noise. Because of the size of our machine and the relatively low densities, this would only increase the difficulty.
+    \item We want many measurements of the plasma distribution in time to see how it evolves across the layer. Thomson scattering is often usually sampling at 1 kHz and even systems where pulses can be more squeezed together are still very far apart in time relative to our timescales.
+    \item Since our system triggers at slightly different times for each shot and the laser system would most likely only fire once per shot, it would be very difficult to get good localized resolution of measurement.
+    \item The low temperatures of our system (on the order of 10s of eV) necessitate the use of high spectral purity lasers or measurement optics. Although not impossible this raises the cost of setup and reduces the laser options making everything more difficult.
 \end{itemize}
+
+\subsection{Retarding Field Energy Analyzer}
+
+A retarding field energy analyzer (RFEA) uses a set of grids at different potentials to repel all particles up to some kinetic energy. They can be used for either electrons or ions but here we'll discuss electron RFEAs.
+
+\subsubsection{Basics}
+
+RFEAs can come in a variety of geometries but here we'll discuss a planar RFEA with a hole where particles can enter. Particles initially pass through an aperture such that particles mostly from a single direction are measured, then ions are repelled using a grid at a high positive potential, then electrons of a minimum energy are selected by another grid at a negative potential, and finally electrons are collected and the current is measured.
+
+\subsubsection{Pros}
+
+RFEAs are quite good at extraccting the tail of a distribution because the higher the repelling voltage, the more you are isolating out only high energy electrons. The electron distribution is extraced by taking the derivative of the measured current with respect to the applied voltage at a single time. For our configuration we would use a static repelling potential because sweeping the voltage in time would not be feasible in the experiment timescales. RFEAs have been shown to work to very high sampling rates so that would not be an issue for us \cite{Hu_Rovey_Zhao_2017}.
+
+\subsubsection{Cons}
+
+Since RFEAs need multiple grids they are usually somewhat sizable (around a centimeter on all sides). In the case of creating a multidirectional probe, which would vastly accelerate data collection, the size of the probe would become quite large and non-local and perturbative physics may come into play for understanding the data. Since our plasma potential changes so drastically during a shot, a measurement of that potential would be nice to have for RFEA interpretation which could be done with a separate probe but would require a larger probe.
+
+Overall, an RFEA is a promissing opttion especially for some of the other physics we are interested in during reconnection but we settled on a Langmuir probe because of past experience and simplicity.
+
+\subsection{Langmuir Probes}
+
+We've already described the basics of a Langmuir probe in section \ref{sse:multitip_langmuir_what} so here we will discuss some of the most relevant parts.
+
+\subsubsection{Basics}
+
+Langmuir probes can come in many configurations, each optimized for measuring a certain plasma parameter. Some of the most common setups are
+\begin{itemize}
+    \item A single tip cylindrical probe which is just a long thin wire. This is useful for measuring the overall IV-characteristic from which plasma parameters can be extracted either by fitting or taking the derivative of the probe current with respect to voltage (specifically for getting the electron distribution function) \cite{Godyak_Demidov_2011}.
+    \item Two plates pointed in opposite directions (like that seen in fig. \ref{fig:multitip_mach_effect}) which can measure the ion drift velocity by measuring the ratio of ion current to one plate vs. the other \cite{Chung_2012}.
+    \item A sheild and a collector setup where the collector is retracted inside the shield such that only a limited number of electrons can hit the probe because their gyroradii force them to instead hit the shield. This can be used to balance the electron and ion currents such the plasma potential can be directly measured but requires high magnetic fields.
+    \item A directional probe where an alumina sheath around a cylindrical probe has a hole perpendicular to the axis of the cylinder. The hole is rotated between shots to collect at different angles relative to the plasma flow and the ion saturation current is measured.
+\end{itemize}
+
+\subsubsection{Pros}
+
+We've already discussed the use of a multi-tip Langmuir probe that has worked well to extract the plasma parameters isotropically (meaning it is collecting plasma from all angles) and thus we have a fair bit of experience with these types of probes. Additionally these probes can be built to almost any size we may want so size considerations are less of an issue. These probes are very cheap to build and can also be moved relatiively easily as compared to an optical system.
+
+\subsubsection{Cons}
+
+Utilizing Langmuir probes for directional measurements of the electron distribution has not yet been well documented although there are many setups that use direction for extracting the ion flow. One possible reason for this is that many terrestrial experiments lack the ability to generate anisotropic electron distributions in the regions accessible by a Langmuir probe. Since the theory is lacking in understanding anisotropic distributions we will need to develop our own. 
+
+\subsection{Our technique}
+
+Comparing all of the aforementioned options, we decided to use a directional Langmuir probe setup as we already have a fair number of the required materials, knowledge to interpret the signals, and may give the ability to extract the plasma flow and temperature anisotropy at the same time which would be interesting to see.
 
 \section{Hardware}
 
+The pressure anisotropy probe (PA probe) uses many of the same designs as the multi-tip Langmuir probe so we'll focus on highlighting any differences.
+
 \subsection{Shaft Components}
 
-\subsubsection{Garages}
-
-\subsubsection{Shaft materials}
-
-\subsubsection{Centering Collet}
+The garages, shaft materials, and usage of centering collets is the same as descriped in \ref{sss:multitip_shaft_components}. The only difference is the feed-thru.
 
 \subsubsection{Feed-thru}
 
+We use the same basic setup of two hermetically sealed DB-25s mounted to a KF-50 flange except for an addition of a through-hole that carries the Bdot signals. This is made by drilling a hole through the flange and then putting twelve wires along with a structural wire through the hole. It's vacuum sealed using an epoxy and mounting connection are soldered to both ends of the signal wires (an internal circuit board and an external DB-15) while heat shrink and teflon tubing is used to protect the signal wires.
+
 \begin{figure}
+    \centering
+    \includegraphics[width=0.5\textwidth]{chapter_pa_probe/figures/pa_feed_thru.jpeg}
     \caption{Picture of feed thru along with drawings of cross-sections.}
 \end{figure}
 
 \subsection{Tip Components}
 
 \begin{figure}
+    \centering
+    \includegraphics[width=\textwidth]{chapter_pa_probe/figures/full_probe_cropped.jpg}
     \caption{Picture of end of probe}
 \end{figure}
 
 \subsubsection{Probe body}
 
+Using the same techniques and considerations as \ref{ss2:multitip_probe_body} we've gone with a 3D printed probe body.
+
 \begin{figure}
+    \centering
+    \includegraphics{chapter_pa_probe/figures/cad_body_image.png}
     \caption{CAD diagram of full body}
 \end{figure}
 
 \paragraph{3D printed}
 
-\paragraph{Both sides fit together}
+The body is printed using stereolithography on a printer in the physics department.
+
+\paragraph{Two sides}
+
+To make the probe building as simple as possible, the body is printed in two halves. This lets us construct each tip individually and then feed the tip and it's signal wires through the hole in the body half. Each half is press fit together after the tips are in place with some epoxy to keep them together and keep plasma out of the probe internals.
 
 \subsubsection{Tip material + size}
 
+As compared to the multitip probe, we've gone with stainless steel and copper as our conductors instead of molybdenum. Although both of these metals have higher secondary electron emission coefficients they are both still smaller at the low temperatures our plasmas attain \cite{Dekker_1958}.
+
 \begin{figure}
+    \centering
+    \includegraphics{chapter_pa_probe/figures/cad_tip_image.png}
     \caption{CAD diagram of probe tip}
 \end{figure}
 
-\paragraph{Shell material}
+\paragraph{Shell}
 
-\paragraph{Core material}
+The shell of the tip is made of 7 mm of stainless steel tubing. On one side, a wire is soldered for measuring the current to the shell and the other side is exposed to the plasma.
+
+\paragraph{Core}
+
+The core on the otherhand is just 24 AWG wire that is placed inside the shell with a limited amount of wire exposed from it's PTFE insulation. The other side of the wire is also soldered for measurment.
 
 \subsubsection{Tip Shielding}
 
+To restrict current to the tip to not overwhelm measurement and reduce tip heating, we shield both the shell and the core.
+
 \paragraph{Shell Shielding}
+
+The shell is shielded using teflon tubing that exposes some of the tip on the plasma facing side and helps to move the measurement region away from the body to avoid shadowing effects (see \ref{fig:multitip_mach_effect}) as we want the shell to collect isotropically.
 
 \paragraph{Core Shielding}
 
+The core is shielded in two ways. The insulation on the core limits how much is exposed in total while the height of the core cylinder face relative to the shell edge limits the projected area the core sees as discussed in \ref{spg:pa_area}.
+
 \subsection{Bdot Coils}
 
-Same as Te probe
-
-\subsection{Connecting Bdot - Probe - Shaft}
+The design of the Bdot probe on the end of the PA probe is the same as that for the multitip Langmuir probe as discussed in \ref{sss:multitip_bdot}.
 
 \subsection{Length Scales}
 
+The plasma parameters we must consider are the same as those for the multitip probe but we have a few other probe length scales specific to the PA probe which can all be seen in table \ref{tab:pa_length_scales}.
+
 \begin{table}
-    \caption{Length scales of probe}
+\begin{center}
+\begin{tabular}{|r|c|c|c|}
+    \hline
+    Name & Symbol & Equation & Value \\
+    \hline\hline
+    Core radius & $r$ & --- & \\
+    \hline
+    Shell inner radius & $r$ & --- & \\
+    \hline
+    Shell outer radius & $r$ & --- & \\
+    \hline
+    Exposed shell length & $l$ & --- & \\
+    \hline
+    Exposed core length & $l$ & --- & \\
+    \hline
+    Top of core to top of shell & $l$ & --- & \\
+    \hline
+    Poloidal angular separation & --- & --- & \\
+    \hline
+    Toroidal angular separation & --- & --- & \\
+    \hline
+    Across probe tip separation & --- & --- & \\
+    \hline
+    B-dot coil side length & --- & --- & 3e-3 \\
+    \hline
+    Debye length & $\lambda_D$ & $\sqrt{\frac{\epsilon_0 T_e}{n e}}$ & 3e-5 \\
+    \hline
+    Ion Gyroradius & $r_i$ & $\frac{m_i \sqrt{2 m_i \bar{v}_i}}{e B}$ & 6e-1 \\
+    \hline
+    Electron Gyroradius & $r_e$ & $\frac{m_e \sqrt{2 m_e \bar{v}_e}}{e B}$ & 1.5e-1 \\
+    \hline
+    Ion mean free path & $\lambda_i$ & $\frac{\bar{v}_i}{\nu_{i,i}}$ & 9e-4 \\
+    \hline
+    Electron mean free path & $\lambda_e$ & $\frac{\bar{v}_e}{\nu_{e,e}}$ & 4.5 \\
+    \hline
+    Electron energy relaxation length & $\lambda_\mathcal{E}$ & * Eq. 5 & 4.5 \\
+    \hline
+    Sheath thickness & $h$ & $\sim \lambda_D$ & 3e-5 \\
+    \hline
+\end{tabular}
+\end{center}
+\caption[*Pressure Anisotropy Probe Length Scales]{Length scales of the PA probe. All lengths are in meters and are approximate. Refer to table \ref{tab:multitip_length_scales} for plasma parameters and citations.} % TODO: Populate this table.
+\label{tab:pa_length_scales}
 \end{table}
 
 \section{Circuitry}
 
+Since the PA probe is also a Langmuir probe, it uses many of the same circuit systems as the multitip probe but custom built for this probe.
+
 \subsection{Bias Source}
+
+\begin{figure}
+    \centering
+    \includegraphics{chapter_pa_probe/figures/bias_polarity_switch_circuit.pdf}
+    \caption[*PA Probe Biasing Circuit]{Biasing circuit for the PA probe. The charging resistor, $R_c$, let's us charge the capacitor bank without having a short circuit while the discharge resistor, $R_d$, let's us quickly change the bias on the capacitor bank when remotely changing the power supply voltage, $V_b$. Since the capacitors are electrolytic and we want both positive and negative biases, the relay system works to change what side of the capacitor bank is connected to ground. We also want to measure the voltage on the capacitor bank which is done after dividing the voltage down using $R_1$ and $R_2$.}
+    \label{fig:pa_bias_circuit}
+\end{figure}
+
+The biasing circuit for the PA probe is far simpler than that for the $T_e$ probe as can be seen in figure \ref{fig:pa_bias_circuit}. We only choose a single bias for each shot instead of splitting it between many biases. We do need to be able to change the bias between shots which occur every three minutes so we discharge the capacitor bank using a discharge resistor that is always connected. 
 
 \subsubsection{Principles of operation}
 
+The PA bias circuit system operates on the same principles as the multitip probe where we want a large charge reservoir to balance the current drawn by the probe and to keep the bias applied to the tip constant.
+
 \paragraph{Charging}
 
+Charging is done through $V_{\text{power}}$, a remotely operated power supply that can go up to 250 V, 375 mA. We charge the capacitors through a charging resistor which reduces the maximum current allowed to flow from the power supply which protects it and the capacitors.
+
 \paragraph{Discharging}
+
+To reduce the voltage to the tips quickly and for safety purposes we use a discharge resistor. This gives an RC time of approximately 30 seconds which, relative to a shot period of three minutes, is short enough to change the bias voltage to a new value between shots.
 
 \paragraph{Swapping polarity}
 
-\begin{figure}
-    \caption{Simple circuit diagram of how bias works.}
-\end{figure}
+We use electrolytic capacitors in our capacitor bank so we use a separate circuit that is connected to both sides of the capacitor bank. It consists of a relay that chooses which side of the capacitor is grounded and which side is connected to the probe. Thus we can always charge the capacitors to a positive voltage and still get a negative output voltage.
 
 \subsubsection{How do we do this}
 
+\begin{figure}
+    \centering
+    \includegraphics{chapter_pa_probe/figures/cap_bank_picture.png}
+    \caption[*PA Capacitor Bank Image]{}
+    \label{fig:pa_bias_image}
+\end{figure}
+
+Now that we've discussed the principles of how this thing should operate, let's dive into some of the details of really getting it built and working. An image of the system can be seen in figure \ref{fig:pa_bias_image}.
+
 \paragraph{Cannibalization}
+
+A classic experimental technique is that of cannibalization; i.e. using parts from old systems that don't work quite like we want! In this case we've used a large capacitor bank, 1 in fig. \ref{fig:pa_bias_image}, consisting of many individual electrolytic capacitors which are connected to plates for positive and negative bias. Between the positive bias plate and the positive terminal is a charging resistor and also a diode for capacitor protection, 2 in fig. \ref{fig:pa_bias_image}.
 
 \paragraph{Discharging}
 
-\paragraph{Safety}
-
-Diodes for discharging the wrong way.
-
-\paragraph{Cap arcing}
-
-\subparagraph{What happened}
-
-\subparagraph{Solution}
+We use a high power resistor, 3 in fig. \ref{fig:pa_bias_image}, to discharge the capacitor bank without burning up the resistor.
 
 \paragraph{Reducing voltage drop due to inductance}
 
+Since we want to keep the bias voltage applied to the tip constant, we've taken a few steps to make that happen.
+
 \subparagraph{Twisting Wires}
+
+One such solution is twisting all pairs of wires between the capacitor bank and the relay system and similarly between the relay and the board where the sense resistors are. Additionally instead of just having a single wire from the capacitors in the bank we've made it mutltistranded such that each capacitor has it's own wire to help reduce inductance.
 
 \subparagraph{Adding cap next to board}
 
+We've also put a capacitor just before the sense resistor board that, while being low capacitance, helps keep the voltage constant by storing charge for biasing right where the probe samples the bias.
+
 \paragraph{Reversing polarity}
 
-\subparagraph{Why we break relay}
+We use a Double-Pole Double-Throw relay to select which side of the capacitor bank goes to ground. This is controlled remotely using a cRIO switch. Unfortunately we found that sometimes the relay breaks and if not caught quickly, leads to many wasted shots.
+
+\subparagraph{Why does the relay break}
+
+We hypothesize that the relay breaks because of high transient current/voltage during switching. If the capacitor bank has some charge on it (say 25 V), there must be some current needed to shift the bias relative to ground because of parasitic capacitance with the lab. Additionally the capacitor we've placed at the sense resistor boards is a source of energy that could destroy the relay.
 
 \subparagraph{How do we fix this problem}
 
-\paragraph{LabView (ew)}
-
-\subparagraph{Controls CRIO}
-
-\subparagraph{Countdown if too high of voltage for swapping}
-
-\begin{figure}
-    \caption{Full circuit diagram of how bias works.}
-\end{figure}
-
-\begin{figure}
-    \caption{Image of power supply setup}
-\end{figure}
-
-\begin{table}
-    \caption{Bias circuit component values}
-\end{table}
+We've found that if we be careful about when we change from negative to positive bias leads to a longer relay lifetime. This is coded into the control interface such that there is a discharge delay which is dependent on the initial bias applied to the capacitor bank.
 
 \subsubsection{Calibration}
 
-\paragraph{Calibrating power supply output}
-
-\paragraph{Calibrating cap bank output}
+Calibration of this power supply operates in the same way as that described in \ref{spg:multitip_bias_calibration}.
 
 \subsection{Probe Circuit}
 
+The probe circuit model can be seen in figure \ref{fig:pa_tip_circuit_diagram} which is reminiscent of \ref{fig:multitip_simple_tip_circuit}. We've also hidden the where the digitizer measures to reduce clutter but to note, $I_d$ is what the digitizer measures.
+
+\begin{figure}
+    \centering
+    \begin{circuitikz}[american]
+        % Shell signal, core signal, and core noise circuits.
+        % Start by drawing shell signal circuit.
+        \draw (0,0) node[left](bias){$V_b$} to[R=$R_{ss}$, name=Rss, i=$I_{ss}$, o-*] ++(2.5,0)
+        coordinate(shell split) to[R=$R_{ws}$, name=Rws, i<=$I_{ps} + I_{pn}$] ++(5,0)
+        to[short, -o, name=shell mid probe] ++(3,0) node[right](shell plasma){$V_{ps} + \tilde{V}_m$}
+        (shell split) -- ++(0,-1) coordinate(shell core split)
+        to[C, *-] ++(0,-1)
+        to[R=$R_{ds}$, name=Rds, i>_=$I_{ds}$] ++(0,-1.5)
+        to[vsource, invert, v_=$V_c$] ++(0,-1.5)
+        node[tlground]{}
+        % Draw core signal.
+        (shell core split) -- ++(1,0) 
+        coordinate(core noise split) to[short, *-] (core noise split -| Rws.west) 
+        to[R=$R_{sc}$, name=Rsc] 
+        (core noise split -| Rws.east) to[short, i=$I_{sc}$] ++(1,0)
+        coordinate(core split) to[R=$R_{wc}$, name=Rwc, *-o, i<=$I_{pc} + I_{pn}$] (core split -| shell plasma.west) 
+        node[right](core plasma){$V_{pc} + \tilde{V}_n$} 
+        (core split) to[C] ++(0, -1)
+        to[R=$R_{dc}$, name=Rds, i>_=$I_{dc}$] ++(0,-1.5)
+        to[vsource, invert, v_=$V_c$] ++(0,-1.5)
+        node[tlground](core ground){}
+        % Draw core noise.
+        (core noise split) -- ([yshift=-1cm] core noise split |- core ground)
+        coordinate(noise turn) -- (noise turn -| Rws.west)
+        to[R=$R_{sn}$, name=Rsn]
+        (noise turn -| Rws.east) to[short, i=$I_{sn}$] (noise turn -| core split)
+        coordinate(noise split) to[R=$R_{wn}$, name=Rwn, *-o, i<=$I_{pn}$] (noise split -| shell plasma.west)
+        node[right](noise plasma){$V_{pn}$} 
+        (noise split) to[C] ++(0, -1)
+        to[R=$R_{dn}$, name=Rdn, i>_=$I_{dn}$] ++(0,-1.5)
+        to[vsource, invert, v_=$V_c$] ++(0,-1.5)
+        node[tlground](noise ground){}
+        ;
+        % Draw shell noise.
+        \draw ([yshift=-1cm] bias |- noise ground) node[left](moise bias){$V_b$} to[R=$R_{sm}$, name=Rsm, i=$I_{sm}$, o-*] (moise bias -| shell split)
+        coordinate(moise split) to[short, i<=$I_{pn}$] (moise split -| Rws.west)
+        to[R=$R_{wm}$, name=Rsm]
+        (moise split -| Rws.east) to[short, -o]
+        (moise split -| shell plasma.west) node[right](moise plasma){$V_{pm}$}
+        (moise split) to[C] ++(0,-1)
+        to[R=$R_{dm}$, name=Rdm, i>_=$I_{dm}$] ++(0,-1.5)
+        to[vsource, invert, v_=$V_c$] ++(0,-1.5)
+        node[tlground]{}
+        ;
+        % \path (shell mid probe) \coord(shell mid probe);
+    \end{circuitikz}
+    \caption[*PA Probe Tip Circuit Diagram]{PA tip circuit model with non-static digitizer ground. Circuit for a single tip on the PA probe. The shell and core (subscripts $s$ and $c$) both have thier own noises ($m$ and $n$ respectively). The digitizers, which measure the voltage across $R_{d\_}$, haven't been drawn to reduce clutter. This model assumes each digitizer is connected to changing ground that changes the same for all probes.}
+    \label{fig:pa_tip_circuit_diagram}
+\end{figure}
+
 \subsubsection{Single-ended measurement}
+
+There are a few different ways we could go about measuring the signals coming from the PA probe. One option is something like an oscilloscope which, while great at having a high sample rate, also has the major issue of grounding the signal through the measurement and the measurment is relative to the oscilloscope ground.
 
 \paragraph{TREX cells}
 
-\paragraph{Why was this bad}
+These digitizers act similarly to an oscilloscope with many channels where the ground is shared between all measurement channels.
 
-\paragraph{How long did we spend on this :(}
+\paragraph{Problems}
+
+Since the ground of the measurement is shared between all of the measurements, common mode noise very easily enters the measurement leading to wild oscillations when the capacitor bank for the drive coils triggers. Ideally subtracting off the noise measurement would correct for this but because of slight differences in circuit resistances and measurement gains, the subtraction does not sufficiently remove noise leaving an SNR of less than 0.1.
+
+\paragraph{Next steps}
+
+After a fair amount of time working to calibrate the circuit and remove noise, we decided to move onto use a different set of digitizers that use a differential measurement.
 
 \subsubsection{Differential measurement}
 
+Using the ACQ2X06s we can measure the difference between two signals instead of the difference between a signal and ground so we've changed the circuit to best account for that. The circuit components are the same as seen in \ref{fig:pa_tip_circuit_diagram} but with an additional parallel circuit.
+
 \paragraph{Parallel circuitry}
+
+Instead of having a single set of resistors and a high-pass capacitor for a tip, we've doubled the circuits on the sense resistor board as can be seen in the middle blue box in figure \ref{fig:pa_grounding_diagram}. For the shell noise and signal it's a simple case of just having another set that is parallel to the shell measurement. For the core, since it is connected to the shell circuit just prior to $R_{sc}$ and $R_{sn}$, the parallel circuit is connected at the same point.
+
+By using this parallel circuitry we drastically reduce the noise in the measurement which helps a lot.
 
 \begin{table}
     \caption{Probe circuit component values}
 \end{table}
 
-\subsubsection{Figuring out grounds}
+\subsubsection{Grounding Techniques}
+
+Good grounding leads to a happy diagnostic. Bad grounding leads to an unhappy graduate student.
+
+Since we have immense amounts of current flowing when triggering the drive coils, capacitive and inductive coupling can occur leading to lots of noise in digitized measurements. A good review on grounding theory can be found in \cite{Horowitz_Hill_1989}.
 
 \paragraph{Types of grounds on the ACQ}
 
+The ACQ2X06 digitizers (where $\text{X} \in \{1, 2\}$) have two types of ground. The first comes from the power cable plugged into the digitizer which we'll call the `chassis' ground (as can be seen in figure \ref{fig:pa_grounding_diagram}). This ground is not directly used during measurement but is instead for safety in case of arcs. The second ground is that of the onboard differential amplifier (called the `0V' ground). This ground sets the limits of the amplifier and by tying the probe circuit ground to this ground, noise between the probe circuit and amplifier can be removed. The `chassis' and `0V' grounds are connected by a high resistance so that the `0V' ground does not float away but also is decoupled.
+
 \paragraph{Routing grounds}
 
+Figuring out how to put all the grounds together was a long and arduous process. After much trial and error, we've come up with the solution found in \ref{fig:pa_grounding_diagram}. The entire system is powered by an isolation transformer, \texttt{T1}. This removes the building ground from the circuit and let's us optionally choose a different ground (we've neglected to attach a grounding wire at the transformer). Instead we ground the sytem through the `chassis' ground of the digitizers and also at the sense resistor board to tie the base of the resistor dividers. The base of the resistor dividers is also directly connected to the `0V' ground which makes the divider measurements move with the opamp making the signal have low noise.
+
 \begin{figure}
-    \caption{Schematic of grounding diagram}
+    \centering
+    \includegraphics[width=\textwidth]{chapter_pa_probe/figures/simple_pa_circuit_no_page.pdf}
+    \caption[PA Probe Grounding Diagram]{Schematic showing the ground paths for the PA probe. Power to the system comes from an isolation transformer which powers a controllable power supply, \texttt{U1}, and the digitizer, \texttt{ACQ2X06}. The bias capacitor bank, \texttt{C1}, is charged and that bias is applied to the probe board which contains the sense resiistors, high-pass capacitor, and dividers (\texttt{R\_sense}, \texttt{C}, and (\texttt{R\_1}, \texttt{R\_2})). Outputs from the board are then measured by the digitizer. The grounding wire is connected to the probe shaft which is then connected to the machine.}
+    \label{fig:pa_grounding_diagram}
 \end{figure}
 
 \subsubsection{Swapping current paths}
 
+If our circuit components were ideal, each element would act the same as that same element for other tips. Since there is some variation in resistance between sense resistors and divider resistors, it's useful to have two current paths for the core measurements.
+
 \paragraph{Why do we want to do this}
 
-\subparagraph{Takes care of small differences in resistors}
+The current collected by the core is quite small and the raw voltage measurement, $V_{dc}$, is dominated by the shell current by a factor of around 20. Now $R_{sc}$ ($R_{sn}$) and $R_{dc}$ ($R_{dn}$) make a resistor divider that divides down the core signal (noise) measurement and then the core signal and noise measurements, $V_{dc}$ and $V_{dn}$, are subtracted to get the core signal.
+
+\subparagraph{Deviations in resistance}
+
+If the resistors in the circuit are different though, the subtraction does not fully remove the shell signal. This causes the derived core voltage and current to be either anomalously high or low compared to it's actual value.
+
+\subparagraph{Correcting for this}
+
+The reason the shell leaks into the core measurement is because of the different divider ratios between the core signal and noise. If we swap the resistors for those two signals though, we can see the effect of both adding shell signal and subtracting shell signal. We can then average the signal between the original path and the swapped path to remove the shell contribution.
 
 \paragraph{Circuitry to do this}
 
-\subparagraph{Only swap core stuff}
+The circuitry we use can be seen in figure \ref{fig:pa_swap_image} and the corresponding schematic in figure \ref{fig:pa_swap_circuit}. The circuit has a number of components used for isolating the CRIO from the circuit and also keeping current through the CRIO to a minimum.
+
+\subparagraph{Only swap core signal and noise}
+
+As we are trying to remove the influence of the different core noise and shell circuits, we only want to swap those two lines. The shell signal and noise are minimally affected by the core and the small resistor differences matter little.
 
 \subparagraph{Many relays}
 
+Each tip needs it's core measurements swapped so in total we have 12 relays. This means that we require a sufficient amount of current for all these relays and thus want to isolate the switching system from the CRIO which is low power.
+
 \subparagraph{Remote control}
 
+To control this switching system, we isolate the CRIO using an optoisolator and use a switch in the CRIO that we can control via LabView. Since the signals we are switching are connected to the bias capacitor bank, we want to keep these high voltage high capacitance lines far away from the expensive CRIO components.
+
 \begin{figure}
+    \centering
+    \includegraphics{chapter_pa_probe/figures/swap_box_image.png}
     \caption{Image of swapping box}
+    \label{fig:pa_swap_image}
 \end{figure}
 
 \begin{figure}
+    \centering
+    \includegraphics{chapter_pa_probe/figures/core_path_swapping_circuit.png}
     \caption{Diagram of swapping}
+    \label{fig:pa_swap_circuit}
 \end{figure}
 
 \paragraph{How does this change results}
 
+Figure \ref{fig:pa_swap_effect} shows the difference between the unswapped (circles) and swapped (squares) core measurements. It is especially clear in tips 2, 6, and 10 where the unswapped measurements are far higher than the swapped because the shell is either adding or subtracting from the signal. By averaging these two options, as described in \ref{spg:pa_averaging_relay}, we can correct for this problem.
+
 \begin{figure}
+    \centering
+    \includegraphics[width=\textwidth]{chapter_pa_probe/figures/example_core_swap_effect.png}
     \caption{Time frame for core movie of IV with separation between relay}
+    \label{fig:pa_swap_effect}
 \end{figure}
 
 \subsubsection{Circuit Solution}
 
+The circuit for the PA probe tips, figure \ref{fig:pa_tip_circuit_diagram}, acts similarly as that of the $T_e$ probe, figure \ref{fig:multitip_tip_circuit_w_noise}. The bias is input as $V_b$ and passes through a sense resistor which acts to bring the probe bias closer to the plasma floating potential (where the current from the plasma to the probe is 0). The core of each tip is attached to the shell circuit because we want the tip core to have a similar bias as the shell. Since the core is smaller and sees less plasma it would not follow the plasma floating potential as much without that connection.
+
 \paragraph{Solution}
+
+Much of this analysis is the same as that done for the multitip Langmuir probe in \ref{ss2:multitip_circuit_solution} so we will gloss over a large portion and jump right into the final equations for the quantities we want to find, $V_{ps}$, $V_{pc}$, $I_{ps}$, and $I_{pc}$.
+
+\begin{align*}
+    % I_{pc} =& \frac{R_{dc} + R_{sc}}{R_{sc}} I_{dc} + \frac{R_{ds} (R_{sc} - R_{sn})}{R_{sc} R_{sn}} I_{ds} - \frac{R_{dn} + R_{sn}}{R_{sn}} I_{dn} \\
+    % I_{ps} =& -\frac{R_{dc}}{R_{sc}} I_{dc} -\frac{R_{dn}}{R_{sn}} I_{dn} - \frac{R_{dm} + R_{sm}}{R_{sm}} I_{dm} + \left(1 + R_{ds} \left( \frac{1}{R_{sc}} + \frac{1}{R_{sn}} + \frac{1}{R_{ss}} \right) \right) I_{ds} \\
+    % V_{pc} =& \frac{(R_{dc} (R_{sc}+R_{wc})+R_{sc} R_{wc})}{R_{sc}}I_{dc} -\frac{R_{ds} R_{wc}}{R_{sc}}I_{ds} +V_{b} \\
+    % V_{ps} =& -\frac{R_{dc} R_{ws}}{R_{sc}}I_{dc} -\frac{R_{dn} R_{ws}}{R_{sn}}I_{dn} +\left(R_{ds} \left(\frac{R_{ws}}{R_{sc}}+\frac{R_{ws}}{R_{sn}}+\frac{R_{ws}}{R_{ss}}+1\right)+R_{ws}\right)I_{ds} +V_{b} \\
+    I_{ps} =& - \frac{I_{dc} R_{dc}}{R_{sc}} + I_{dm} \left(- \frac{R_{dm}}{R_{ss}} - \frac{R_{sm}}{R_{ss}}\right) + I_{dn} \left(\frac{R_{dn} R_{sm}}{R_{sn} R_{ss}} - \frac{2 R_{dn}}{R_{sn}} + \frac{R_{sm}}{R_{ss}} - 1\right) \\
+    &+ I_{ds} \left(- \frac{R_{ds} R_{sm}}{R_{sn} R_{ss}} + \frac{R_{ds}}{R_{ss}} + \frac{2 R_{ds}}{R_{sn}} + \frac{R_{ds}}{R_{sc}} + 1\right) \\
+    V_{ps} =& - \frac{I_{dc} R_{dc} R_{ws}}{R_{sc}} + I_{dm} \left(- R_{dm} - \frac{R_{dm} R_{ws}}{R_{ss}} - R_{sm} - \frac{R_{sm} R_{ws}}{R_{ss}}\right) \\
+    &+ I_{dn} \left(\frac{R_{dn} R_{sm}}{R_{sn}} + \frac{R_{dn} R_{sm} R_{ws}}{R_{sn} R_{ss}} - \frac{R_{dn} R_{ws}}{R_{sn}} + R_{sm} + \frac{R_{sm} R_{ws}}{R_{ss}}\right) \\
+    &+ I_{ds} \left(- \frac{R_{ds} R_{sm}}{R_{sn}} - \frac{R_{ds} R_{sm} R_{ws}}{R_{sn} R_{ss}} + R_{ds} + \frac{R_{ds} R_{ws}}{R_{ss}} + \frac{R_{ds} R_{ws}}{R_{sn}} + \frac{R_{ds} R_{ws}}{R_{sc}} + R_{ws}\right) \\
+    I_{pc} =& \frac{I_{dc} R_{sn} \left(R_{dc} + R_{sc}\right) - I_{dn} R_{sc} \left(R_{dn} + R_{sn}\right) + I_{ds} R_{ds} \left(R_{sc} - R_{sn}\right)}{R_{sc} R_{sn}} \\
+    V_{pc} =& I_{dc} \left(R_{dc} + \frac{R_{dc} R_{wc}}{R_{sc}} + R_{wc}\right) + I_{dm} \left(- R_{dm} - R_{sm}\right) + I_{dn} \left(\frac{R_{dn} R_{sm}}{R_{sn}} + R_{sm}\right) \\
+    &+ I_{ds} \left(- \frac{R_{ds} R_{sm}}{R_{sn}} - \frac{R_{ds} R_{wc}}{R_{sc}}\right)
+\end{align*}
 
 \paragraph{Assumptions}
 
+Here we have the same assumption of noise coming from a changing measurement ground but we now can account for a second source of noise which is extraneous current flowing down the probe wires due to coupling or other strange effects. We've also assumed, similar to previously, that the high pass capacitors change too slowly during a shot for their charge to matter.
+
 \subsubsection{Calibration}
 
-\paragraph{Calibrating in isat}
+Calibration of the PA probe is once again done very similarly to that of the multitip Langmuir probe, \ref{ss2:multitip_calibration}. Here we'll discuss some of the differences.
+
+\paragraph{Calibrating in Ion Saturation}
+
+During the initial plasma equilibrium, the plasma is quite isotropic and along with the isotropic collection of the shells, we can calibrate between each shell the relative areas.
 
 \paragraph{Calibrating on the exponential}
 
+Also during that equilibrium, the plasma temperature is quite low (around 4 eV) so by biasing the shells such that they lie near the plasma potential on the exponential, they should all have nearly the same probe potential which lets us calibrate the wire resistance.
+
 \paragraph{Rotation calibration}
 
-\subsubsection{The path to ground}
+Although the initial equilibrium is quite isotropic, there is some flow from the plasma guns and cross-field diffusion of the plasma to higher radii. Thus to correct for these issues we calibrate the same core parameters as the shell by rotating the probe between shots such that each direction is covered by different tips. Then we can use the different shots with tips in the same direction in both the ion saturation region and on the exponential to get the core wire resistance and area.
 
-\paragraph{Why do we have to care}
+% \subsubsection{The path to ground}
 
-\paragraph{How do we set it}
+% \paragraph{Why do we have to care}
 
-\begin{figure}
-    \caption{Circuit diagram of probe circuitry}
-\end{figure}
+% \paragraph{How do we set it}
 
-\begin{figure}
-    \caption{Image of probe circuitry}
-\end{figure}
+% \begin{figure}
+%     \centering
+    
+%     \caption{Picture of circuit setup.}
+%     \label{fig:pa_circuit_picture}
+% \end{figure}
 
 \subsubsection{Capacitive coupling}
 
-\paragraph{Where does it come from}
+This probe was built using a technique that made sense in the moment but leads to some effects that we need to remove after data collection. To make the noise look as similar as possible to the signal, we used fine twisted pair wire for the shell signal and noise and similarly for the core signal and noise. This leads to a capacitive coupling between the signal and noise measurements due to a difference in voltage between the two wires.
 
-\paragraph{Where do we see it}
+\paragraph{What do we see} As can be seen in figure \ref{fig:pa_example_capacitive_coupling}, the shell noise (signal number 5) is approximately the derivative of the shell current (signal number 6) multiplied by some constant. This is the case for all tips but the coefficient multiplying the derivative can be different. The same effect should also occur for the core measurements but are more difficult to see since they are dominated by the shell signal.
 
 \begin{figure}
-    \caption{Probe signals showing coupling}
+    \centering
+    \includegraphics[width=\textwidth]{chapter_pa_probe/figures/example_raw_signal_trace_with_capacitive_coupling.png}
+    \caption{Example of the raw signal measured by the digitizers. This signal is from tip \#2. Each signal has it's zero at the corresponding channel of the digitizer (i.e. the signal that starts at 5 V is really starting at 0 V but is offset by the channel number). Channel 5 is the shell noise wire, channel 6 is the shell signal wire, channel 7 is the core noise wire, and channel 8 is the core signal wire.}
+    \label{fig:pa_example_capacitive_coupling}
+\end{figure}
+
+\paragraph{Where does it come from}
+
+The combination of sense resistors and closely wound wires is a recipe for a RC circuit-like effects. Intuitively, since the signal looks like the derivative let's look at what a circuit differentiator is.
+
+\subparagraph{A differentiator}
+
+As can be seen in figure \ref{fig:passive_differentiator}, a passive differentiator is just a resistor and capacitor acting like a divider. When $\overline{x} - g$ varies, at low frequency the capacitor acts as a break in the circuit leading to no voltage difference on $\overline{y}$ but at very high frequencies all the voltage is transfered to $\overline{y}$ since the capacitor acts as a short. The transfer function for this circuit can be written as
+\begin{equation}
+    \label{eq:passive_differentiator}
+    \overline{Y} = \frac{sRC}{1 + sRC} \overline{X}
+\end{equation}
+where $\overline{X} = \overline{x} - g$ and $\overline{Y} = \overline{y} - g$ and $\overline{x}$, $\overline{y}$, and $g$ are the voltages at their respective nodes.
+
+\begin{figure}
+    \centering
+    \begin{circuitikz}[american]
+        \draw (0, 0) node[left]{$\overline{x}$}
+        to[C=$C$, o-] ++(2, 0) coordinate(RC split)
+        to[R=$R$] ++(0, -2) coordinate(gnd split)
+        to[short, -o] (0, -2) node[left]{$g$}
+        (RC split) to[short, -o] ++(1, 0) node[right]{$\overline{y}$}
+        (gnd split) to[short, -o] ++(1, 0) node[right]{};
+    \end{circuitikz}
+    \caption{A passive differentiator. This figure is reproduced from \href{https://commons.wikimedia.org/wiki/File:Passive_differentiator_circuit_1.png}{Wikipedia}.}
+    \label{fig:passive_differentiator}
+\end{figure}
+
+\subparagraph{High-pass capacitor and resistor divider}
+
+This differentiator looks very similar to the high pass capacitors and resistor dividers we use in the circuit but because of the high resistance and capacitance they have an RC time greater than a millisecond. Thus we can ignore the differentiator effects there.
+
+\subparagraph{Shell/core circuit}
+
+Let's start by just examining the shell but the core undergoes a similar method. Figure \ref{fig:pa_tip_circuit_diagram_w_coupling} is the same as figure \ref{fig:pa_tip_circuit_diagram} except that we've added the capacitive coupling as a capacitor, $C_c$. We've also removed the core circuit as it does not play a significant role in the shell analysis. In the case of the core analysis, $V_b \rightarrow V_s + V_b$, $V_s \rightarrow V_c$, and $V_m \rightarrow V_n$. As can be seen in the simplified circuit at the bottom of figure \ref{fig:pa_tip_circuit_diagram_w_coupling}, looking at everything to the left of $C_c$, the shell voltage measurement ($V_s$) is just the divided down $V_p - V_b$. Now instead if we look at everything on the right of $R_p$ and $V_p - V_b$ (including those two elements) we see that we have a differentiator and also a resistor divider. The $R_w$ in this right circuit is difficult to calculate as capacitive coupling occurs along the entire wire so it's simpler to just ignore $R_w$ everywhere as it plays a small part in the analysis.
+
+\begin{figure}
+    \centering
+    \begin{tikzpicture}
+        % Paths, nodes and wires:
+        \draw (11, 7.75) to[variable american resistor, l={$R_p$}] (11, 6.25);
+        \draw (9, 8) to[american resistor, l={$R_w$}] (7.5, 8);
+        \draw (6.5, 8) to[american resistor, l={$R_s$}] (5, 8);
+        \draw (6.5, 6) to[american resistor, l={$R_s$}] (5, 6);
+        \draw (9, 6) to[american resistor, l={$R_w$}] (7.5, 6);
+        \draw (9.5, 7.75) to[capacitor, l={$C_c$}] (9.5, 6.25);
+        \draw (7, 8.5) to[capacitor, l={$C_t$}] (7, 10);
+        \draw (7, 4) to[capacitor, l={$C_t$}] (7, 5.5);
+        \draw (7, 2) to[american resistor, l={$R_d$}] (7, 3.5);
+        \draw (7, 10.5) to[american resistor, l={$R_d$}] (7, 12);
+        \draw (4.5, 4.5) to[capacitor, l={$C_b$}] (4.5, 6);
+        \draw (4.5, 2.5) to[american voltage source, l={$V_b$}] (4.5, 4);
+        \draw (11, 2.5) to[american voltage source, l={$V_p$}] (11, 4);
+        \draw (7.5, 8) -- (6.5, 8);
+        \draw (7, 8.5) -| (7, 8);
+        \draw (7, 10.5) -| (7, 10);
+        \draw (7, 12) -| (12.25, 2) -| (4.5, 2.5);
+        \draw (4.5, 4.5) -| (4.5, 4);
+        \draw (4.5, 6) -- (5, 6);
+        \draw (5, 8) -- (4.5, 8) -| (4.5, 6);
+        \draw (6.5, 6) -- (7.5, 6);
+        \draw (7, 5.5) -| (7, 6);
+        \draw (7, 4) -| (7, 3.5);
+        \draw (9, 8) -| (11, 7.75);
+        \draw (11, 6.25) -| (11, 4);
+        \draw (11, 2.5) -| (11, 2);
+        \draw (9.5, 8) -| (9.5, 7.75);
+        \draw (9.5, 6.25) |- (9, 6);
+        \draw (7, 10.5) to[voltmeter, l={$V_s$}] (8.5, 10.5);
+        \draw (8.5, 12) -| (8.5, 10.5);
+        \draw (7, 3.5) to[voltmeter, l={$V_m$}] (8.5, 3.5);
+        \draw (8.5, 3.5) -| (8.5, 2);
+        \path[draw={rgb,255:red,224;green,27;blue,36}, line width=2pt, -latex] (7.25, 1.75) -- (7.25, 1);
+        \draw (4, -1.5) to[voltmeter, l={$V_s$}] (4, 0);
+        \draw (12.75, -1.5) to[voltmeter, l_={$V_m$}] (12.75, 0);
+        \draw (5.25, -1.5) to[american resistor, l={$R_d$}] (5.25, -0);
+        \draw (6.5, -1.5) to[american resistor, l={$R_s$}] (6.5, -0);
+        \draw (6.5, 0) to[american resistor, l={$R_w$}] (8, -0);
+        \draw (8, 0) to[capacitor, l={$C_c$}] (9, -0);
+        \draw (9, 0) to[american resistor, l={$R_w$}] (10.5, -0);
+        \draw (10.5, -1.5) to[american resistor, l={$R_s$}] (10.5, -0);
+        \draw (11.75, -1.5) to[american resistor, l={$R_d$}] (11.75, -0);
+        \draw (8, -0) to[variable american resistor, l_={$R_p$}] (8, -1.5);
+        \draw (4, -0) -- (6.5, -0);
+        \draw (4, -3) -- (12.75, -3);
+        \draw (10.5, -0) -- (12.75, -0);
+        \draw (6.5, -3) -- (6.5, -1.5);
+        \draw (10.5, -3) -- (10.5, -1.5);
+        \draw (8, -3) to[american voltage source, l_={$V_p - V_b$}] (8, -1.5);
+        \draw (4, -1.5) -| (4, -3);
+        \draw (5.25, -1.5) -| (5.25, -3);
+        \draw (11.75, -1.5) -| (11.75, -3);
+        \draw (12.75, -1.5) -| (12.75, -3);
+    \end{tikzpicture}
+    \caption{The capacitive coupling of the shell signal and the shell noise which are coupled by capacitor $C_c$. The signals are measured via $V_n$ and $V_s$. The left side of the top circuit is the bias voltage ($V_b$) applied to the biasing capacitor ($C_b$). $R_p$ is the resistance of the plasma which is calculated from Ohm's law: $V_\text{probe} - V_\text{plasma} = I_\text{probe} R_\text{plasma}$. The $p$'s in $V_p$ and $R_p$ are for `plasma'. To achieve the bottom circuit, we've simplified the top circuit by combining voltage supplies and removing capacitances that are too large to play into the capacitive coupling effect we see.}
+    \label{fig:pa_tip_circuit_diagram_w_coupling}
 \end{figure}
 
 \paragraph{Magnitude of effect}
 
+We can calculate the capacitive coupling using the wire parameters. We are using very fine twisted pair wire with a wire diameter of 0.003 inches, a separation between wire centers of 0.003 inches, and the dielectric constant of PTFE is 2.2 (this is the enamel coating material on the wires). We then get a capacitance per meter of 84.2 pF / m. Using a sense resistance of 680 $\Omega$ we find that $RC \approx 0.11$ \textmu s. Since our signals are on the order of 0.1 \textmu s ($s \approxeq 6 \cdot 10^7$ rad/s) the magnitude of the coefficient in \ref{eq:passive_differentiator} is $\approx 0.8$. The capacitive coupling is a bit over estimated since the wires are not perfectly twisted but this is good enough to let us know that this is an effect to remove.
+
 \paragraph{Removing effect}
+
+% TODO: Update this.
+As of this writing, the best way to take care of this effect is to ignore it. This is because the only reason we may want to remove this effect is if we want to extract the common mode noise to then remove from the signal. For the shell, the magnitude of the coupling on the noise signal can be up to 1/3rd of the shell signal whereas the common mode noise for the shell is far smaller (maybe around 1\%). For the core, since both the core signal and core noise have a very similar voltage, the capacitive coupling is very small and although the common mode noise is larger the capacitive coupling is very small. We have done some work extracting transfer functions to account for this effect but this is ongoing.
 
 \section{Plasma Theory}
 
@@ -266,43 +629,161 @@ Diodes for discharging the wrong way.
 
 \subsubsection{Plasma Distribution}
 
+We assume that we have a drifting bi-Maxwellian for the electrons where the temperature parallel to the magnetic field, $\vb{B}$, is different than the temperature perpendicular to it. If we let the drift velocity be $\vb{v_D}$ then we can write our distrubution function as the following:
+\begin{equation}
+    f_e(\vb{v}) = \left(\frac{m_e}{2\pi k}\right)^{3/2} \frac{n}{\sqrt{T_{e\perp}^2 T_{e\parallel}}} \exp\left[-\frac{m_e}{2 k} \left(\frac{(\vb{v} - \vb{v_D})_\parallel^2}{T_{e\parallel}} + \frac{(\vb{v} - \vb{v_D})_\perp^2}{T_{e\perp}}\right)\right]
+    \label{eq:drifting_bimaxwellian}
+\end{equation}
+
+We can extract the parallel and perpendicular components since
+\begin{align*}
+    (\vb{v} - \vb{v_D})_\parallel^2 &= \left((\vb{v} - \vb{v_D}) \cdot \hat{b}\right)^2 \\
+    (\vb{v} - \vb{v_D})_\perp^2 &= \left((\vb{v} - \vb{v_D}) - \left((\vb{v} - \vb{v_D}) \cdot \hat{b}\right) \hat{b} \right)^2
+\end{align*}
+
+For the ions we'll assume that they are isotropic in temperature as most work with langmuir probes has shown that ion temperature effects are not highly impactful. Another way to say this is it's very difficult to extract the ion temperature from IV curves because it plays a small effect. We still assume that the ions drift with the electrons and often the drift speed is above the ion sound speed and thus our probe acts like a mach probe in many ways.
+
 \subsubsection{Ion particle flux}
 
-\paragraph{Mach effects}
+For the attracted ions we are fortunate. The core of each tip recieves very little ion current throughout the shot so having high accuracy is not necessary. Thus we'll use a relatively simple model by Hutchinson derived from a set of PIC simulations \cite{Hutchinson_mach_2002}. Although this model doesn't work for large Debye length, we'll continue our approximation of small Debye length.
 
 \subsubsection{Electron particle flux}
 
+We split the calculation of the current to the probe into a multistage process. We will only model the repelled electrons using \ref{eq:drifting_bimaxwellian} as modeling the attracted electrons is a much more difficult task.
+
+To calculate the total electron current to the core we need to calculate the flux to the probe from a specific direction. We'll assume that we can use energy conservation to get the minimum velocity for an electron to hit the probe and we only care about the electron velocity perpendicular to the probe surface. Once we integrate up the distribution function for a specific direction and minimum energy then we can integrate over all angles while multiplying by the area of the probe to get the electron current to the probe.
+
+\paragraph{Coordinate System}
+
+Let's orient our velocity space coordinate system along the probe direction. The position coordinate system is ignorable as we assume that the small separation in tip position is ignorable. Let $v$ be the radial magnitude, $\theta_T$ be the polar angle, and $\varphi_T$ be the azimuthal angle. $\theta_T = 0$ along the tip direction pointed into the plasma and away from the probe body.
+
+Let $\hat{t}_1$, $\hat{t}_2$, and $\hat{t}_3$ be the cartesian unit vectors in this coordinate system. The third unit vector is pointed along $\theta_T = 0$. $\hat{t}_1$ and $\hat{t}_2$ are arbitrarily chosen to be perpendicular to $\hat{t}_3$. We can get the direction of the tip from how the probe is attached to it's port on the surface of the machine. To convert a vector, $\vb{u}_{mach}$, in machine cartesian coordinates into a vector in this new coordinate system we take $u_i = \vb{u}_{mach} \cdot \hat{t}_i$. This gives us the components of $\vb{u}_T$ where the $T$ subscript means the tip coordinates.
+
 \paragraph{Minimum velocity}
 
+\begin{figure}
+    \centering
+    \includegraphics[scale=0.2]{chapter_pa_probe/figures/minimum_velocity_handdrawn.png}
+    \caption{Diagram of electron coming from a direction $\theta_T$ and finite impact parameter on the side of the core.}
+    \label{fig:pa_minimum_velocity_handdrawn}
+\end{figure}
+
+Let's orient our coordinate system such that $\theta_T = 0$ in spherical coordinates is along the axis of the tip as can be seen in figure \ref{fig:pa_minimum_velocity_handdrawn}. Then the perpendicular velocity is given by
+\begin{align*}
+    v_{\perp, c} &= v \cos(\theta_T) \\
+    v_{\perp, s} &= v \sin(\theta_T) \sqrt{1 - \frac{x^2}{r^2}}
+\end{align*}
+
+Since the electron needs to overcome the probe potential this means
+\begin{align*}
+    |v_\perp| &\geq v_\perp^\mathrm{min}(x) \\
+    \frac{1}{2} m_e v_\perp^\mathrm{min}(x)^2 &= e (V_p - V_0) \\
+    \Rightarrow v_{\perp}^\mathrm{min}(x) &= \sqrt{\frac{2e}{m_e} (V_p - V_0)} \\
+    \Rightarrow v_{c}^\mathrm{min}(x) &= \frac{1}{\cos{\theta_T}}\sqrt{\frac{2e}{m_e} (V_p - V_0)} \\
+    \Rightarrow v_{s}^\mathrm{min}(x) &= \frac{1}{\sin(\theta_T) \sqrt{1 - x^2 / r^2}} \sqrt{\frac{2e}{m_e} (V_p - V_0)}
+\end{align*}
+where $V_0$ is the plasma potential far from the probe.
+
 \paragraph{Area}
+\label{spg:pa_area}
+
+\begin{figure}
+    \centering
+    \includegraphics[scale=0.8]{chapter_pa_probe/figures/projected_area.pdf}
+    \caption{The bottom plot shows the projected area of the core as a function of direction. The top plots are what the probe tip looks like from specific direction associated with the vertical dashed grey lines. The shell is blue, insulation green, and core orange.}
+    \label{fig:pa_projected_area}
+\end{figure}
+
+Using the same coordinate system we can calculate the area of the cap, $c$, and side, $s$, of the core. What we want is the area projected along some direction as electrons from that direction will only see that limited amount of area. The easiest way to do this is to do an integral from $x = -r$ to $x = +r$ where $r$ is the radius of the core. At any value of $x$, we want to find the height of exposed tip. As $\theta_T$ increases, the outer shell will cover the side of the core and then the cap. The equations for the projected height are
+\begin{align*}
+    h_{\mathrm{bottom}, s}(x) &= -\cos(\theta_T) \sqrt{r^2 - x^2} \\
+    h_{\mathrm{top}, s}(x) &= -\cos(\theta_T) \sqrt{r^2 - x^2} + h \sin(\theta_T) \\
+    h_{\mathrm{bottom}, c}(x) &= -\cos(\theta_T) \sqrt{r^2 - x^2} + h \sin(\theta_T) \\
+    h_{\mathrm{top}, c}(x) &= \cos(\theta_T) \sqrt{r^2 - x^2} + h \sin(\theta_T) \\
+    h_{\mathrm{top}, \mathrm{shell}}(x) &= -\cos(\theta_T) \sqrt{R^2 - x^2} + H \sin(\theta_T)
+\end{align*}
+where $R$ is the radius of the shell. The constants $h$ and $H$ are the heights of the core and shell respectively measured from the insulation height.
+
+The total height for the side and cap including the covering due to the shell is
+\begin{align*}
+    h_s(x) &= h_{top,s}(x) - \min\left[h_{top,s}(x), \max\left[h_{bottom,s}(x), h_{top,shell}(x)\right]\right] \\
+    h_c(x) &= h_{top,c}(x) - \min\left[h_{top,c}(x), \max\left[h_{bottom,c}(x), h_{top,shell}(x)\right]\right]
+\end{align*}
+
+There is a maximum angle at which the side of the core gets fully covered by the shell. There is a larger angle similarly associated with the cap. The conditions of coverage are
+\begin{align*}
+    h_{\mathrm{top}, \mathrm{shell}}(x = r, \theta_T = \theta_{T,s}^\mathrm{max}) &= h_{\mathrm{top}, s}(x = r, \theta_T = \theta_{T,s}^\mathrm{max}) \quad \mathrm{Side} \\
+    \Rightarrow \theta_{T,s}^\mathrm{max} &= \tan^{-1} \left(\frac{\sqrt{R^2 - r^2}}{H - h}\right) \\
+    h_{\mathrm{top}, \mathrm{shell}}(x = 0, \theta_T = \theta_{T,c}^\mathrm{max}) &= h_{\mathrm{top}, c}(x = 0, \theta_T = \theta_{T,c}^\mathrm{max}) \quad \mathrm{Cap} \\
+    \Rightarrow \theta_{T,c}^\mathrm{max} &= \tan^{-1} \left(\frac{R + r}{H - h}\right)
+\end{align*}
 
 \paragraph{Particle Flux}
 
+We are now ready to calculate the particle flux to the probe. We'll integrate the distribution function along a specific $\varphi_T$ and $\theta_T$. Then we'll do a solid angle integral to get the total flux. The particle flux is calculated by multiplying the area along a projected direction by the number of particles from that direction alongwith the velocity perpendicular to the probe.
+
+\begin{equation}
+    \Gamma_e = \int_{0}^{2\pi}d\varphi_T \sum_{l \in \{s, e\}} \int_{0}^{\theta_{T,l}^{\max}} d\theta_T \int_{-r}^{r} dx \int_{v_{l}^\mathrm{min}(\theta_T, x)}^{\infty}dv \, v^2 \sin(\theta_T) h_l(x) v_{\perp,l} f_e(v, \theta_T, \varphi_T)
+    \label{eq:electron_particle_flux}
+\end{equation}
+
+The $v^2 \sin(\theta_T)$ is due to spherical coordinates. $h_l(x)$ is the height of the projected area going from left to right in the small plots of \ref{fig:pa_projected_area}. The $v_{\perp,l}$ term accounts for the velocity perpendicular to the probe and $f_e$ is the distribution function.
+
+We will remove the integral over $x$ in order to simplify the problem. Since the side of the probe has much less projected area and is more affected by non-planar effects this approximation should have only a small effect. The particle flux to the side and core can be seen in fig \ref{fig:pa_example_particle_flux_to_core}. It can be seen that the flux to the side of the core is very small relative to the cap flux and only starts to become significant near $V_p = 0$.
+
+\begin{figure}
+    \centering
+    \includegraphics[width=\textwidth]{chapter_pa_probe/figures/example_core_particle_flux.png}
+    \caption{Example particle flux to the core for the electrons and ions of a flowing Maxwellian. The ion particle flux is much less for the tip pointed away from the flow (Angle = 0) compared to the tip pointed into the flow (Angle = 180). The electron particle flux is much less affected by the flow. Also, the particle flux to the side of the tip is very small in comparison to the flux to the cap.}
+    \label{fig:pa_example_particle_flux_to_core}
+\end{figure}
+
 \subsubsection{Theoretical JV curves}
+
+Now that we have developed a theory for the expected current to a probe given some plasma parameters, let's take a look at what we expect the measurements to be given certain plasma parameters.
 
 \paragraph{Reading radar plots}
 
+Normally, IV-characteristics are read using a 2D plot of the probe potential vs. probe current (or current density). As we want to incorporate a directional aspect to this plot let's use a radar plot.
+
 \subparagraph{Radar axis}
 
-\subparagraph{Solutions}
+The radar plot has a direction component which is the angle around the circle. For the probe potential we use the radial distance and choose a minimum voltage to be at zero radius (not plotting any points with bias less that the minimum voltage). The color is then the current to the probe at a given angle and voltage. We also draw a grey line where the floating potential is (i.e. there is no current to the probe).
+
+\paragraph{Solutions} Figure \ref{fig:pa_theoretical_radar_plots} shows some example electron distribution functions (top row) and their corresponding IV-characteristic radar plots (bottom row). In a Maxwellian plasma with no drift (left column) the IV radar plot looks the same for any angle. This is as expected since the plasma has no directional dependence. Once we add a drift, middle column, the distribution changes shape. In this case the plasma is flowing upward with a drift velocity that is small relative to the electron thermal speed but is on the order of tenths of ion sound speed. This means that the mach effect will come into play which leads to more ion current hitting probes pointing into the flow (pointing downwards) and very little current hitting probes pointed in the direction of flow. Finally, we can give a drifting bi-Maxwellian which will have both a Mach effect and a difference in temperature. Here we've set the drift to be upwards and the magnetic field direction (parallel direction) to be up and to the left. When this is the case we have two interesting features. First, we get the same ion current directional difference as seen for the drifting Maxwellian. Secondly, and more revealing, the electron current to the probe is much higher in the direction of higher temperature than in the direction of low temperature. This is as to be expected because there is higher electron flux in the high electron temperature direction.
 
 \begin{figure}
-    \caption{Figure of theoretial plasma distributions and JV curves}
+    \centering
+    \includegraphics[width=\textwidth]{chapter_pa_probe/figures/theoretical_pa_radar_plots.png}
+    \caption{Figure of theoretical plasma distributions and JV curves}
+    \label{fig:pa_theoretical_radar_plots}
 \end{figure}
 
 \subsection{Individual tip fitting}
 
+As an alternative to the full model we just described, let's look into another option for extracting the plasma distribution. Instead of fitting all the tips at once, we can try fitting each using a routine similar to that for the multitip Langmuir probe and then combining each of those individual fits.
+
 \subsubsection{Why do this instead}
 
-\subsubsection{Methods}
+We've found that the full model suffers from some issues in regards to finding a good fit to the measured data. One problem is that it is computationally intensive to recalculate the IV-characteristic when optimizing the parameters. Additionally, we are fitting six parameters at once! Namely, the electron density, parallel temperature, perpendicular temperature, and three components of the drift velocity. Even ignoring the drift velocity still leads to exceedingly long optimization times that don't fit the data all that well. One other reason that this may be the case is there may exist non-Maxwellian features in the plasma and the simplicity of this model may not correctly reproduce the actual plasma response to an acceptable degree.
 
-\paragraph{Aforementioned methods}
+\subsubsection{Individual Tip Theories}
+
+Let's take a look as to the options we have available for fitting each tip separately.
+
+\paragraph{Multitip methods}
+
+In sections \ref{sss:multitip_hutchinson_theory} and \ref{sss:multitip_brl_theory} we discussed two plasma theories to predict the expected current to a simple Langmuir probe given a set of plasma parameters describing an unmagnetized Maxwellian plasma. Both of these methods, and many other Langmuir probe theories, show the same general trends for the expected current to a Langmuir probe independent of theory approximations and magnetization. Thus one thing we can try doing is applying these theories to the PA probe in which we attempt to fit each tip using the code architecture as described in \ref{sss:multitip_odr}.
 
 \paragraph{Exponential}
+
+While both of the previous theories, Hutchinsons and BRL, work well for a normal Langmuir probe, we find that the geometry of our system may lead to different ratios of the electron to ion current than expected from one of these physically derived theories. Why might that be?
 
 \subparagraph{Ions don't hit core}
 
 \begin{figure}
+    \centering
+    \includegraphics{chapter_pa_probe/figures/pa_ion_attraction.png}
     \caption{Simple drawing of what might happen to ions}
 \end{figure}
 
@@ -354,6 +835,7 @@ We will use ODR like mentioned in Te section.
 \subsubsection{Averaging of core data}
 
 \paragraph{Weighted average of relay on/off}
+\label{spg:pa_averaging_relay}
 
 \subsection{Fitting shell}
 

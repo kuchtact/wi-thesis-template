@@ -41,32 +41,35 @@
 \contentsline {figure}{\numberline {3.8}{\ignorespaces *New Multitip Bias Circuitry Image}}{36}{figure.caption.51}%
 \contentsline {figure}{\numberline {3.9}{\ignorespaces *Tip Signal Circuit}}{38}{figure.caption.53}%
 \contentsline {figure}{\numberline {3.10}{\ignorespaces *Tip Circuit w/ Noise}}{39}{figure.caption.54}%
-\contentsline {figure}{\numberline {3.11}{\ignorespaces Multitip Single Ended Tip Board}}{41}{figure.caption.55}%
+\contentsline {figure}{\numberline {3.11}{\ignorespaces *Multitip Single Ended Tip Board}}{41}{figure.caption.55}%
 \contentsline {figure}{\numberline {3.12}{\ignorespaces Image of new circuit board}}{42}{figure.caption.56}%
 \contentsline {figure}{\numberline {3.13}{\ignorespaces *Bdot coil circuit}}{45}{figure.caption.58}%
-\contentsline {figure}{\numberline {3.14}{\ignorespaces Multitip Electric Field Diagram}}{57}{figure.caption.60}%
-\contentsline {figure}{\numberline {3.15}{\ignorespaces Multitip Electric Field Effect}}{58}{figure.caption.61}%
-\contentsline {figure}{\numberline {3.16}{\ignorespaces Multitip Fit Example}}{63}{figure.caption.62}%
+\contentsline {figure}{\numberline {3.14}{\ignorespaces *Multitip Electric Field Diagram}}{57}{figure.caption.60}%
+\contentsline {figure}{\numberline {3.15}{\ignorespaces *Multitip Electric Field Effect}}{58}{figure.caption.61}%
+\contentsline {figure}{\numberline {3.16}{\ignorespaces *Multitip Fit Example}}{63}{figure.caption.62}%
 \contentsline {figure}{\numberline {3.17}{\ignorespaces Example fit using many shots, multiple local parameter fits, and errors}}{66}{figure.caption.63}%
 \contentsline {figure}{\numberline {3.18}{\ignorespaces Plot of isat currents from BRL}}{66}{figure.caption.64}%
 \contentsline {figure}{\numberline {3.19}{\ignorespaces Radial chord of initial density with Hutchinson vs BRL.}}{66}{figure.caption.65}%
 \contentsline {figure}{\numberline {3.20}{\ignorespaces Comparison of expected E from Ohm's law and measured E.}}{67}{figure.caption.66}%
 \addvspace {10pt}
-\contentsline {figure}{\numberline {4.1}{\ignorespaces Picture of feed thru along with drawings of cross-sections.}}{69}{figure.caption.67}%
-\contentsline {figure}{\numberline {4.2}{\ignorespaces Picture of end of probe}}{69}{figure.caption.68}%
-\contentsline {figure}{\numberline {4.3}{\ignorespaces CAD diagram of full body}}{69}{figure.caption.69}%
-\contentsline {figure}{\numberline {4.4}{\ignorespaces CAD diagram of probe tip}}{69}{figure.caption.70}%
-\contentsline {figure}{\numberline {4.5}{\ignorespaces Simple circuit diagram of how bias works.}}{70}{figure.caption.72}%
-\contentsline {figure}{\numberline {4.6}{\ignorespaces Full circuit diagram of how bias works.}}{71}{figure.caption.73}%
-\contentsline {figure}{\numberline {4.7}{\ignorespaces Image of power supply setup}}{71}{figure.caption.74}%
-\contentsline {figure}{\numberline {4.8}{\ignorespaces Schematic of grounding diagram}}{72}{figure.caption.77}%
-\contentsline {figure}{\numberline {4.9}{\ignorespaces Image of swapping box}}{73}{figure.caption.78}%
-\contentsline {figure}{\numberline {4.10}{\ignorespaces Diagram of swapping}}{73}{figure.caption.79}%
-\contentsline {figure}{\numberline {4.11}{\ignorespaces Time frame for core movie of IV with separation between relay}}{73}{figure.caption.80}%
-\contentsline {figure}{\numberline {4.12}{\ignorespaces Circuit diagram of probe circuitry}}{74}{figure.caption.81}%
-\contentsline {figure}{\numberline {4.13}{\ignorespaces Image of probe circuitry}}{74}{figure.caption.82}%
-\contentsline {figure}{\numberline {4.14}{\ignorespaces Probe signals showing coupling}}{74}{figure.caption.83}%
-\contentsline {figure}{\numberline {4.15}{\ignorespaces Figure of theoretial plasma distributions and JV curves}}{75}{figure.caption.84}%
-\contentsline {figure}{\numberline {4.16}{\ignorespaces Simple drawing of what might happen to ions}}{76}{figure.caption.85}%
-\contentsline {figure}{\numberline {4.17}{\ignorespaces Comparison of alignment using Bz = 0 or bdot cross correlation}}{77}{figure.caption.86}%
+\contentsline {figure}{\numberline {4.1}{\ignorespaces Picture of feed thru along with drawings of cross-sections.}}{74}{figure.caption.67}%
+\contentsline {figure}{\numberline {4.2}{\ignorespaces Picture of end of probe}}{74}{figure.caption.68}%
+\contentsline {figure}{\numberline {4.3}{\ignorespaces CAD diagram of full body}}{75}{figure.caption.69}%
+\contentsline {figure}{\numberline {4.4}{\ignorespaces CAD diagram of probe tip}}{76}{figure.caption.70}%
+\contentsline {figure}{\numberline {4.5}{\ignorespaces *PA Probe Biasing Circuit}}{79}{figure.caption.72}%
+\contentsline {figure}{\numberline {4.6}{\ignorespaces *PA Capacitor Bank Image}}{80}{figure.caption.73}%
+\contentsline {figure}{\numberline {4.7}{\ignorespaces *PA Probe Tip Circuit Diagram}}{83}{figure.caption.74}%
+\contentsline {figure}{\numberline {4.8}{\ignorespaces PA Probe Grounding Diagram}}{86}{figure.caption.76}%
+\contentsline {figure}{\numberline {4.9}{\ignorespaces Image of swapping box}}{88}{figure.caption.77}%
+\contentsline {figure}{\numberline {4.10}{\ignorespaces Diagram of swapping}}{88}{figure.caption.78}%
+\contentsline {figure}{\numberline {4.11}{\ignorespaces Time frame for core movie of IV with separation between relay}}{89}{figure.caption.79}%
+\contentsline {figure}{\numberline {4.12}{\ignorespaces Example of the raw signal measured by the digitizers. This signal is from tip \#2. Each signal has it's zero at the corresponding channel of the digitizer (i.e. the signal that starts at 5 V is really starting at 0 V but is offset by the channel number). Channel 5 is the shell noise wire, channel 6 is the shell signal wire, channel 7 is the core noise wire, and channel 8 is the core signal wire.}}{92}{figure.caption.80}%
+\contentsline {figure}{\numberline {4.13}{\ignorespaces A passive differentiator. This figure is reproduced from \href {https://commons.wikimedia.org/wiki/File:Passive_differentiator_circuit_1.png}{Wikipedia}.}}{93}{figure.caption.81}%
+\contentsline {figure}{\numberline {4.14}{\ignorespaces The capacitive coupling of the shell signal and the shell noise which are coupled by capacitor $C_c$. The signals are measured via $V_n$ and $V_s$. The left side of the top circuit is the bias voltage ($V_b$) applied to the biasing capacitor ($C_b$). $R_p$ is the resistance of the plasma which is calculated from Ohm's law: $V_\text {probe} - V_\text {plasma} = I_\text {probe} R_\text {plasma}$. The $p$'s in $V_p$ and $R_p$ are for `plasma'. To achieve the bottom circuit, we've simplified the top circuit by combining voltage supplies and removing capacitances that are too large to play into the capacitive coupling effect we see.}}{95}{figure.caption.82}%
+\contentsline {figure}{\numberline {4.15}{\ignorespaces Diagram of electron coming from a direction $\theta _T$ and finite impact parameter on the side of the core.}}{98}{figure.caption.83}%
+\contentsline {figure}{\numberline {4.16}{\ignorespaces The bottom plot shows the projected area of the core as a function of direction. The top plots are what the probe tip looks like from specific direction associated with the vertical dashed grey lines. The shell is blue, insulation green, and core orange.}}{100}{figure.caption.84}%
+\contentsline {figure}{\numberline {4.17}{\ignorespaces Example particle flux to the core for the electrons and ions of a flowing Maxwellian. The ion particle flux is much less for the tip pointed away from the flow (Angle = 0) compared to the tip pointed into the flow (Angle = 180). The electron particle flux is much less affected by the flow. Also, the particle flux to the side of the tip is very small in comparison to the flux to the cap.}}{102}{figure.caption.85}%
+\contentsline {figure}{\numberline {4.18}{\ignorespaces Figure of theoretical plasma distributions and JV curves}}{104}{figure.caption.86}%
+\contentsline {figure}{\numberline {4.19}{\ignorespaces Simple drawing of what might happen to ions}}{106}{figure.caption.87}%
+\contentsline {figure}{\numberline {4.20}{\ignorespaces Comparison of alignment using Bz = 0 or bdot cross correlation}}{107}{figure.caption.88}%
 \addvspace {10pt}

@@ -1,4 +1,4 @@
-\begin{wb-bib}{17}
+\begin{wb-bib}{21}
 \expandafter\ifx\csname natexlab\endcsname\relax\def\natexlab#1{#1}\fi
 \expandafter\ifx\csname bibnamefont\endcsname\relax
   \def\bibnamefont#1{#1}\fi
@@ -31,6 +31,11 @@
 \newblock \bibinfo{title}{Mach probes}.
 \newblock \emph{\bibinfo{journal}{Plasma Sources Science and Technology}} \bibinfo{volume}{21}(\bibinfo{number}{6}):\penalty0 \bibinfo{pages}{063001}.
 
+\bibitem[{\citenamefont{Dekker}(1958)}]{Dekker_1958}
+\bibinfo{author}{\bibnamefont{Dekker}, \bibfnamefont{A.~J.}} \bibinfo{year}{1958}.
+\newblock \emph{\bibinfo{title}{Secondary electron emission}}, vol.~\bibinfo{volume}{6} of \emph{\bibinfo{series}{Solid State Physics}}, \bibinfo{pages}{251--311}.
+\newblock \bibinfo{publisher}{Academic Press}.
+
 \bibitem[{\citenamefont{Demidov et~al.}(2002)\citenamefont{Demidov, Ratynskaia, and Rypdal}}]{Demidov_Ratynskaia_Rypdal_2002}
 \bibinfo{author}{\bibnamefont{Demidov}, \bibfnamefont{V.~I.}}, \bibinfo{author}{\bibfnamefont{S.~V.} \bibnamefont{Ratynskaia}}, \bibnamefont{and} \bibinfo{author}{\bibfnamefont{K.}~\bibnamefont{Rypdal}}. \bibinfo{year}{2002}.
 \newblock \bibinfo{title}{Electric probes for plasmas: The link between theory and instrument}.
@@ -41,6 +46,11 @@
 \newblock \bibinfo{title}{Formation of a localized acceleration potential during magnetic reconnection with a guide field}.
 \newblock \emph{\bibinfo{journal}{Physics of Plasmas}} \bibinfo{volume}{16}(\bibinfo{number}{5}):\penalty0 \bibinfo{pages}{050701}.
 
+\bibitem[{\citenamefont{Godyak and Demidov}(2011)}]{Godyak_Demidov_2011}
+\bibinfo{author}{\bibnamefont{Godyak}, \bibfnamefont{V~A}}, \bibnamefont{and} \bibinfo{author}{\bibfnamefont{V~I} \bibnamefont{Demidov}}. \bibinfo{year}{2011}.
+\newblock \bibinfo{title}{Probe measurements of electron-energy distributions in plasmas: what can we measure and how can we achieve reliable results?}
+\newblock \emph{\bibinfo{journal}{Journal of Physics D: Applied Physics}} \bibinfo{volume}{44}(\bibinfo{number}{23}):\penalty0 \bibinfo{pages}{233001}.
+
 \bibitem[{\citenamefont{Gradney}(2025)}]{Gradney_2025}
 \bibinfo{author}{\bibnamefont{Gradney}, \bibfnamefont{Paul}}. \bibinfo{year}{2025}.
 \newblock \bibinfo{title}{Laboratory investigation of collisionless kinetic effects and 3d topological triggers for magnetic reconnection}.
@@ -50,6 +60,11 @@
 \bibinfo{author}{\bibnamefont{Hershkowitz}, \bibfnamefont{Noah}}. \bibinfo{year}{1989}.
 \newblock \emph{\bibinfo{title}{How langmuir probes work}}, \bibinfo{pages}{113–183}.
 \newblock \bibinfo{publisher}{Elsevier}.
+
+\bibitem[{\citenamefont{Hu et~al.}(2017)\citenamefont{Hu, Rovey, and Zhao}}]{Hu_Rovey_Zhao_2017}
+\bibinfo{author}{\bibnamefont{Hu}, \bibfnamefont{Jing}}, \bibinfo{author}{\bibfnamefont{Joshua~L.} \bibnamefont{Rovey}}, \bibnamefont{and} \bibinfo{author}{\bibfnamefont{Wansheng} \bibnamefont{Zhao}}. \bibinfo{year}{2017}.
+\newblock \bibinfo{title}{Retarding field energy analyzer for high energy pulsed electron beam measurements}.
+\newblock \emph{\bibinfo{journal}{Review of Scientific Instruments}} \bibinfo{volume}{88}(\bibinfo{number}{1}):\penalty0 \bibinfo{pages}{013302}.
 
 \bibitem[{\citenamefont{Hutchinson}(2002)}]{Hutchinson_2002}
 \bibinfo{author}{\bibnamefont{Hutchinson}, \bibfnamefont{I.~H.}} \bibinfo{year}{2002}.
@@ -80,6 +95,11 @@
 \bibinfo{author}{\bibnamefont{Merlino}, \bibfnamefont{R.~L.}}, \bibnamefont{and} \bibinfo{author}{\bibfnamefont{N.}~\bibnamefont{D'Angelo}}. \bibinfo{year}{1987}.
 \newblock \bibinfo{title}{The interaction of a conducting object with a supersonic plasma flow: ion deflection near a negatively charged obstacle}.
 \newblock \emph{\bibinfo{journal}{Journal of Plasma Physics}} \bibinfo{volume}{37}(\bibinfo{number}{2}):\penalty0 \bibinfo{pages}{185--198}.
+
+\bibitem[{\citenamefont{Ohia et~al.}(2012)\citenamefont{Ohia, Egedal, Lukin, Daughton, and Le}}]{Ohia_Egedal_Lukin_Daughton_Le_2012}
+\bibinfo{author}{\bibnamefont{Ohia}, \bibfnamefont{O.}}, \bibinfo{author}{\bibfnamefont{J.}~\bibnamefont{Egedal}}, \bibinfo{author}{\bibfnamefont{V.~S.} \bibnamefont{Lukin}}, \bibinfo{author}{\bibfnamefont{W.}~\bibnamefont{Daughton}}, \bibnamefont{and} \bibinfo{author}{\bibfnamefont{A.}~\bibnamefont{Le}}. \bibinfo{year}{2012}.
+\newblock \bibinfo{title}{Demonstration of anisotropic fluid closure capturing the kinetic structure of magnetic reconnection}.
+\newblock \emph{\bibinfo{journal}{Physical Review Letters}} \bibinfo{volume}{109}(\bibinfo{number}{11}):\penalty0 \bibinfo{pages}{115004}.
 
 \bibitem[{\citenamefont{Olson}(2020)}]{Olson_2020}
 \bibinfo{author}{\bibnamefont{Olson}, \bibfnamefont{Joseph}}. \bibinfo{year}{2020}.

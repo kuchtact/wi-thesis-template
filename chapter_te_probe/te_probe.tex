@@ -1,6 +1,7 @@
 \chapter{Multi-tip Langmuir Probe}
 
 \section{What's a Langmuir probe}
+\label{sse:multitip_langmuir_what}
 
 % TODO: space out the below references for this section.
 Hershkowitz: \cite{Hershkowitz_1989}
@@ -125,6 +126,7 @@ We need some way to extract the signals from the probe tip. Because of the const
 \end{figure}
 
 \subsubsection{Probe body}
+\label{ss2:multitip_probe_body}
 
 Our probe does not need to withstand extreme heat fluxes and our vacuum conditions don't need to be perfect so we are lucky enough to be able to use a 3D printed probe body.
 
@@ -143,7 +145,7 @@ The tubing exists to connect the probe to the main shaft holding it up and also 
 To collect current, we use 16 separate tips which each sample a point on the IV curve. We make these tips out of Molybdenum which requires us to connect the tips to the signal wire using a friction fit.
 
 \paragraph{Why use Mo}
-Even though Molybdenum has it's difficulties with connections, it has a high work function which helps to reduce secondary electron emission which can change the shape of the IV-characteristic. % TODO: Is there any other reason for Mo?
+Secondary electron emission from molybdenum is quite small as compared to many metals \cite{Dekker_1958} which helps with IV-characteristic interpretation \cite{Hershkowitz_1989}. Additionally, as a refractory metal, molybdenum will not melt nor sputter at the high temperatures the probe tips may get to as they collect current.
 
 \paragraph{Size considerations}
 We expect the current to the tips to be on the order of $1 \, \text{kA}/\text{m}^2$. We measure the current across a `sense' resistor (as discussed thoroughly in \ref{sss:multitip_probe_circuit}) but we don't want to have to use high power resistors for this. Thus we choose our current to be on the order of 10 mA which is feasible by having a tip area on the order of 10 mm$^2$. This amount of current also gives a reasonable signal-to-noise ratio.
@@ -201,7 +203,7 @@ Our ion and electron gyroradii are both relatively large compared to the probe t
     \hline\hline
     Tip radius & $r$ & --- & 5e-4 \\
     \hline
-    Tip length & $l$ & --- & 2e-3 \\
+    Exposed tip length & $l$ & --- & 2e-3 \\
     \hline
     Neighboring tip separation & --- & --- & 2e-3 \\
     \hline
@@ -348,6 +350,7 @@ During running when the probe was at low radius and $V_- = -225$ V, the positive
 Additionally the 10 W discharge resistor initially used for discharging the negative capacitor burned out because the power load was higher than expected. We replaced it with a large carborundum resistor that can handle 50 W.
 
 \paragraph{Calibration}
+\label{spg:multitip_bias_calibration}
 Calibration of the supply consists of two things:
 \begin{itemize}
     \item The power supplies are remotely controlled through LabView which communicates with a CompactRIO analog output module that sends an isolated control voltage to the power supply. This output signal has a voltage offset and is not a perfect conversion between set voltage and output voltage that can be corrected by a multiplicative factor. We can do both these corrections by setting a voltage in LabView and seeing what voltage the power supply is outputting. This is just a problem of fitting a straight line with an offset.
@@ -416,7 +419,7 @@ We've used the TREX cells in the past which are single ended digitizers that can
 \begin{figure}
     \centering
     \includegraphics[width=.85\textwidth]{chapter_te_probe/figures/single_ended_bias_board.jpeg}
-    \caption[Multitip Single Ended Tip Board]{Image of circuit board used for single-ended measurements. The top ribbon connector is where the bias comes in. Just below that connector are multiple sense resistors. Often those are replaced with hand soldered higher power resistor networks. The pink rectangles on the right are the capacitors as can be seen in figure \ref{fig:multitip_simple_tip_circuit}. The resistor networks in black and light blue in the bottom right are a resistor divider prior to measurement whose signals leave out the tan connector at bottom left.}
+    \caption[*Multitip Single Ended Tip Board]{Image of circuit board used for single-ended measurements. The top ribbon connector is where the bias comes in. Just below that connector are multiple sense resistors. Often those are replaced with hand soldered higher power resistor networks. The pink rectangles on the right are the capacitors as can be seen in figure \ref{fig:multitip_simple_tip_circuit}. The resistor networks in black and light blue in the bottom right are a resistor divider prior to measurement whose signals leave out the tan connector at bottom left.}
     \label{fig:multitip_single_ended_circuit_image}
 \end{figure}
 
@@ -435,6 +438,7 @@ This vastly improves the signal quality and helps to remove much of the noise we
 \end{table}
 
 \subsubsection{Circuit Solution}
+\label{ss2:multitip_circuit_solution}
 
 During a shot, noise is generated around the lab because of the high currents used to create the reversed magnetic field for reconnection. To remove this noise we use another circuit that has the same components but is not connected to a plasma facing tip which can be seen in figure \ref{fig:multitip_tip_circuit_w_noise}. We'll call this other circuit the \textbf{noise circuit} and the circuit that is connected to the tip the \textbf{signal circuit}. If there was no noise in the lab we would expect to measure no fluctuations on the noise circuit digitizer.
 
@@ -470,6 +474,7 @@ Thus our final equations for the probe voltage and current are
 Here we have assumed that all the noise is coming from a fluctuating ground which is an alright assumption as we do expect significant ground fluctuations that could easily change the measurement. We see less of these fluctuations during shots with no plasma which may mean part of this noise is coming from current drawn by the probe. It remains to be seen if there are better ways to model the common-mode noise or if we are accidentally removing bias voltage fluctuations that may be necessary for better IV-characteristic reconstructions.
 
 \subsubsection{Calibration}
+\label{ss2:multitip_calibration}
 
 Try as we might, we can't perfectly manufacture these probes such that the areas of each tip are the same and the various resistances all match. The best way to calibrate this probe is using the plasma itself.
 
@@ -566,6 +571,7 @@ Now $\dot{\vb{B}}$ is overdefined since we have six measurements and three field
 The depth of theory needed to correctly understand Langmuir probes is near endless with a menagerie of exciting physical effects one could account for. I'm prone to dive a bit too deep into some of these various theories but after much literature review and some misteps we've come to a theory that seems to work relatively well for our results. Here I'll discuss the prior method using a very simple model and another method that gives much better results.
 
 \subsection{Simple Plasma Theory (Hutchinson)}
+\label{sss:multitip_hutchinson_theory}
 
 \cite{Hutchinson_2002} develops a simple model for the current to a Langmuir probe that we have used for a long time. It assumes that the ion current is constant and the electron current follows an exponential and only looks at the electron repelling region.
 
@@ -608,6 +614,7 @@ The total current to the probe for $V_\text{probe} < V_\text{plasma}$ is thus
 This method has the benefit of being exceedingly simple to implement and often widely applicable. As long as the tips stay below the plasma potential this usually nicely matches our measurements. Unfortunately there's the catch, during a shot the plasma potential changes quickly by up to 100 or more volts. One option is to select only probe tips that look like they are below the plasma potential but this is both time consuming and prone to bias. Thus we look for a new method.
 
 \subsection{BRL}
+\label{sss:multitip_brl_theory}
 
 \cite{Laframboise_1966} created a model for the current to a cylindrical probe in a plasma with maxwellian ions and electrons that works for probe voltages above and below the plasma potential. Unfortunately, to my knowledge nobody has redone these calculations nor made a public repository with the code. To sidestep this issue we've used two simplifying approximations.
 
@@ -777,7 +784,7 @@ Figure \ref{fig:multitip_e_field_diagram} shows what we expect the electric fiel
 \begin{figure}
     \centering
     \includegraphics{chapter_te_probe/figures/te_E_field_effect.pdf}
-    \caption[Multitip Electric Field Diagram]{The expected effect of an electric field on the probe measurements. The tips are separated across the probe body by a distance $2d$. There is an electric field of magnitude $E$ pointed along the direction of the tips. If both tips are set to a bias $V_b$, the electric field will change the left tip to be at $V_b - E d$ and the right tip will be at $V_b + E d$.}
+    \caption[*Multitip Electric Field Diagram]{The expected effect of an electric field on the probe measurements. The tips are separated across the probe body by a distance $2d$. There is an electric field of magnitude $E$ pointed along the direction of the tips. If both tips are set to a bias $V_b$, the electric field will change the left tip to be at $V_b - E d$ and the right tip will be at $V_b + E d$.}
     \label{fig:multitip_e_field_diagram}
 \end{figure}
 
@@ -788,7 +795,7 @@ We can see a measurement from a shot where the probe tips were pointed in the $\
 \begin{figure}
     \centering
     \includegraphics[width=\textwidth]{chapter_te_probe/figures/experimental_e_field_effect.png}
-    \caption[Multitip Electric Field Effect]{Example JV-characteristic showing the splitting of tips that are on one side of the probe vs. the other (even vs. odd). It can be seen that the even numbered tips are moved to a negative bias relative to the odd numbered tips. The actual plasma potential is at the midpoint of the shifts left and right.}
+    \caption[*Multitip Electric Field Effect]{Example JV-characteristic showing the splitting of tips that are on one side of the probe vs. the other (even vs. odd). It can be seen that the even numbered tips are moved to a negative bias relative to the odd numbered tips. The actual plasma potential is at the midpoint of the shifts left and right.}
     \label{fig:multitip_e_field_effect}
 \end{figure}
 
@@ -841,6 +848,7 @@ Least squares is very quick to solve and thus analyzing many data points is no i
 Unfortunately it's ease also has it's issues. Since it is only minimizing error in the $J$ direction it does not account for errors in measurement that also cause errors in $V$. This is especially problematic when using Hutchinson's model and the probe is collecting in the electron saturation region. Since Hutchinson's model does not account for this component it artificially raises the electron temperature and this is especially visible when only minimizing the error in $J$. Least squares also often uses a simple method for finding a `best fit'. This means that if the fit starts with a bad initial guess it may end at a suboptimal fit.
 
 \subsection{ODR}
+\label{sss:multitip_odr}
 
 To correctly model the errors in our circuit we use Orthogonal Distance Regression (implemented by \cite{Boggs_Byrd_Rogers_Schnabel}).
 
@@ -889,7 +897,7 @@ The dream of many (or at least me) is an algorithm that always finds the global 
 \begin{figure}
     \centering
     \includegraphics[width=\textwidth]{chapter_te_probe/figures/experimental_fit_example.png}
-    \caption[Multitip Fit Example]{Example fit for using Chen's IV-characteristic and Orthogonal Distance Regression.}
+    \caption[*Multitip Fit Example]{Example fit for using Chen's IV-characteristic and Orthogonal Distance Regression.}
     \label{fig:multitip_example_fit}
 \end{figure}
 
