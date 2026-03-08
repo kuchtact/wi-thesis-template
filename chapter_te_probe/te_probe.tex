@@ -584,29 +584,30 @@ The volume surrounding the probe is split into two regions: \textbf{the plasma} 
 
 The ion current is just modeled by how many ions randomly cross the plasma-sheath interface (the interface will be denoted by subscript $s$). If the ions are cold (i.e. negligible initial kinetic energy) then they will only get to the probe via their random motion. The speed of these ions is set by the voltage at which the interface appears which is where
 \begin{equation}
-    V_s = -\frac{T_e}{2e}.
+    V_s = -\frac{T_e}{2}.
 \end{equation}
-$V_s$ is the potential at the interface relative to the plasma potential. Assuming the electrons are Boltzmann and quasineutrality holds at the interface then
+$V_s$ is the potential at the interface relative to the plasma potential and $T_e$ is in eV. Assuming the electrons are Boltzmann and quasineutrality holds at the interface then
 \begin{equation}
-    n_{is} = n_{es} = n_\infty \exp\left(\frac{e V_s}{T_e}\right).
+    n_{is} = n_{es} = n_\infty \exp\left(\frac{V_s}{T_e}\right).
 \end{equation}
 Now we can calculate the ion current as
 \begin{align}
     I_i &= A_s v_{is} n_{is} \\
-    &= A_s \sqrt{-\frac{2eV_s}{m_i}} n_\infty \exp\left(\frac{e V_s}{T_e}\right) \\
-    &= \exp\left(-\frac{1}{2}\right) A_s n_\infty \sqrt{\frac{T_e}{m_i}}.
+    &= A_s \sqrt{-\frac{2eV_s}{m_i}} n_\infty \exp\left(\frac{V_s}{T_e}\right) \\
+    &= \exp\left(-\frac{1}{2}\right) A_s n_\infty \sqrt{\frac{e T_e}{m_i}}.
 \end{align}
 We often assume that the sheath area is the same as the probe area since the Debye length is so short.
 
 For the electron current, we are assuming they are Boltzmann and they will hit the probe due to random motion. Since they are repelled by the probe the density will be smaller than in the bulk plasma. We can write the electron current as
 \begin{equation}
-    I_e = A_p \frac{1}{4} \sqrt{\frac{2 T_e}{m_e}} n_\infty \exp\left(\frac{e V_\text{probe}}{T_e}\right)
+    I_e = A_p \frac{1}{4} \sqrt{\frac{2 e T_e}{m_e}} n_\infty \exp\left(\frac{e (V_\text{probe} - V_\text{plasma})}{T_e}\right)
 \end{equation}
 where the square root is the average electron velocity and the exponential is the factor the electron density is reduced.
 
 The total current to the probe for $V_\text{probe} < V_\text{plasma}$ is thus
 \begin{equation}
-    I = n_\infty e A_p \sqrt{T_e}{m_i} \left[ \frac{1}{2} \sqrt{\frac{2 m_i}{\pi m_e}} \exp\left(\frac{e V_\text{probe}}{T_e}\right) - \exp\left(-\frac{1}{2}\right)\right]. % TODO: Where does the pi come from?
+    I = n_\infty e A_p \sqrt{\frac{e T_e}{m_i}} \left[ \frac{1}{2} \sqrt{\frac{2 m_i}{\pi m_e}} \exp\left(\frac{V_\text{probe} - V_\text{plasma}}{T_e}\right) - \exp\left(-\frac{1}{2}\right)\right]. % TODO: Where does the pi come from?
+    \label{eq:multitip_hutchinson_model}
 \end{equation}
 
 \subsubsection{Pros \& Cons}

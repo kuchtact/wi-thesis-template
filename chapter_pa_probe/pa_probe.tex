@@ -781,23 +781,65 @@ While both of the previous theories, Hutchinsons and BRL, work well for a normal
 
 \subparagraph{Ions don't hit core}
 
+Figure \ref{fig:pa_ion_vs_electron_trajectories} shows an approximate sheath around the core (orange rectangle) and shell (blue rectangles) as a cross section of the probe tip. Ions will be consumed by the shell and electrons will be focused towards the core leading to a lower than expected ratio of ion versus electron current to the core.
+
 \begin{figure}
     \centering
     \includegraphics{chapter_pa_probe/figures/pa_ion_attraction.png}
-    \caption{Simple drawing of what might happen to ions}
+    \caption[PA Ion vs. Electron trajectories]{This figure shows some what may occur to ions in comparison to electrons when the probe is attracting ions. Ions, in this case protons signified by `p' in red, are attracted to the probe and when passing close to the shell on their way to the core they hit the shell. The electrons (green, e) are instead repelled from the shell (blue rectangles) and focused toward the core (orange rectangle). The purple regions are the extent of the sheath over which there is a non-negligible electric field pointed toward the conductors.}
+    \label{fig:pa_ion_vs_electron_trajectories}
 \end{figure}
 
-\subparagraph{Take care of this by allowing free parameters}
+\subparagraph{More Free Parameters}
 
-\subparagraph{Converting from plasma parameters to exponential}
+As already noted, the current to a Langmuir probe is well approximated by a constant ion current and an exponential electron current like as seen in Hutchinsons model. The ratio of these currents is set by physical assumptions and derivations that may not hold for our system so we choose an additional free parameter such that we are fitting the electron density, electron temperature, plasma potential, and the ion density. Although quasineutrality should hold in the plasma the separation between densities allows us to better model mach effects and take care of shell ion consumption.
 
-\subparagraph{Converting back}
+\subparagraph{Model equation}
 
-\subparagraph{Taking care of errors}
+We could fit the all the plasma parameters we just discussed but for increased fitting speed and simplicity, we've taken our model current to be
+\begin{equation}
+    I_p(V_p) = -A \exp(V_p / B) + C.
+    \label{eq:pa_exp_model}
+\end{equation}
+All the parameters to fit ($A$, $B$, and $C$) are greater than zero.
+
+\subparagraph{Plasma parameters to exponential parameters}
+
+Using Hutchinsons model, equation \ref{eq:multitip_hutchinson_model}, we can write the terms in the exponential model, eq. \ref{eq:pa_exp_model}, as
+\begin{align}
+    A(n_e, T_e; V_\text{plasma}) &= n_e e \sqrt{\frac{e T_e}{m_i}} \left[\frac{1}{2} \sqrt{\frac{2 m_i}{\pi m_e}} \exp\left(\frac{- V_\text{plasma}}{T_e}\right)\right] \\
+    B(T_e) &= T_e \\
+    C(n_i, T_e; V_\text{plasma}) &= n_i e \sqrt{\frac{e T_e}{m_i}} \exp\left(-\frac{1}{2}\right).
+\end{align}
+
+\subparagraph{Exponential parameters to plasma parameters}
+
+Since we have four plasma parameters and three exponential parameters, we can't invert the entire fitting procedure. Luckily, the shells can very accurately fit the plasma potential and since the plasma potential for both the shell and core should be the same we use that as a constant input. Thus we have
+\begin{align}
+    n_e(A, B) &= \left. A \middle/ e \sqrt{\frac{e B}{m_i}} \left[\frac{1}{2} \sqrt{\frac{2 m_i}{\pi m_e}} \exp\left(\frac{- V_\text{plasma}}{B}\right)\right] \right. \\
+    T_e(B) &= B \\
+    n_i(C, B) &= \left. C \middle/ e \sqrt{\frac{e B}{m_i}} \exp\left(-\frac{1}{2}\right) \right..
+\end{align}
+
+\subparagraph{Converting fit errors}
+
+After fitting the exponential parameters, our fitting routine spits out a set of standard deviations for each fit parameter. Assuming linear error then we can write standard deviations on each of the plasma parameters as
+\begin{align}
+    \sigma_{ne} &= \partial_A n_e(A, B) \sigma_A + \partial_B n_e(A, B) \sigma_B \\
+    \sigma_{Te} &= \sigma_B \\
+    \sigma_{ni} &= \partial_C n_e(C, B) \sigma_C + \partial_B n_e(C, B) \sigma_B.
+\end{align}
 
 \subsubsection{Extracting plasma parameters}
 
+Using any of the aforementioned theories we can get individual plasma parameters for each tip of the PA probe but now we need to get the mean plasma parameters for all of the tips. It's simple enough to get the mean density and temperature of the tips by just taking an average but use spherical harmonics to better extract the parameters of interest. We've also chosen to ignore evaluation of the drift velocity from the ion densities because of the increased complexity and the drift velocity is not as much of an interest as the temperature anisotropy.
+
 \paragraph{Spherical harmonics}
+
+If we ignore the drift velocity in the distribution function, equation \ref{eq:drifting_bimaxwellian}, we find that the term in the exponential coefficient takes the form
+\begin{equation}
+    
+\end{equation}
 
 \paragraph{Error bars}
 

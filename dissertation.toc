@@ -1,7 +1,7 @@
 \contentsline {chapter}{Contents}{ii}{section*.3}%
-\contentsline {chapter}{List of Tables}{xviii}{section*.5}%
-\contentsline {chapter}{List of Figures}{xix}{section*.7}%
-\contentsline {chapter}{Abstract}{xxiii}{chapter*.9}%
+\contentsline {chapter}{List of Tables}{iii}{section*.5}%
+\contentsline {chapter}{List of Figures}{iv}{section*.7}%
+\contentsline {chapter}{Abstract}{v}{chapter*.9}%
 \contentsline {chapter}{\chapternumberline {1}Introduction}{1}{chapter.1}%
 \contentsline {section}{\numberline {1.1}What the heck is a plasma}{1}{section.1.1}%
 \contentsline {subsection}{\numberline {1.1.1}Plasmas in the universe}{1}{subsection.1.1.1}%
@@ -411,66 +411,67 @@
 \contentsline {subsubsection}{\numberline {4.4.2.2}Individual Tip Theories}{105}{subsubsection.4.4.2.2}%
 \contentsline {paragraph}{\numberline {4.4.2.2.1}Multitip methods}{105}{paragraph.4.4.2.2.1}%
 \contentsline {paragraph}{\numberline {4.4.2.2.2}Exponential}{105}{paragraph.4.4.2.2.2}%
-\contentsline {subparagraph}{\numberline {4.4.2.2.2.1}Ions don't hit core}{105}{figure.caption.87}%
-\contentsline {subparagraph}{\numberline {4.4.2.2.2.2}Take care of this by allowing free parameters}{105}{subparagraph.4.4.2.2.2.2}%
-\contentsline {subparagraph}{\numberline {4.4.2.2.2.3}Converting from plasma parameters to exponential}{105}{subparagraph.4.4.2.2.2.3}%
-\contentsline {subparagraph}{\numberline {4.4.2.2.2.4}Converting back}{106}{subparagraph.4.4.2.2.2.4}%
-\contentsline {subparagraph}{\numberline {4.4.2.2.2.5}Taking care of errors}{106}{subparagraph.4.4.2.2.2.5}%
-\contentsline {subsubsection}{\numberline {4.4.2.3}Extracting plasma parameters}{106}{subsubsection.4.4.2.3}%
-\contentsline {paragraph}{\numberline {4.4.2.3.1}Spherical harmonics}{106}{paragraph.4.4.2.3.1}%
-\contentsline {paragraph}{\numberline {4.4.2.3.2}Error bars}{106}{paragraph.4.4.2.3.2}%
-\contentsline {subparagraph}{\numberline {4.4.2.3.2.1}Monte-carlo}{106}{subparagraph.4.4.2.3.2.1}%
-\contentsline {subparagraph}{\numberline {4.4.2.3.2.2}Other options}{106}{subparagraph.4.4.2.3.2.2}%
-\contentsline {subparagraph}{\numberline {4.4.2.3.2.3}Why can we ignore non-bi-maxwellian features}{106}{subparagraph.4.4.2.3.2.3}%
-\contentsline {section}{\numberline {4.5}Curve Fitting}{106}{section.4.5}%
-\contentsline {subsection}{\numberline {4.5.1}Combining multiple shots}{107}{subsection.4.5.1}%
-\contentsline {subsubsection}{\numberline {4.5.1.1}Timing alignment}{107}{subsubsection.4.5.1.1}%
-\contentsline {paragraph}{\numberline {4.5.1.1.1}Bz = 0 alignment}{107}{paragraph.4.5.1.1.1}%
-\contentsline {subparagraph}{\numberline {4.5.1.1.1.1}Aligns where we expect Anisotropy}{107}{subparagraph.4.5.1.1.1.1}%
-\contentsline {subparagraph}{\numberline {4.5.1.1.1.2}Depends heavily on prior bdot data}{107}{subparagraph.4.5.1.1.1.2}%
-\contentsline {paragraph}{\numberline {4.5.1.1.2}Bdot cross correlation}{107}{paragraph.4.5.1.1.2}%
-\contentsline {subparagraph}{\numberline {4.5.1.1.2.1}Still requires smoothing to get rid of initial oscillation impact}{107}{subparagraph.4.5.1.1.2.1}%
-\contentsline {paragraph}{\numberline {4.5.1.1.3}Result comparison}{107}{figure.caption.88}%
-\contentsline {subsubsection}{\numberline {4.5.1.2}Averaging of core data}{107}{subsubsection.4.5.1.2}%
-\contentsline {paragraph}{\numberline {4.5.1.2.1}Weighted average of relay on/off}{107}{paragraph.4.5.1.2.1}%
-\contentsline {subsection}{\numberline {4.5.2}Fitting shell}{108}{subsection.4.5.2}%
-\contentsline {subsubsection}{\numberline {4.5.2.1}Use all shell data}{108}{subsubsection.4.5.2.1}%
-\contentsline {subsubsection}{\numberline {4.5.2.2}Fit using BRL}{108}{subsubsection.4.5.2.2}%
-\contentsline {subsubsection}{\numberline {4.5.2.3}Fits pretty good}{108}{subsubsection.4.5.2.3}%
-\contentsline {subsection}{\numberline {4.5.3}Fitting core}{108}{subsection.4.5.3}%
-\contentsline {subsubsection}{\numberline {4.5.3.1}Fitting using full routine}{108}{subsubsection.4.5.3.1}%
-\contentsline {paragraph}{\numberline {4.5.3.1.1}Slow}{108}{paragraph.4.5.3.1.1}%
-\contentsline {paragraph}{\numberline {4.5.3.1.2}Model not perfectly representative}{108}{paragraph.4.5.3.1.2}%
-\contentsline {subsubsection}{\numberline {4.5.3.2}Fitting tips independently}{108}{subsubsection.4.5.3.2}%
-\contentsline {paragraph}{\numberline {4.5.3.2.1}Individual fitting method}{108}{paragraph.4.5.3.2.1}%
-\contentsline {paragraph}{\numberline {4.5.3.2.2}Holding Vprobe constant}{108}{paragraph.4.5.3.2.2}%
-\contentsline {paragraph}{\numberline {4.5.3.2.3}Exponential fitting method}{108}{paragraph.4.5.3.2.3}%
-\contentsline {paragraph}{\numberline {4.5.3.2.4}Spherical harmonics}{108}{paragraph.4.5.3.2.4}%
-\contentsline {section}{\numberline {4.6}Results}{108}{section.4.6}%
-\contentsline {subsection}{\numberline {4.6.1}Drive cylinder}{109}{subsection.4.6.1}%
-\contentsline {subsubsection}{\numberline {4.6.1.1}What did we try}{109}{subsubsection.4.6.1.1}%
-\contentsline {subsubsection}{\numberline {4.6.1.2}Why didn't we see pressure anisotropy}{109}{subsubsection.4.6.1.2}%
-\contentsline {paragraph}{\numberline {4.6.1.2.1}In the bdot data}{109}{paragraph.4.6.1.2.1}%
-\contentsline {paragraph}{\numberline {4.6.1.2.2}In the PA data}{109}{paragraph.4.6.1.2.2}%
-\contentsline {subsection}{\numberline {4.6.2}3 coil}{109}{subsection.4.6.2}%
-\contentsline {subsubsection}{\numberline {4.6.2.1}How much anisotropy should we expect}{109}{subsubsection.4.6.2.1}%
-\contentsline {subsubsection}{\numberline {4.6.2.2}What setups did we try}{109}{subsubsection.4.6.2.2}%
-\contentsline {subsubsection}{\numberline {4.6.2.3}Old results of just comparing radar plots}{109}{subsubsection.4.6.2.3}%
-\contentsline {subsubsection}{\numberline {4.6.2.4}New results using independent fitting}{109}{subsubsection.4.6.2.4}%
-\contentsline {chapter}{\chapternumberline {5}Conclusion}{110}{chapter.5}%
-\contentsline {section}{\numberline {5.1}Summary of thesis}{110}{section.5.1}%
-\contentsline {subsection}{\numberline {5.1.1}Using pressure waves to measure density}{110}{subsection.5.1.1}%
-\contentsline {subsection}{\numberline {5.1.2}Upgrading langmuir probe analysis and new possibilities}{110}{subsection.5.1.2}%
-\contentsline {subsection}{\numberline {5.1.3}Using directional langmuir probes for measuring pressure anisotropy}{110}{subsection.5.1.3}%
-\contentsline {section}{\numberline {5.2}Future work}{110}{section.5.2}%
-\contentsline {subsection}{\numberline {5.2.1}Pressure wave}{110}{subsection.5.2.1}%
-\contentsline {subsubsection}{\numberline {5.2.1.1}Aforementioned future work}{110}{subsubsection.5.2.1.1}%
-\contentsline {subsubsection}{\numberline {5.2.1.2}Extracting cross-field diffusion}{110}{subsubsection.5.2.1.2}%
-\contentsline {subsection}{\numberline {5.2.2}Langmuir Probe}{110}{subsection.5.2.2}%
-\contentsline {subsubsection}{\numberline {5.2.2.1}Prepared to analyze lots of cool data}{110}{subsubsection.5.2.2.1}%
-\contentsline {subsubsection}{\numberline {5.2.2.2}Extract out electric field}{110}{subsubsection.5.2.2.2}%
-\contentsline {subsection}{\numberline {5.2.3}PA Probe}{110}{subsection.5.2.3}%
-\contentsline {subsubsection}{\numberline {5.2.3.1}Try more configurations}{110}{subsubsection.5.2.3.1}%
-\contentsline {subsubsection}{\numberline {5.2.3.2}Map out full pressure anisotropy during shot}{110}{subsubsection.5.2.3.2}%
-\contentsline {chapter}{Colophon}{111}{chapter*.89}%
-\contentsline {chapter}{References}{112}{section*.91}%
+\contentsline {subparagraph}{\numberline {4.4.2.2.2.1}Ions don't hit core}{105}{subparagraph.4.4.2.2.2.1}%
+\contentsline {subparagraph}{\numberline {4.4.2.2.2.2}More Free Parameters}{106}{subparagraph.4.4.2.2.2.2}%
+\contentsline {subparagraph}{\numberline {4.4.2.2.2.3}Model equation}{106}{subparagraph.4.4.2.2.2.3}%
+\contentsline {subparagraph}{\numberline {4.4.2.2.2.4}Plasma parameters to exponential parameters}{107}{subparagraph.4.4.2.2.2.4}%
+\contentsline {subparagraph}{\numberline {4.4.2.2.2.5}Exponential parameters to plasma parameters}{107}{subparagraph.4.4.2.2.2.5}%
+\contentsline {subparagraph}{\numberline {4.4.2.2.2.6}Converting fit errors}{107}{subparagraph.4.4.2.2.2.6}%
+\contentsline {subsubsection}{\numberline {4.4.2.3}Extracting plasma parameters}{108}{subsubsection.4.4.2.3}%
+\contentsline {paragraph}{\numberline {4.4.2.3.1}Spherical harmonics}{108}{paragraph.4.4.2.3.1}%
+\contentsline {paragraph}{\numberline {4.4.2.3.2}Error bars}{108}{paragraph.4.4.2.3.2}%
+\contentsline {subparagraph}{\numberline {4.4.2.3.2.1}Monte-carlo}{108}{subparagraph.4.4.2.3.2.1}%
+\contentsline {subparagraph}{\numberline {4.4.2.3.2.2}Other options}{108}{subparagraph.4.4.2.3.2.2}%
+\contentsline {subparagraph}{\numberline {4.4.2.3.2.3}Why can we ignore non-bi-maxwellian features}{109}{subparagraph.4.4.2.3.2.3}%
+\contentsline {section}{\numberline {4.5}Curve Fitting}{109}{section.4.5}%
+\contentsline {subsection}{\numberline {4.5.1}Combining multiple shots}{109}{subsection.4.5.1}%
+\contentsline {subsubsection}{\numberline {4.5.1.1}Timing alignment}{109}{subsubsection.4.5.1.1}%
+\contentsline {paragraph}{\numberline {4.5.1.1.1}Bz = 0 alignment}{109}{paragraph.4.5.1.1.1}%
+\contentsline {subparagraph}{\numberline {4.5.1.1.1.1}Aligns where we expect Anisotropy}{109}{subparagraph.4.5.1.1.1.1}%
+\contentsline {subparagraph}{\numberline {4.5.1.1.1.2}Depends heavily on prior bdot data}{109}{subparagraph.4.5.1.1.1.2}%
+\contentsline {paragraph}{\numberline {4.5.1.1.2}Bdot cross correlation}{109}{paragraph.4.5.1.1.2}%
+\contentsline {subparagraph}{\numberline {4.5.1.1.2.1}Still requires smoothing to get rid of initial oscillation impact}{109}{subparagraph.4.5.1.1.2.1}%
+\contentsline {paragraph}{\numberline {4.5.1.1.3}Result comparison}{109}{figure.caption.88}%
+\contentsline {subsubsection}{\numberline {4.5.1.2}Averaging of core data}{109}{subsubsection.4.5.1.2}%
+\contentsline {paragraph}{\numberline {4.5.1.2.1}Weighted average of relay on/off}{109}{paragraph.4.5.1.2.1}%
+\contentsline {subsection}{\numberline {4.5.2}Fitting shell}{110}{subsection.4.5.2}%
+\contentsline {subsubsection}{\numberline {4.5.2.1}Use all shell data}{110}{subsubsection.4.5.2.1}%
+\contentsline {subsubsection}{\numberline {4.5.2.2}Fit using BRL}{110}{subsubsection.4.5.2.2}%
+\contentsline {subsubsection}{\numberline {4.5.2.3}Fits pretty good}{110}{subsubsection.4.5.2.3}%
+\contentsline {subsection}{\numberline {4.5.3}Fitting core}{110}{subsection.4.5.3}%
+\contentsline {subsubsection}{\numberline {4.5.3.1}Fitting using full routine}{110}{subsubsection.4.5.3.1}%
+\contentsline {paragraph}{\numberline {4.5.3.1.1}Slow}{110}{paragraph.4.5.3.1.1}%
+\contentsline {paragraph}{\numberline {4.5.3.1.2}Model not perfectly representative}{110}{paragraph.4.5.3.1.2}%
+\contentsline {subsubsection}{\numberline {4.5.3.2}Fitting tips independently}{110}{subsubsection.4.5.3.2}%
+\contentsline {paragraph}{\numberline {4.5.3.2.1}Individual fitting method}{110}{paragraph.4.5.3.2.1}%
+\contentsline {paragraph}{\numberline {4.5.3.2.2}Holding Vprobe constant}{110}{paragraph.4.5.3.2.2}%
+\contentsline {paragraph}{\numberline {4.5.3.2.3}Exponential fitting method}{110}{paragraph.4.5.3.2.3}%
+\contentsline {paragraph}{\numberline {4.5.3.2.4}Spherical harmonics}{110}{paragraph.4.5.3.2.4}%
+\contentsline {section}{\numberline {4.6}Results}{110}{section.4.6}%
+\contentsline {subsection}{\numberline {4.6.1}Drive cylinder}{111}{subsection.4.6.1}%
+\contentsline {subsubsection}{\numberline {4.6.1.1}What did we try}{111}{subsubsection.4.6.1.1}%
+\contentsline {subsubsection}{\numberline {4.6.1.2}Why didn't we see pressure anisotropy}{111}{subsubsection.4.6.1.2}%
+\contentsline {paragraph}{\numberline {4.6.1.2.1}In the bdot data}{111}{paragraph.4.6.1.2.1}%
+\contentsline {paragraph}{\numberline {4.6.1.2.2}In the PA data}{111}{paragraph.4.6.1.2.2}%
+\contentsline {subsection}{\numberline {4.6.2}3 coil}{111}{subsection.4.6.2}%
+\contentsline {subsubsection}{\numberline {4.6.2.1}How much anisotropy should we expect}{111}{subsubsection.4.6.2.1}%
+\contentsline {subsubsection}{\numberline {4.6.2.2}What setups did we try}{111}{subsubsection.4.6.2.2}%
+\contentsline {subsubsection}{\numberline {4.6.2.3}Old results of just comparing radar plots}{111}{subsubsection.4.6.2.3}%
+\contentsline {subsubsection}{\numberline {4.6.2.4}New results using independent fitting}{111}{subsubsection.4.6.2.4}%
+\contentsline {chapter}{\chapternumberline {5}Conclusion}{112}{chapter.5}%
+\contentsline {section}{\numberline {5.1}Summary of thesis}{112}{section.5.1}%
+\contentsline {subsection}{\numberline {5.1.1}Using pressure waves to measure density}{112}{subsection.5.1.1}%
+\contentsline {subsection}{\numberline {5.1.2}Upgrading langmuir probe analysis and new possibilities}{112}{subsection.5.1.2}%
+\contentsline {subsection}{\numberline {5.1.3}Using directional langmuir probes for measuring pressure anisotropy}{112}{subsection.5.1.3}%
+\contentsline {section}{\numberline {5.2}Future work}{112}{section.5.2}%
+\contentsline {subsection}{\numberline {5.2.1}Pressure wave}{112}{subsection.5.2.1}%
+\contentsline {subsubsection}{\numberline {5.2.1.1}Aforementioned future work}{112}{subsubsection.5.2.1.1}%
+\contentsline {subsubsection}{\numberline {5.2.1.2}Extracting cross-field diffusion}{112}{subsubsection.5.2.1.2}%
+\contentsline {subsection}{\numberline {5.2.2}Langmuir Probe}{112}{subsection.5.2.2}%
+\contentsline {subsubsection}{\numberline {5.2.2.1}Prepared to analyze lots of cool data}{112}{subsubsection.5.2.2.1}%
+\contentsline {subsubsection}{\numberline {5.2.2.2}Extract out electric field}{112}{subsubsection.5.2.2.2}%
+\contentsline {subsection}{\numberline {5.2.3}PA Probe}{112}{subsection.5.2.3}%
+\contentsline {subsubsection}{\numberline {5.2.3.1}Try more configurations}{112}{subsubsection.5.2.3.1}%
+\contentsline {subsubsection}{\numberline {5.2.3.2}Map out full pressure anisotropy during shot}{112}{subsubsection.5.2.3.2}%
+\contentsline {chapter}{Colophon}{113}{chapter*.89}%
+\contentsline {chapter}{References}{114}{section*.91}%
