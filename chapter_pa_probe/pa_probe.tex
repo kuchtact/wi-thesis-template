@@ -67,7 +67,7 @@ Langmuir probes can come in many configurations, each optimized for measuring a 
 
 \subsubsection{Pros}
 
-We've already discussed the use of a multi-tip Langmuir probe that has worked well to extract the plasma parameters isotropically (meaning it is collecting plasma from all angles) and thus we have a fair bit of experience with these types of probes. Additionally these probes can be built to almost any size we may want so size considerations are less of an issue. These probes are very cheap to build and can also be moved relatiively easily as compared to an optical system.
+We've already discussed the use of a multi-tip Langmuir probe that has worked well to extract the plasma parameters isotropically (meaning it is collecting plasma from all angles) and thus we have a fair bit of experience with these types of probes. Additionally these probes can be built to almost any size we may want so size considerations are less of an issue. These probes are very cheap to build and can also be moved relatively easily as compared to an optical system.
 
 \subsubsection{Cons}
 
@@ -83,7 +83,7 @@ The pressure anisotropy probe (PA probe) uses many of the same designs as the mu
 
 \subsection{Shaft Components}
 
-The garages, shaft materials, and usage of centering collets is the same as descriped in \ref{sss:multitip_shaft_components}. The only difference is the feed-thru.
+The garages, shaft materials, and usage of centering collets is the same as described in \ref{sss:multitip_shaft_components}. The only difference is the feed-thru.
 
 \subsubsection{Feed-thru}
 
@@ -392,6 +392,7 @@ Figuring out how to put all the grounds together was a long and arduous process.
 \end{figure}
 
 \subsubsection{Swapping current paths}
+\label{ss2:pa_swapping_current_paths}
 
 If our circuit components were ideal, each element would act the same as that same element for other tips. Since there is some variation in resistance between sense resistors and divider resistors, it's useful to have two current paths for the core measurements.
 
@@ -439,7 +440,7 @@ To control this switching system, we isolate the CRIO using an optoisolator and 
 
 \paragraph{How does this change results}
 
-Figure \ref{fig:pa_swap_effect} shows the difference between the unswapped (circles) and swapped (squares) core measurements. It is especially clear in tips 2, 6, and 10 where the unswapped measurements are far higher than the swapped because the shell is either adding or subtracting from the signal. By averaging these two options, as described in \ref{spg:pa_averaging_relay}, we can correct for this problem.
+Figure \ref{fig:pa_swap_effect} shows the difference between the unswapped (circles) and swapped (squares) core measurements. It is especially clear in tips 2, 6, and 10 where the unswapped measurements are far higher than the swapped because the shell is either adding or subtracting from the signal. By averaging these two options, as described in \ref{ss2:pa_averaging_relay}, we can correct for this problem.
 
 \begin{figure}
     \centering
@@ -631,7 +632,7 @@ As of this writing, the best way to take care of this effect is to ignore it. Th
 
 We assume that we have a drifting bi-Maxwellian for the electrons where the temperature parallel to the magnetic field, $\vb{B}$, is different than the temperature perpendicular to it. If we let the drift velocity be $\vb{v_D}$ then we can write our distrubution function as the following:
 \begin{equation}
-    f_e(\vb{v}) = \left(\frac{m_e}{2\pi k}\right)^{3/2} \frac{n}{\sqrt{T_{e\perp}^2 T_{e\parallel}}} \exp\left[-\frac{m_e}{2 k} \left(\frac{(\vb{v} - \vb{v_D})_\parallel^2}{T_{e\parallel}} + \frac{(\vb{v} - \vb{v_D})_\perp^2}{T_{e\perp}}\right)\right]
+    f_e(\vb{v}) = \left(\frac{m_e}{2\pi k}\right)^{3/2} \frac{n}{\sqrt{T_{e\perp}^2 T_{e\parallel}}} \exp\left[-\frac{e m_e}{2} \left(\frac{(\vb{v} - \vb{v_D})_\parallel^2}{T_{e\parallel}} + \frac{(\vb{v} - \vb{v_D})_\perp^2}{T_{e\perp}}\right)\right].
     \label{eq:drifting_bimaxwellian}
 \end{equation}
 
@@ -836,18 +837,54 @@ Using any of the aforementioned theories we can get individual plasma parameters
 
 \paragraph{Spherical harmonics}
 
+Since each tip is measuring it's own value, we need some way to extract the temperature anisotropy. A good way to do that is to take spherical harmonics of the system with the magnetic field direction being the polar axis. By using spherical harmonics that only vary as a function of polar angle, $\theta$, this let's get only the components either parallel or perpendicular to the magnetic field. To note, the distribution or measurements may not be symmetric about the magnetic field but we only care for the pressure anisotropy which is gyroaveraged. 
+
+\subparagraph{Temperature by direction}
+
 If we ignore the drift velocity in the distribution function, equation \ref{eq:drifting_bimaxwellian}, we find that the term in the exponential coefficient takes the form
 \begin{equation}
-    
+    -\frac{e m_e}{2} v^2 \left(\frac{\cos^2\theta}{T_\parallel} + \frac{\sin^2\theta}{T_\perp}\right)
 \end{equation}
+where $\theta$ is the angle between the magnetic field and the velocity (whose magnitude is given by $v$). Thus we can write a directional temperature as
+\begin{equation}
+    T(\theta) = \frac{T_\perp T_\parallel}{T_\parallel \sin^2 \theta + T_\perp \cos^2 \theta}.
+    \label{eq:pa_directional_temperature}
+\end{equation}
+This can not be written in a finite number of spherical harmonics but the inverse temperature can:
+\begin{align}
+    \frac{1}{T(\theta)} &= \frac{T_\parallel \sin^2 \theta + T_\perp \cos^2 \theta}{T_\perp T_\parallel} \\
+    &= \frac{T_\parallel}{T_\perp T_\parallel} + \frac{T_\perp - T_\parallel}{T_\perp T_\parallel} \cos^2\theta \\
+    &= \frac{2 \sqrt{\pi}}{3} \left(\frac{2 T_\parallel + T_\perp}{T_\parallel T_\perp} Y_{0,0}(\theta, \phi) - \frac{2}{\sqrt{5}} \frac{T_\parallel - T_\perp}{T_\parallel T_\perp} Y_{2, 0}(\theta, \phi)\right)
+\end{align}
+where $Y_{i,j}$ are the spherical harmonics.
+
+Now the mean temperature of all the tips is not necessarily the mean temperature gotten from the second moment of the distribution function. From the distribution function, the mean temperature is
+\begin{equation}
+    \frac{1}{2} m_e \iiint v^2 f(v) \, \dd \vb{v} = \frac{T_\parallel + 2 T_\perp}{3}.
+\end{equation}
+If we assume that each tip only measures the distribution function along a ray in the direction of the tip then we need to average the directional temperature, equation \ref{eq:pa_directional_temperature}. As we are really fitting $1/T$ we find that
+\begin{equation}
+    T_\text{avg} = \left(\frac{\iint 1 / T(\theta) \, \dd \Omega}{\iint \, \dd \Omega}\right)^{-1} = \frac{3 T_\parallel T_\perp}{2 T_\parallel + T_\perp}.
+\end{equation}
+To note, if we were to instead average the temperature, not the inverse temperature, we would find
+\begin{equation}
+    T_\text{avg,non-inverse} = \begin{cases*}
+        \frac{T_\parallel T_\perp}{\sqrt{T_\parallel \left(T_\perp - T_\parallel \right)}} \cos^{-1}\left(\sqrt{\frac{T_\parallel }{T_\perp }}\right) & if $T_\parallel < T_\perp$  \\
+        \frac{T_\parallel T_\perp}{\sqrt{T_\parallel \left(T_\parallel - T_\perp \right)}} \cosh^{-1}\left(\sqrt{\frac{T_\parallel }{T_\perp }}\right) & if $T_\parallel > T_\perp$
+    \end{cases*}
+\end{equation}
+which is larger than $T_\text{avg}$ for all $T_\parallel / T_\perp$. This can be seen in figure \ref{fig:pa_t_averaging}.
+
+\begin{figure}
+    \centering
+    \includegraphics{chapter_pa_probe/figures/t_averaging_comparison.pdf}
+    \caption[T averaging methods]{A comparison of the various methods for averaging the temperature. Averaging the distribution always leads to the largest average temperature whereas averaging the temperature by direction scales at a different rate.}
+    \label{fig:pa_t_averaging}
+\end{figure}
 
 \paragraph{Error bars}
 
-\subparagraph{Monte-carlo}
-
-\subparagraph{Other options}
-
-\subparagraph{Why can we ignore non-bi-maxwellian features}
+Monte-carlo % TODO: Finish this once I have settled on a method.
 
 \section{Curve Fitting}
 
@@ -855,29 +892,84 @@ We will use ODR like mentioned in Te section.
 
 \subsection{Combining multiple shots}
 
+We want to build up a full IV-characteristic so that we can fit the various plasma potentials. To do so, we take shots at a variety of different bias voltages and with the core current paths in both orientations, see \ref{ss2:pa_swapping_current_paths}. In total, this requires on the order of 100 shots so we need to make sure that these shots are sufficiently similar in plasma dynamics and the time coordinate is correctly aligned.
+
 \subsubsection{Timing alignment}
 \label{ss2:pa_timing_alignment}
 
+\begin{figure}
+  \centering
+  \includegraphics[width=\textwidth]{chapter_pa_probe/figures/PA_example_time_alignment.png}
+  \caption{The alignment procedure for a single shot. Alignment can occur in one of two ways. Either the cross-correlation of the B-dot signals can be maximized or the crossing time of $B_z = 0$ can be aligned. Here we've chosen a particularly egregious shot for alignment purposes since the alignment wants to offset the arrays by 8 time samples for the B-dot cross-correlation (0.8 \textmu s) or 7 time samples for the $B_z = 0$ method (red and green dashed lines respectively in bottom panel). The top three panels show the unaligned data from the shot (blue dotted for both B-dot and B). The orange and red lines are the data to align with which is found using the mean of the B-dot and B signals for all of the shots. The Xs in the $\partial_t B_z$ panel are where $B_z = 0$ for the unaligned and aligned data.}
+  \label{fig:pa_example_time_alignment}
+\end{figure}
+
+\begin{figure}
+  \centering
+  \includegraphics[width=\textwidth]{chapter_pa_probe/figures/PA_time_alignment_over_many_shots.png}
+  \caption{An example of the effects of aligning data for the PA probe. Using 98 shots we have aligned the data in time using either cross-correlation of the B-dot signals on the probe or by aligning the $B_z = 0$ crossing time index. The differences in the alignment method are seen in the bottom figure. The histograms for both methods are similar and thus give similar alignment results. The top three panels show example B-dot traces (light colored lines). The average of all 98 signals before alignment is seen in black with one standard deviation bounds. After alignment, a new mean is calculated and shown in red. It can be seen that the standard deviation is far smaller after alignment and the red mean has less smoothed features.}
+  \label{fig:pa_time_alignment_many_shots}
+\end{figure}
+
+Since each shot is slightly different (although quite reproducable), we need to adjust the time index for each shot such that the features in the shot match up nicely for all the shots. An example of this can be seen in Fig. \ref{fig:pa_example_time_alignment} where the actual shot timing is eight time samples (0.8 \textmu s) after the normal shot timing. We can correct this in one of two ways:
+
+\paragraph{B-dot cross-correlation}
+
+Cross-correlation is a method of finding when different signals align by applying different amounts of offset between the two signals and calculating
+\begin{equation}
+    C_{i,j}(\Delta t) = \frac{1}{T_i T_j} \int \vb{S}_i(t) \cdot \vb{S}_j(t + \Delta t) \, \dd t.
+\end{equation}
+Both of our signals are of the same length but because we are shifting them by $\Delta t$ the amount of time they overlap goes as $T_i = T - \Delta t$. Additionally as we have a discrete set of sample points, this is a sum in our case and subtracting off the mean of both signals before multiplying them (i.e. $\vb{S} \rightarrow \vb{S} - \overline{S}$) helps with correlation and is common place.
+
+If we take the cross-correlation of the probe B-dot signals in machine coordinates we can maximize that to find when the signals for that shot best align with the average shot.
+
+\subparagraph{B-dot smoothing}
+
+During the initial phase when the capacitor bank trigger activates and later when the bank switch turns on, there is an enormous amount of ringing in the lab which can lead to oscillations at the start of the signal. Since the trigger is very uniform between shots, this can lead to alignment at the trigger time, not alignment of the plasma features. Thus we smooth out the start of the shot so that the ringing is removed.
+
 \paragraph{Bz = 0 alignment}
+
+Instead of aligning the entire B-dot signal, we can instead focus only on when the reconnection layer passes and the reconnecting magnetic field, $B_z$, reverses direction.
 
 \subparagraph{Aligns where we expect Anisotropy}
 
+This has the advantage of aligning the plasma features in the outflow of reconnection which is where we are searching for signs of pressure anisotropy (or lack thereof).
+
 \subparagraph{Depends heavily on prior bdot data}
 
-\paragraph{Bdot cross correlation}
+Unfortunately, since we calculate $\vb{B}$ by integrating the B-dot signal this depends on the signals measured earlier in time and because these coils aren't optimized for the high frequency measurement we are doing this can lead to incorrect integrated fields because of ringing in the B-dot circuit or non-linear transfer functions.
 
-\subparagraph{Still requires smoothing to get rid of initial oscillation impact}
+\paragraph{Delay cause}
+
+This delay in firing that both alignment methods attempt to account for is due to the capacitor bank thyratron (for capacitor bank layout see \cite{Endrizzi_2021}). The trigger, which is a spark in the gas inside the thyratron, can lead to a variety of different full conduction times so there is a distribution of drive start times which can be seen in the bottom panel of Fig. \ref{fig:pa_time_alignment_many_shots}. Additionally, the reason for different reconnection timings may also be due to slight variations in how the layer forms and reconnects.
 
 \paragraph{Result comparison}
 
+It is difficult to quantify which method works better for alignment because of a lack in ground truth knowledge, the method behind B-dot cross-correlation appears more sound and is less susceptable to noise which is widespread in the lab. Both methods lead to very similar results which can be seen in the bottom panel of \ref{fig:pa_time_alignment_many_shots} where both histograms are very similar in shape.
+
+\subsubsection{Shot selection}
+
 \begin{figure}
-    \caption{Comparison of alignment using Bz = 0 or bdot cross correlation}
+    \centering
+    \includegraphics[width=\textwidth]{chapter_pa_probe/figures/example_lightsaber_measurements.png}
+    \caption[Lightsaber Probe Measurements]{This figure shows three different shots (columns) and their respective Bdot measurements in various directions (rows). Most figures are like that of shot 69728 where there is a single x-point for many of our configurations but sometimes during a shot, plasmoids can form like those in shots 69664 and 69687. These plasmoids can form either to the left or right of the main reconnecting x-point and can change the outflow dynamics of the reconnecting current layer.}
+    \label{fig:pa_lightsaber_plots}
 \end{figure}
 
-\subsubsection{Averaging of core data}
+We have to use many shots to build up a full IV-characteristic for the PA probe and different machine setups/parameters lead to different amounts of reproducibility. In the plasmas we are studying while looking for pressure anisotropy, we find the dominant source of irreproducibility are plasmoids that form near the x-point and are ejected out (shots 69665 and 69687 in figure \ref{fig:pa_lightsaber_plots}). It is relatively easy to pick out shots that vary drastically by eye from these lightsaber probe measurements (see \ref{sps:intro_lightsaber_probe} for the probe description).
 
-\paragraph{Weighted average of relay on/off}
-\label{spg:pa_averaging_relay}
+We can also remove bad shots by comparing all shots where the PA probe was at the same bias. If a shot gives signals for all the tips that are very different than the other shots we remove the outlier shot.
+
+\subsubsection{Averaging of core data}
+\label{ss2:pa_averaging_relay}
+
+To average the data we start by finding clusters of shots where the bias voltage, $V_{\text{bias}}$, is within some tolerance of each other (usually $~5$ V). Then we calculate $I_\text{probe}$ and $V_\text{probe}$ for each shot. For each shot cluster of size $N$ there will be $n$ shots with the relay off and $N - n$ shots with the relay on. Then our averaged data can be written as
+\begin{align*}
+  I_\text{probe}^\text{avg} &= \frac{1}{2} \left( \frac{1}{n} \sum_{i \in n} I_\text{probe}^i + \frac{1}{N - n} \sum_{i \in N - n} I_\text{probe}^i \right) \\
+  &= \frac{1}{2 n (N - n)} \sum_{i \in n} \sum_{j \in N - n} \left( I_\text{probe}^i + I_\text{probe}^j \right) \\
+  V_\text{probe}^\text{avg} &= \frac{1}{2 n (N - n)} \sum_{i \in n} \sum_{j \in N - n} \left( V_\text{probe}^i + V_\text{probe}^j \right)
+\end{align*}
+Here we have normalized our averaging terms by the number of shots in each cluster.
 
 \subsection{Fitting shell}
 

@@ -1,4 +1,4 @@
-\begin{wb-bib}{21}
+\begin{wb-bib}{24}
 \expandafter\ifx\csname natexlab\endcsname\relax\def\natexlab#1{#1}\fi
 \expandafter\ifx\csname bibnamefont\endcsname\relax
   \def\bibnamefont#1{#1}\fi
@@ -12,108 +12,226 @@
 \providecommand{\bibinfo}[2]{#2}
 \providecommand{\eprint}[2][]{\url{#2}}
 
-\bibitem[{\citenamefont{Boggs et~al.}(2005)\citenamefont{Boggs, Byrd, Rogers, and Schnabel}}]{Boggs_Byrd_Rogers_Schnabel}
-\bibinfo{author}{\bibnamefont{Boggs}, \bibfnamefont{Paul~T}}, \bibinfo{author}{\bibfnamefont{Richard~H} \bibnamefont{Byrd}}, \bibinfo{author}{\bibfnamefont{Janet~E} \bibnamefont{Rogers}}, \bibnamefont{and} \bibinfo{author}{\bibfnamefont{Robert~B} \bibnamefont{Schnabel}}. \bibinfo{year}{2005}.
-\newblock \bibinfo{title}{User's reference guide for odrpack version 2.01 software for weighted orthogonal distance regression}.
+\bibitem[{\citenamefont{Boggs et~al.}(2005)\citenamefont{Boggs, Byrd, Rogers,
+  and Schnabel}}]{Boggs_Byrd_Rogers_Schnabel}
+\bibinfo{author}{\bibnamefont{Boggs}, \bibfnamefont{Paul~T}},
+  \bibinfo{author}{\bibfnamefont{Richard~H} \bibnamefont{Byrd}},
+  \bibinfo{author}{\bibfnamefont{Janet~E} \bibnamefont{Rogers}},
+  \bibnamefont{and} \bibinfo{author}{\bibfnamefont{Robert~B}
+  \bibnamefont{Schnabel}}. \bibinfo{year}{2005}.
+\newblock \bibinfo{title}{User's reference guide for odrpack version 2.01
+  software for weighted orthogonal distance regression}.
 
 \bibitem[{\citenamefont{Chen}(1965)}]{Chen_1965}
 \bibinfo{author}{\bibnamefont{Chen}, \bibfnamefont{F~F}}. \bibinfo{year}{1965}.
-\newblock \bibinfo{title}{Numerical computations for ion probe characteristics in a collisionless plasma}.
-\newblock \emph{\bibinfo{journal}{Journal of Nuclear Energy. Part C, Plasma Physics, Accelerators, Thermonuclear Research}} \bibinfo{volume}{7}(\bibinfo{number}{1}):\penalty0 \bibinfo{pages}{47--67}.
+\newblock \bibinfo{title}{Numerical computations for ion probe characteristics
+  in a collisionless plasma}.
+\newblock \emph{\bibinfo{journal}{Journal of Nuclear Energy. Part C, Plasma
+  Physics, Accelerators, Thermonuclear Research}}
+  \bibinfo{volume}{7}(\bibinfo{number}{1}):\penalty0 \bibinfo{pages}{47--67}.
 
 \bibitem[{\citenamefont{Chen}(2001)}]{Chen_2001}
-\bibinfo{author}{\bibnamefont{Chen}, \bibfnamefont{Francis~F.}} \bibinfo{year}{2001}.
+\bibinfo{author}{\bibnamefont{Chen}, \bibfnamefont{Francis~F.}}
+  \bibinfo{year}{2001}.
 \newblock \bibinfo{title}{Langmuir probe analysis for high density plasmas}.
-\newblock \emph{\bibinfo{journal}{Physics of Plasmas}} \bibinfo{volume}{8}(\bibinfo{number}{6}):\penalty0 \bibinfo{pages}{3029--3041}.
+\newblock \emph{\bibinfo{journal}{Physics of Plasmas}}
+  \bibinfo{volume}{8}(\bibinfo{number}{6}):\penalty0
+  \bibinfo{pages}{3029--3041}.
 
 \bibitem[{\citenamefont{Chung}(2012)}]{Chung_2012}
-\bibinfo{author}{\bibnamefont{Chung}, \bibfnamefont{Kyu-Sun}}. \bibinfo{year}{2012}.
+\bibinfo{author}{\bibnamefont{Chung}, \bibfnamefont{Kyu-Sun}}.
+  \bibinfo{year}{2012}.
 \newblock \bibinfo{title}{Mach probes}.
-\newblock \emph{\bibinfo{journal}{Plasma Sources Science and Technology}} \bibinfo{volume}{21}(\bibinfo{number}{6}):\penalty0 \bibinfo{pages}{063001}.
+\newblock \emph{\bibinfo{journal}{Plasma Sources Science and Technology}}
+  \bibinfo{volume}{21}(\bibinfo{number}{6}):\penalty0 \bibinfo{pages}{063001}.
 
 \bibitem[{\citenamefont{Dekker}(1958)}]{Dekker_1958}
-\bibinfo{author}{\bibnamefont{Dekker}, \bibfnamefont{A.~J.}} \bibinfo{year}{1958}.
-\newblock \emph{\bibinfo{title}{Secondary electron emission}}, vol.~\bibinfo{volume}{6} of \emph{\bibinfo{series}{Solid State Physics}}, \bibinfo{pages}{251--311}.
+\bibinfo{author}{\bibnamefont{Dekker}, \bibfnamefont{A.~J.}}
+  \bibinfo{year}{1958}.
+\newblock \emph{\bibinfo{title}{Secondary electron emission}},
+  vol.~\bibinfo{volume}{6} of \emph{\bibinfo{series}{Solid State Physics}},
+  \bibinfo{pages}{251--311}.
 \newblock \bibinfo{publisher}{Academic Press}.
 
-\bibitem[{\citenamefont{Demidov et~al.}(2002)\citenamefont{Demidov, Ratynskaia, and Rypdal}}]{Demidov_Ratynskaia_Rypdal_2002}
-\bibinfo{author}{\bibnamefont{Demidov}, \bibfnamefont{V.~I.}}, \bibinfo{author}{\bibfnamefont{S.~V.} \bibnamefont{Ratynskaia}}, \bibnamefont{and} \bibinfo{author}{\bibfnamefont{K.}~\bibnamefont{Rypdal}}. \bibinfo{year}{2002}.
-\newblock \bibinfo{title}{Electric probes for plasmas: The link between theory and instrument}.
-\newblock \emph{\bibinfo{journal}{Review of Scientific Instruments}} \bibinfo{volume}{73}(\bibinfo{number}{10}):\penalty0 \bibinfo{pages}{3409--3439}.
+\bibitem[{\citenamefont{Demidov et~al.}(2002)\citenamefont{Demidov, Ratynskaia,
+  and Rypdal}}]{Demidov_Ratynskaia_Rypdal_2002}
+\bibinfo{author}{\bibnamefont{Demidov}, \bibfnamefont{V.~I.}},
+  \bibinfo{author}{\bibfnamefont{S.~V.} \bibnamefont{Ratynskaia}},
+  \bibnamefont{and} \bibinfo{author}{\bibfnamefont{K.}~\bibnamefont{Rypdal}}.
+  \bibinfo{year}{2002}.
+\newblock \bibinfo{title}{Electric probes for plasmas: The link between theory
+  and instrument}.
+\newblock \emph{\bibinfo{journal}{Review of Scientific Instruments}}
+  \bibinfo{volume}{73}(\bibinfo{number}{10}):\penalty0
+  \bibinfo{pages}{3409--3439}.
 
-\bibitem[{\citenamefont{Egedal et~al.}(2009)\citenamefont{Egedal, Daughton, Drake, Katz, and Lê}}]{Egedal_Daughton_Drake_Katz_Lê_2009}
-\bibinfo{author}{\bibnamefont{Egedal}, \bibfnamefont{J.}}, \bibinfo{author}{\bibfnamefont{W.}~\bibnamefont{Daughton}}, \bibinfo{author}{\bibfnamefont{J.~F.} \bibnamefont{Drake}}, \bibinfo{author}{\bibfnamefont{N.}~\bibnamefont{Katz}}, \bibnamefont{and} \bibinfo{author}{\bibfnamefont{A.}~\bibnamefont{Lê}}. \bibinfo{year}{2009}.
-\newblock \bibinfo{title}{Formation of a localized acceleration potential during magnetic reconnection with a guide field}.
-\newblock \emph{\bibinfo{journal}{Physics of Plasmas}} \bibinfo{volume}{16}(\bibinfo{number}{5}):\penalty0 \bibinfo{pages}{050701}.
+\bibitem[{\citenamefont{Egedal et~al.}(2009)\citenamefont{Egedal, Daughton,
+  Drake, Katz, and Lê}}]{Egedal_Daughton_Drake_Katz_Lê_2009}
+\bibinfo{author}{\bibnamefont{Egedal}, \bibfnamefont{J.}},
+  \bibinfo{author}{\bibfnamefont{W.}~\bibnamefont{Daughton}},
+  \bibinfo{author}{\bibfnamefont{J.~F.} \bibnamefont{Drake}},
+  \bibinfo{author}{\bibfnamefont{N.}~\bibnamefont{Katz}}, \bibnamefont{and}
+  \bibinfo{author}{\bibfnamefont{A.}~\bibnamefont{Lê}}. \bibinfo{year}{2009}.
+\newblock \bibinfo{title}{Formation of a localized acceleration potential
+  during magnetic reconnection with a guide field}.
+\newblock \emph{\bibinfo{journal}{Physics of Plasmas}}
+  \bibinfo{volume}{16}(\bibinfo{number}{5}):\penalty0 \bibinfo{pages}{050701}.
+
+\bibitem[{\citenamefont{Endrizzi}(2021)}]{Endrizzi_2021}
+\bibinfo{author}{\bibnamefont{Endrizzi}, \bibfnamefont{Douglass~A.}}
+  \bibinfo{year}{2021}.
+\newblock \bibinfo{title}{The formation of parallel and perpendicular
+  collisionless shocks in the big red ball}.
+\newblock \bibinfo{type}{Dissertation/thesis}, \bibinfo{school}{University of
+  Wisconsin-Madison}, \bibinfo{address}{Madison, WI}.
 
 \bibitem[{\citenamefont{Godyak and Demidov}(2011)}]{Godyak_Demidov_2011}
-\bibinfo{author}{\bibnamefont{Godyak}, \bibfnamefont{V~A}}, \bibnamefont{and} \bibinfo{author}{\bibfnamefont{V~I} \bibnamefont{Demidov}}. \bibinfo{year}{2011}.
-\newblock \bibinfo{title}{Probe measurements of electron-energy distributions in plasmas: what can we measure and how can we achieve reliable results?}
-\newblock \emph{\bibinfo{journal}{Journal of Physics D: Applied Physics}} \bibinfo{volume}{44}(\bibinfo{number}{23}):\penalty0 \bibinfo{pages}{233001}.
+\bibinfo{author}{\bibnamefont{Godyak}, \bibfnamefont{V~A}}, \bibnamefont{and}
+  \bibinfo{author}{\bibfnamefont{V~I} \bibnamefont{Demidov}}.
+  \bibinfo{year}{2011}.
+\newblock \bibinfo{title}{Probe measurements of electron-energy distributions
+  in plasmas: what can we measure and how can we achieve reliable results?}
+\newblock \emph{\bibinfo{journal}{Journal of Physics D: Applied Physics}}
+  \bibinfo{volume}{44}(\bibinfo{number}{23}):\penalty0 \bibinfo{pages}{233001}.
 
 \bibitem[{\citenamefont{Gradney}(2025)}]{Gradney_2025}
-\bibinfo{author}{\bibnamefont{Gradney}, \bibfnamefont{Paul}}. \bibinfo{year}{2025}.
-\newblock \bibinfo{title}{Laboratory investigation of collisionless kinetic effects and 3d topological triggers for magnetic reconnection}.
-\newblock \bibinfo{type}{Dissertation/thesis}, \bibinfo{school}{University of Wisconsin-Madison}, \bibinfo{address}{Madison, WI}.
+\bibinfo{author}{\bibnamefont{Gradney}, \bibfnamefont{Paul}}.
+  \bibinfo{year}{2025}.
+\newblock \bibinfo{title}{Laboratory investigation of collisionless kinetic
+  effects and 3d topological triggers for magnetic reconnection}.
+\newblock \bibinfo{type}{Dissertation/thesis}, \bibinfo{school}{University of
+  Wisconsin-Madison}, \bibinfo{address}{Madison, WI}.
 
 \bibitem[{\citenamefont{Hershkowitz}(1989)}]{Hershkowitz_1989}
-\bibinfo{author}{\bibnamefont{Hershkowitz}, \bibfnamefont{Noah}}. \bibinfo{year}{1989}.
-\newblock \emph{\bibinfo{title}{How langmuir probes work}}, \bibinfo{pages}{113–183}.
+\bibinfo{author}{\bibnamefont{Hershkowitz}, \bibfnamefont{Noah}}.
+  \bibinfo{year}{1989}.
+\newblock \emph{\bibinfo{title}{How langmuir probes work}},
+  \bibinfo{pages}{113--183}.
 \newblock \bibinfo{publisher}{Elsevier}.
 
-\bibitem[{\citenamefont{Hu et~al.}(2017)\citenamefont{Hu, Rovey, and Zhao}}]{Hu_Rovey_Zhao_2017}
-\bibinfo{author}{\bibnamefont{Hu}, \bibfnamefont{Jing}}, \bibinfo{author}{\bibfnamefont{Joshua~L.} \bibnamefont{Rovey}}, \bibnamefont{and} \bibinfo{author}{\bibfnamefont{Wansheng} \bibnamefont{Zhao}}. \bibinfo{year}{2017}.
-\newblock \bibinfo{title}{Retarding field energy analyzer for high energy pulsed electron beam measurements}.
-\newblock \emph{\bibinfo{journal}{Review of Scientific Instruments}} \bibinfo{volume}{88}(\bibinfo{number}{1}):\penalty0 \bibinfo{pages}{013302}.
+\bibitem[{\citenamefont{Horowitz and Hill}(1989)}]{Horowitz_Hill_1989}
+\bibinfo{author}{\bibnamefont{Horowitz}, \bibfnamefont{Paul}},
+  \bibnamefont{and} \bibinfo{author}{\bibfnamefont{Winfield}
+  \bibnamefont{Hill}}. \bibinfo{year}{1989}.
+\newblock \emph{\bibinfo{title}{The art of electronics}}.
+\newblock \bibinfo{edition}{2nd} ed. \bibinfo{address}{United States}:\@
+  \bibinfo{publisher}{Cambridge University Press}.
 
-\bibitem[{\citenamefont{Hutchinson}(2002)}]{Hutchinson_2002}
-\bibinfo{author}{\bibnamefont{Hutchinson}, \bibfnamefont{I.~H.}} \bibinfo{year}{2002}.
+\bibitem[{\citenamefont{Hu et~al.}(2017)\citenamefont{Hu, Rovey, and
+  Zhao}}]{Hu_Rovey_Zhao_2017}
+\bibinfo{author}{\bibnamefont{Hu}, \bibfnamefont{Jing}},
+  \bibinfo{author}{\bibfnamefont{Joshua~L.} \bibnamefont{Rovey}},
+  \bibnamefont{and} \bibinfo{author}{\bibfnamefont{Wansheng}
+  \bibnamefont{Zhao}}. \bibinfo{year}{2017}.
+\newblock \bibinfo{title}{Retarding field energy analyzer for high energy
+  pulsed electron beam measurements}.
+\newblock \emph{\bibinfo{journal}{Review of Scientific Instruments}}
+  \bibinfo{volume}{88}(\bibinfo{number}{1}):\penalty0 \bibinfo{pages}{013302}.
+
+\bibitem[{\citenamefont{Hutchinson}(2002{\natexlab{a}})}]{Hutchinson_mach_2002}
+\bibinfo{author}{\bibnamefont{Hutchinson}, \bibfnamefont{I~H}}.
+  \bibinfo{year}{2002}{\natexlab{a}}.
+\newblock \bibinfo{title}{Ion collection by a sphere in a flowing plasma: I.
+  quasineutral}.
+\newblock \emph{\bibinfo{journal}{Plasma Physics and Controlled Fusion}}
+  \bibinfo{volume}{44}(\bibinfo{number}{9}):\penalty0
+  \bibinfo{pages}{1953--1977}.
+
+\bibitem[{\citenamefont{Hutchinson}(2002{\natexlab{b}})}]{Hutchinson_2002}
+\bibinfo{author}{\bibnamefont{Hutchinson}, \bibfnamefont{I.~H.}}
+  \bibinfo{year}{2002}{\natexlab{b}}.
 \newblock \emph{\bibinfo{title}{Principles of plasma diagnostics}}.
-\newblock \bibinfo{edition}{2nd} ed. \bibinfo{address}{Cambridge; New York}:\@ \bibinfo{publisher}{Cambridge University Press}.
+\newblock \bibinfo{edition}{2nd} ed. \bibinfo{address}{Cambridge; New York}:\@
+  \bibinfo{publisher}{Cambridge University Press}.
 
 \bibitem[{\citenamefont{Jackson}(1999)}]{Jackson_1999}
-\bibinfo{author}{\bibnamefont{Jackson}, \bibfnamefont{John~David}}. \bibinfo{year}{1999}.
+\bibinfo{author}{\bibnamefont{Jackson}, \bibfnamefont{John~David}}.
+  \bibinfo{year}{1999}.
 \newblock \emph{\bibinfo{title}{Classical electrodynamics}}.
-\newblock \bibinfo{edition}{3rd} ed. \bibinfo{address}{New York}:\@ \bibinfo{publisher}{Wiley}.
+\newblock \bibinfo{edition}{3rd} ed. \bibinfo{address}{New York}:\@
+  \bibinfo{publisher}{Wiley}.
 
-\bibitem[{\citenamefont{Karamcheti and Steinbrüchel}(1999)}]{Karamcheti_Steinbrüchel_1999}
-\bibinfo{author}{\bibnamefont{Karamcheti}, \bibfnamefont{A.}}, \bibnamefont{and} \bibinfo{author}{\bibfnamefont{Ch.} \bibnamefont{Steinbrüchel}}. \bibinfo{year}{1999}.
-\newblock \bibinfo{title}{Parametrization of laframboise's results for spherical and cylindrical langmuir probes}.
-\newblock \emph{\bibinfo{journal}{Journal of Vacuum Science \& Technology A: Vacuum, Surfaces, and Films}} \bibinfo{volume}{17}(\bibinfo{number}{5}):\penalty0 \bibinfo{pages}{3051--3056}.
+\bibitem[{\citenamefont{Karamcheti and
+  Steinbrüchel}(1999)}]{Karamcheti_Steinbrüchel_1999}
+\bibinfo{author}{\bibnamefont{Karamcheti}, \bibfnamefont{A.}},
+  \bibnamefont{and} \bibinfo{author}{\bibfnamefont{Ch.}
+  \bibnamefont{Steinbrüchel}}. \bibinfo{year}{1999}.
+\newblock \bibinfo{title}{Parametrization of laframboise's results for
+  spherical and cylindrical langmuir probes}.
+\newblock \emph{\bibinfo{journal}{Journal of Vacuum Science \& Technology A:
+  Vacuum, Surfaces, and Films}}
+  \bibinfo{volume}{17}(\bibinfo{number}{5}):\penalty0
+  \bibinfo{pages}{3051--3056}.
 
 \bibitem[{\citenamefont{Laframboise}(1966)}]{Laframboise_1966}
-\bibinfo{author}{\bibnamefont{Laframboise}, \bibfnamefont{James~Gerald}}. \bibinfo{year}{1966}.
-\newblock \bibinfo{title}{Theory of spherical and cylindrical langmuir probes in a collisionless, maxwellian plasma at rest}.
-\newblock \bibinfo{type}{Dissertation/thesis}, \bibinfo{school}{University of Toronto (Canada)}, \bibinfo{address}{Canada -- Ontario, CA}.
+\bibinfo{author}{\bibnamefont{Laframboise}, \bibfnamefont{James~Gerald}}.
+  \bibinfo{year}{1966}.
+\newblock \bibinfo{title}{Theory of spherical and cylindrical langmuir probes
+  in a collisionless, maxwellian plasma at rest}.
+\newblock \bibinfo{type}{Dissertation/thesis}, \bibinfo{school}{University of
+  Toronto (Canada)}, \bibinfo{address}{Canada -- Ontario, CA}.
 
 \bibitem[{\citenamefont{Mausbach}(1997)}]{Mausbach_1997}
-\bibinfo{author}{\bibnamefont{Mausbach}, \bibfnamefont{Michael}}. \bibinfo{year}{1997}.
-\newblock \bibinfo{title}{Parametrization of the laframboise theory for cylindrical langmuir probe analysis}.
-\newblock \emph{\bibinfo{journal}{Journal of Vacuum Science \& Technology A: Vacuum, Surfaces, and Films}} \bibinfo{volume}{15}(\bibinfo{number}{6}):\penalty0 \bibinfo{pages}{2923--2929}.
+\bibinfo{author}{\bibnamefont{Mausbach}, \bibfnamefont{Michael}}.
+  \bibinfo{year}{1997}.
+\newblock \bibinfo{title}{Parametrization of the laframboise theory for
+  cylindrical langmuir probe analysis}.
+\newblock \emph{\bibinfo{journal}{Journal of Vacuum Science \& Technology A:
+  Vacuum, Surfaces, and Films}}
+  \bibinfo{volume}{15}(\bibinfo{number}{6}):\penalty0
+  \bibinfo{pages}{2923--2929}.
 
 \bibitem[{\citenamefont{Merlino and D'Angelo}(1987)}]{Merlino_D'Angelo_1987}
-\bibinfo{author}{\bibnamefont{Merlino}, \bibfnamefont{R.~L.}}, \bibnamefont{and} \bibinfo{author}{\bibfnamefont{N.}~\bibnamefont{D'Angelo}}. \bibinfo{year}{1987}.
-\newblock \bibinfo{title}{The interaction of a conducting object with a supersonic plasma flow: ion deflection near a negatively charged obstacle}.
-\newblock \emph{\bibinfo{journal}{Journal of Plasma Physics}} \bibinfo{volume}{37}(\bibinfo{number}{2}):\penalty0 \bibinfo{pages}{185--198}.
+\bibinfo{author}{\bibnamefont{Merlino}, \bibfnamefont{R.~L.}},
+  \bibnamefont{and} \bibinfo{author}{\bibfnamefont{N.}~\bibnamefont{D'Angelo}}.
+  \bibinfo{year}{1987}.
+\newblock \bibinfo{title}{The interaction of a conducting object with a
+  supersonic plasma flow: ion deflection near a negatively charged obstacle}.
+\newblock \emph{\bibinfo{journal}{Journal of Plasma Physics}}
+  \bibinfo{volume}{37}(\bibinfo{number}{2}):\penalty0
+  \bibinfo{pages}{185--198}.
 
-\bibitem[{\citenamefont{Ohia et~al.}(2012)\citenamefont{Ohia, Egedal, Lukin, Daughton, and Le}}]{Ohia_Egedal_Lukin_Daughton_Le_2012}
-\bibinfo{author}{\bibnamefont{Ohia}, \bibfnamefont{O.}}, \bibinfo{author}{\bibfnamefont{J.}~\bibnamefont{Egedal}}, \bibinfo{author}{\bibfnamefont{V.~S.} \bibnamefont{Lukin}}, \bibinfo{author}{\bibfnamefont{W.}~\bibnamefont{Daughton}}, \bibnamefont{and} \bibinfo{author}{\bibfnamefont{A.}~\bibnamefont{Le}}. \bibinfo{year}{2012}.
-\newblock \bibinfo{title}{Demonstration of anisotropic fluid closure capturing the kinetic structure of magnetic reconnection}.
-\newblock \emph{\bibinfo{journal}{Physical Review Letters}} \bibinfo{volume}{109}(\bibinfo{number}{11}):\penalty0 \bibinfo{pages}{115004}.
+\bibitem[{\citenamefont{Ohia et~al.}(2012)\citenamefont{Ohia, Egedal, Lukin,
+  Daughton, and Le}}]{Ohia_Egedal_Lukin_Daughton_Le_2012}
+\bibinfo{author}{\bibnamefont{Ohia}, \bibfnamefont{O.}},
+  \bibinfo{author}{\bibfnamefont{J.}~\bibnamefont{Egedal}},
+  \bibinfo{author}{\bibfnamefont{V.~S.} \bibnamefont{Lukin}},
+  \bibinfo{author}{\bibfnamefont{W.}~\bibnamefont{Daughton}}, \bibnamefont{and}
+  \bibinfo{author}{\bibfnamefont{A.}~\bibnamefont{Le}}. \bibinfo{year}{2012}.
+\newblock \bibinfo{title}{Demonstration of anisotropic fluid closure capturing
+  the kinetic structure of magnetic reconnection}.
+\newblock \emph{\bibinfo{journal}{Physical Review Letters}}
+  \bibinfo{volume}{109}(\bibinfo{number}{11}):\penalty0
+  \bibinfo{pages}{115004}.
 
 \bibitem[{\citenamefont{Olson}(2020)}]{Olson_2020}
-\bibinfo{author}{\bibnamefont{Olson}, \bibfnamefont{Joseph}}. \bibinfo{year}{2020}.
-\newblock \bibinfo{title}{Exploring driven, high lundquist number magnetic reconnection in the laboratory: studies of sub-ion scale plasmoids, and the interplay between shocks and magnetic flux pileup}.
-\newblock \bibinfo{type}{Phd thesis}, \bibinfo{school}{University of Wisconsin-Madison}.
+\bibinfo{author}{\bibnamefont{Olson}, \bibfnamefont{Joseph}}.
+  \bibinfo{year}{2020}.
+\newblock \bibinfo{title}{Exploring driven, high lundquist number magnetic
+  reconnection in the laboratory: studies of sub-ion scale plasmoids, and the
+  interplay between shocks and magnetic flux pileup}.
+\newblock \bibinfo{type}{Phd thesis}, \bibinfo{school}{University of
+  Wisconsin-Madison}.
 
 \bibitem[{\citenamefont{Steinbrüchel}(1990)}]{Steinbrüchel_1990}
-\bibinfo{author}{\bibnamefont{Steinbrüchel}, \bibfnamefont{Christoph}}. \bibinfo{year}{1990}.
-\newblock \bibinfo{title}{A new method for analyzing langmuir probe data and the determination of ion densities and etch yields in an etching plasma}.
-\newblock \emph{\bibinfo{journal}{Journal of Vacuum Science \& Technology A: Vacuum, Surfaces, and Films}} \bibinfo{volume}{8}(\bibinfo{number}{3}):\penalty0 \bibinfo{pages}{1663--1667}.
+\bibinfo{author}{\bibnamefont{Steinbrüchel}, \bibfnamefont{Christoph}}.
+  \bibinfo{year}{1990}.
+\newblock \bibinfo{title}{A new method for analyzing langmuir probe data and
+  the determination of ion densities and etch yields in an etching plasma}.
+\newblock \emph{\bibinfo{journal}{Journal of Vacuum Science \& Technology A:
+  Vacuum, Surfaces, and Films}}
+  \bibinfo{volume}{8}(\bibinfo{number}{3}):\penalty0
+  \bibinfo{pages}{1663--1667}.
 
-\bibitem[{\citenamefont{Zwolak et~al.}(2007)\citenamefont{Zwolak, Boggs, and Watson}}]{Zwolak_et_al_2007}
-\bibinfo{author}{\bibnamefont{Zwolak}, \bibfnamefont{Jason~W.}}, \bibinfo{author}{\bibfnamefont{Paul~T.} \bibnamefont{Boggs}}, \bibnamefont{and} \bibinfo{author}{\bibfnamefont{Layne~T.} \bibnamefont{Watson}}. \bibinfo{year}{2007}.
-\newblock \bibinfo{title}{Algorithm 869: Odrpack95: A weighted orthogonal distance regression code with bound constraints}.
-\newblock \emph{\bibinfo{journal}{ACM Trans. Math. Softw.}} \bibinfo{volume}{33}(\bibinfo{number}{4}):\penalty0 \bibinfo{pages}{27--es}.
+\bibitem[{\citenamefont{Zwolak et~al.}(2007)\citenamefont{Zwolak, Boggs, and
+  Watson}}]{Zwolak_et_al_2007}
+\bibinfo{author}{\bibnamefont{Zwolak}, \bibfnamefont{Jason~W.}},
+  \bibinfo{author}{\bibfnamefont{Paul~T.} \bibnamefont{Boggs}},
+  \bibnamefont{and} \bibinfo{author}{\bibfnamefont{Layne~T.}
+  \bibnamefont{Watson}}. \bibinfo{year}{2007}.
+\newblock \bibinfo{title}{Algorithm 869: Odrpack95: A weighted orthogonal
+  distance regression code with bound constraints}.
+\newblock \emph{\bibinfo{journal}{ACM Trans. Math. Softw.}}
+  \bibinfo{volume}{33}(\bibinfo{number}{4}):\penalty0 \bibinfo{pages}{27--es}.
 
 \end{wb-bib}

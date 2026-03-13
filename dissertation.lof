@@ -44,12 +44,12 @@
 \contentsline {figure}{\numberline {3.11}{\ignorespaces *Multitip Single Ended Tip Board}}{41}{figure.caption.55}%
 \contentsline {figure}{\numberline {3.12}{\ignorespaces Image of new circuit board}}{42}{figure.caption.56}%
 \contentsline {figure}{\numberline {3.13}{\ignorespaces *Bdot coil circuit}}{45}{figure.caption.58}%
-\contentsline {figure}{\numberline {3.14}{\ignorespaces *Multitip Electric Field Diagram}}{57}{figure.caption.60}%
-\contentsline {figure}{\numberline {3.15}{\ignorespaces *Multitip Electric Field Effect}}{58}{figure.caption.61}%
-\contentsline {figure}{\numberline {3.16}{\ignorespaces *Multitip Fit Example}}{63}{figure.caption.62}%
+\contentsline {figure}{\numberline {3.14}{\ignorespaces *Multitip Electric Field Diagram}}{58}{figure.caption.60}%
+\contentsline {figure}{\numberline {3.15}{\ignorespaces *Multitip Electric Field Effect}}{59}{figure.caption.61}%
+\contentsline {figure}{\numberline {3.16}{\ignorespaces *Multitip Fit Example}}{64}{figure.caption.62}%
 \contentsline {figure}{\numberline {3.17}{\ignorespaces Example fit using many shots, multiple local parameter fits, and errors}}{66}{figure.caption.63}%
-\contentsline {figure}{\numberline {3.18}{\ignorespaces Plot of isat currents from BRL}}{66}{figure.caption.64}%
-\contentsline {figure}{\numberline {3.19}{\ignorespaces Radial chord of initial density with Hutchinson vs BRL.}}{66}{figure.caption.65}%
+\contentsline {figure}{\numberline {3.18}{\ignorespaces Plot of isat currents from BRL}}{67}{figure.caption.64}%
+\contentsline {figure}{\numberline {3.19}{\ignorespaces Radial chord of initial density with Hutchinson vs BRL.}}{67}{figure.caption.65}%
 \contentsline {figure}{\numberline {3.20}{\ignorespaces Comparison of expected E from Ohm's law and measured E.}}{67}{figure.caption.66}%
 \addvspace {10pt}
 \contentsline {figure}{\numberline {4.1}{\ignorespaces Picture of feed thru along with drawings of cross-sections.}}{74}{figure.caption.67}%
@@ -71,5 +71,8 @@
 \contentsline {figure}{\numberline {4.17}{\ignorespaces Example particle flux to the core for the electrons and ions of a flowing Maxwellian. The ion particle flux is much less for the tip pointed away from the flow (Angle = 0) compared to the tip pointed into the flow (Angle = 180). The electron particle flux is much less affected by the flow. Also, the particle flux to the side of the tip is very small in comparison to the flux to the cap.}}{102}{figure.caption.85}%
 \contentsline {figure}{\numberline {4.18}{\ignorespaces Figure of theoretical plasma distributions and JV curves}}{104}{figure.caption.86}%
 \contentsline {figure}{\numberline {4.19}{\ignorespaces PA Ion vs. Electron trajectories}}{106}{figure.caption.87}%
-\contentsline {figure}{\numberline {4.20}{\ignorespaces Comparison of alignment using Bz = 0 or bdot cross correlation}}{109}{figure.caption.88}%
+\contentsline {figure}{\numberline {4.20}{\ignorespaces T averaging methods}}{110}{figure.caption.88}%
+\contentsline {figure}{\numberline {4.21}{\ignorespaces The alignment procedure for a single shot. Alignment can occur in one of two ways. Either the cross-correlation of the B-dot signals can be maximized or the crossing time of $B_z = 0$ can be aligned. Here we've chosen a particularly egregious shot for alignment purposes since the alignment wants to offset the arrays by 8 time samples for the B-dot cross-correlation (0.8 \textmu s) or 7 time samples for the $B_z = 0$ method (red and green dashed lines respectively in bottom panel). The top three panels show the unaligned data from the shot (blue dotted for both B-dot and B). The orange and red lines are the data to align with which is found using the mean of the B-dot and B signals for all of the shots. The Xs in the $\partial _t B_z$ panel are where $B_z = 0$ for the unaligned and aligned data.}}{112}{figure.caption.89}%
+\contentsline {figure}{\numberline {4.22}{\ignorespaces An example of the effects of aligning data for the PA probe. Using 98 shots we have aligned the data in time using either cross-correlation of the B-dot signals on the probe or by aligning the $B_z = 0$ crossing time index. The differences in the alignment method are seen in the bottom figure. The histograms for both methods are similar and thus give similar alignment results. The top three panels show example B-dot traces (light colored lines). The average of all 98 signals before alignment is seen in black with one standard deviation bounds. After alignment, a new mean is calculated and shown in red. It can be seen that the standard deviation is far smaller after alignment and the red mean has less smoothed features.}}{113}{figure.caption.90}%
+\contentsline {figure}{\numberline {4.23}{\ignorespaces Lightsaber Probe Measurements}}{115}{figure.caption.91}%
 \addvspace {10pt}
