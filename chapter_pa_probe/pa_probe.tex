@@ -43,7 +43,7 @@ RFEAs can come in a variety of geometries but here we'll discuss a planar RFEA w
 
 \subsubsection{Pros}
 
-RFEAs are quite good at extraccting the tail of a distribution because the higher the repelling voltage, the more you are isolating out only high energy electrons. The electron distribution is extraced by taking the derivative of the measured current with respect to the applied voltage at a single time. For our configuration we would use a static repelling potential because sweeping the voltage in time would not be feasible in the experiment timescales. RFEAs have been shown to work to very high sampling rates so that would not be an issue for us \cite{Hu_Rovey_Zhao_2017}.
+RFEAs are quite good at extracting the tail of a distribution because the higher the repelling voltage, the more you are isolating out only high energy electrons. The electron distribution is extraced by taking the derivative of the measured current with respect to the applied voltage at a single time. For our configuration we would use a static repelling potential because sweeping the voltage in time would not be feasible in the experiment timescales. RFEAs have been shown to work to very high sampling rates so that would not be an issue for us \cite{Hu_Rovey_Zhao_2017}.
 
 \subsubsection{Cons}
 
@@ -646,7 +646,19 @@ For the ions we'll assume that they are isotropic in temperature as most work wi
 
 \subsubsection{Ion particle flux}
 
-For the attracted ions we are fortunate. The core of each tip recieves very little ion current throughout the shot so having high accuracy is not necessary. Thus we'll use a relatively simple model by Hutchinson derived from a set of PIC simulations \cite{Hutchinson_mach_2002}. Although this model doesn't work for large Debye length, we'll continue our approximation of small Debye length.
+For the attracted ions we are fortunate. The core of each tip recieves very little ion current throughout the shot so having high accuracy is not necessary. Thus we'll use a relatively simple empirical model by Hutchinson derived from a set of PIC simulations \cite{Hutchinson_mach_2002}. Although this model doesn't work for large Debye length, we'll continue our approximation of small Debye length.
+
+For reference, the normalized ion flux is
+\begin{equation}
+    \Gamma(\bar{v}_f, \cos \theta) = \Gamma_0 \exp \left\{\frac{1}{2} \bar{v}_f \left[(1 - \cos \theta) K_u - (1 + \cos \theta) K_d\right]\right\}
+\end{equation}
+where $\bar{v}_f$ is the flow velocity normalized by $\sqrt{T_e / m_i}$, $\theta$ is the angle of the measurement direction to the flow direction ($\theta = 0 \equiv$ tip pointed in direction of flow therefore low ion flux), $\Gamma_0 = 0.62$, $K_u = 0.64$, and $K_d = 0.70$. The flux is normalized to $n_i \sqrt{T_e / m_i}$.
+
+Thus the (unnormalized) ion current density is
+\begin{equation}
+    J_i(v_f, \theta) = e n_i \sqrt{\frac{T_e}{m_i}} \Gamma_0 \exp \left\{\frac{1}{2} v_f \sqrt{\frac{m_i}{T_e}} \left[(1 - \cos \theta) K_u - (1 + \cos \theta) K_d\right]\right\}.
+    \label{eq:pa_ion_current_density_full}
+\end{equation}
 
 \subsubsection{Electron particle flux}
 
@@ -826,9 +838,11 @@ Since we have four plasma parameters and three exponential parameters, we can't 
 
 After fitting the exponential parameters, our fitting routine spits out a set of standard deviations for each fit parameter. Assuming linear error then we can write standard deviations on each of the plasma parameters as
 \begin{align}
-    \sigma_{ne} &= \partial_A n_e(A, B) \sigma_A + \partial_B n_e(A, B) \sigma_B \\
+    \sigma_{ne} &= \sqrt{(\partial_A n_e(A, B) \sigma_A)^2 + (\partial_B n_e(A, B) \sigma_B)^2} \nonumber \\
+    &= \sqrt{\frac{\pi}{2}} \sqrt{\exp\left(\frac{2 V_\text{plasma}}{B}\right) \frac{m_e}{B^5 e^3} \left(4 B^4 \sigma_A^2 + A^2 \sigma_B^2 (B + 2 V_\text{plasma})\right)} \\
     \sigma_{Te} &= \sigma_B \\
-    \sigma_{ni} &= \partial_C n_e(C, B) \sigma_C + \partial_B n_e(C, B) \sigma_B.
+    \sigma_{ni} &= \sqrt{(\partial_C n_e(C, B) \sigma_C)^2 + (\partial_B n_e(C, B) \sigma_B)^2} \nonumber \\
+    &= \frac{\exp\left(\frac{1}{2}\right)}{2}\sqrt{\frac{m_i}{B^3 e^3} \left(C^2 \sigma_B^2 + 4 B^2 \sigma_C^2\right)}.
 \end{align}
 
 \subsubsection{Extracting plasma parameters}
@@ -841,7 +855,7 @@ Since each tip is measuring it's own value, we need some way to extract the temp
 
 \subparagraph{Temperature by direction}
 
-If we ignore the drift velocity in the distribution function, equation \ref{eq:drifting_bimaxwellian}, we find that the term in the exponential coefficient takes the form
+If we ignore the drift velocity in the distribution function (since drifts in our experiment are small relative to the electron thermal speed), equation \ref{eq:drifting_bimaxwellian}, we find that the term in the exponential coefficient takes the form
 \begin{equation}
     -\frac{e m_e}{2} v^2 \left(\frac{\cos^2\theta}{T_\parallel} + \frac{\sin^2\theta}{T_\perp}\right)
 \end{equation}
@@ -881,6 +895,43 @@ which is larger than $T_\text{avg}$ for all $T_\parallel / T_\perp$. This can be
     \caption[T averaging methods]{A comparison of the various methods for averaging the temperature. Averaging the distribution always leads to the largest average temperature whereas averaging the temperature by direction scales at a different rate.}
     \label{fig:pa_t_averaging}
 \end{figure}
+
+\subparagraph{Ion Drift Velocity}
+
+From equation \ref{eq:pa_ion_current_density_full} we can see that the logarithm of the ion current density looks like it could be decomposed into spherical harmonics and we could thus extract the plasma drift. We already fit $n_i$ which in our simple model is proportional to the ion current density. Thus let's examine how we might do so.
+
+We can write the logarithm of the current density as
+\begin{align}
+    \ln(J_i(v_f, \theta')) =& \ln\left(e n_i \sqrt{\frac{e T_e}{m_i}} \Gamma_0\right) \nonumber \\
+    &+ \left\{\frac{1}{2} v_f \sqrt{\frac{m_i}{e T_e}} \left[(1 - \cos \theta') K_u - (1 + \cos \theta') K_d\right]\right\}.
+    \label{eq:pa_log_ion_current_density}
+\end{align}
+$\theta'$ is the angle between the flow direction, $(\theta_f, \phi_f)$, and the tip direction, $(\theta_t, \phi_t)$ which can be written as
+\begin{align*}
+    \theta' = \cos^{-1}(&\left(\sin\theta_t \cos\phi_t \hat{x} + \sin\theta_t \sin\phi_t \hat{y} + \cos\theta_t \hat{z}\right) \cdot \\
+    &\left(\sin\theta_f \cos\phi_f \hat{x} + \sin\theta_f \sin\phi_f \hat{y} + \cos\theta_f \hat{z}\right)).
+\end{align*}
+As the ion density is a real number, let's use spherical harmonics defined in the real domain as
+\begin{equation*}
+    Y_{l,m}(\theta, \phi) = \begin{cases*}
+        \frac{i}{\sqrt{2}} \left(Y_l^m(\theta, \phi) - (-1)^m Y_l^{-m}(\theta, \phi)\right) & if $m < 0$\\
+        Y_l^0(\theta, \phi) & if $m = 0$\\
+        \frac{1}{\sqrt{2}} \left(Y_l^{-m}(\theta, \phi) + (-1)^m Y_l^{m}(\theta, \phi)\right) & if $m > 0$
+    \end{cases*}
+\end{equation*}
+To note, for the case of extracting the parallel and perpendicular temperature there was no azimuthal dependence on $Y_{0,0}$ and $Y_{2,0}$ so we did not have to convert the harmonic to real space.
+
+We can then write the spherical harmonic coefficients of equation \ref{eq:pa_log_ion_current_density}:
+\begin{align*}
+    c_{0,0} &= \sqrt{\pi} \left((K_u - K_d) \sqrt{\frac{m_i}{e T_e}} v_f + 2 \ln\left(e n_i \sqrt{\frac{e T_e}{m_i}} \Gamma_0\right)\right) \\
+    c_{1,-1} &= -(K_u + K_d) \sqrt{\frac{\pi}{3}}\sqrt{\frac{m_i}{e T_e}} v_f \sin \theta_f \sin \phi_f \\
+    c_{1,0} &= -(K_u + K_d) \sqrt{\frac{\pi}{3}}\sqrt{\frac{m_i}{e T_e}} v_f \cos \theta_f \\
+    c_{1,+1} &= -(K_u + K_d) \sqrt{\frac{\pi}{3}}\sqrt{\frac{m_i}{e T_e}} v_f \sin \theta_f \cos \phi_f
+\end{align*}
+We can see that $c_{1,-1}$, $c_{1,0}$, and $c_{1,+1}$ let us figure out the flow velocity vector assuming we set the electron temperature. $c_{0,0}$ sets the ion number density once we have the flow velocity magnitude. It can be seen that $c_{1,-1}$, $c_{1,0}$, and $c_{1,+1}$ construct a vector antiparallel to the flow such that
+\begin{equation*}
+    c_{1,+1} \hat{x} + c_{1,-1} \hat{y} + c_{1,0} \hat{z} = -(K_u + K_d) \sqrt{\frac{\pi}{3}}\sqrt{\frac{m_i}{e T_e}} \vb{v}_f.
+\end{equation*}
 
 \paragraph{Error bars}
 
@@ -952,7 +1003,7 @@ It is difficult to quantify which method works better for alignment because of a
 \begin{figure}
     \centering
     \includegraphics[width=\textwidth]{chapter_pa_probe/figures/example_lightsaber_measurements.png}
-    \caption[Lightsaber Probe Measurements]{This figure shows three different shots (columns) and their respective Bdot measurements in various directions (rows). Most figures are like that of shot 69728 where there is a single x-point for many of our configurations but sometimes during a shot, plasmoids can form like those in shots 69664 and 69687. These plasmoids can form either to the left or right of the main reconnecting x-point and can change the outflow dynamics of the reconnecting current layer.}
+    \caption[Lightsaber Probe Measurements]{This figure shows three different shots (columns) and their respective Bdot measurements in various directions (rows). Most shots are like that of shot 69728 where there is a single x-point for many of our configurations but sometimes during a shot, plasmoids can form like those in shots 69664 and 69687. These plasmoids can form either to the left or right of the main reconnecting x-point and can change the outflow dynamics of the reconnecting current layer.}
     \label{fig:pa_lightsaber_plots}
 \end{figure}
 

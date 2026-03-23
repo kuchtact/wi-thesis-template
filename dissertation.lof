@@ -13,66 +13,68 @@
 \contentsline {figure}{\numberline {1.12}{\ignorespaces Simplified cut of plasma gun insides.}}{6}{figure.caption.21}%
 \contentsline {figure}{\numberline {1.13}{\ignorespaces Image from high speed camera of gun spewing}}{7}{figure.caption.22}%
 \addvspace {10pt}
-\contentsline {figure}{\numberline {2.1}{\ignorespaces dBz/dt plots for different Helmholtz fields}}{10}{figure.caption.25}%
-\contentsline {figure}{\numberline {2.2}{\ignorespaces Greess et al. 2022 paper showing simulations with pressure wave.}}{10}{figure.caption.26}%
-\contentsline {figure}{\numberline {2.3}{\ignorespaces Simple diagram of sound wave in container}}{12}{figure.caption.27}%
-\contentsline {figure}{\numberline {2.4}{\ignorespaces Data vs. crude minimum density vs. empirical minimum density}}{15}{figure.caption.29}%
-\contentsline {figure}{\numberline {2.5}{\ignorespaces Diagram of what the more complex model looks like.}}{15}{figure.caption.30}%
-\contentsline {figure}{\numberline {2.6}{\ignorespaces CAD rendering of BRB w/ drive cylinder, flux probes, and Te probe.}}{16}{figure.caption.31}%
-\contentsline {figure}{\numberline {2.7}{\ignorespaces Plot of langmuir density and wave density}}{16}{figure.caption.32}%
-\contentsline {figure}{\numberline {2.8}{\ignorespaces Diagram of sheath overlap for multitip langmuir probe}}{16}{figure.caption.33}%
-\contentsline {figure}{\numberline {2.9}{\ignorespaces Plot of two-fluid dispresion relation}}{16}{figure.caption.34}%
-\contentsline {figure}{\numberline {2.10}{\ignorespaces Results of simulating application of dispresion relation to pressure wave}}{17}{figure.caption.35}%
-\contentsline {figure}{\numberline {2.11}{\ignorespaces Initial density before and after many shots}}{17}{figure.caption.36}%
-\contentsline {figure}{\numberline {2.12}{\ignorespaces Initial density for varying gun number}}{17}{figure.caption.37}%
-\contentsline {figure}{\numberline {2.13}{\ignorespaces Initial density for varying Helmholtz}}{17}{figure.caption.38}%
-\contentsline {figure}{\numberline {2.14}{\ignorespaces Diagram of flux mechanisms.}}{18}{figure.caption.39}%
-\contentsline {figure}{\numberline {2.15}{\ignorespaces Example diffusion simulation}}{18}{figure.caption.40}%
-\contentsline {figure}{\numberline {2.16}{\ignorespaces Example of cross-correlation}}{18}{figure.caption.41}%
-\contentsline {figure}{\numberline {2.17}{\ignorespaces Example of DTW}}{19}{figure.caption.42}%
+\contentsline {figure}{\numberline {2.1}{\ignorespaces Experimental measurements from a single shot where the probes are at $z=0$. The drive cylinder at $r = 0.6$ m turns on at $t = 0$. This releases the magnetic pressure at high radii allowing the plasma to expand which leads to a pressure wavefront moving radially inwards (orange). Later, a shock (green) is formed in front of the reconnection layer (purple dashed) which moves radially inwards. Once the wavefront passes, the magnetic field lines start moving outwards following the flux contours (black).}}{11}{figure.caption.25}%
+\contentsline {figure}{\numberline {2.2}{\ignorespaces Pressure Wave Observations in Bdot Measurements}}{12}{figure.caption.26}%
+\contentsline {figure}{\numberline {2.3}{\ignorespaces Pressure Wave Observations in Simulations}}{14}{figure.caption.27}%
+\contentsline {figure}{\numberline {2.4}{\ignorespaces The simulated wavefront from a 1D linearized MHD simulation. Panel a shows the initial density profile and panel b shows the Alfv\'en speed (red) and fast magnetosonic speed (orange dashed) which are nearly the same. Panel c is the boundary velocity set by the applied loop voltage. Panel d is the velocity of the plasma which only begins to move outward once the wavefront passes with the different speed streamlines drawn on top. Panel e shows the expected measurements from a B-dot coil and flux contours which are similar to \ref {fig:experimental-evolution}, a.}}{24}{figure.caption.29}%
+\contentsline {figure}{\numberline {2.5}{\ignorespaces Traces from the flux array showing what the raw Bdot traces look like.}}{25}{figure.caption.30}%
+\contentsline {figure}{\numberline {2.6}{\ignorespaces Data vs. crude minimum density vs. empirical minimum density}}{26}{figure.caption.31}%
+\contentsline {figure}{\numberline {2.7}{\ignorespaces Diagram of what the more complex model looks like.}}{26}{figure.caption.32}%
+\contentsline {figure}{\numberline {2.8}{\ignorespaces CAD rendering of BRB w/ drive cylinder, flux probes, and Te probe.}}{26}{figure.caption.33}%
+\contentsline {figure}{\numberline {2.9}{\ignorespaces Plot of langmuir density and wave density}}{27}{figure.caption.34}%
+\contentsline {figure}{\numberline {2.10}{\ignorespaces Diagram of sheath overlap for multitip langmuir probe}}{27}{figure.caption.35}%
+\contentsline {figure}{\numberline {2.11}{\ignorespaces Plot of two-fluid dispresion relation}}{27}{figure.caption.36}%
+\contentsline {figure}{\numberline {2.12}{\ignorespaces Results of simulating application of dispresion relation to pressure wave}}{28}{figure.caption.37}%
+\contentsline {figure}{\numberline {2.13}{\ignorespaces Initial density before and after many shots}}{28}{figure.caption.38}%
+\contentsline {figure}{\numberline {2.14}{\ignorespaces Initial density for varying gun number}}{28}{figure.caption.39}%
+\contentsline {figure}{\numberline {2.15}{\ignorespaces Initial density for varying Helmholtz}}{29}{figure.caption.40}%
+\contentsline {figure}{\numberline {2.16}{\ignorespaces Diagram of flux mechanisms.}}{29}{figure.caption.41}%
+\contentsline {figure}{\numberline {2.17}{\ignorespaces Example diffusion simulation}}{29}{figure.caption.42}%
+\contentsline {figure}{\numberline {2.18}{\ignorespaces Example of cross-correlation}}{29}{figure.caption.43}%
+\contentsline {figure}{\numberline {2.19}{\ignorespaces Example of DTW}}{30}{figure.caption.44}%
 \addvspace {10pt}
-\contentsline {figure}{\numberline {3.1}{\ignorespaces *Diagram of simple langmuir probe}}{20}{figure.caption.43}%
-\contentsline {figure}{\numberline {3.2}{\ignorespaces *Probe Shaft CAD Diagram}}{24}{figure.caption.44}%
-\contentsline {figure}{\numberline {3.3}{\ignorespaces *Picture of multi-tip Langmuir Probe}}{26}{figure.caption.45}%
-\contentsline {figure}{\numberline {3.4}{\ignorespaces *Multi-tip Langmuir Probe Body Schematic}}{27}{figure.caption.46}%
-\contentsline {figure}{\numberline {3.5}{\ignorespaces *Mach Effect Diagram}}{29}{figure.caption.47}%
-\contentsline {figure}{\numberline {3.6}{\ignorespaces *Old Multitip Biasing Circuit}}{33}{figure.caption.49}%
-\contentsline {figure}{\numberline {3.7}{\ignorespaces *New Multitip Biasing Circuit}}{35}{figure.caption.50}%
-\contentsline {figure}{\numberline {3.8}{\ignorespaces *New Multitip Bias Circuitry Image}}{36}{figure.caption.51}%
-\contentsline {figure}{\numberline {3.9}{\ignorespaces *Tip Signal Circuit}}{38}{figure.caption.53}%
-\contentsline {figure}{\numberline {3.10}{\ignorespaces *Tip Circuit w/ Noise}}{39}{figure.caption.54}%
-\contentsline {figure}{\numberline {3.11}{\ignorespaces *Multitip Single Ended Tip Board}}{41}{figure.caption.55}%
-\contentsline {figure}{\numberline {3.12}{\ignorespaces Image of new circuit board}}{42}{figure.caption.56}%
-\contentsline {figure}{\numberline {3.13}{\ignorespaces *Bdot coil circuit}}{45}{figure.caption.58}%
-\contentsline {figure}{\numberline {3.14}{\ignorespaces *Multitip Electric Field Diagram}}{58}{figure.caption.60}%
-\contentsline {figure}{\numberline {3.15}{\ignorespaces *Multitip Electric Field Effect}}{59}{figure.caption.61}%
-\contentsline {figure}{\numberline {3.16}{\ignorespaces *Multitip Fit Example}}{64}{figure.caption.62}%
-\contentsline {figure}{\numberline {3.17}{\ignorespaces Example fit using many shots, multiple local parameter fits, and errors}}{66}{figure.caption.63}%
-\contentsline {figure}{\numberline {3.18}{\ignorespaces Plot of isat currents from BRL}}{67}{figure.caption.64}%
-\contentsline {figure}{\numberline {3.19}{\ignorespaces Radial chord of initial density with Hutchinson vs BRL.}}{67}{figure.caption.65}%
-\contentsline {figure}{\numberline {3.20}{\ignorespaces Comparison of expected E from Ohm's law and measured E.}}{67}{figure.caption.66}%
+\contentsline {figure}{\numberline {3.1}{\ignorespaces *Diagram of simple langmuir probe}}{31}{figure.caption.45}%
+\contentsline {figure}{\numberline {3.2}{\ignorespaces *Probe Shaft CAD Diagram}}{35}{figure.caption.46}%
+\contentsline {figure}{\numberline {3.3}{\ignorespaces *Picture of multi-tip Langmuir Probe}}{37}{figure.caption.47}%
+\contentsline {figure}{\numberline {3.4}{\ignorespaces *Multi-tip Langmuir Probe Body Schematic}}{38}{figure.caption.48}%
+\contentsline {figure}{\numberline {3.5}{\ignorespaces *Mach Effect Diagram}}{40}{figure.caption.49}%
+\contentsline {figure}{\numberline {3.6}{\ignorespaces *Old Multitip Biasing Circuit}}{44}{figure.caption.51}%
+\contentsline {figure}{\numberline {3.7}{\ignorespaces *New Multitip Biasing Circuit}}{46}{figure.caption.52}%
+\contentsline {figure}{\numberline {3.8}{\ignorespaces *New Multitip Bias Circuitry Image}}{47}{figure.caption.53}%
+\contentsline {figure}{\numberline {3.9}{\ignorespaces *Tip Signal Circuit}}{49}{figure.caption.55}%
+\contentsline {figure}{\numberline {3.10}{\ignorespaces *Tip Circuit w/ Noise}}{50}{figure.caption.56}%
+\contentsline {figure}{\numberline {3.11}{\ignorespaces *Multitip Single Ended Tip Board}}{52}{figure.caption.57}%
+\contentsline {figure}{\numberline {3.12}{\ignorespaces Image of new circuit board}}{53}{figure.caption.58}%
+\contentsline {figure}{\numberline {3.13}{\ignorespaces *Bdot coil circuit}}{56}{figure.caption.60}%
+\contentsline {figure}{\numberline {3.14}{\ignorespaces *Multitip Electric Field Diagram}}{69}{figure.caption.62}%
+\contentsline {figure}{\numberline {3.15}{\ignorespaces *Multitip Electric Field Effect}}{70}{figure.caption.63}%
+\contentsline {figure}{\numberline {3.16}{\ignorespaces *Multitip Fit Example}}{75}{figure.caption.64}%
+\contentsline {figure}{\numberline {3.17}{\ignorespaces Example fit using many shots, multiple local parameter fits, and errors}}{77}{figure.caption.65}%
+\contentsline {figure}{\numberline {3.18}{\ignorespaces Plot of isat currents from BRL}}{78}{figure.caption.66}%
+\contentsline {figure}{\numberline {3.19}{\ignorespaces Radial chord of initial density with Hutchinson vs BRL.}}{78}{figure.caption.67}%
+\contentsline {figure}{\numberline {3.20}{\ignorespaces Comparison of expected E from Ohm's law and measured E.}}{78}{figure.caption.68}%
 \addvspace {10pt}
-\contentsline {figure}{\numberline {4.1}{\ignorespaces Picture of feed thru along with drawings of cross-sections.}}{74}{figure.caption.67}%
-\contentsline {figure}{\numberline {4.2}{\ignorespaces Picture of end of probe}}{74}{figure.caption.68}%
-\contentsline {figure}{\numberline {4.3}{\ignorespaces CAD diagram of full body}}{75}{figure.caption.69}%
-\contentsline {figure}{\numberline {4.4}{\ignorespaces CAD diagram of probe tip}}{76}{figure.caption.70}%
-\contentsline {figure}{\numberline {4.5}{\ignorespaces *PA Probe Biasing Circuit}}{79}{figure.caption.72}%
-\contentsline {figure}{\numberline {4.6}{\ignorespaces *PA Capacitor Bank Image}}{80}{figure.caption.73}%
-\contentsline {figure}{\numberline {4.7}{\ignorespaces *PA Probe Tip Circuit Diagram}}{83}{figure.caption.74}%
-\contentsline {figure}{\numberline {4.8}{\ignorespaces PA Probe Grounding Diagram}}{86}{figure.caption.76}%
-\contentsline {figure}{\numberline {4.9}{\ignorespaces Image of swapping box}}{88}{figure.caption.77}%
-\contentsline {figure}{\numberline {4.10}{\ignorespaces Diagram of swapping}}{88}{figure.caption.78}%
-\contentsline {figure}{\numberline {4.11}{\ignorespaces Time frame for core movie of IV with separation between relay}}{89}{figure.caption.79}%
-\contentsline {figure}{\numberline {4.12}{\ignorespaces Example of the raw signal measured by the digitizers. This signal is from tip \#2. Each signal has it's zero at the corresponding channel of the digitizer (i.e. the signal that starts at 5 V is really starting at 0 V but is offset by the channel number). Channel 5 is the shell noise wire, channel 6 is the shell signal wire, channel 7 is the core noise wire, and channel 8 is the core signal wire.}}{92}{figure.caption.80}%
-\contentsline {figure}{\numberline {4.13}{\ignorespaces A passive differentiator. This figure is reproduced from \href {https://commons.wikimedia.org/wiki/File:Passive_differentiator_circuit_1.png}{Wikipedia}.}}{93}{figure.caption.81}%
-\contentsline {figure}{\numberline {4.14}{\ignorespaces The capacitive coupling of the shell signal and the shell noise which are coupled by capacitor $C_c$. The signals are measured via $V_n$ and $V_s$. The left side of the top circuit is the bias voltage ($V_b$) applied to the biasing capacitor ($C_b$). $R_p$ is the resistance of the plasma which is calculated from Ohm's law: $V_\text {probe} - V_\text {plasma} = I_\text {probe} R_\text {plasma}$. The $p$'s in $V_p$ and $R_p$ are for `plasma'. To achieve the bottom circuit, we've simplified the top circuit by combining voltage supplies and removing capacitances that are too large to play into the capacitive coupling effect we see.}}{95}{figure.caption.82}%
-\contentsline {figure}{\numberline {4.15}{\ignorespaces Diagram of electron coming from a direction $\theta _T$ and finite impact parameter on the side of the core.}}{98}{figure.caption.83}%
-\contentsline {figure}{\numberline {4.16}{\ignorespaces The bottom plot shows the projected area of the core as a function of direction. The top plots are what the probe tip looks like from specific direction associated with the vertical dashed grey lines. The shell is blue, insulation green, and core orange.}}{100}{figure.caption.84}%
-\contentsline {figure}{\numberline {4.17}{\ignorespaces Example particle flux to the core for the electrons and ions of a flowing Maxwellian. The ion particle flux is much less for the tip pointed away from the flow (Angle = 0) compared to the tip pointed into the flow (Angle = 180). The electron particle flux is much less affected by the flow. Also, the particle flux to the side of the tip is very small in comparison to the flux to the cap.}}{102}{figure.caption.85}%
-\contentsline {figure}{\numberline {4.18}{\ignorespaces Figure of theoretical plasma distributions and JV curves}}{104}{figure.caption.86}%
-\contentsline {figure}{\numberline {4.19}{\ignorespaces PA Ion vs. Electron trajectories}}{106}{figure.caption.87}%
-\contentsline {figure}{\numberline {4.20}{\ignorespaces T averaging methods}}{110}{figure.caption.88}%
-\contentsline {figure}{\numberline {4.21}{\ignorespaces The alignment procedure for a single shot. Alignment can occur in one of two ways. Either the cross-correlation of the B-dot signals can be maximized or the crossing time of $B_z = 0$ can be aligned. Here we've chosen a particularly egregious shot for alignment purposes since the alignment wants to offset the arrays by 8 time samples for the B-dot cross-correlation (0.8 \textmu s) or 7 time samples for the $B_z = 0$ method (red and green dashed lines respectively in bottom panel). The top three panels show the unaligned data from the shot (blue dotted for both B-dot and B). The orange and red lines are the data to align with which is found using the mean of the B-dot and B signals for all of the shots. The Xs in the $\partial _t B_z$ panel are where $B_z = 0$ for the unaligned and aligned data.}}{112}{figure.caption.89}%
-\contentsline {figure}{\numberline {4.22}{\ignorespaces An example of the effects of aligning data for the PA probe. Using 98 shots we have aligned the data in time using either cross-correlation of the B-dot signals on the probe or by aligning the $B_z = 0$ crossing time index. The differences in the alignment method are seen in the bottom figure. The histograms for both methods are similar and thus give similar alignment results. The top three panels show example B-dot traces (light colored lines). The average of all 98 signals before alignment is seen in black with one standard deviation bounds. After alignment, a new mean is calculated and shown in red. It can be seen that the standard deviation is far smaller after alignment and the red mean has less smoothed features.}}{113}{figure.caption.90}%
-\contentsline {figure}{\numberline {4.23}{\ignorespaces Lightsaber Probe Measurements}}{115}{figure.caption.91}%
+\contentsline {figure}{\numberline {4.1}{\ignorespaces Picture of feed thru along with drawings of cross-sections.}}{85}{figure.caption.69}%
+\contentsline {figure}{\numberline {4.2}{\ignorespaces Picture of end of probe}}{85}{figure.caption.70}%
+\contentsline {figure}{\numberline {4.3}{\ignorespaces CAD diagram of full body}}{86}{figure.caption.71}%
+\contentsline {figure}{\numberline {4.4}{\ignorespaces CAD diagram of probe tip}}{87}{figure.caption.72}%
+\contentsline {figure}{\numberline {4.5}{\ignorespaces *PA Probe Biasing Circuit}}{90}{figure.caption.74}%
+\contentsline {figure}{\numberline {4.6}{\ignorespaces *PA Capacitor Bank Image}}{91}{figure.caption.75}%
+\contentsline {figure}{\numberline {4.7}{\ignorespaces *PA Probe Tip Circuit Diagram}}{94}{figure.caption.76}%
+\contentsline {figure}{\numberline {4.8}{\ignorespaces PA Probe Grounding Diagram}}{97}{figure.caption.78}%
+\contentsline {figure}{\numberline {4.9}{\ignorespaces Image of swapping box}}{99}{figure.caption.79}%
+\contentsline {figure}{\numberline {4.10}{\ignorespaces Diagram of swapping}}{99}{figure.caption.80}%
+\contentsline {figure}{\numberline {4.11}{\ignorespaces Time frame for core movie of IV with separation between relay}}{100}{figure.caption.81}%
+\contentsline {figure}{\numberline {4.12}{\ignorespaces Example of the raw signal measured by the digitizers. This signal is from tip \#2. Each signal has it's zero at the corresponding channel of the digitizer (i.e. the signal that starts at 5 V is really starting at 0 V but is offset by the channel number). Channel 5 is the shell noise wire, channel 6 is the shell signal wire, channel 7 is the core noise wire, and channel 8 is the core signal wire.}}{103}{figure.caption.82}%
+\contentsline {figure}{\numberline {4.13}{\ignorespaces A passive differentiator. This figure is reproduced from \href {https://commons.wikimedia.org/wiki/File:Passive_differentiator_circuit_1.png}{Wikipedia}.}}{104}{figure.caption.83}%
+\contentsline {figure}{\numberline {4.14}{\ignorespaces The capacitive coupling of the shell signal and the shell noise which are coupled by capacitor $C_c$. The signals are measured via $V_n$ and $V_s$. The left side of the top circuit is the bias voltage ($V_b$) applied to the biasing capacitor ($C_b$). $R_p$ is the resistance of the plasma which is calculated from Ohm's law: $V_\text {probe} - V_\text {plasma} = I_\text {probe} R_\text {plasma}$. The $p$'s in $V_p$ and $R_p$ are for `plasma'. To achieve the bottom circuit, we've simplified the top circuit by combining voltage supplies and removing capacitances that are too large to play into the capacitive coupling effect we see.}}{106}{figure.caption.84}%
+\contentsline {figure}{\numberline {4.15}{\ignorespaces Diagram of electron coming from a direction $\theta _T$ and finite impact parameter on the side of the core.}}{109}{figure.caption.85}%
+\contentsline {figure}{\numberline {4.16}{\ignorespaces The bottom plot shows the projected area of the core as a function of direction. The top plots are what the probe tip looks like from specific direction associated with the vertical dashed grey lines. The shell is blue, insulation green, and core orange.}}{111}{figure.caption.86}%
+\contentsline {figure}{\numberline {4.17}{\ignorespaces Example particle flux to the core for the electrons and ions of a flowing Maxwellian. The ion particle flux is much less for the tip pointed away from the flow (Angle = 0) compared to the tip pointed into the flow (Angle = 180). The electron particle flux is much less affected by the flow. Also, the particle flux to the side of the tip is very small in comparison to the flux to the cap.}}{113}{figure.caption.87}%
+\contentsline {figure}{\numberline {4.18}{\ignorespaces Figure of theoretical plasma distributions and JV curves}}{115}{figure.caption.88}%
+\contentsline {figure}{\numberline {4.19}{\ignorespaces PA Ion vs. Electron trajectories}}{117}{figure.caption.89}%
+\contentsline {figure}{\numberline {4.20}{\ignorespaces T averaging methods}}{121}{figure.caption.90}%
+\contentsline {figure}{\numberline {4.21}{\ignorespaces The alignment procedure for a single shot. Alignment can occur in one of two ways. Either the cross-correlation of the B-dot signals can be maximized or the crossing time of $B_z = 0$ can be aligned. Here we've chosen a particularly egregious shot for alignment purposes since the alignment wants to offset the arrays by 8 time samples for the B-dot cross-correlation (0.8 \textmu s) or 7 time samples for the $B_z = 0$ method (red and green dashed lines respectively in bottom panel). The top three panels show the unaligned data from the shot (blue dotted for both B-dot and B). The orange and red lines are the data to align with which is found using the mean of the B-dot and B signals for all of the shots. The Xs in the $\partial _t B_z$ panel are where $B_z = 0$ for the unaligned and aligned data.}}{125}{figure.caption.91}%
+\contentsline {figure}{\numberline {4.22}{\ignorespaces An example of the effects of aligning data for the PA probe. Using 98 shots we have aligned the data in time using either cross-correlation of the B-dot signals on the probe or by aligning the $B_z = 0$ crossing time index. The differences in the alignment method are seen in the bottom figure. The histograms for both methods are similar and thus give similar alignment results. The top three panels show example B-dot traces (light colored lines). The average of all 98 signals before alignment is seen in black with one standard deviation bounds. After alignment, a new mean is calculated and shown in red. It can be seen that the standard deviation is far smaller after alignment and the red mean has less smoothed features.}}{126}{figure.caption.92}%
+\contentsline {figure}{\numberline {4.23}{\ignorespaces Lightsaber Probe Measurements}}{128}{figure.caption.93}%
 \addvspace {10pt}

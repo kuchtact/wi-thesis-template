@@ -606,9 +606,10 @@ where the square root is the average electron velocity and the exponential is th
 
 The total current to the probe for $V_\text{probe} < V_\text{plasma}$ is thus
 \begin{equation}
-    I = n_\infty e A_p \sqrt{\frac{e T_e}{m_i}} \left[ \frac{1}{2} \sqrt{\frac{2 m_i}{\pi m_e}} \exp\left(\frac{V_\text{probe} - V_\text{plasma}}{T_e}\right) - \exp\left(-\frac{1}{2}\right)\right]. % TODO: Where does the pi come from?
+    I = -n_\infty e A_p \sqrt{\frac{e T_e}{m_i}} \left[ \frac{1}{2} \sqrt{\frac{2 m_i}{\pi m_e}} \exp\left(\frac{V_\text{probe} - V_\text{plasma}}{T_e}\right) - \exp\left(-\frac{1}{2}\right)\right] % TODO: Where does the pi come from?
     \label{eq:multitip_hutchinson_model}
 \end{equation}
+where we've chosen the convention of ion current to the probe being positive and electron current being negative.
 
 \subsubsection{Pros \& Cons}
 

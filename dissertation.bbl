@@ -1,4 +1,4 @@
-\begin{wb-bib}{24}
+\begin{wb-bib}{27}
 \expandafter\ifx\csname natexlab\endcsname\relax\def\natexlab#1{#1}\fi
 \expandafter\ifx\csname bibnamefont\endcsname\relax
   \def\bibnamefont#1{#1}\fi
@@ -85,6 +85,13 @@
 \newblock \bibinfo{type}{Dissertation/thesis}, \bibinfo{school}{University of
   Wisconsin-Madison}, \bibinfo{address}{Madison, WI}.
 
+\bibitem[{\citenamefont{Freidberg}(2014)}]{Freidberg_2014}
+\bibinfo{author}{\bibnamefont{Freidberg}, \bibfnamefont{Jeffrey~P.}}
+  \bibinfo{year}{2014}.
+\newblock \emph{\bibinfo{title}{Ideal mhd}}.
+\newblock \bibinfo{address}{New York}:\@ \bibinfo{publisher}{Cambridge
+  University Press}.
+
 \bibitem[{\citenamefont{Godyak and Demidov}(2011)}]{Godyak_Demidov_2011}
 \bibinfo{author}{\bibnamefont{Godyak}, \bibfnamefont{V~A}}, \bibnamefont{and}
   \bibinfo{author}{\bibfnamefont{V~I} \bibnamefont{Demidov}}.
@@ -101,6 +108,25 @@
   effects and 3d topological triggers for magnetic reconnection}.
 \newblock \bibinfo{type}{Dissertation/thesis}, \bibinfo{school}{University of
   Wisconsin-Madison}, \bibinfo{address}{Madison, WI}.
+
+\bibitem[{\citenamefont{Greess et~al.}(2022)\citenamefont{Greess, Egedal,
+  Stanier, Olson, Daughton, Lê, Millet-Ayala, Kuchta, and
+  Forest}}]{Greess_Egedal_Stanier_Olson_Daughton_Lê_Millet-Ayala_Kuchta_Forest_2022}
+\bibinfo{author}{\bibnamefont{Greess}, \bibfnamefont{S.}},
+  \bibinfo{author}{\bibfnamefont{J.}~\bibnamefont{Egedal}},
+  \bibinfo{author}{\bibfnamefont{A.}~\bibnamefont{Stanier}},
+  \bibinfo{author}{\bibfnamefont{J.}~\bibnamefont{Olson}},
+  \bibinfo{author}{\bibfnamefont{W.}~\bibnamefont{Daughton}},
+  \bibinfo{author}{\bibfnamefont{A.}~\bibnamefont{Lê}},
+  \bibinfo{author}{\bibfnamefont{A.}~\bibnamefont{Millet-Ayala}},
+  \bibinfo{author}{\bibfnamefont{C.}~\bibnamefont{Kuchta}}, \bibnamefont{and}
+  \bibinfo{author}{\bibfnamefont{C.~B.} \bibnamefont{Forest}}.
+  \bibinfo{year}{2022}.
+\newblock \bibinfo{title}{Kinetic simulations verifying reconnection rates
+  measured in the laboratory, spanning the ion-coupled to near electron-only
+  regimes}.
+\newblock \emph{\bibinfo{journal}{Physics of Plasmas}}
+  \bibinfo{volume}{29}(\bibinfo{number}{10}):\penalty0 \bibinfo{pages}{102103}.
 
 \bibitem[{\citenamefont{Hershkowitz}(1989)}]{Hershkowitz_1989}
 \bibinfo{author}{\bibnamefont{Hershkowitz}, \bibfnamefont{Noah}}.
@@ -212,6 +238,26 @@
   interplay between shocks and magnetic flux pileup}.
 \newblock \bibinfo{type}{Phd thesis}, \bibinfo{school}{University of
   Wisconsin-Madison}.
+
+\bibitem[{\citenamefont{Olson et~al.}(2021)\citenamefont{Olson, Egedal, Clark,
+  Endrizzi, Greess, Millet-Ayala, Myers, Peterson, Wallace, and
+  Forest}}]{Olson_Egedal_Clark_Endrizzi_Greess_Millet-Ayala_Myers_Peterson_Wallace_Forest_2021}
+\bibinfo{author}{\bibnamefont{Olson}, \bibfnamefont{Joseph}},
+  \bibinfo{author}{\bibfnamefont{Jan} \bibnamefont{Egedal}},
+  \bibinfo{author}{\bibfnamefont{Michael} \bibnamefont{Clark}},
+  \bibinfo{author}{\bibfnamefont{Douglass~A.} \bibnamefont{Endrizzi}},
+  \bibinfo{author}{\bibfnamefont{Samuel} \bibnamefont{Greess}},
+  \bibinfo{author}{\bibfnamefont{Alexander} \bibnamefont{Millet-Ayala}},
+  \bibinfo{author}{\bibfnamefont{Rachel} \bibnamefont{Myers}},
+  \bibinfo{author}{\bibfnamefont{Ethan~E.} \bibnamefont{Peterson}},
+  \bibinfo{author}{\bibfnamefont{John} \bibnamefont{Wallace}},
+  \bibnamefont{and} \bibinfo{author}{\bibfnamefont{Cary~B.}
+  \bibnamefont{Forest}}. \bibinfo{year}{2021}.
+\newblock \bibinfo{title}{Regulation of the normalized rate of driven magnetic
+  reconnection through shocked flux pileup}.
+\newblock \emph{\bibinfo{journal}{Journal of Plasma Physics}}
+  \bibinfo{volume}{87}(\bibinfo{number}{3}):\penalty0
+  \bibinfo{pages}{175870301}.
 
 \bibitem[{\citenamefont{Steinbrüchel}(1990)}]{Steinbrüchel_1990}
 \bibinfo{author}{\bibnamefont{Steinbrüchel}, \bibfnamefont{Christoph}}.

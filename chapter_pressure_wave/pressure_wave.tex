@@ -4,151 +4,352 @@
 
 Once I get Jan's rewrite of the intro + conclusion I can figure out what might go here.
 
-\section{Observations that lead us to look at this wave}
+\subsection{Physical Interpretation}
 
-\subsection{Speed probe measurements}
+This wavefront is initialized by a release in magnetic pressure at high radii due to a drop in magnetic field as the drive coils turn on. For plasma near the coils, it begins to expand. This drops both the plasma pressure and magnetic pressure since the plasma carries the field radially outwards leading to plasma at lower radius beginning to expand. This then leads to an iterative process as plasma at lower and lower radii wait until the plasma just above begins to move out.
+
+\section{Observational Evidence}
+
+Our experiment is mostly focused towards studying magnetic reconnection in the lab and thus we often focus on the area around where the reconnecting field, $B_z$, goes to zero. To flip the sign of the background field we drive current through our drive coils or cylinder and in the process of forming this reconnection layer, we see an interesting feature that appears both in magnetic field measurements and particle-in-cell simulations.
+
+\begin{figure}
+    \centering
+    \includegraphics[width=\textwidth]{chapter_pressure_wave/figures/dB_B_and_x_line_shock_pressure_flux.png}
+    \caption{Experimental measurements from a single shot where the probes are at $z=0$. The drive cylinder at $r = 0.6$ m turns on at $t = 0$. This releases the magnetic pressure at high radii allowing the plasma to expand which leads to a pressure wavefront moving radially inwards (orange). Later, a shock (green) is formed in front of the reconnection layer (purple dashed) which moves radially inwards. Once the wavefront passes, the magnetic field lines start moving outwards following the flux contours (black).}
+    % TODO: Fit this into the text.
+    \label{fig:experimental-evolution}
+\end{figure}
+
+\subsection{Bdot measurements}
+
+A common technique in analyzing our data is to measure the radial speed of the reconnection layer by measuring $\partial_t B_z$ as a function of radius, $r$. We have many probes that have that cabilitity with the simplest being the speed probe (see \ref{sps:intro_speed_probe}). Additionally, the flux arrays act like many speed probes at various $z$ positions and we've taken measurements from a single stick of probes along a radial chord in figure \ref{fig:pressure_wave_speed_probe}.
 
 \subsubsection{Flux expansion before shock layer}
+
+Let's examine the characteristics of shot 68936 in figure \ref{fig:pressure_wave_speed_probe}. This plot is over saturated to highlight salient features. The green line is where the position of the x-point which we can see moves radially inwards (first appearing at around 191 \textmu s). Earlier in time (and lower in radii) is a dark blue region where the sign of $\partial_t B_z$ is opposite of that needed to flip the sign of the magnetic field. This is due to a shock that forms to regulate the reconnection rate (see \cite{Olson_Egedal_Clark_Endrizzi_Greess_Millet-Ayala_Myers_Peterson_Wallace_Forest_2021}).
+
+The black contours are of constant magnetic flux, which in a cylindrically symmetric system are the paths along which magnetic field lines follow. We see that the field lines begin to move outward far before the reconnection layer passes or the shock compresses them radially inwards. This is a feature of the wave that will help inform our physical understanding of the wave.
 
 \subsubsection{Wavefront that depends on configuration}
 
 \begin{figure}
-    \caption{dBz/dt plots for different Helmholtz fields}
+    \centering
+    \includegraphics[width=\textwidth]{chapter_pressure_wave/figures/example_speed_probe_panels.png}
+    \caption[Pressure Wave Observations in Bdot Measurements]{dBz/dt plots for different Helmholtz fields}
+    \label{fig:pressure_wave_speed_probe}
 \end{figure}
 
-\subsection{Simulations}
+Each panel in figure \ref{fig:pressure_wave_speed_probe} has a different configuration with the left and right columns being three and six plasma guns respectively (thus changing the total amount of plasma in the machine) and the top and bottom rows having no guide field or having a guide field (thus changing the distribution of the plasma). We can see that there is a feature in the Bdot data that travels radially inwards. Once that feature passes, the flux contours begin to move out. This feature, which we'll call the wavefront, travels faster with fewer guns (i.e. getting to a lower radius in a shorter amount of time) and is also a much different shape with versus without a guide field.
 
-\subsubsection{Different n and drive change feature}
+\subsection{PIC Simulations}
+
+Simulations show very similar results to that of the experiment as can be seen in figure \ref{fig:pressure_wave_greess_simulation}. Here, 2D particle-in-cell simulations were done of the three coil reconnection experiment and (d)-(k) show the electron bulk velocity ((d)-(g)) and $J_\phi = \partial_z B_r - \partial_r B_z \approx - \partial_r B_z \propto \partial_t B_z$ ((h)-(k)).
+
+The out of plane current shows the same qaulitative features as in figure \ref{fig:pressure_wave_speed_probe} and we see that the electrons drift radially upwards once the wavefront basses, similar to the magnetic field lines from the experiment.
+
+\subsubsection{Varying Driving Parameters}
+
+Figure \ref{fig:pressure_wave_greess_simulation} shows four different driving configurations for the reconnection experiment where the initial density and voltage on the drive capacitor bank are changed. The shape of the wavefront changes for different densities but does not depend on the drive voltage.
 
 \begin{figure}
-    \caption{Greess et al. 2022 paper showing simulations with pressure wave.}
+    \centering
+    \includegraphics[width=\textwidth]{chapter_pressure_wave/figures/Greess_2022_fig_3.png}
+    \caption[Pressure Wave Observations in Simulations]{Reproduction of fig. 3 of \cite{Greess_Egedal_Stanier_Olson_Daughton_Lê_Millet-Ayala_Kuchta_Forest_2022} showing the effect of the pressure wave rebounding off of $R = 0$ and interacting with the reconnection layer. When the rebounding pressure wave hits the layer it can change the reconnection rate which can be seen in panel (a) where there is a dip in the reconnection rate for $n / 3$.}
+    \label{fig:pressure_wave_greess_simulation}
 \end{figure}
 
-\subsubsection{Change reconnection layer post reflection}
+\subsubsection{Changes in Reconnection Rate}
 
-\section{Physical understanding of wave}
+The wavefront moves far faster than both the shock and reconnection layer so does not interract with either on the way towards $r = 0$. Once it hits the center the wavefront reflects in simulations (black circles in panels (i) and (j) of figure \ref{fig:pressure_wave_greess_simulation}) and depending on when this interaction occurs, can change the reconnection rate (measured in the red rectangle and plotted as green triangles in panel (a)).
 
-\subsection{Initial plasma configuration}
+% \section{Physical Interpretation}
 
-\subsection{Release in magnetic pressure}
+% This wavefront is initialized by a release in magnetic pressure at high radii due to a drop in magnetic field as the drive coils turn on. For plasma near the coils, it begins to expand. This drops both the plasma pressure and magnetic pressure since the plasma carries the field radially outwards leading to plasma at lower radius beginning to expand. This then leads to an iterative process as plasma at lower and lower radii wait until the plasma just above begins to move out.
 
-\subsubsection{What would happen if plasma was immobile (replaced with perfect conductor)}
+% \subsection{Initial plasma configuration}
 
-All field is shielded at edge and there is no change in magnetic pressure in the bulk.
+% Our system is cylindrically symmetric and plasma is injected from the north pole ($+z$). This plasma then diffuses radially outwards across field lines pointed in either the $z$ direction of the $z$ and $\phi$ directions depending on the use of a guide field. In either case, this can be modeled as a screw pinch equilibrium.
 
-\subsection{Wavefront tells plasma about pressure Release}
+% \subsection{Release in magnetic pressure}
 
-\subsubsection{Analogous system}
+% The drive coils create a field antiparallel to the Helmholtz coil (which creates our initial equilibrium). Since these coils don't ramp up immediately to a high current there is some time when the magnetic pressure near the coils is dropping. The delay in rise is most likely due to transmission line and switch effects that delay the full application of the capacitor bank voltage to the coil leads.
 
-Sound wave.
+% \subsection{Wavefront as an Information Carrier}
 
-How does a sound wave propogate in a plasma? Fast magnetosonic wave!
 
-\begin{figure}
-    \caption{Simple diagram of sound wave in container}
-\end{figure}
 
-\subsection{Modeling magnetic field response}
+% \subsubsection{Analogous system}
 
-\subsubsection{How do we create this model}
+% Sound wave.
 
-\subsubsection{Pressure wave is like a shield}
+% How does a sound wave propogate in a plasma? Fast magnetosonic wave!
 
-\subsubsection{Example}
+% \begin{figure}
+%     \caption{Simple diagram of sound wave in container}
+% \end{figure}
 
-\subsubsection{Why have we mentioned this?}
+% \subsection{Modeling magnetic field response}
 
-\paragraph{Important for probe calibrations}
+% \subsubsection{How do we create this model}
 
-\paragraph{Good for predicting effects of different coil configurations}
+% \subsubsection{Pressure wave is like a shield}
+
+% \subsubsection{Example}
+
+% \subsubsection{Why have we mentioned this?}
+
+% \paragraph{Important for probe calibrations}
+
+% \paragraph{Good for predicting effects of different coil configurations}
 
 \section{Wave Simulation}
 
+As we can observe this wavefront in a variety of contexts, let's try simulating it using linearized MHD. This will give us a simple model that should be quick to solve that should get at the core physics of the wavefront. After the wavefront passes, higher order MHD effects may come into play but that is not of concern to this analysis.
+
 \subsection{Approximations}
 
+For the simulation, we take the following assumptions for simplification:
+\begin{itemize}
+    \item The toroidal field is unaffected by the plasma. This only matters in cases where we are starting from a screw pinch equilibrium.
+    \item The system is cylindrically symmetric.
+    \item The plasma can be well modeled by ideal MHD.
+\end{itemize}
+
 \subsection{Linearizing MHD}
+
+We start by writing out our conservation laws and Maxwell's equations:
+\begin{align}
+  \partial_t \rho + \nabla \cdot (\rho \bm{v}) &= 0 \label{eq:mhd_particle_conservation}\\
+  \rho \frac{dv}{dt} &= \bm{J} \times \bm{B} - \nabla p \label{eq:mhd_force_balance}\\
+  \frac{d}{dt} \left(\frac{p}{\rho^\gamma}\right) &= 0 \label{eq:mhd_energy}\\
+  \bm{E} + \bm{v} \times \bm{B} &= 0 \label{eq:mhd_ohms_law}\\
+  \nabla \times \bm{E} &= -\partial_t \bm{B} \label{eq:mhd_faradays_law}\\
+  \nabla \times \bm{B} &= \mu_0 \bm{J} \label{eq:mhd_amperes_law}\\
+  \nabla \cdot \bm{B} &= 0 \label{eq:mhd_div_b}
+\end{align}
+We can rewrite these equations as the following:
+\begin{align}
+  \textrm{Eq. }\ref{eq:mhd_force_balance} &\Rightarrow \rho \left( \frac{\partial \bm{v}}{\partial t} + \bm{v} \cdot \nabla \bm{v} \right) = \bm{J} \times \bm{B} - \nabla p \label{eq:mhd_force_balance_simplified}\\
+  \textrm{Eq. }\ref{eq:mhd_energy} &\Rightarrow \partial_t p + \bm{v} \cdot \nabla p + \gamma p \nabla \cdot \bm{v} = 0 \label{eq:mhd_energy_simplified}\\
+  \textrm{Eq. }\ref{eq:mhd_ohms_law} + \ref{eq:mhd_faradays_law} &\Rightarrow \frac{\partial \bm{B}}{\partial t} = \nabla \times (\bm{v} \times \bm{B}) \label{eq:mhd_ohms_faradays_simplified}
+\end{align}
+Then we can expand around equilibrium assuming each variable can be written as $X = X_0 + X_1(t)$ where $X_0$ is the equilibrium value and $X_1$ is a perturbation. We'll assume that the equilibrium values are constant in time and that the perturbations are small. Thus we can write the following equations:
+\begin{align}
+    \textrm{Eq. } \ref{eq:mhd_particle_conservation} &\Rightarrow \frac{\partial \rho_1}{\partial t} = - \nabla \cdot (\rho_0 \bm{v_1}) \label{eq:mhd_particle_linear}\\
+    \textrm{Eq. } \ref{eq:mhd_force_balance_simplified}, \ref{eq:mhd_amperes_law} &\Rightarrow \rho_0 \frac{\partial \bm{v_1}}{\partial t} = \frac{1}{\mu_0} ((\nabla \times \bm{B}_1) \times \bm{B}_0 + (\nabla \times \bm{B}_0) \times \bm{B}_1) - \nabla p_0 - \nabla p_1 \label{eq:mhd_force_balance_linear}\\
+    \textrm{Eq. } \ref{eq:mhd_energy_simplified} &\Rightarrow \frac{\partial p_1}{\partial t} = -\bm{v_1} \cdot \nabla p_0 -\gamma p_0 \nabla \cdot \bm{v_1} \label{eq:mhd_energy_linear}\\
+    \textrm{Eq. } \ref{eq:mhd_ohms_faradays_simplified} &\Rightarrow \frac{\partial \bm{B}_1}{\partial t} = \nabla \times (\bm{v_1} \times \bm{B}_0) \label{eq:mhd_ohms_faradays_linear}
+\end{align}
+Let $\bm{\xi}$ be a displacement vector that represents the perturbation and thus $\partial_t \bm{\xi} = \bm{v}_1$. By dropping higher order terms we get the following.
+\begin{align}
+  \textrm{Eq. } \ref{eq:mhd_particle_linear} &\Rightarrow \partial_t \rho_1 = - \nabla \cdot (\rho_0 \partial_t \bm{\xi}) \nonumber \\
+  &\Rightarrow \rho_1 = - \nabla \cdot (\rho_0 \bm{\xi}) \label{eq:mhd_particle_linear_displacement}\\
+  \textrm{Eq. } \ref{eq:mhd_force_balance_linear} &\Rightarrow \rho_0 \partial_{tt} \bm{\xi} = \frac{1}{\mu_0} ((\nabla \times \bm{B}_1) \times \bm{B}_0 + (\nabla \times \bm{B}_0) \times \bm{B}_1) - \nabla p_0 - \nabla p_1 \label{eq:mhd_force_balance_linear_displacement}\\
+  \textrm{Eq. } \ref{eq:mhd_energy_simplified} &\Rightarrow \partial_t p_1 = -\partial_t \bm{\xi} \cdot \nabla p_0 -\gamma p_0 \nabla \cdot \partial_t \bm{\xi} \nonumber \\
+  &\Rightarrow p_1 = -\bm{\xi} \cdot \nabla p_0 -\gamma p_0 \nabla \cdot \bm{\xi} \label{eq:mhd_energy_linear_displacement}\\
+  \textrm{Eq. } \ref{eq:mhd_ohms_faradays_linear} &\Rightarrow \partial_t \bm{B}_1 = \nabla \times (\partial_t \bm{\xi} \times \bm{B}_0) \nonumber \\ 
+  &\Rightarrow \bm{B}_1 = \nabla \times (\bm{\xi} \times \bm{B}_0) \label{eq:mhd_ohms_faradays_linear_displacement}
+\end{align}
+
+Then, combining \ref{eq:mhd_force_balance_linear_displacement}, \ref{eq:mhd_energy_linear_displacement}, and \ref{eq:mhd_ohms_faradays_linear_displacement}, we can write a first-order perturbation expansion of the plasma as
+\begin{align}
+  \rho_0 \partial_{tt} \bm{\xi} =& \frac{1}{\mu_0}\left\{\nabla \times \left[\nabla \times \left(\bm{\xi} \times \bm{B}_0\right)\right]\right\}\times \bm{B}_0 + \frac{1}{\mu_0} \left(\nabla \times \bm{B}_0\right) \times \left[\nabla \times \left(\bm{\xi} \times \bm{B}_0\right)\right] \nonumber \\
+  &- \nabla p_0 + \nabla \left(\bm{\xi} \cdot \nabla p_0 + \gamma p_0 \nabla \cdot \bm{\xi}\right)
+  \label{eq:first_order_mhd}
+\end{align}
+We have thus far created a linearized MHD system of equations.
 
 \subsection{Plasma Equilibrium + Symmetries}
 
 \subsubsection{Types of Equilibrium}
 
-\paragraph{theta-pinch}
+Our experimental system evolves to an equilibrium as the plasma is injected into the machine. The plasma fills up flux tubes connected to the plasma guns. As the ions have a gyroradius on the order of a centimeter, these flux tubes are very thin but the plasma begins to diffuse across field lines in both the toroidal and radial directions.
 
-\paragraph{screw-pinch}
+\paragraph{\texorpdfstring{$\theta$}{Theta}-pinch}
+
+If we only have the Helmholtz coil on, the plasma pressure is only balancing a $z$ directed magnetic field thus giving a $\theta$-pinch equilibrium defined by
+\begin{equation}
+    p + \frac{B_z^2}{2\mu_0} = \frac{B_0^2}{2 \mu_0}.
+    \label{eq:theta_pinch_equilibrium}
+\end{equation}
+See \cite{Freidberg_2014} for a derivation of this (section 5.2) and the screw pinch equilibrium (section 5.4).
+
+\paragraph{Screw-pinch}
+
+With a guide field, the system changes as we now have a toroidal field that goes like
+\begin{equation}
+    B_\phi(r) = \frac{\mu_0 I}{2 \pi r}.
+\end{equation}
+The plasma could potentially perturb this toroidal field and we lack a measurement of the static magnetic field. Luckily, a perturbation of this field would require a plasma current in the $z$-direction and since the permanent magnets confine the plasma in the axial direction, any net current would be small.
+
+Our screw-pinch equilibrium is
+\begin{equation}
+    \dv{r} \left(p + \frac{B_z^2 + B_\phi^2}{2 \mu_0}\right) + \frac{B_\phi^2}{2 \mu_0} = 0.
+    \label{eq:screw_pinch_equilibrium}
+\end{equation}
+It turns out, if we use only the initial guide field (without a plasma perturbation), this reverts back to the $\theta$-pinch equilibrium.
 
 \subsubsection{Types of Symmetries}
 
-\paragraph{z-symmetry}
+Let's now discuss the validity of our symmetry assumptions that we made at the start and we'll use for simplification of our linearized MHD equation.
 
-\paragraph{toroidal-symmetry}
+\paragraph{Z-symmetry}
+
+We assume translationaly $z$-symmetry but let's start with mirror symmetry. It can be seen that along the equator of the machine, and as previously discussed, everything about our system is mirror symmetric except the plasma guns. Since the thermal speed if so much larger than the diffusion speed (both into the walls and across field lines) we can assume a fair bit of $z$ symmetry from the guns. Additionally, the magnetic field from the Helmholtz coil is uniform along the $z$ direction and the magnetic field from the coils (drive coils especially) is quite symmetric at least near the $z$-center of the coil system (edge effects add in $r$ directed fields thus removing $z$ translational symmetry because of $\nabla \cdot \vb{B} = 0$).
+
+\paragraph{\texorpdfstring{$\phi$}{Phi}-symmetry}
+
+In the $\phi$ direction, we lack symmetry at two locations. The guns inject in a hexagonal pattern or symmetric subgroups of that at a radius of approximately 10 cm. Althought the distance between guns when we are only using three guns is approximately 20 cm meaning that toroidal isotropization is on that length scale, we find through measurements that the plasma is very toroidally symmetric. The second source of assymetry is due to the drive coil leads. Since the leads are close together and in the drive cylinder case, are well shielded, we can ignore this effect as long as we are somewhat far from the drive coil radii.
 
 \subsection{Simplified 1D equation}
 
-\subsubsection{What does this look like?}
+Now we'll assume that the perturbation only depends on $r$ since we are symmetric in $\phi$ and $z$. Thus we can write $\xi$ as
+\begin{equation*}
+  \xi = \xi_r(r) \hat{r} + \xi_\phi(r) \hat{\phi} + \xi_z(r) \hat{z} \label{eq:xi_vector}
+\end{equation*}
+Using equation \ref{eq:screw_pinch_equilibrium} and assuming that the toroidal field is not affected by the plasma we get
+\begin{align}
+  B_{\phi, 0} &= \frac{\mu_0 I_\mathrm{TF}}{2 \pi r} \label{eq:toroidal_field} \\
+  \Rightarrow \partial_r p_0 &= -\frac{1}{\mu_0} \left( B_{\phi, 0} \partial_r B_{\phi, 0} + B_{z, 0} \partial_r B_{z, 0} + \frac{B_{\phi, 0}^2}{r} \right) \\
+  &= -\frac{1}{\mu_0} B_{z, 0} \partial_r B_{z, 0} \label{eq:simple_screw_pinch_pressure_gradient}
+\end{align}
+This turns out to be the same as the $\theta$-pinch equilibrium (equation \ref{eq:theta_pinch_equilibrium}). Integrating we find
+\begin{equation}
+  p_0 + \frac{B_{z, 0}^2}{2 \mu_0} = \mathrm{const.} \label{eq:screw_pinch_equilibrium_integrated}
+\end{equation}
+Assuming the plasma displaces the initial field as it enters the machine we can let $\mathrm{const.} = B_H^2 / 2 \mu_0$ where $B_H$ is the Helmholtz field. Here we've assumed the pressure stays constant from before plasma to after. Since the Helmholtz changes as a function of radius, we need to choose some value for $B_H$ so we choose the value at $r = 0$. It is difficult to determine exactly what value to choose because as the background field is pushed out because of the plasma, the tension force helps hold in the plasma. Since the plasma beta is low, we can assume this effect is small and thus the total pressure is close to the initial Helmholtz pressure.
 
-A wave equation!
+Solving for the pressure from equation \ref{eq:screw_pinch_equilibrium_integrated} we get
+\begin{align*}
+  \rho_0(r) \partial_{tt} \xi_r &= \frac{1}{2 \mu_0 r^2} \bigg[ r^2 \xi_r''(r) \left(\frac{5 B_H^2}{3}+2 B_{\phi, 0}(r)^2+\frac{B_{z,0}(r)^2}{3}\right) \\
+  & + r \xi_r'(r) \bigg(\frac{5 B_H^2}{3}+6 r B_{\phi, 0}(r) B_{\phi, 0}'(r)+4 B_{\phi, 0}(r)^2 \\
+  &\qquad \qquad +\frac{1}{3} B_{z,0}(r) \left(2 r B_{z,0}'(r)+B_{z,0}(r)\right)\bigg) \\
+  & + \xi_r(r) \bigg(-\frac{5 B_H^2}{3}+2 r^2 B_{\phi, 0}(r) B_{\phi, 0}''(r) \\
+  & \qquad \qquad +2 r B_{\phi, 0}'(r) \left(r B_{\phi, 0}'(r)+2 B_{\phi, 0}(r)\right) \\
+  & \qquad \qquad -\frac{1}{3} B_{z,0}(r) \left(B_{z,0}(r)-2 r B_{z,0}'(r)\right)\bigg) \bigg] \\
+  \partial_{tt} \xi_\phi &= 0 \\
+  \partial_{tt} \xi_z &= 0
+\end{align*}
+where $\gamma = 5/3$. Since the second derivative is zero in both the $\phi$ and $z$ directions this means the wave only perturbs the plasma radially, as expected for an expanding plasma. We can rewrite the density in terms of other values (since the ion temperature is much smaller than the electron temperature the first equality is true):
+\begin{align*}
+  p_0(r) &= T_0 n_0(r) = \frac{1}{2 \mu_0}(B_H^2 - B_{z0}(r)^2) = T_0 \frac{\rho_0(r)}{m_i + m_e} \\
+  \Rightarrow \rho_0(r) &= \frac{m_i + m_e}{2 T_0 \mu_0}(B_H^2 - B_{z0}(r)^2)
+\end{align*}
 
-\subsubsection{Normalizations}
+\subsubsection{Equation Interpretation}
 
-\begin{table}
-    \caption{Parameters for normalization}
-\end{table}
+We can see that equation \ref{eq:dedimensionalized_pde} looks something like a wave equation with the form
+\begin{equation*}
+    \partial_{tt} \xi = D \partial_{rr} \xi
+\end{equation*}
+where $D > 0$. The various terms with $r$ acts in a geometric fashion as the wave travels towards low radii and the magnetic field acts to change the wave speed. This isn't immediately obvious but we will see it's effect in our simulations.
 
 \subsubsection{Normalized equation}
 
-\subsection{Boundary conditions}
+We want to nondimensionalize our equation so that it can be simulated numerically. To do so we need to choose some parameters no normalize by so we'll use the radii, magnetic field, and time.
 
-\subsubsection{r = 0 Boundary}
+Let $r = \tilde{r}R$, $B = \tilde{B}B_H$, $t=t_0 \tau$. Thus $\partial_r = 1/R \partial_{\tilde{r}}$, $\partial_t = 1/t_0 \partial_\tau$, and $\xi = \tilde{\xi}R$. We'll now use primes to denote derivatives in $\tilde{r}$. Thus we have
+\begin{align}
+  % \partial_{\tau\tau}\tilde{\xi} =& \underbrace{\frac{T_0 t_0^2}{3 R^2 (m_i + m_e)}}_{C} \frac{1}{\tilde{r}^2\left(1 - \tilde{B}_{z0}(\tilde{r})^2\right)} \left[-\tilde{\xi} \left(5 + \tilde{B}_{z0}^2 - 2 \tilde{r} \tilde{B}_{z0}\tilde{B}_{z0}'\right) + \tilde{r}\tilde{\xi}' \left(5 + \tilde{B}_{z0}^2 + 2 \tilde{r} \tilde{B}_{z0}\tilde{B}_{z0}'\right)+\tilde{r}^2 \tilde{\xi}'' \left(5 + \tilde{B}_{z0}^2\right)\right]
+  \partial_{\tau\tau}\tilde{\xi} =& \underbrace{\frac{T_0 t_0^2}{3 R^2 (m_i + m_e)}}_{C} \frac{1}{\tilde{r}^2\left(1 - \tilde{B}_{z, 0}(\tilde{r})^2\right)} \left[ A(\tilde{r}) \tilde{r}^2 \tilde{\xi}'' + B(r) \tilde{r}\tilde{\xi}' + C(\tilde{r}) \tilde{\xi} \right]
+  \label{eq:dedimensionalized_pde} \\
+  A(\tilde{r}) =& 5 + 6 \tilde{B}_{\phi, 0}(r)^2 + \tilde{B}_{z, 0}(\tilde{r})^2 \nonumber \\
+  B(\tilde{r}) =& 5 + 18 \tilde{r} \tilde{B}_{\phi, 0}(\tilde{r}) \tilde{B}_{\phi, 0}'(\tilde{r}) + 12 \tilde{B}_{\phi, 0}(\tilde{r})^2 + \tilde{B}_{z, 0}(\tilde{r}) \left(2 \tilde{r} \tilde{B}_{z, 0}'(\tilde{r}) + \tilde{B}_{z, 0}(\tilde{r})\right) \nonumber \\
+  C(\tilde{r}) =& -5 + 6 \tilde{r}^2 \tilde{B}_{\phi, 0}(\tilde{r}) \tilde{B}_{\phi, 0}''(\tilde{r}) + 6 \tilde{r} \tilde{B}_{\phi, 0}'(\tilde{r}) \left(\tilde{r} \tilde{B}_{\phi, 0}'(\tilde{r}) + 2 \tilde{B}_{\phi, 0}(\tilde{r})\right) \nonumber \\
+  &- \tilde{B}_{z, 0}(\tilde{r}) \left(\tilde{B}_{z, 0}(\tilde{r}) - 2 \tilde{r} \tilde{B}_{z, 0}'(\tilde{r})\right) \nonumber
+\end{align}
+The first fraction is made of constants and we'll call the first coefficent $C$. By choosing a value for $C$ we set a relation between the normalization radius, time, and electron temperature. The normalizations we use for the simulations can be found in table \ref{tab:wave_normalizations}.
 
-\paragraph{v = 0 option}
+\begin{table}
+    \begin{center}
+    \begin{tabular}{|c|c|c|c|}
+        \hline
+        Name & Value & Definition & Normalization \\
+        \hline \hline
+        $R$ & $0.6$ m & Drive coil radius & $r / R$ \\
+        \hline
+        $B_H$ & $0.01$ T & Helmholtz strength at center & $B / B_H$ \\
+        \hline
+        $T_0$ & $5$ eV & Electron temperature & $T / T_0$ \\
+        \hline
+        $t_0$ & $\approx 50$ \textmu s & Derived & $t / t_0$ \\
+        \hline
+    \end{tabular}
+    \end{center}
+    \caption{Parameters for normalization}
+    \label{tab:wave_normalizations}
+\end{table}
 
-\paragraph{xi = 0 option}
+\subsection{Initial and Boundary conditions}
 
-\paragraph{What do we choose?}
+\subsubsection{Initial conditions}
 
-\subsubsection{r = R Boundary}
+The pressure wave is initialized by the high radius boundary condition so all we must do is select an initial plasma density profile. For simplicity, we go with a density that goes as
+\begin{equation}
+    n(r) = n_0 e^{-n^2 / a^2}
+\end{equation}
+where $n_0$ is the density at $r = 0$ and $a$ is the spread of the density radially. This then defines the magnetic field profile because of pressure balance giving, from equation \ref{eq:theta_pinch_equilibrium},
+\begin{equation}
+    B_{z,0}(r) = \sqrt{B_H^2 - 2 \mu_0 n(r) T_0}.
+\end{equation}
 
-\paragraph{What is physically happening at high radius in the coils?}
+The initial plasma profile could conceivably be any distribution so long as the plasma pressure is always less than the magnetic pressure such that the $\theta$-pinch equilibrium holds and thus we don't get a singularity in our PDE, equation \ref{eq:dedimensionalized_pde}.
 
-\paragraph{Loop voltage sets dBz/dt}
+\subsubsection{Low Radius Boundary}
 
-\paragraph{Assuming MHD so far so let's keep assuming!}
+We have a singularity in our PDE at $r = 0$ so we'll set our lower radii boundary to $r_0$. If the wave were to propogate all the way to $r = 0$, because of toroidal symmetry there could be no plasma displacement so we set $\tilde{\xi}(t) = 0$.
 
-\paragraph{Vloop signal shape}
+\subsubsection{High Radius Boundary}
 
-\subsection{Initial conditions}
+Here, at high radii, the drive coils have an applied loop voltage that depends on time, $V_\text{loop}(t)$. From Faraday's law,
+\begin{align*}
+  V_\text{loop}(t) &= \oint \bm{v}(R, t) \times \bm{B}(R, t) \cdot d \bm{l} \\
+  &= \int_0^{2\pi} \left(\bm{v}(R, t) \times \bm{B}(R, t)\right)_\varphi R d\varphi \\
+  &\approx -2 \pi R v_r(R, t) B_{z,0}(R) \\
+  \Rightarrow v_r(R, t) &= -\frac{V_\text{loop}(t)}{2 \pi R B_{z,0}(R)}.
+\end{align*}
+Now we need to define the loop voltage as a function of time. From measurements of $\partial_t B_z$, we find a reasonable model takes the form
+\begin{equation}
+    V_\text{loop} = V_\text{cap} \left(1 - e^{-t / \tau_v}\right) \cos \left(2 \pi \frac{t}{T}\right)
+\end{equation}
+where $V_\text{cap} \approx 5$ kV is the capacitor bank initial voltage, $\tau_v \approx 0.2$ \textmu s is the decay time for the loop voltage to rise to the capacitor voltage, and $T \approx 50$ \textmu s is the period of oscillation of the capacitor bank - drive coil system.
 
-\subsubsection{What form can we expect plasma to take?}
+\subsection{Simulation Results}
 
-\subsubsection{What form do we use for these results}
+\begin{figure*}[ht]
+    \centering
+    \includegraphics[width=\textwidth]{chapter_pressure_wave/figures/v_and_bdot_w_simulation_setup.png}
+    % \caption{TODO: Move labels more up into corner. Straddle panels b and d. Figure out a better way to have shared axis next to each other. Add curly bracket to show that t < 0 applies to both a and b. Move 1e18 to next to 2 in panel a.}
+    \caption{The simulated wavefront from a 1D linearized MHD simulation. Panel a shows the initial density profile and panel b shows the Alfv\'en speed (red) and fast magnetosonic speed (orange dashed) which are nearly the same. Panel c is the boundary velocity set by the applied loop voltage. Panel d is the velocity of the plasma which only begins to move outward once the wavefront passes with the different speed streamlines drawn on top. Panel e shows the expected measurements from a B-dot coil and flux contours which are similar to \ref{fig:experimental-evolution}, a.}
+    \label{fig:simulation-setup}
+\end{figure*}
 
-\subsection{What does our simulation show?}
+Simulation results can be seen in Fig. \ref{fig:simulation-setup}. Panels a and b show the initial plasma distribution and corresponding wave speeds for the Alfv\'en and fast magnetosonic waves ($v_A$ and $v_{ms}$). Panel d shows streamlines traveling at $v_A$ and $v_{ms}$ which are very similar for our low beta system. Both streamlines match the speed of the wavefront caused by the initial change in the boundary velocity (panel c). Finally, panel e shows the expected $\partial_t B_z$ signal which matches well with the measured signal from Fig. \ref{fig:experimental-evolution}, panel a.
 
-\subsubsection{There is a wavefront traveling inwards at fast magnetosonic}
+The $\partial_t B_z$ response is derived from equation \ref{eq:mhd_ohms_faradays_linear_displacement} where we find
+\begin{align*}
+  \partial_t \bm{B}_1 &= \nabla \times (-B_{z, 0} \partial_t \xi \hat{\phi} + B_{\phi, 0} \partial_t \xi \hat{z}) \\
+  \partial_t B_{1, r} &= 0 \\
+  \partial_t B_{1, \phi} &= -\partial_r (B_{\phi, 0} \partial_t \xi) \\
+  &= - \partial_r B_{\phi, 0} \partial_t \xi - B_{\phi, 0} \partial_{r} \partial_{t} \xi \\
+  \partial_t B_{1, z} &= \frac{1}{r} \partial_r (-r B_{z, 0} \partial_t \xi) \\
+  &= -\frac{1}{r} B_{z, 0} \partial_t \xi - \partial_r B_{z, 0} \partial_t \xi - B_{z, 0} \partial_{r} \partial_{t} \xi
+\end{align*}
 
-\paragraph{Low beta approximation giving Alfven}
+We find that the simulation is very similar to the observed Bdot measurements so assuming that the wave travels at approximately the Alfv\'en speed we can now work to extract the initial plasma density profile.
 
-\subsubsection{Once wavefront passes, plasma moves out}
+\section{Application}
 
-\subsubsection{Converting to Bdot}
+Now that we know the wave travels at the fast magnetosonic speed according to the simulations, we can now apply that information to our Bdot measurements to extract the plasma density.
 
-\subsubsection{In Bdot we see flux moving outwards}
+\subsection{Extracting Wave Speed}
 
-As expected from MHD assumption.
-
-\section{How do we apply it to real data?}
-
-\subsection{Base requirements}
-
-\subsubsection{Cylindrical symmetry}
-
-\subsubsection{Releasing magnetic pressure at high radius}
-
-\subsubsection{Measurements along a radial chord}
-
-\subsubsection{Known initial field}
-
-\subsection{Extracting the wave speed from the data}
+\begin{figure}[]
+    \centering
+    
+    \caption{Traces from the flux array showing what the raw Bdot traces look like.}
+    \label{fig:pressure_wave_raw_bdot_traces}
+\end{figure}
 
 \subsubsection{Wave tracking}
 
@@ -238,6 +439,16 @@ Refer to figure in Te section showing how it matters.
 \end{figure}
 
 \section{Applications}
+
+\subsection{Base requirements}
+
+\subsubsection{Cylindrical symmetry}
+
+\subsubsection{Releasing magnetic pressure at high radius}
+
+\subsubsection{Measurements along a radial chord}
+
+\subsubsection{Known initial field}
 
 \subsection{Other machines where this is applicable}
 
