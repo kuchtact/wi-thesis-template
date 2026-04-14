@@ -1,4 +1,4 @@
-\begin{wb-bib}{27}
+\begin{wb-bib}{33}
 \expandafter\ifx\csname natexlab\endcsname\relax\def\natexlab#1{#1}\fi
 \expandafter\ifx\csname bibnamefont\endcsname\relax
   \def\bibnamefont#1{#1}\fi
@@ -11,6 +11,28 @@
 \expandafter\ifx\csname urlprefix\endcsname\relax\def\urlprefix{URL }\fi
 \providecommand{\bibinfo}[2]{#2}
 \providecommand{\eprint}[2][]{\url{#2}}
+
+\bibitem[{\citenamefont{Bathgate et~al.}(2018)\citenamefont{Bathgate, Bilek,
+  Cairns, and McKenzie}}]{Bathgate_2018}
+\bibinfo{author}{\bibnamefont{Bathgate}, \bibfnamefont{Stephen~N}},
+  \bibinfo{author}{\bibfnamefont{Marcela~MM} \bibnamefont{Bilek}},
+  \bibinfo{author}{\bibfnamefont{Iver~H} \bibnamefont{Cairns}},
+  \bibnamefont{and} \bibinfo{author}{\bibfnamefont{David~R}
+  \bibnamefont{McKenzie}}. \bibinfo{year}{2018}.
+\newblock \bibinfo{title}{A thruster using magnetic reconnection to create a
+  high-speed plasma jet}.
+\newblock \emph{\bibinfo{journal}{The European Physical Journal Applied
+  Physics}} \bibinfo{volume}{84}(\bibinfo{number}{2}):\penalty0
+  \bibinfo{pages}{20801}.
+
+\bibitem[{\citenamefont{Bellan}(2012)}]{Bellan_2012}
+\bibinfo{author}{\bibnamefont{Bellan}, \bibfnamefont{P.~M.}}
+  \bibinfo{year}{2012}.
+\newblock \bibinfo{title}{Improved basis set for low frequency plasma waves}.
+\newblock \emph{\bibinfo{journal}{Journal of Geophysical Research: Space
+  Physics}} \bibinfo{volume}{117}(\bibinfo{number}{A12}).
+\newblock
+  \eprint{https://agupubs-onlinelibrary-wiley-com.ezproxy.library.wisc.edu/doi/pdfdirect/10.1029/2012JA017856}.
 
 \bibitem[{\citenamefont{Boggs et~al.}(2005)\citenamefont{Boggs, Byrd, Rogers,
   and Schnabel}}]{Boggs_Byrd_Rogers_Schnabel}
@@ -128,6 +150,14 @@
 \newblock \emph{\bibinfo{journal}{Physics of Plasmas}}
   \bibinfo{volume}{29}(\bibinfo{number}{10}):\penalty0 \bibinfo{pages}{102103}.
 
+\bibitem[{\citenamefont{Greess}(2022)}]{Greess}
+\bibinfo{author}{\bibnamefont{Greess}, \bibfnamefont{Samuel~M}}.
+  \bibinfo{year}{2022}.
+\newblock \bibinfo{title}{New frontiers in collisionless reconnection:
+  Exploring magnetosphere-relevant reconnection with experiments and custom
+  kinetic simulations}.
+\newblock Ph.D. thesis.
+
 \bibitem[{\citenamefont{Hershkowitz}(1989)}]{Hershkowitz_1989}
 \bibinfo{author}{\bibnamefont{Hershkowitz}, \bibfnamefont{Noah}}.
   \bibinfo{year}{1989}.
@@ -217,6 +247,120 @@
   \bibinfo{volume}{37}(\bibinfo{number}{2}):\penalty0
   \bibinfo{pages}{185--198}.
 
+\bibitem[{\citenamefont{Murphy et~al.}(2022)\citenamefont{Murphy, Everson,
+  Stańczak-Marikin, Heuer, Kozlowski, Malhotra, Arran, Bagherianlemraski,
+  Beckers, Bergeron, Bessi, Britten, Brown, Bryant, Carroll, Chambers,
+  Chattopadhyay, Choubey, Deal, Diaz~Riega, Dover, Drozdov, Du, Einhorn, Fan,
+  Farid, Fischer, Foo, Gangadharan, Goodall, Gorelli, Goudeau, Guidoni,
+  Haggerty, Hansen, Hillairet, Hoang, How, Huang, Humphrey, Isupova, Jeandet,
+  Johnson, Kent, Kulshrestha, Kuszaj, Köhn-Seemann, Langendorf, Lanteri, Lee,
+  Leonard, Lequette, Lim, Magarde, Martinelli, McHardy, Modi, Montes, Mumford,
+  Munn, Murphy, Nie, Pannala, Parashar, Patel, Pavon, Polak, Pérez, Qudsi,
+  Raj, Rajashekar, Rao, Richardson, Rojas~Zelaya, Salcido, Savcheva, Shen,
+  Sheng, Sherpa, Silvestri, Singh, Singh, Sipőcz, Skinner, Smirnov, Stansby,
+  Stinson, Tavant, Ulrich, Varnish, Vo, Xu, Yip, Zhang, Kastek, Roberts, Wu,
+  and Trestan}}]{PlasmaPy}
+\bibinfo{author}{\bibnamefont{Murphy}, \bibfnamefont{Nicholas~A.}},
+  \bibinfo{author}{\bibfnamefont{Erik} \bibnamefont{Everson}},
+  \bibinfo{author}{\bibfnamefont{Dominik} \bibnamefont{Stańczak-Marikin}},
+  \bibinfo{author}{\bibfnamefont{Peter} \bibnamefont{Heuer}},
+  \bibinfo{author}{\bibfnamefont{Pawel} \bibnamefont{Kozlowski}},
+  \bibinfo{author}{\bibfnamefont{Ritiek} \bibnamefont{Malhotra}},
+  \bibinfo{author}{\bibfnamefont{Christopher} \bibnamefont{Arran}},
+  \bibinfo{author}{\bibfnamefont{Haman} \bibnamefont{Bagherianlemraski}},
+  \bibinfo{author}{\bibfnamefont{Jasper} \bibnamefont{Beckers}},
+  \bibinfo{author}{\bibfnamefont{Justin} \bibnamefont{Bergeron}},
+  \bibinfo{author}{\bibfnamefont{Ludovico} \bibnamefont{Bessi}},
+  \bibinfo{author}{\bibfnamefont{Riley} \bibnamefont{Britten}},
+  \bibinfo{author}{\bibfnamefont{Shane} \bibnamefont{Brown}},
+  \bibinfo{author}{\bibfnamefont{Khalil} \bibnamefont{Bryant}},
+  \bibinfo{author}{\bibfnamefont{Sean} \bibnamefont{Carroll}},
+  \bibinfo{author}{\bibfnamefont{Sean} \bibnamefont{Chambers}},
+  \bibinfo{author}{\bibfnamefont{Ankur} \bibnamefont{Chattopadhyay}},
+  \bibinfo{author}{\bibfnamefont{Apoorv} \bibnamefont{Choubey}},
+  \bibinfo{author}{\bibfnamefont{Jacob} \bibnamefont{Deal}},
+  \bibinfo{author}{\bibfnamefont{Diego~A.} \bibnamefont{Diaz~Riega}},
+  \bibinfo{author}{\bibfnamefont{Fionnlagh~Mackenzie} \bibnamefont{Dover}},
+  \bibinfo{author}{\bibfnamefont{David} \bibnamefont{Drozdov}},
+  \bibinfo{author}{\bibfnamefont{Tiger} \bibnamefont{Du}},
+  \bibinfo{author}{\bibfnamefont{Leah} \bibnamefont{Einhorn}},
+  \bibinfo{author}{\bibfnamefont{Thomas} \bibnamefont{Fan}},
+  \bibinfo{author}{\bibfnamefont{Samaiyah~I.} \bibnamefont{Farid}},
+  \bibinfo{author}{\bibfnamefont{Michael} \bibnamefont{Fischer}},
+  \bibinfo{author}{\bibfnamefont{Bryan} \bibnamefont{Foo}},
+  \bibinfo{author}{\bibfnamefont{Rajagopalan} \bibnamefont{Gangadharan}},
+  \bibinfo{author}{\bibfnamefont{Brian} \bibnamefont{Goodall}},
+  \bibinfo{author}{\bibfnamefont{Marco} \bibnamefont{Gorelli}},
+  \bibinfo{author}{\bibfnamefont{Graham} \bibnamefont{Goudeau}},
+  \bibinfo{author}{\bibfnamefont{Silvina} \bibnamefont{Guidoni}},
+  \bibinfo{author}{\bibfnamefont{Colby} \bibnamefont{Haggerty}},
+  \bibinfo{author}{\bibfnamefont{Raymon~Skjørten} \bibnamefont{Hansen}},
+  \bibinfo{author}{\bibfnamefont{Julien} \bibnamefont{Hillairet}},
+  \bibinfo{author}{\bibfnamefont{Chris} \bibnamefont{Hoang}},
+  \bibinfo{author}{\bibfnamefont{Poh~Zi} \bibnamefont{How}},
+  \bibinfo{author}{\bibfnamefont{Yi-Min} \bibnamefont{Huang}},
+  \bibinfo{author}{\bibfnamefont{Nabil} \bibnamefont{Humphrey}},
+  \bibinfo{author}{\bibfnamefont{Maria} \bibnamefont{Isupova}},
+  \bibinfo{author}{\bibfnamefont{Alexis} \bibnamefont{Jeandet}},
+  \bibinfo{author}{\bibfnamefont{Elliot} \bibnamefont{Johnson}},
+  \bibinfo{author}{\bibfnamefont{James} \bibnamefont{Kent}},
+  \bibinfo{author}{\bibfnamefont{Siddharth} \bibnamefont{Kulshrestha}},
+  \bibinfo{author}{\bibfnamefont{Piotr} \bibnamefont{Kuszaj}},
+  \bibinfo{author}{\bibfnamefont{Alf} \bibnamefont{Köhn-Seemann}},
+  \bibinfo{author}{\bibfnamefont{Samuel} \bibnamefont{Langendorf}},
+  \bibinfo{author}{\bibfnamefont{Anna} \bibnamefont{Lanteri}},
+  \bibinfo{author}{\bibfnamefont{Terrance~Takho} \bibnamefont{Lee}},
+  \bibinfo{author}{\bibfnamefont{Drew} \bibnamefont{Leonard}},
+  \bibinfo{author}{\bibfnamefont{Nicolas} \bibnamefont{Lequette}},
+  \bibinfo{author}{\bibfnamefont{Pey~Lian} \bibnamefont{Lim}},
+  \bibinfo{author}{\bibfnamefont{Aditya} \bibnamefont{Magarde}},
+  \bibinfo{author}{\bibfnamefont{Joao~Victor} \bibnamefont{Martinelli}},
+  \bibinfo{author}{\bibfnamefont{Isaias} \bibnamefont{McHardy}},
+  \bibinfo{author}{\bibfnamefont{Dhawal} \bibnamefont{Modi}},
+  \bibinfo{author}{\bibfnamefont{Kevin} \bibnamefont{Montes}},
+  \bibinfo{author}{\bibfnamefont{Stuart} \bibnamefont{Mumford}},
+  \bibinfo{author}{\bibfnamefont{Joshua} \bibnamefont{Munn}},
+  \bibinfo{author}{\bibfnamefont{Leo} \bibnamefont{Murphy}},
+  \bibinfo{author}{\bibfnamefont{Suzanne} \bibnamefont{Nie}},
+  \bibinfo{author}{\bibfnamefont{Mahima} \bibnamefont{Pannala}},
+  \bibinfo{author}{\bibfnamefont{Tulasi} \bibnamefont{Parashar}},
+  \bibinfo{author}{\bibfnamefont{Neil} \bibnamefont{Patel}},
+  \bibinfo{author}{\bibfnamefont{Francisco~Silva} \bibnamefont{Pavon}},
+  \bibinfo{author}{\bibfnamefont{Jakub} \bibnamefont{Polak}},
+  \bibinfo{author}{\bibfnamefont{Roberto~Díaz} \bibnamefont{Pérez}},
+  \bibinfo{author}{\bibfnamefont{Ramiz} \bibnamefont{Qudsi}},
+  \bibinfo{author}{\bibfnamefont{Raajit} \bibnamefont{Raj}},
+  \bibinfo{author}{\bibfnamefont{Vishwas} \bibnamefont{Rajashekar}},
+  \bibinfo{author}{\bibfnamefont{Afzal} \bibnamefont{Rao}},
+  \bibinfo{author}{\bibfnamefont{Steve} \bibnamefont{Richardson}},
+  \bibinfo{author}{\bibfnamefont{Reynaldo} \bibnamefont{Rojas~Zelaya}},
+  \bibinfo{author}{\bibfnamefont{Armando} \bibnamefont{Salcido}},
+  \bibinfo{author}{\bibfnamefont{Antonia} \bibnamefont{Savcheva}},
+  \bibinfo{author}{\bibfnamefont{Chengcai} \bibnamefont{Shen}},
+  \bibinfo{author}{\bibfnamefont{Andrew} \bibnamefont{Sheng}},
+  \bibinfo{author}{\bibfnamefont{Dawa~Nurbu} \bibnamefont{Sherpa}},
+  \bibinfo{author}{\bibfnamefont{Luciano} \bibnamefont{Silvestri}},
+  \bibinfo{author}{\bibfnamefont{Angad} \bibnamefont{Singh}},
+  \bibinfo{author}{\bibfnamefont{Ankit} \bibnamefont{Singh}},
+  \bibinfo{author}{\bibfnamefont{Brigitta} \bibnamefont{Sipőcz}},
+  \bibinfo{author}{\bibfnamefont{Cody} \bibnamefont{Skinner}},
+  \bibinfo{author}{\bibfnamefont{Nikita} \bibnamefont{Smirnov}},
+  \bibinfo{author}{\bibfnamefont{David} \bibnamefont{Stansby}},
+  \bibinfo{author}{\bibfnamefont{Tomás} \bibnamefont{Stinson}},
+  \bibinfo{author}{\bibfnamefont{Antoine} \bibnamefont{Tavant}},
+  \bibinfo{author}{\bibfnamefont{Thomas} \bibnamefont{Ulrich}},
+  \bibinfo{author}{\bibfnamefont{Thomas} \bibnamefont{Varnish}},
+  \bibinfo{author}{\bibfnamefont{Tien} \bibnamefont{Vo}},
+  \bibinfo{author}{\bibfnamefont{Sixue} \bibnamefont{Xu}},
+  \bibinfo{author}{\bibfnamefont{Chun~Hei} \bibnamefont{Yip}},
+  \bibinfo{author}{\bibfnamefont{Carol} \bibnamefont{Zhang}},
+  \bibinfo{author}{\bibfnamefont{Marcin} \bibnamefont{Kastek}},
+  \bibinfo{author}{\bibfnamefont{Jayden} \bibnamefont{Roberts}},
+  \bibinfo{author}{\bibfnamefont{Tingfeng} \bibnamefont{Wu}}, \bibnamefont{and}
+  \bibinfo{author}{\bibfnamefont{Simon} \bibnamefont{Trestan}}.
+  \bibinfo{year}{2022}.
+\newblock \bibinfo{title}{Plasmapy}.
+
 \bibitem[{\citenamefont{Ohia et~al.}(2012)\citenamefont{Ohia, Egedal, Lukin,
   Daughton, and Le}}]{Ohia_Egedal_Lukin_Daughton_Le_2012}
 \bibinfo{author}{\bibnamefont{Ohia}, \bibfnamefont{O.}},
@@ -268,6 +412,27 @@
   Vacuum, Surfaces, and Films}}
   \bibinfo{volume}{8}(\bibinfo{number}{3}):\penalty0
   \bibinfo{pages}{1663--1667}.
+
+\bibitem[{\citenamefont{Yamada et~al.}(2010)\citenamefont{Yamada, Kulsrud, and
+  Ji}}]{Yamada_Kulsrud_Ji_2010}
+\bibinfo{author}{\bibnamefont{Yamada}, \bibfnamefont{Masaaki}},
+  \bibinfo{author}{\bibfnamefont{Russell} \bibnamefont{Kulsrud}},
+  \bibnamefont{and} \bibinfo{author}{\bibfnamefont{Hantao} \bibnamefont{Ji}}.
+  \bibinfo{year}{2010}.
+\newblock \bibinfo{title}{Magnetic reconnection}.
+\newblock \emph{\bibinfo{journal}{Reviews of Modern Physics}}
+  \bibinfo{volume}{82}(\bibinfo{number}{1}):\penalty0
+  \bibinfo{pages}{603--664}.
+
+\bibitem[{\citenamefont{Zweibel and Yamada}(2009)}]{Zweibel_Yamada_2009}
+\bibinfo{author}{\bibnamefont{Zweibel}, \bibfnamefont{Ellen~G.}},
+  \bibnamefont{and} \bibinfo{author}{\bibfnamefont{Masaaki}
+  \bibnamefont{Yamada}}. \bibinfo{year}{2009}.
+\newblock \bibinfo{title}{Magnetic reconnection in astrophysical and laboratory
+  plasmas}.
+\newblock \emph{\bibinfo{journal}{Annual Review of Astronomy and Astrophysics}}
+  \bibinfo{volume}{47}(\bibinfo{number}{1}):\penalty0
+  \bibinfo{pages}{291--332}.
 
 \bibitem[{\citenamefont{Zwolak et~al.}(2007)\citenamefont{Zwolak, Boggs, and
   Watson}}]{Zwolak_et_al_2007}

@@ -324,7 +324,13 @@ where $V_\text{cap} \approx 5$ kV is the capacitor bank initial voltage, $\tau_v
     \label{fig:simulation-setup}
 \end{figure*}
 
-Simulation results can be seen in Fig. \ref{fig:simulation-setup}. Panels a and b show the initial plasma distribution and corresponding wave speeds for the Alfv\'en and fast magnetosonic waves ($v_A$ and $v_{ms}$). Panel d shows streamlines traveling at $v_A$ and $v_{ms}$ which are very similar for our low beta system. Both streamlines match the speed of the wavefront caused by the initial change in the boundary velocity (panel c). Finally, panel e shows the expected $\partial_t B_z$ signal which matches well with the measured signal from Fig. \ref{fig:experimental-evolution}, panel a.
+Simulation results can be seen in Fig. \ref{fig:simulation-setup}. Panels a and b show the initial plasma distribution and corresponding wave speeds for the Alfv\'en and fast magnetosonic waves where
+\begin{align}
+    v_s &\approx \sqrt{\frac{\gamma T_0}{m_i}} \\
+    v_A &\approx \frac{B_0}{\sqrt{\mu_0 n_0 m_i}} \\
+    v_{ms} &= \sqrt{v_A^2 + v_s^2}.
+\end{align}
+The wave propogates radially inwards while all the magnetic field components are in the $z$ and $\phi$ directions so the propogation angle is always $90^\circ$. Panel d shows streamlines traveling at $v_A$ and $v_{ms}$ which are very similar for our low beta system. Both streamlines match the speed of the wavefront caused by the initial change in the boundary velocity (panel c). Finally, panel e shows the expected $\partial_t B_z$ signal which matches well with the measured signal from Fig. \ref{fig:experimental-evolution}, panel a.
 
 The $\partial_t B_z$ response is derived from equation \ref{eq:mhd_ohms_faradays_linear_displacement} where we find
 \begin{align*}
@@ -346,152 +352,184 @@ Now that we know the wave travels at the fast magnetosonic speed according to th
 
 \begin{figure}[]
     \centering
-    
+    \includegraphics[height=0.9\textheight]{chapter_pressure_wave/figures/example_bdot_traces.png}
     \caption{Traces from the flux array showing what the raw Bdot traces look like.}
     \label{fig:pressure_wave_raw_bdot_traces}
 \end{figure}
 
+We need some way get the wave speed from the data and a simple way of doing so is to set some limiting value of Bdot. When the measured Bdot crosses that threshold we say that the wave has passed the probe.
+
 \subsubsection{Wave tracking}
 
-\paragraph{Edge finding}
+This very simple thresholding method works okay but requires some fine tuning to avoid various issues. Figure \ref{fig:pressure_wave_raw_bdot_traces} shows some example Bdot traces from the flux array for a single shot. Here we can see common mode noise (which is very large around time index 1870) exists on all channels and thus the interpolated data (blue) has wild oscillations there. Without some work, the threshold would often say that the wave passes the probe much earlier than it actually does.
 
-\paragraph{Inertia}
+\paragraph{Smoothing} The easiest solution is to just apply some amount of smoothing to the data to get rid of these high frequency oscillations. The smoothed signal, as shown in green in figure \ref{fig:pressure_wave_raw_bdot_traces} shows marked improvement over the raw interpolated signal in blue.
 
-\paragraph{Monte-carlo}
+\paragraph{Inertia} One solution to this problem is to give the wave some `intertia'. Instead of just choosing the first location where the Bdot signal is greater than the threshold, we do an iterative process. We start by finding the crossing point for the two probes at the highest radius. Then we can calculate $v_0 = \Delta r / \Delta t = (r_1 - r_0) / (t_1 - t_0)$. Then for finding $t_2$ ($r_2$ having been set by the radius of the probe) we only consider times where $t_2 > t_1 + C (r_2 - r_1) / v_0$. This forces the wave to keep up some amount of speed which we can determine by choosing $C$, the inertia factor.
 
-\paragraph{Centered finite difference}
-
-\paragraph{Mean + Standard Deviation of Speed}
+\paragraph{Monte-carlo} To get an understanding of the error in this wave finding we do a Monte-carlo scheme to fit many possible wavefronts to the data. Then we can calculate statistics on that distribution of wavefronts. The parameters we vary are the inertia coefficient, $C$, and the threshold value for the wave.
 
 \subsection{Getting the density}
 
-\subsubsection{Using the alfven speed}
-
-% \subsubsection{Using fast magnetosonic speed} % This is mentioned in the future work section.
+Once we have the wave speed it is a simple enough process to extract the plasma density. If we knew the initial temperature profile, we could use the full magnetosonic wave relation but for simplicity and to reduce the need for a temperature measurement, our low beta system let's $v_{ms} \approx v_A$. With our known initial magnetic field which is only slightly perturbed by the plasma we can then solve for $n_0$ finding
+\begin{equation}
+    n_0 \approx \frac{B_0^2}{\mu_0 m_i v_A^2}
+\end{equation}
 
 \subsection{Minimum measurable density}
 
-\subsubsection{Assuming sample resolution}
+It can be seen that as the density decreases, the speed of the wave increases and this can lead to resolvability issues where the wave is traveling so quickly that it passes two probes in the time it takes between sample points. A first approximation to this minimum can be written as
+\begin{align}
+    n_\text{min} &= \frac{B_0^2}{\mu_0 m_i v_{\text{max}}^2} \\
+    v_\text{max} &= (r_{i + 1} - r_i) f
+\end{align}
+where $f = 10$ MHz is the sampling frequency of the digitizer.
 
-\paragraph{What does this assumption derive}
+We find in practice that this overestimates the minimum measurable density because it assumes that we are limiting the wave crossing time to match with the time sampling. Since we instead find the crossing point of the interpolated data this means we have subsample resolution for our Bdot data so a better approximation derived empirically is
+\begin{equation}
+    v_\text{max} = (r_{N - 1} - r_0) \frac{f}{2}
+\end{equation}
+where $N$ is the number of probes.
 
-\paragraph{How does it compare to the data}
+% \subsubsection{Assuming sample resolution}
 
-\paragraph{We need a better approximation}
+% \paragraph{What does this assumption derive}
 
-\subsubsection{Assuming sub-sample resolution}
+% \paragraph{How does it compare to the data}
 
-\begin{figure}
-    \caption{Data vs. crude minimum density vs. empirical minimum density}
-\end{figure}
+% \paragraph{We need a better approximation}
 
-\subsubsection{A more complex model assuming the plasma is a step function * linear}
+% \subsubsection{Assuming sub-sample resolution}
 
-\begin{figure}
-    \caption{Diagram of what the more complex model looks like.}
-\end{figure}
+% \begin{figure}
+%     \caption{Data vs. crude minimum density vs. empirical minimum density}
+% \end{figure}
 
-\section{Does it reproduce langmuir probe results}
+% \subsubsection{A more complex model assuming the plasma is a step function * linear}
+
+% \begin{figure}
+%     \caption{Diagram of what the more complex model looks like.}
+% \end{figure}
+
+\section{Results}
+
+Now that we have a method of our applying our simulation knowledge to the experiment, we can compare the results of this method to that of a multi-tip Langmuir probe as described in chapter \ref{sch:multitip_probe}.
 
 \subsection{Experimental setup}
 
+A CAD diagram of the experimental setup used for these results can be seen in figure \ref{fig:pressure_wave_brb_cad_rendering}. We measure the magnetic field evolution using the flux arrays which are not shown in the figure but give us density profiles at many different $z$ positions. We find that all of the Bdot signals look very similar so we do have a fair amount of $z$ symmetry. We insert the multi-tip Langmuir probe into a port on the equator such that it passes between the two halves of the drive cylinder and measures along a radial chord. We use the drive cylinder because of it's symmetry in creating a uniformly antiparallel $B_z$.
+
 \begin{figure}
+    \centering
+    \includegraphics{chapter_pressure_wave/figures/brb_cad_drive_cylinder.png}
     \caption{CAD rendering of BRB w/ drive cylinder, flux probes, and Te probe.}
-    \label{fig:brb_cad_rendering}
+    \label{fig:pressure_wave_brb_cad_rendering}
 \end{figure}
 
-\subsubsection{Drive cylinder}
-
-\subsubsection{Te probe along equator}
-
-\subsection{Results}
+\subsection{Langmuir vs. Pressure Wave Profiles}
 
 \begin{figure}
-    \caption{Plot of langmuir density and wave density}
+    \centering
+    \includegraphics{chapter_pressure_wave/figures/wave_density_vs_probe_density.png}
+    \caption{Plot of langmuir density and wave density. The minimum probe density is described in \ref{sss:multitip_min_density}.}
+    \label{fig:pressure_wave_langmuir_vs_wave_density}
 \end{figure}
 
-\subsubsection{Langmuir probe minimum measurable density}
+\subsubsection{Density Comparison}
+
+Figure \ref{fig:pressure_wave_langmuir_vs_wave_density} shows a comparison between measurements of the initial plasma density using the Langmuir over many shots (each point in the plot beting a separate shot) and the pressure wave profiles. Each orange line is a single shot with the full density profile and we can see that there was an outlier shot with far lower density. The advantage of the pressure wave method is that each shot fully reproduces the radial density profile (for $N$ Bdot coils it would take $N$ shots with the Langmuir probe to get the same result).
+
+It can be noted that the Langmuir probe and the pressure wave show very similar trends except when the probe is nearing it's minimum measurable density. Additionally, we have used the pressure wave as absolute calibration of the Langmuir probe area so the scaling of the scatter points is set after the fact.
+
+\subsubsection{Wave Evolution}
+
+As we have the entire simulated evolution of the magnetic field, we can compare the experimental measurements of figure \ref{fig:pressure_wave_raw_bdot_traces} to that simulated in figure \ref{fig:pressure_wave_simulated_bdot_trace}. We see that in the simulation, high frequency modes grow as the wave moves radially inwards whereas the wave smooths as it propogates from experimental results.
+
+We believe that the cause of this may be from two-fluid effects where the ions and electrons decouple at a high enough frequency such that the wave speed shifts. Additionally, there may be some dissipation of the wave energy and lack of cylindrical symmetry that lead to a decrease in wave height.
 
 \begin{figure}
-    \caption{Diagram of sheath overlap for multitip langmuir probe}
+    \centering
+    \includegraphics{chapter_pressure_wave/figures/bdot_w_r_cuts.png}
+    \caption{The left plot shows the expected magnetic field evolution from the simulation and the right plot shows the evolution of $\partial_t B_z$ in time for a variety of radii which are in positions similar to figure \ref{fig:pressure_wave_raw_bdot_traces}. The orange line shows the wavefront with orange dots being the points where the wave crosses the radial position. The right panel shows the growth of high frequency modes in the wavefront.}
+    \label{fig:pressure_wave_simulated_bdot_trace}
 \end{figure}
 
-\subsubsection{Impacts of simple Langmuir model vs BRL}
-
-Refer to figure in Te section showing how it matters.
-
-\subsubsection{What happens to the wave shape in simulation vs. experiment}
-
-\paragraph{Two-fluid dispersion}
+\paragraph{Two-fluid dispersion} The two-fluid dispersion relation derived by \cite{Bellan_2012} and implemented in \cite{PlasmaPy} is shown in figure \ref{fig:pressure_wave_two_fluid_dispersion}. It can be seen that the high frequency components of the wavefront are expected to move slower as compared to frequencies below the MHD cutoff, which for the given parameters is $\approx 9 \cdot 10^5$ Hz.
 
 \begin{figure}
-    \caption{Plot of two-fluid dispresion relation}
+    \centering
+    \includegraphics{chapter_pressure_wave/figures/two_fluid_velocity.png}
+    \caption{The phase and group velocities for the fast magnetosonic wave as a function of frequency. The MHD cutoff is set to when the phase velocity differs by more than 10\% of the fast magnetosonic speed derived from MHD. The plasma parameters here are $n = 10^{18}$ m$^{-3}$, $B = 5$ mT, $T_e = 5$ eV, $T_i = 1$ eV, and propogation angle $\theta = 90^\circ$.}
+    \label{fig:pressure_wave_two_fluid_dispersion}
 \end{figure}
 
-\paragraph{How might we expect this to change the wave}
+\paragraph{Effect on Wave} This means that all the high frequency components will be delayed and the wavefront should smooth out as it propogates inwards which is in fact what we see in figure \ref{fig:pressure_wave_raw_bdot_traces}. Now the dispersion relation does not say anything about how those high frequency components should dissipate but because we don't see their existence (unless they are hidden in the noise) there should be some other effect occurring to wipe them out.
 
-\paragraph{How to simulate evolution approximately}
+% TODO: Add simulation results if I have any.
+% \paragraph{How to simulate evolution approximately}
 
-\paragraph{Dispersion simulation results}
+% \paragraph{Dispersion simulation results}
 
-\begin{figure}
-    \caption{Results of simulating application of dispresion relation to pressure wave}
-\end{figure}
+% \begin{figure}
+%     \caption{Results of simulating application of dispresion relation to pressure wave}
+% \end{figure}
 
-\section{Applications}
+% TODO: Figure out if I should talk about this applications stuff.
+% \section{Applications}
 
-\subsection{Base requirements}
+% \subsection{System Requirements}
 
-\subsubsection{Cylindrical symmetry}
+% \subsubsection{Cylindrical symmetry}
 
-\subsubsection{Releasing magnetic pressure at high radius}
+% \subsubsection{Releasing magnetic pressure at high radius}
 
-\subsubsection{Measurements along a radial chord}
+% \subsubsection{Measurements along a radial chord}
 
-\subsubsection{Known initial field}
+% \subsubsection{Known initial field}
 
-\subsection{Other machines where this is applicable}
+% \subsection{Other Machines}
 
-LAPD \& MRX
+% LAPD \& MRX
 
-\subsection{Diagnosing gun failures}
+% \subsection{Diagnosing Gun failures}
 
-\begin{figure}
-    \caption{Initial density before and after many shots}
-\end{figure}
+% \begin{figure}
+%     \caption{Initial density before and after many shots}
+% \end{figure}
 
-\subsection{Measuring effect of different gun number and Helmholtz strength}
+% \subsection{Measuring effect of different gun number and Helmholtz strength}
 
-\subsubsection{Gun number}
+% \subsubsection{Gun number}
 
-\begin{figure}
-    \caption{Initial density for varying gun number}
-\end{figure}
+% \begin{figure}
+%     \caption{Initial density for varying gun number}
+% \end{figure}
 
-\subsubsection{Helmholtz}
+% \subsubsection{Helmholtz}
 
-\begin{figure}
-    \caption{Initial density for varying Helmholtz}
-\end{figure}
+% \begin{figure}
+%     \caption{Initial density for varying Helmholtz}
+% \end{figure}
 
-\subsection{Measuring diffusion coefficient}
+% \subsection{Measuring diffusion coefficient}
 
-\subsubsection{Diffusion theoretical model}
+% \subsubsection{Diffusion theoretical model}
 
-\begin{figure}
-    \caption{Diagram of flux mechanisms.}
-\end{figure}
+% \begin{figure}
+%     \caption{Diagram of flux mechanisms.}
+% \end{figure}
 
-\subsubsection{Diffusion simulations}
+% \subsubsection{Diffusion simulations}
 
-\begin{figure}
-    \caption{Example diffusion simulation}
-\end{figure}
+% \begin{figure}
+%     \caption{Example diffusion simulation}
+% \end{figure}
 
-\subsubsection{Applications of pressure wave model}
+% \subsubsection{Applications of pressure wave model}
 
-I think I need to do a bit more research here to show that we can actually extract a diffusion coefficient.
+% I think I need to do a bit more research here to show that we can actually extract a diffusion coefficient.
 
+% TODO: What all should I include in this section?
 \section{Future Research}
 
 \subsection{Better wave tracking}

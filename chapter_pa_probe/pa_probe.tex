@@ -632,7 +632,7 @@ As of this writing, the best way to take care of this effect is to ignore it. Th
 
 We assume that we have a drifting bi-Maxwellian for the electrons where the temperature parallel to the magnetic field, $\vb{B}$, is different than the temperature perpendicular to it. If we let the drift velocity be $\vb{v_D}$ then we can write our distrubution function as the following:
 \begin{equation}
-    f_e(\vb{v}) = \left(\frac{m_e}{2\pi k}\right)^{3/2} \frac{n}{\sqrt{T_{e\perp}^2 T_{e\parallel}}} \exp\left[-\frac{e m_e}{2} \left(\frac{(\vb{v} - \vb{v_D})_\parallel^2}{T_{e\parallel}} + \frac{(\vb{v} - \vb{v_D})_\perp^2}{T_{e\perp}}\right)\right].
+    f_e(\vb{v}) = \left(\frac{e m_e}{2\pi}\right)^{3/2} \frac{n}{\sqrt{T_{e\perp}^2 T_{e\parallel}}} \exp\left[-\frac{e m_e}{2} \left(\frac{(\vb{v} - \vb{v_D})_\parallel^2}{T_{e\parallel}} + \frac{(\vb{v} - \vb{v_D})_\perp^2}{T_{e\perp}}\right)\right].
     \label{eq:drifting_bimaxwellian}
 \end{equation}
 
@@ -773,6 +773,7 @@ The radar plot has a direction component which is the angle around the circle. F
 \end{figure}
 
 \subsection{Individual tip fitting}
+\label{sss:pa_individual_tip_fitting}
 
 As an alternative to the full model we just described, let's look into another option for extracting the plasma distribution. Instead of fitting all the tips at once, we can try fitting each using a routine similar to that for the multitip Langmuir probe and then combining each of those individual fits.
 
@@ -789,6 +790,7 @@ Let's take a look as to the options we have available for fitting each tip separ
 In sections \ref{sss:multitip_hutchinson_theory} and \ref{sss:multitip_brl_theory} we discussed two plasma theories to predict the expected current to a simple Langmuir probe given a set of plasma parameters describing an unmagnetized Maxwellian plasma. Both of these methods, and many other Langmuir probe theories, show the same general trends for the expected current to a Langmuir probe independent of theory approximations and magnetization. Thus one thing we can try doing is applying these theories to the PA probe in which we attempt to fit each tip using the code architecture as described in \ref{sss:multitip_odr}.
 
 \paragraph{Exponential}
+\label{spg:pa_theory_exponential}
 
 While both of the previous theories, Hutchinsons and BRL, work well for a normal Langmuir probe, we find that the geometry of our system may lead to different ratios of the electron to ion current than expected from one of these physically derived theories. Why might that be?
 
@@ -820,7 +822,7 @@ All the parameters to fit ($A$, $B$, and $C$) are greater than zero.
 
 Using Hutchinsons model, equation \ref{eq:multitip_hutchinson_model}, we can write the terms in the exponential model, eq. \ref{eq:pa_exp_model}, as
 \begin{align}
-    A(n_e, T_e; V_\text{plasma}) &= n_e e \sqrt{\frac{e T_e}{m_i}} \left[\frac{1}{2} \sqrt{\frac{2 m_i}{\pi m_e}} \exp\left(\frac{- V_\text{plasma}}{T_e}\right)\right] \\
+    A(n_e, T_e; V_\text{plasma}) &= n_e e \sqrt{\frac{e T_e}{m_i}} \left[\frac{1}{2} \sqrt{\frac{2 m_i}{\pi m_e}} \exp\left(\frac{- V_\text{plasma}}{T_e}\right)\right] \label{eq:pa_plasma_to_exp_params_A}\\
     B(T_e) &= T_e \\
     C(n_i, T_e; V_\text{plasma}) &= n_i e \sqrt{\frac{e T_e}{m_i}} \exp\left(-\frac{1}{2}\right).
 \end{align}
@@ -853,7 +855,7 @@ Using any of the aforementioned theories we can get individual plasma parameters
 
 Since each tip is measuring it's own value, we need some way to extract the temperature anisotropy. A good way to do that is to take spherical harmonics of the system with the magnetic field direction being the polar axis. By using spherical harmonics that only vary as a function of polar angle, $\theta$, this let's get only the components either parallel or perpendicular to the magnetic field. To note, the distribution or measurements may not be symmetric about the magnetic field but we only care for the pressure anisotropy which is gyroaveraged. 
 
-\subparagraph{Temperature by direction}
+\subparagraph{Parallel and Perpendicular Temperature}
 
 If we ignore the drift velocity in the distribution function (since drifts in our experiment are small relative to the electron thermal speed), equation \ref{eq:drifting_bimaxwellian}, we find that the term in the exponential coefficient takes the form
 \begin{equation}
@@ -896,6 +898,20 @@ which is larger than $T_\text{avg}$ for all $T_\parallel / T_\perp$. This can be
     \label{fig:pa_t_averaging}
 \end{figure}
 
+\subparagraph{Trimaxwellian Temperature}
+
+In calculating the parallel and perpendicular temperature we enforced that the temperatures of the distribution had to be in the coordinate system of the local magnetic field direction. This forces us to only be able to see temperature differences aligned with the field and thus may introduce some errors into our analysis. Additionally we don't know if the distribution is actually rotating with the magnetic field.
+
+Let's fix this by using a trimaxwellian distribution given by
+\begin{equation}
+    f(\vb{v}) \propto \exp\left(-\frac{(\vb{v}\cdot\hat{t}_1)^2}{T_1} -\frac{(\vb{v}\cdot\hat{t}_2)^2}{T_2} -\frac{(\vb{v}\cdot(\hat{t}_1 \cross \hat{t}_2))^2}{T_3}\right)
+\end{equation}
+where $\hat{t}_1$ and $\hat{t}_2$ are orthonormal and aligned with $T_1$ and $T_2$ respectively ($T_3$ having been aligned with the third basis vector $\hat{t}_3 = \hat{t}_1 \cross \hat{t}_2$). If we define a spherical coordinate system with $\hat{t}_1$ as the polar axis we can then write
+\begin{equation}
+    \frac{1}{T_\text{tri}(\theta', \phi')} = \frac{\cos^2\theta'}{T_1} + \frac{\sin^2\theta'\cos^2\phi'}{T_2} + \frac{\sin^2\theta'\sin^2\phi'}{T_3}.
+\end{equation}
+We leave it as an exercise to the reader to show that this reproduces the bimaxwellian inverse temperature equation.
+
 \subparagraph{Ion Drift Velocity}
 
 From equation \ref{eq:pa_ion_current_density_full} we can see that the logarithm of the ion current density looks like it could be decomposed into spherical harmonics and we could thus extract the plasma drift. We already fit $n_i$ which in our simple model is proportional to the ion current density. Thus let's examine how we might do so.
@@ -935,7 +951,7 @@ We can see that $c_{1,-1}$, $c_{1,0}$, and $c_{1,+1}$ let us figure out the flow
 
 \paragraph{Error bars}
 
-Monte-carlo % TODO: Finish this once I have settled on a method.
+In calculating the error on the drifts or temperatures, the simplest way to do so is using a Monte-carlo method. As an example, for calculating the drift we are taking spherical harmonics of the ion density. From the individual tip fits we get $n_i^j \pm \sigma_{ni}^j$. Thus we can sample that distribution and recalculate the drift velocity many times. This then gives us a distribution of drift velocities for a single time point that let's us derive some error bars. The same can be done for the temperatures where we recalculate the spherical harmonic coefficients many times for distributions of temperature measurements.
 
 \section{Curve Fitting}
 
@@ -1030,23 +1046,39 @@ Here we have normalized our averaging terms by the number of shots in each clust
 
 \subsubsection{Fits pretty good}
 
+\begin{figure}
+    \centering
+    \includegraphics[width=\textwidth]{chapter_pa_probe/figures/shell_fit_screen_grab.png}
+    \caption{Example fits for the shell data at a single time after combining many shots and clocking angles (shot numbers and angles can be seen in the figure title). The bottom two panels show the magnetic field evolution with error bars being the standard deviation between all the PA probe magnetic field measurements. The twelve panels }
+    \label{fig:pa_example_shell_fits}
+\end{figure}
+
 \subsection{Fitting core}
 
-\subsubsection{Fitting using full routine}
+In fitting the core IV curves we will fit each tip individually as the full IV-characteristic model suffers from some issues as described in \ref{sss:pa_individual_tip_fitting}.
 
-\paragraph{Slow}
+\subsubsection{Individual fitting method}
 
-\paragraph{Model not perfectly representative}
+We fit each tip using a similar routine as done for the core and multitip Langmuir probe in that we use Orthogonal Distance Regression (ODR) along with some plasma model.
 
-\subsubsection{Fitting tips independently}
+\paragraph{ODR errors}
 
-\paragraph{Individual fitting method}
+ODR requires a way to model the error on the measured parameters (i.e. the bias voltage and the various digitizer measurements) that propogates to the model to fit. In the past we were able to fully model the errors we expect to appear in $V_\text{probe}$ and $I_\text{probe}$ since both of those derived measurements depended solely on the measurements during a single shot. Thus if there is an error on $v_{ds}$ of $\sigma_{ds}$ then this leads to an error of $\sigma_{V,\text{probe}} = V_\text{probe}(v_{ds} + \sigma_{ds}) - V_\text{probe}(v_{ds})$ (a similar analysis can be done for $I_\text{probe}$ where this example used the variables as seen in equations \ref{eq:multitip_V_p} and \ref{eq:multitip_I_p}). Then all errors on the bias voltage and the probe signals can be incorporated into the fitting routine.
 
-\paragraph{Holding Vprobe constant}
+Since we will be using data averaged over many shots, there are other sources of error to account for like variable time delays and irreproducable plasma parameters. We find that a good alternative to a full error model is of the form
+\begin{align*}
+    \sigma_{I,pc} &= \tilde{I}_{pc} - I_{pc} \\
+    \sigma_{V,pc} &= \tilde{V}_{pc} - V_{pc}
+\end{align*}
+where the tilde represent the the measured signal with some error (like what $v_{ds}$ was in the last example). Now we need to choose some value for $\sigma_{I,pc}$ and $\sigma_{V,pc}$ where we've chosen $\sigma_{V,pc} = R_s \sigma_{I,pc}$. The magnitude of this error does not matter for fitting as ODR will try to minimize the error in the same way independent of a scaling factor on both errors. By choosing an error like this the fitting routing will use ellipses oriented along the current and voltage axis in the JV characteristic fitting (the example consisted of errors acting as skewed ellipses that were aligned with $J \approx V / R_s$).
 
 \paragraph{Exponential fitting method}
 
-\paragraph{Spherical harmonics}
+In modeling the expected JV characteristic we go with the model described in \ref{spg:pa_theory_exponential}. This model let's us split up the ion and electron densities which allows us to potentially extract out mach effects and also ignore some potential problems deriving from probe geometry.
+
+\paragraph{Constant Plasma Potential}
+
+Since the exponential model only depends on the plasma potential inside the exponential it can be seen that the electron density and plasma potential are degenerate (see equation \ref{eq:pa_plasma_to_exp_params_A}). Additionally, because of the strange configuration of the tip it is very difficult to derive what we expect the electron attracting regime to look like and thus can't use a full JV-characteristic model. Thus we hold the plasma potential constant at the value found by fitting the shell. The shell often has very good fits for the plasma potential (as can be seen in figure \ref{fig:pa_example_shell_fits}) which allows for this.
 
 \section{Results}
 

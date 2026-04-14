@@ -1,12 +1,13 @@
 \chapter{Multi-tip Langmuir Probe}
+\label{sch:multitip_probe}
 
 \section{What's a Langmuir probe}
 \label{sse:multitip_langmuir_what}
 
 % TODO: space out the below references for this section.
-Hershkowitz: \cite{Hershkowitz_1989}
-Hutchinson: \cite{Hutchinson_2002}
-Olson: \cite{Olson_2020}
+% Hershkowitz: \cite{Hershkowitz_1989}
+% Hutchinson: \cite{Hutchinson_2002}
+% Olson: \cite{Olson_2020}
 
 Plasma diagnostics make a broad phylogenetic tree ranging from the variety of plasma parameters they can measure to their size and complexity. In the Big Red Ball we prefer simplicity and cheapness to some of the wilder diagnostic varieties so a common probe that we use is a Langmuir probe.
 
@@ -434,7 +435,32 @@ This vastly improves the signal quality and helps to remove much of the noise we
 \end{figure}
 
 \begin{table}
-    \caption{Probe circuit component values}
+    \begin{center}
+        \begin{tabular}{|r|c|c|c|}
+            \hline
+            Name & Symbol & Value & Unit \\
+            \hline \hline
+            Digitizer current (signal) & $I_{ds}$ & \multirow{2}{*}{$\abs{I_d}<10^{-3}$} & \multirow{2}*{Amperes} \\
+            Digitizer current (noise) & $I_{dn}$ & & \\
+            \hline
+            \multirow{2}*{Digitizer voltage} & \multirow{2}*{$V_D$} & $\abs{V_D} < 1$ (TREX cells) & \multirow{2}*{Volts} \\
+            & & $\abs{V_D} < 2.5$ (ACQ2106) & \\
+            \hline
+            Sense resistor & $R_{s}$ & 470 & Ohms \\
+            \hline
+            Wire resistance & $R_{w}$ & $20$ & Ohms \\
+            \hline
+            \multirow{2}*{Digitizer resistance} & \multirow{2}*{$R_{D}$} & 508 (TREX cells) & \multirow{2}*{Ohms} \\
+            & & $1.6 \times 10^6$ (ACQ2106) & \\
+            \hline
+            \multirow{2}*{Divider resistance} & $R_1$ & $56\times 10^3$ & \multirow{2}{*}{Ohms} \\
+            & $R_2$ & 680 & \\
+            \hline
+            High pass capacitor & & $1 \times 10^{-6}$ & Farads \\
+            \hline
+        \end{tabular}
+    \end{center}
+    \caption{Multi-tip Langmuir probe circuit values for circuit elements seen in figure \ref{fig:multitip_simple_tip_circuit}.}
 \end{table}
 
 \subsubsection{Circuit Solution}
@@ -802,6 +828,7 @@ We can see a measurement from a shot where the probe tips were pointed in the $\
 \end{figure}
 
 \subsection{Minimum measurable density}
+\label{sss:multitip_min_density}
 
 Since we have many tips next to each other, we may need to worry about them interfering with each other and changing the IV-characteristic. This interference is directly related to the Debye length.
 
@@ -943,44 +970,34 @@ There are two issues with this:
 
 \section{Results}
 
-What is the benefit of doing all this work?
-
-\begin{figure}
-    \caption{Example fit using many shots, multiple local parameter fits, and errors}
-\end{figure}
-
 \subsection{Measurement of low densities}
 
-\subsubsection{How does Hutchinson vs BRL treat ion saturation}
-
-\subsubsection{What are the experimental predictions that Hutchinson vs BRL have}
+BRL helps significantly in better measuring low plasma densities because of two factors. First, when we have low densities we often have points in both the ion attracting and electron attracting regimes. Thus being able to include all of those data points in the fitting routine (especially as low density $\rightarrow$ low ion current $\rightarrow$ low signal-to-noise ratio) helps in avoiding noise issues. Secondly, at low densities and thus high ratios of $\lambda_D / r_\text{probe}$ the ion current varies as a function of $V_\text{probe}$. A discussion of these effects and benefits of BRL can be seen in figure \ref{fig:isat_comparison}.
 
 \begin{figure}
-    \caption{Plot of isat currents from BRL}
-\end{figure}
-
-\subsubsection{How does that change the results}
-
-\begin{figure}
-    \caption{Radial chord of initial density with Hutchinson vs BRL.}
+    \centering
+    \includegraphics[width=\textwidth]{chapter_te_probe/figures/isat_comparison.png}
+    \caption[Langmuir Ion Saturation Current vs. Pressure Wave Profile]{Here we show the effect of just using the measured ion saturation current as a function of the density vs. using the BRL modeled ion saturation current (see \ref{sss:multitip_brl_theory}). The top plot shows the pressure wave density profile in orange. The blue scatter points are the measured ion saturation currents and the green are the plasma densities. The middle plot shows the tip radius and how large the Debye length (derived from the pressure wave) is in comparison along with the electron mean free path, $\lambda_e$, which is always large. The bottom plot shows the expected IV-characteristic for varoius radii and the BRL effect can be seen as a change in the expected ion saturation current for different plasma potentials (this effect is not taken into account for the simple Hutchinson model from \ref{sss:multitip_hutchinson_theory}).}
+    \label{fig:isat_comparison}
 \end{figure}
 
 \subsection{Noise resilience}
 
-Not sure how best I should show this.
-
-\subsection{Fits more accurate}
-
-- Each fit uses many data points
-
-- Don't have to arbitrarily cutoff data points
-
-\subsection{Extracting electric fields}
-
-\subsubsection{Where do we expect electric fields to be}
-
-\subsubsection{Do we see them there}
-
 \begin{figure}
-    \caption{Comparison of expected E from Ohm's law and measured E.}
+  \centering
+  \includegraphics[width=\textwidth]{chapter_te_probe/figures/TREX_cell_vs_ACQ.png}
+  \caption{This figure shows the fit plasma parameters from the single ended TREX cells on the left and the differential D-TACQ digitizers on the right. The differential digitizers have a much higher sampling rate letting us better resolve the plasma dynamics and the error bars are far smaller. It can be seen that the fitting routine sometimes has erroneous fits as can be seen in the right panel at around $t = 0.018088$ s.}
+  \label{fig:multitip_trex_vs_dtacq}
 \end{figure}
+
+An example of the comparison between the single ended digitizers and the differential digitizers can be seen in figure \ref{fig:multitip_trex_vs_dtacq}. The initial oscillations and noise that occur due to the drive cap bank discharging affect the TREX cells a lot causing very large error bars on the plasma fits whereas this effect is much smaller for the differential measurements.
+
+% \subsection{Extracting electric fields}
+
+% \subsubsection{Where do we expect electric fields to be}
+
+% \subsubsection{Do we see them there}
+
+% \begin{figure}
+%     \caption{Comparison of expected E from Ohm's law and measured E.}
+% \end{figure}

@@ -1,14 +1,14 @@
 \addvspace {10pt}
-\contentsline {table}{\numberline {1.1}{\ignorespaces List of diagnostics used in the experiment and what they can measure.}}{7}{table.caption.23}%
-\contentsline {table}{\numberline {1.2}{\ignorespaces Lab vs. Space Parameters}}{9}{table.caption.24}%
+\contentsline {table}{\numberline {1.1}{\ignorespaces List of diagnostics used in the experiment and what they can measure.}}{9}{table.caption.24}%
+\contentsline {table}{\numberline {1.2}{\ignorespaces Lab vs. Space Parameters}}{10}{table.caption.25}%
 \addvspace {10pt}
-\contentsline {table}{\numberline {2.1}{\ignorespaces Parameters for normalization}}{22}{table.caption.28}%
+\contentsline {table}{\numberline {2.1}{\ignorespaces Parameters for normalization}}{23}{table.caption.29}%
 \addvspace {10pt}
-\contentsline {table}{\numberline {3.1}{\ignorespaces *Multitip Langmuir Probe Length Scales}}{42}{table.caption.50}%
-\contentsline {table}{\numberline {3.2}{\ignorespaces *Multitip Bias Circuit Component Values}}{48}{table.caption.54}%
-\contentsline {table}{\numberline {3.3}{\ignorespaces Probe circuit component values}}{51}{table.caption.59}%
-\contentsline {table}{\numberline {3.4}{\ignorespaces Chen BRL Parametrization}}{66}{table.caption.61}%
+\contentsline {table}{\numberline {3.1}{\ignorespaces *Multitip Langmuir Probe Length Scales}}{47}{table.caption.43}%
+\contentsline {table}{\numberline {3.2}{\ignorespaces *Multitip Bias Circuit Component Values}}{53}{table.caption.47}%
+\contentsline {table}{\numberline {3.3}{\ignorespaces Multi-tip Langmuir probe circuit values for circuit elements seen in figure \ref {fig:multitip_simple_tip_circuit}.}}{56}{table.caption.52}%
+\contentsline {table}{\numberline {3.4}{\ignorespaces Chen BRL Parametrization}}{71}{table.caption.54}%
 \addvspace {10pt}
-\contentsline {table}{\numberline {4.1}{\ignorespaces *Pressure Anisotropy Probe Length Scales}}{89}{table.caption.73}%
-\contentsline {table}{\numberline {4.2}{\ignorespaces Probe circuit component values}}{95}{table.caption.77}%
+\contentsline {table}{\numberline {4.1}{\ignorespaces *Pressure Anisotropy Probe Length Scales}}{96}{table.caption.64}%
+\contentsline {table}{\numberline {4.2}{\ignorespaces Probe circuit component values}}{102}{table.caption.68}%
 \addvspace {10pt}
