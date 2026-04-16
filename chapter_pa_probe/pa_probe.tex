@@ -909,8 +909,53 @@ Let's fix this by using a trimaxwellian distribution given by
 where $\hat{t}_1$ and $\hat{t}_2$ are orthonormal and aligned with $T_1$ and $T_2$ respectively ($T_3$ having been aligned with the third basis vector $\hat{t}_3 = \hat{t}_1 \cross \hat{t}_2$). If we define a spherical coordinate system with $\hat{t}_1$ as the polar axis we can then write
 \begin{equation}
     \frac{1}{T_\text{tri}(\theta', \phi')} = \frac{\cos^2\theta'}{T_1} + \frac{\sin^2\theta'\cos^2\phi'}{T_2} + \frac{\sin^2\theta'\sin^2\phi'}{T_3}.
+    \label{eq:pa_trimax_inv_temp}
 \end{equation}
 We leave it as an exercise to the reader to show that this reproduces the bimaxwellian inverse temperature equation.
+
+Now we don't know how our temperatures can be represented using a trimaxwellian so we are working to discover what the temperatures and their directions are. Thus let's use the unprimed coordinates $\theta$ and $\phi$ to represent the angles relative to whatever set of axis are convenient (in our case the machine cylindrical coordinates).
+
+We can construct a tensor from this inverse temperature equation by populating each element in the matrix, $T$, via
+\begin{align*}
+    T_{ij} &= \int x_i x_j \frac{1}{T(\theta, \phi)} \dd \Omega \\
+    &= c_{0,0} y_{0,0} + \sum_{m=-2}^2 c_{2,m}^{ij} y_{2,m}
+\end{align*}
+where
+\begin{align*}
+    c_{l,m}^{ij} &= \int x_i x_j Y_{l,m}(\theta, \phi) \dd \Omega \\
+    y_{l,m} &= \int \frac{1}{T(\theta, \phi)} Y_{l,m}(\theta, \phi) \dd \Omega.
+\end{align*}
+
+Now we can diagonalize this tensor into $T = P D P^{-1}$ where this just acts to rotate this arbitrarily directed trimaxwellian into a coordinate system aligned with $\hat{t}_1$ and $\hat{t}_2$. The eigenvectors give the directions of each temperature and the eigenvalues $\lambda_i$, which make up the diagonal of $D$, are just $T_{ij}'$ (the elements of $T$ in the coordinate system aligned with the temperatures).
+
+Thus we can solve for $y_{l,m}'$ by solving
+\begin{align}
+    \begin{bmatrix}
+        \lambda_1 \\
+        \lambda_2 \\
+        \lambda_3
+    \end{bmatrix} = \begin{bmatrix}
+        c_{0,0} & c_{2,0}^{xx} & c_{2,\pm 2}^{xx} \\
+        c_{0,0} & c_{2,0}^{yy} & c_{2,\pm 2}^{yy} \\
+        c_{0,0} & c_{2,0}^{zz} & c_{2,\pm 2}^{zz} \\
+    \end{bmatrix} \begin{bmatrix}
+        y_{0,0}' \\
+        y_{2,0}' \\
+        y_{2,+2}' + y_{2,-2}'
+    \end{bmatrix}.
+\end{align}
+Note that $c_{2,+2} = c_{2,-2}$ so we've combined those spherical harmonics.
+
+Returning to our inverse temperature equation, \ref{eq:pa_trimax_inv_temp}, we can split the inverse temperature into spherical harmonics as
+\begin{align*}
+    \frac{1}{T_\text{tri}(\theta', \phi')} =& y_{0,0}' Y_{0,0}(\theta', \phi') + y_{2,0}' Y_{2,0}(\theta', \phi') \\
+    &+ (y_{2,+2}' + y_{2,-2}') \left(Y_{2,+2}(\theta', \phi') + Y_{2,-2}(\theta', \phi')\right) \\
+    y_{0,0}' =& \frac{2\sqrt{\pi}}{3} \frac{T_1 (T_2 + T_3) + T_2 T_3}{T_1 T_2 T_3} \\
+    y_{2,0}' =& -\frac{2}{3} \sqrt{\frac{\pi}{5}} \frac{T_1 (T_2 + T_3) - 2 T_2 T_3}{T_1 T_2 T_3} \\
+    y_{2,+2}' + y_{2,-2}' =& -\sqrt{\frac{8 \pi}{15}} \frac{T_2 - T_3}{T_2 T_3}.
+\end{align*}
+These equations can be solved for the temperatures which along with the eigenvectors gives us the trimaxwellian temperatures and directions.
+
 
 \subparagraph{Ion Drift Velocity}
 
@@ -955,7 +1000,7 @@ In calculating the error on the drifts or temperatures, the simplest way to do s
 
 \section{Curve Fitting}
 
-We will use ODR like mentioned in Te section.
+To measure the plasma parameters we first need to do some cleanup by combining multiple shots and then we use data from both the shell and core to get the final plasma parameters of interest.
 
 \subsection{Combining multiple shots}
 
@@ -1040,11 +1085,7 @@ Here we have normalized our averaging terms by the number of shots in each clust
 
 \subsection{Fitting shell}
 
-\subsubsection{Use all shell data}
-
-\subsubsection{Fit using BRL}
-
-\subsubsection{Fits pretty good}
+The shells act very much like a normal Langmuir probe in that they collect isotropically and thus their analysis is relatively simple. We use all the data from all of the shots which creates a large distribution of points on the JV-characteristic and additionally combine all the tips together while fitting such that we get $n_e^\text{shell}$, $T_e^\text{shell}$, and $V_\text{plasma}$. Example fits from the routine can be seen in figure \ref{fig:pa_example_shell_fits}.
 
 \begin{figure}
     \centering

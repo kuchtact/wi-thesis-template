@@ -25,7 +25,21 @@ Magnetic reconnection plays a large part in geomagnetic storms that are driven b
 
 \section{Reconnection Theory}
 
+There have been many different theories used to understand the breaking of field lines where each depends on a different combination of terms to break Ohm's law (i.e. $\vb{E} + \vb{v} \cross \vb{B} \neq 0$).
+
 \subsection{The Generalized Ohm's Law}
+
+The idealized Ohm's law as seen in ideal magnetohydrodynamics is
+\begin{equation}
+  \vb{E} + \vb{v} \cross \vb{B} = 0.
+\end{equation}
+$\vb{E}$ is the electric field, $\vb{v}$ is the plasma flow velocity, and $\vb{B}$ is the magnetic field. This condition forces the field lines to evolve differentiably and thus magnetic reconnection can't occur. Unfortunately reality isn't quite like that.
+
+Using the electron momentum equation we can derive the following equation aptly named the generalized Ohm's law:
+\begin{equation}
+  \vb{E} + \vb{v} \cross \vb{B} = \eta \vb{J} + \frac{\vb{J}\cross\vb{B}}{ne} - \frac{\nabla \cdot\vb{P}_e}{ne}+\frac{m_e}{ne^2}\dv{\vb{J}}{t}
+\end{equation}
+$\vb{v}$ is the plasma flow velocity, $\eta$ is the resistivity of the plasma, $\vb{J}$ is the current density, $n$ is the number density, $e$ is the elementary charge, $\vb{P}_e$ is the electron pressure tensor, and $m_e$ is the electron mass.
 
 \subsubsection{How do we derive this?}
 
@@ -47,18 +61,6 @@ i.e. why do we use $S$ and $L / d_i$ to characterize reconnection regimes?
 
 \begin{figure}
   \caption{Diagram of reconnection regimes.}
-\end{figure}
-
-\subsection{Sweet-Parker Reconnection}
-
-\subsubsection{A quick historical detour}
-
-\subsubsection{What are the assumptions that go into Sweet-Parker?}
-
-\subsubsection{Sweet-Parker Reconnection Rate Derivation}
-
-\begin{figure}
-  \caption{Diagram of Sweet-Parker reconnection.}
 \end{figure}
 
 \subsubsection{Application to Real Systems}
@@ -163,7 +165,7 @@ At the end of experimental setup I'll talk about why we want to do it in the lab
   \label{fig:brb_cad_rendering}
 \end{figure}
 
-\subsection{Overall how does our experiment progress}
+\subsection{Experiment Timeline}
 
 \begin{figure}[!ht]
   \centering
