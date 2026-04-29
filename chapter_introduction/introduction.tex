@@ -29,7 +29,7 @@ There have been many different theories used to understand the breaking of field
 
 \subsection{The Generalized Ohm's Law}
 
-The idealized Ohm's law as seen in ideal magnetohydrodynamics is
+The idealized Ohm's law as seen in ideal magnetohydrodynamics (MHD) is
 \begin{equation}
   \vb{E} + \vb{v} \cross \vb{B} = 0.
 \end{equation}
@@ -37,131 +37,209 @@ $\vb{E}$ is the electric field, $\vb{v}$ is the plasma flow velocity, and $\vb{B
 
 Using the electron momentum equation we can derive the following equation aptly named the generalized Ohm's law:
 \begin{equation}
-  \vb{E} + \vb{v} \cross \vb{B} = \eta \vb{J} + \frac{\vb{J}\cross\vb{B}}{ne} - \frac{\nabla \cdot\vb{P}_e}{ne}+\frac{m_e}{ne^2}\dv{\vb{J}}{t}
+  \vb{E} + \vb{u} \cross \vb{B} = \eta \vb{J} + \frac{\vb{J}\cross\vb{B}}{ne} - \frac{\nabla \cdot\vb{P}_e}{ne}-\frac{m_e}{e}\dv{\vb{u}_e}{t}
+  \label{eq:generalized_ohms_law}
+\end{equation} % TODO: what are other components that might go into the generalized Ohm's law (relatavistic effects? ...?)
+$\vb{u}$ is the plasma flow velocity, $\eta$ is the resistivity of the plasma, $\vb{J} = ne(\vb{u}_i + \vb{u}_e)$ is the current density, $n$ is the number density, $e$ is the elementary charge, $\vb{P}_e$ is the electron pressure tensor, $m_e$ is the electron mass, and $\vb{u}_e$ ($\vb{u}_i$) is the electron (ion) flow velocity \cite{Zweibel_Yamada_2016}.
+
+\subsubsection{Plasma Resistance}
+
+The first term on the right hand side, $\eta \vb{J}$, causes the breaking of Ohm's law via the plasma resistance. This term is important when the reconnection stays MHDlike and is important in Sweet-Parker reconnection which is characterized by exceptionally slow reconnection rates, $R$, where the rate goes as
+\begin{equation}
+  R = \frac{v_\text{in}}{v_\text{out}} = \sqrt{S}.
 \end{equation}
-$\vb{v}$ is the plasma flow velocity, $\eta$ is the resistivity of the plasma, $\vb{J}$ is the current density, $n$ is the number density, $e$ is the elementary charge, $\vb{P}_e$ is the electron pressure tensor, and $m_e$ is the electron mass.
+$v_\text{in}$ and $v_\text{out}$ is the inflow and outflow speeds and $S$ is the Lundquist number. The Lundquist number is a ratio of the speed at a field line convects divided by how quickly it diffuses. This model exceptionally underpredicts the reconnection rate for events occuring in our solar system (e.g. Sweet-Parker predicts that solar flares should reconnect in months whereas they actually reconnect in minutes to hours).
 
-\subsubsection{How do we derive this?}
+\subsubsection{Separation of Ions and Electrons}
+\label{ss2:hall_reconnection}
 
-\subsubsection{A breakdown of the terms}
+The second term, $(\vb{J} \cross \vb{B}) / ne$, is the Hall term. This term appears when the electrons and ions can decouple at scale lengths of the ion skin depth, $d_i$. When the current sheet is on the order of a few $d_i$ or less, the ions become demagnetized and thus decouple from the magnetic field crossing from the inflow to the outflow and thus have separate dynamics than the electrons which stay magnetized. This causes additional currents that create a quadropolar out of plane field structure near the x-point (see \cite{Zweibel_Yamada_2009}). This term can't actually break field lines because at the x-point the reconnecting field component drops to zero and since the current is out of the plane this leads to $(\vb{J} \cross \vb{B}) / ne = 0$.
 
-\subsection{Regimes of Reconnection}
+\subsubsection{Kinetic Physics}
 
-\subsubsection{Reconnection scaling parameters}
+At scales of the electron skin depth, the electron pressure anisotropy and electron inertia terms can come into play (the right two terms of the generalized Ohm's law). % TODO: Is this true.
 
-i.e. why do we use $S$ and $L / d_i$ to characterize reconnection regimes?
+\paragraph{Electron Inertia}
 
-\subsubsection{Where do various systems line up?}
+If the two inflows have different plasma parameters this can lead to the electron inertia term (the rightmost of equation \ref{eq:generalized_ohms_law}) breaking Ohm's law. In this case, the location where $B$ flips sign (the x-point) is not at the same location as where the plasma flows balance. Thus after expanding the convective derivative we get
+\begin{equation}
+  \dv{\vb{u}}{t} = \pdv{\vb{u}}{t} + \vb{u}\cdot \nabla \vb{u}.
+\end{equation}
+Assuming the system is in equilibrium (by this we mean it is time translation invariant for bulk quantities yet the field lines are still able to move) the partial derivative drops out. This equilibium condition forces a pressure balance and thus a relation between $n$ and $B$ between them. Since the plasma flow is non-zero at the x-point the second term can be non-zero.
 
-\begin{figure}
-  \caption{Cartoon of places where reconnection can happen.}
-\end{figure}
+\paragraph{Electron Pressure Anisotropy}
 
-\subsubsection{What are we interested in?}
+If the plasma is sufficiently collisionless, the distribution function can become non-maxwellian leading to a breaking of the frozen-in condition which is well derived in \cite{Egedal_2023}. Only the off diagonal terms of the pressure tensor lead to breaking of the Ohm's law which appear because of meandering orbits across the x-point and trapped particles in the inflows. % TODO: Check this.
 
-\begin{figure}
-  \caption{Diagram of reconnection regimes.}
-\end{figure}
+\subsubsection{Summary}
 
-\subsubsection{Application to Real Systems}
+Each term on the right side of the generalized Ohm's law has led to lots of exciting research and each term balances to a varying extent depending on two scaling parameters, the sytem size defined by $L / d_i$ and the Lundquist number, $S$. A discussion of these regimes can be found in any of the aforementioned theses. In this work we are looking reconnection where pressure anisotropy plays a large part.
 
-\paragraph{What are some example parameters where reconnection occurs?}
+% \subsection{Regimes of Reconnection}
 
-\paragraph{What time scales does Sweet-Parker predict?}
+% \subsubsection{Reconnection scaling parameters}
 
-\paragraph{What did we miss?}
+% i.e. why do we use $S$ and $L / d_i$ to characterize reconnection regimes?
 
-\subsection{Hall Reconnection}
-\label{sss:hall_reconnection}
+% \subsubsection{Where do various systems line up?}
 
-\subsubsection{Why should the Hall term appear?}
+% \begin{figure}
+%   \caption{Cartoon of places where reconnection can happen.}
+% \end{figure}
 
-\paragraph{What is the relevant physics that sets when the hall term matters}
+% \subsubsection{What are we interested in?}
 
-\paragraph{In what kind of plasmas does the hall term appear and when does it not?}
+% \begin{figure}
+%   \caption{Diagram of reconnection regimes.}
+% \end{figure}
 
-\subsubsection{What does hall reconnection look like}
+% \subsubsection{Application to Real Systems}
 
-\begin{figure}
-  \caption{Diagram of 2d hall reconnection}
-\end{figure}
+% \subsection{Kinetic Reconnection}
 
-\subsubsection{What's missing?}
+% \subsubsection{What makes kinetic reconnection ``kinetic''?}
 
-\subsection{Kinetic Reconnection}
+% \paragraph{What do collisions do?}
 
-\subsubsection{What makes kinetic reconnection ``kinetic''?}
+% \subparagraph{How quickly do collisions damp out non-Maxwellian features?}
 
-\paragraph{What do collisions do?}
+% \paragraph{What makes a system kinetic?}
 
-\subparagraph{How quickly do collisions damp out non-Maxwellian features?}
+% \subparagraph{What parameters set this?}
 
-\paragraph{What makes a system kinetic?}
+% \subparagraph{What should we do in the lab to get this?}
 
-\subparagraph{What parameters set this?}
-
-\subparagraph{What should we do in the lab to get this?}
+\subsection{Pressure Anisotropy}
 
 \subsubsection{What is pressure anisotropy}
 \label{ss2:intro_PA_what}
 
+In a fluid understanding of a plasma, the pressure is often isotropic where only a single scalar variable, $p_e = nT_e$, is needed to define the electron plasma pressure. Note that we are ignoring the ion pressure as our ions are very cold and does not come into play in the generalized Ohm's law (equation \ref{eq:generalized_ohms_law}). The plasma distribution in these fluid approximations is a Maxwellian which has rotational symmetry (once the flow velocity has been removed) which is given by
+\begin{equation}
+  f(\vb{v}) = \left(\frac{e m_e}{2 \pi}\right)^{3/2} \frac{n}{T^{3/2}} \exp \left[-\frac{e m_e}{2} \frac{(\vb{v} - \vb{v}_D)^2}{T}\right].
+  \label{eq:maxwellian_distribution}
+\end{equation}
+Fluid models with an isotropic pressure closure enforce this requirement but this is not necesarily a good representation of the plasma when collisions are not as dominant. With low collisionality the distribution can become non-Maxwellian and to the next order, the distribution can be represented via a bi-Maxwellian where the temperature parallel to the magnetic field is different than the temperature perpendicular. This leads to a parallel and perpendicular pressure given by $n T_\parallel$ and $n T_\perp$ which we will from here on out call \textit{pressure anisotropy}.
+
+There can be higher order effects that lead to either off-diagonal terms in the pressure tensor or non gyrotropic distributions where there isn't just one perpendicular temperature. This will be discussed more in the chapter on the pressure anisotropy probe and the physics effects of off diagonal terms can be learned about in \cite{Egedal_2023}.
+
 \subsubsection{Where does Pressure Anisotropy come from?}
 \label{ss2:intro_PA_generation}
 
-Trapping electric field: \cite{Egedal_Daughton_Drake_Katz_Lê_2009}
-
-\paragraph{Movement of flux tube}
-
 \begin{figure}
-  \caption{Flux tube changing size during reconnection causing pressure anisotropy build up.}
+  \centering
+  \includegraphics[width=\textwidth]{chapter_introduction/figures/flux_tube_evolution.png}
+  \caption{This figure shows an example reconnection configuration on the scale of the ion skin depth for collisionless reconnection. The green arrows show the direction of flow into the x-point. Electrons trapped in a flux tube far from the x-point (with distribution function in panel A) are convected towards a region of lower field causing the flux tube to widen vertically (panel B). To enforce quasineutrality this requires the to shorten in the horizontal direction. The passing electrons (in green and purple which originate from a Maxwellian distribution) move to higher $v_\parallel$ whereas trapped electrons get smeared out causing the distribution to have an increasingly large $T_\parallel$ and smaller $T_\perp$.}
+  \label{fig:flux_tube_evolution}
 \end{figure}
 
-\paragraph{Effect of background field}
+This pressure anisotropy does not suddenly appear at the x-line. Instead it forms as the flux tubes travel towards the x-point once inside the ion diffusion region. As the ions are decoupled from the electron dynamics, they have a nearly uniform number density, $n_i$.
+% TODO: Why does the parallel electric field come into play? Le et al. 2010 Magnitude of ..., Le et al. 2010 Equations of state ...
 
-\subparagraph{Too low of background field does...}
+Two populations of electrons exist, those with passing orbits which can travel along the entire field line and others that are drapped due to two effects \cite{Le_Egedal_Fox_Katz_Vrublevskis_Daughton_Drake_2010}; magnetic trapping due to conservation of magnetic moment where the magnetic field is smaller near the x-point compared to a distance along the field line; trapping due to a parallel electric field that forms along the field lines. % Is the reason for the electric field because the flux tube expansion is too much for magnetic trapping to sufficiently increase the electron particle number so there must be electric field trapping?
+Assuming no collisions and using Liouville's theorem, we can construct
+\begin{align}
+  f(\vb{x}, \mathcal{E}_\parallel, \mathcal{E}_\perp) &= \\
+  f(\vb{x}, \mathcal{E}_\parallel, \mu B(\vb{x})) &= \begin{cases}
+    f_\infty\left(\mathcal{E}_\parallel - \mu B_\infty - e \Phi_\parallel, \mu B_\infty \right) & \text{passing} \\
+    f_\infty\left(0, \mu B_\infty \right) & \text{trapped} \\
+  \end{cases}
+\end{align}
+which defines the distribution function at all points of the inflow defined by the distribution function at infinity \cite{Le_Egedal_Daughton_Fox_Katz_2009}. $\mathcal{E}$ is the kinetic energy, $\mu$ is the magnetic moment, $B_\infty$ is the magnetic field at infinity, and $\Phi_\parallel$ is the electrostatic potential calculated via
+\begin{equation}
+  \Phi_\parallel(\vb{x}) = \int_{\vb{x}}^\infty \vb{E} \cdot \hat{b} \dd{\vb{x}'}.
+\end{equation}
+This can be simplified to the Chew, Goldberg, and Low (CGL) scaling for a flux tube with no heat heat fluxes (i.e. the passing particles are ignored and the distribution starts as a trapped maxwellian in the a flux tube far from the x-point) \cite{Chew_Goldberger_Low_1956}
+\begin{align}
+  \frac{p_\parallel}{ p_\infty} &= \frac{\pi}{6} \left(\frac{n}{n_\infty}\right)^3 \left(\frac{B}{B_\infty}\right)^{-2} \label{eq:cgl_parallel} \\
+  \frac{p_\perp}{ p_\infty} &= \frac{n}{n_\infty} \frac{B}{B_\infty}. \label{eq:cgl_perp}
+\end{align}
+Thus as the flux tube convects inwards and the magnetic field drops, the parallel pressure rises while the perpendicular pressure falls leading to pressure anisotropy just before the plasma enters the x-point. This same derivation and a review of these effects can be seen in \cite{Egedal_Le_Daughton_2013}.
 
-\subparagraph{Too high of field does\dots}
+% Trapping electric field: \cite{Egedal_Daughton_Drake_Katz_Lê_2009}
+
+\paragraph{Effect of guide field}
+
+\begin{figure}
+  \centering
+  \includegraphics[width=\textwidth]{chapter_introduction/figures/field_line_curvature.png}
+  \caption{The left panel shows an example reconnection region with a single field line identified in red. The guide field is in the $\phi$ direction. For low guide field, the field line has a very small radius of curvature, $R_B$, since the field line is sharply bent and $\rho_e \gg R_B$. In this case the electron does not conserve magnetic moment and the distribution function is isotropized. In the case of high guide field, the electron gyroradius is small relative to the radius of curvature and the pressure anisotropy is conserved.}
+  \label{fig:field_line_curvature}
+\end{figure}
+
+A guide field is a magnetic field out of the page in figure \ref{fig:field_line_curvature} that does not reconnect. This guide field can be present to varying extents in any reconnecting system but changes the effects of pressure anisotropy.
+
+\subparagraph{Low field}
+
+If we have a very small guide field, the magnitude of the magnetic field changes a lot between the initial field, $B_\infty$, and the field near the x-point. In the extreme case of no guide field, the magnitude of the field is zero at the x-point and thus the CGL predict infinite parallel pressure! Fortunately finite gyroradius effects save us from this catastrophe as the gyroradius increases for decreasing field strength. Although the plasma does have a large amount of pressure anisotropy the distribution isotropizes near the x-point because the of a lack of magnetic moment conservation caused by a very small radius of curvature of the reconnecting field line \cite{Le_Egedal_Ohia_Daughton_Karimabadi_Lukin_2013}.
+
+\subparagraph{High field}
+
+In the case of a very large guide field, the pressure anisotropy is conserved into the outflow but there isn't much pressure anisotropy to begin with! This is because the magnitude of the magnetic field does not change very much as the field line convects inwards leading to not much change in the flux tube shape and thus minimal pressure anisotropy.
 
 \subparagraph{Goldilocks!}
 
-\begin{figure}
-  \caption{Simulated kinetic reconnection with changing guide field.}
-\end{figure}
-
-\subsubsection{How does pressure anisotropy change what the reconnection looks like}
+In the case of a moderate guide field, the pressure anisotropy grows in the inflow and is conserved in the outflow. In this case there is sufficient anisotropy to change the outflow behaviour.
 
 \begin{figure}
-  \caption{Diagram from Ohia of with and without pressure anisotropy in simulation.}
+  \centering
+  \includegraphics{chapter_introduction/figures/variable_guide_field_le_2013.png}
+  \caption{Simulated kinetic reconnection with changing guide field reproduced from \cite{Le_Egedal_Ohia_Daughton_Karimabadi_Lukin_2013}. The top four panels, (a - d), show results from a full mass ratio PIC simulation of reconnection with a guide field of various amounts in pink squares on left. At the bottom is a fluid simulation with a closure that allows for pressure anisotropy. With varying guide field, the outflow characteristics change where very low or no guide field leads to no jets, moderate field leads to jets that pierce the center of the outflow, and high guide field returns to an outflow similar to the low guide field case.}
+  \label{fig:variable_guide_field}
 \end{figure}
 
-\paragraph{Thinner reconnection layer?}
-
-Use results from Jan's more recent papers.
+\subsubsection{Effects of pressure anisotropy}
 
 \begin{figure}
-  \caption{Some figure from Jan's papers thowing effects of pressure anisotropy}
+  \centering
+  \includegraphics[width=\textwidth]{chapter_introduction/figures/low_v_high_field_pa_le_2013.png}
+  \caption{PIC simulations of reconnection from \cite{Le_Egedal_Ohia_Daughton_Karimabadi_Lukin_2013}. The top row shows a moderate guide field run and the bottom row a low guide field run. With sufficiently high field, the pressure anisotropy in panel (a) stays in the outflow as compared to the low guide field. This leads to a marginal firehose condition of order $0.5$ (panel (b)) in the outflow which supports sharply bent field lines and a current jet in the center of the outflow (panel (c)).}
 \end{figure}
 
-\paragraph{Marginal Firehose Condition}
+If the pressure anisotropy sticks around into the outflow, it can become so strong as to begin to balance the magnetic tension force allowing the field lines to be sharply bent. Because of this sharp bend, the out of plane current is peaked at this bend which lies between both separatrices. The marginal firehose condition is
+\begin{equation}
+  F = \frac{\mu_0 (p_\parallel - p_\perp)}{B^2}
+\end{equation}
+which is derived by balancing the diagonal terms of the plasma pressure tensor with those of the Maxwell stress tensor such that the total pressure is isotropic:
+\begin{align*}
+  (\bm{\sigma} + \vb{P})_{ii} &= C \\
+  \left(\frac{B^2}{2\mu_0} \begin{bmatrix}
+    1 & 0 & 0 \\
+    0 & -1 & 0 \\
+    0 & 0 & -1 \\
+  \end{bmatrix} + \begin{bmatrix}
+    p_\parallel & 0 & 0 \\
+    0 & p_\perp & 0 \\
+    0 & 0 & p_\perp \\
+  \end{bmatrix}\right)_{ii} &= \\
+  \Rightarrow \frac{B^2}{2 \mu_0} + p_\parallel &= -\frac{B^2}{2 \mu_0} + p_\perp \\
+  \Rightarrow \frac{\mu_0 (p_\parallel - p_\perp)}{B^2} &= -1.
+\end{align*} % TODO: Figure out if the stress tensor should actually be negative.
 
-\paragraph{Concluding: what features should we look for in the data?}
+% \paragraph{Thinner reconnection layer?}
+
+% Use results from Jan's more recent papers.
+
+% \begin{figure}
+%   \caption{Some figure from Jan's papers thowing effects of pressure anisotropy}
+% \end{figure}
+
+\paragraph{Features to look for}
+
+Given that pressure anisotropy can exist in both the inflow and outflow we have multiple places to search in the experiment but only when the anisotropy stays into the outflow does it significantly change the magnetic field structure. Thus we will look for a configuration with a clear jet in the outflow which will help us make sure we are correctly measuring anisotropy.
 
 \subsubsection{Why do we want to measure it?}
 
-At the end of experimental setup I'll talk about why we want to do it in the lab but I think motivating why we care about kinetic reconnection as a process would be good here.
-
-\paragraph{Simulation result overview}
-
-\paragraph{Spacecraft result overview}
-
-\paragraph{Experimental result?}
+Both spacecraft and simulation have identified pressure anisotropy during reconnection in the magnetosphere and the effects on the reconnection dynamics, while understood theoretically, have not yet been measured in a terrestrial experiment.
 
 \section{Experimental Setup}
+
+The Big Red Ball, BRB, is a three meter vacuum vessel with a cusp confinement mechanism that leaves the bulk plasma ideally unmagnetized which works wonderfully for studying basic plasma physics like magnetic reconnection! Before going further, a great and thorough explanation of the BRB and the Terrestrial Reconnection EXperiment, TREX, can be found in \cite{Olson_2020}. This section acts to regurgitate only the most relevant information.
 
 \begin{figure}
   \centering
   \includegraphics{chapter_introduction/figures/CAD_TREX_with_arrows_and_speed_probe.png}
-  \caption{BRB CAD diagram}
+  \caption{A CAD diagram of the Big Red Ball. The experiment starts with a background field generated by a Helmholtz coil (1) into which plasma is injected via a set of plasma guns (2). After some time, the plasma has equilibrated and then a reverse field is driven via either a set of individual coils or a drive cylinder (3). A reconnecting current layer travels radially inward from high radius to low, passing probes along the way giving us the ability to trace the plasma parameters from one inflow, into an outflow, and into the other inflow.}
   \label{fig:brb_cad_rendering}
 \end{figure}
 
@@ -189,7 +267,7 @@ At the end of experimental setup I'll talk about why we want to do it in the lab
     \draw [ fill={rgb,255:red,220; green,138; blue,221} , dashed] (17.25,16.25) rectangle  (17.25,16.25);
     \draw [ fill={rgb,255:red,220; green,138; blue,221} , dashed] (17.25,16.25) rectangle  (17.25,16.25);
     \draw [ fill={rgb,255:red,249; green,240; blue,107} , dashed] (13.75,14.75) rectangle  (21.25,14.25);
-    \node [font=\normalsize] at (17.5,15) {toroidal \& perturbation coils};
+    \node [font=\normalsize] at (17.5,15) {toroidal field coil};
     \draw [ fill={rgb,255:red,220; green,138; blue,221} , dashed] (17.25,15) rectangle  (17.25,15);
     \draw [ fill={rgb,255:red,220; green,138; blue,221} , dashed] (17.25,15) rectangle  (17.25,15);
     \draw [ fill={rgb,255:red,220; green,138; blue,221} , dashed] (17.25,15) rectangle  (17.25,15);
@@ -266,96 +344,99 @@ At the end of experimental setup I'll talk about why we want to do it in the lab
     \node [font=\normalsize, align=left, anchor=east] at (14.5,8.5) {reconnection};
   \end{circuitikz}
   }%
+  \caption{Timeline of a single shot for TREX. The permanent magnets are just that, permanent, and thus always on. About four seconds before the start of the shot, the Helmholtz coil is turned on to allow the field to penetrate the three inch thick aluminum wall. Plasma is injected at 12 ms along with an optional toroidal field coil. The drive coils are then pulsed with a ringing current. The first quarter period is of interest to us where first a pressure wave travels inwards, followed by a shock, and finally the reconnection layer.}
   \label{fig:experimental_sequence_timeline}
-  \caption[*Experimental Sequence Timeline]{Timeline of experimental sequence.}
 \end{figure}
+
+A diagram of the experiment can be seen in figure \ref{fig:brb_cad_rendering} with timescales given in \ref{fig:experimental_sequence_timeline}. The experiment begins with an applied background field creating a nearly uniform field, $\vb{B}_H(r, z) \approx B_H \hat{z}$ (section 2.6 of \cite{Olson_2020}). We then inject plasma using a set of washer guns (section 2.3.2 of \cite{Olson_2020}) along the $z$ axis which diffuses radially outwards creating a peaked density profile. At this time we can also turn on a toroidal field coil that consists of seven wires running along the $z$ axis which give a radially variable guide field for reconnection. From here we pulse either a three coil system with coils at $z \in \{-15, 15, 45\}$ cm (as described in section 4.2 of \cite{Greess}) or a drive cylinder (as seen in \cite{Gradney_Egedal_Barnhill_Flores-García_Greess_Kuchta_Olson_Wallace_Yu_Forest_2023}).
+
+These coils/cylinder generate a reversed magnetic field creating a current sheet in the plasma where beneath the current sheet, the plasma is frozen into the Helmholtz field and above the sheet, is frozen into the drive field. This current layer moves radially inwards as seen in figure \ref{fig:flux_array_movie_frames}.
 
 \begin{figure}
+  \centering
+  \includegraphics[width=\textwidth]{chapter_introduction/figures/example_movie_frames.png}
   \caption{Panels from flux arrays of experiment happening.}
+  \label{fig:flux_array_movie_frames}
 \end{figure}
-
-\subsection{Initial field}
-
-\subsubsection{Helmholtz}
-
-\subsubsection{Permanent magnets}
 
 \subsubsection{Toroidal}
 \label{ss2:initial_toroidal_field}
 
-\paragraph{Shifted coil}
+% \paragraph{Shifted coil}
 
-\paragraph{Axial coil}
+% \paragraph{Axial coil}
 
-\subsubsection{Perturbation coils}
+% \subsubsection{Perturbation coils}
 
-\subsection{Plasma Generation}
+% \subsection{Plasma Generation}
 
-\subsubsection{How do our guns work}
+% \subsubsection{How do our guns work}
 
-\paragraph{Gas lines}
+% \paragraph{Gas lines}
 
-\paragraph{PFNs}
+% \paragraph{PFNs}
 
-\begin{figure}
-  \caption{Circuit diagram of plasma gun.}
-\end{figure}
+% \begin{figure}
+%   \caption{Circuit diagram of plasma gun.}
+% \end{figure}
 
-\paragraph{Puff trigger}
+% \paragraph{Puff trigger}
 
-\paragraph{How to breakdown}
+% \paragraph{How to breakdown}
 
-\begin{figure}
-  \caption{Simplified cut of plasma gun insides.}
-\end{figure}
+% \begin{figure}
+%   \caption{Simplified cut of plasma gun insides.}
+% \end{figure}
 
-\subsubsection{How are the guns placed for injection?}
+% \subsubsection{How are the guns placed for injection?}
 
-\paragraph{How much do they fill the machine}
+% \paragraph{How much do they fill the machine}
 
-\paragraph{What sets the filling fraction}
+% \paragraph{What sets the filling fraction}
   
-\subsubsection{What goes wrong with them}
+% \subsubsection{What goes wrong with them}
 
-\paragraph{Burning up}
+% \paragraph{Burning up}
 
-\begin{figure}
-  \caption{Image from high speed camera of gun spewing}
-\end{figure}
+% \begin{figure}
+%   \caption{Image from high speed camera of gun spewing}
+% \end{figure}
 
-\paragraph{Burn holes in wall because of background field}
+% \paragraph{Burn holes in wall because of background field}
 
-Get image from Paul with hole in wall.
+% Get image from Paul with hole in wall.
 
-\paragraph{Air cooling}
+% \paragraph{Air cooling}
 
-\paragraph{Optimizing gun operation}
+% \paragraph{Optimizing gun operation}
 
-\subsection{Drive field}
+% \subsection{Drive field}
 
-\subsubsection{Individual coils}
+% \subsubsection{Individual coils}
 
-\paragraph{Zone's between coils as plasma sources}
+% \paragraph{Zone's between coils as plasma sources}
 
-\subsubsection{Drive Cylinder}
+% \subsubsection{Drive Cylinder}
 
-Reference Paul's RSI + thesis.
+% Reference Paul's RSI + thesis.
 
 \subsection{Diagnostics Overview}
 
-\begin{table}
-  \caption{List of diagnostics used in the experiment and what they can measure.}
-\end{table}
+All the data in this thesis comes from four probes. Two of the probes, the multitip langmuir probe and pressure anisotropy probe, have chapters devoted to them in this thesis (\ref{sch:multitip_probe} and \ref{sch:pa_probe}). These are both used for measuring the densities, temperatures, and plasma potential distributions in the system. We also use two other probes for measuring the changes in the magnetic field. A linear array of Bdot probes measures the three components of Bdot at a single $r$ and $\phi$ coordinate but along many $z$ positions. For this probe, the layer passes the probe and the configuration can be reconstructed via the jogging method (section 5.3 of \cite{Greess}). The other is a set of flux arrays which consist of many Bdot probes in a plane normal to $\hat{\phi}$. This probe can create a movie of the evolving magnetic field for each shot and is described in section A.2 of \cite{Gradney_2025}.
 
-\subsubsection{Bdot probes}
+% \begin{table}
+%   \caption{List of diagnostics used in the experiment and what they can measure.}
+% \end{table}
 
-\paragraph{Basic principles}
+% \subsubsection{Bdot probes}
 
-\paragraph{Probe types}
+% \paragraph{Basic principles}
 
-\subparagraph{Linear probe}
+% \paragraph{Probe types}
 
-\subparagraph{Hook probe}
+% \subparagraph{Linear probe}
+
+% \subparagraph{Hook probe}
 
 \subparagraph{Lightsaber probe}
 \label{sps:intro_lightsaber_probe}
@@ -363,33 +444,33 @@ Reference Paul's RSI + thesis.
 \subparagraph{Speed probe}
 \label{sps:intro_speed_probe}
 
-\subparagraph{Flux array 1}
+% \subparagraph{Flux array 1}
 
-\subparagraph{Flux array 2}
+% \subparagraph{Flux array 2}
 
-\paragraph{Data Interpretation}
+% \paragraph{Data Interpretation}
 
-How do we convert the raw data into something useful?
+% How do we convert the raw data into something useful?
 
-\subsubsection{Hall probes}
+% \subsubsection{Hall probes}
 
-\paragraph{Basic principles}
+% \paragraph{Basic principles}
 
-\paragraph{Issues and feasibility}
+% \paragraph{Issues and feasibility}
 
-\subsubsection{Langmuir probes}
+% \subsubsection{Langmuir probes}
 
-\paragraph{Basic principles}
+% \paragraph{Basic principles}
 
-\paragraph{What do we need to do to make them work for our device?}
+% \paragraph{What do we need to do to make them work for our device?}
 
-\paragraph{Look into XXX chapter}
+% \paragraph{Look into XXX chapter}
 
-\subsubsection{Fast camera}
+% \subsubsection{Fast camera}
 
-\paragraph{What can we see with it?}
+% \paragraph{What can we see with it?}
 
-\paragraph{Potential use cases}
+% \paragraph{Potential use cases}
 
 \subsection{How does the experiment compare to space}
 

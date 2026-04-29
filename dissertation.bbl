@@ -1,4 +1,4 @@
-\begin{wb-bib}{33}
+\begin{wb-bib}{41}
 \expandafter\ifx\csname natexlab\endcsname\relax\def\natexlab#1{#1}\fi
 \expandafter\ifx\csname bibnamefont\endcsname\relax
   \def\bibnamefont#1{#1}\fi
@@ -60,6 +60,19 @@
   \bibinfo{volume}{8}(\bibinfo{number}{6}):\penalty0
   \bibinfo{pages}{3029--3041}.
 
+\bibitem[{\citenamefont{Chew et~al.}(1956)\citenamefont{Chew, Goldberger, and
+  Low}}]{Chew_Goldberger_Low_1956}
+\bibinfo{author}{\bibnamefont{Chew}, \bibfnamefont{G.~F.}},
+  \bibinfo{author}{\bibfnamefont{M.~L.} \bibnamefont{Goldberger}},
+  \bibnamefont{and} \bibinfo{author}{\bibfnamefont{F.~E.} \bibnamefont{Low}}.
+  \bibinfo{year}{1956}.
+\newblock \bibinfo{title}{The boltzmann equation an d the one-fluid
+  hydromagnetic equations in the absence of particle collisions}.
+\newblock \emph{\bibinfo{journal}{Proceedings of the Royal Society of London.
+  A. Mathematical and Physical Sciences}}
+  \bibinfo{volume}{236}(\bibinfo{number}{1204}):\penalty0
+  \bibinfo{pages}{112--118}.
+
 \bibitem[{\citenamefont{Chung}(2012)}]{Chung_2012}
 \bibinfo{author}{\bibnamefont{Chung}, \bibfnamefont{Kyu-Sun}}.
   \bibinfo{year}{2012}.
@@ -99,6 +112,30 @@
 \newblock \emph{\bibinfo{journal}{Physics of Plasmas}}
   \bibinfo{volume}{16}(\bibinfo{number}{5}):\penalty0 \bibinfo{pages}{050701}.
 
+\bibitem[{\citenamefont{Egedal et~al.}(2023)\citenamefont{Egedal, Gurram,
+  Greess, Daughton, and Lê}}]{Egedal_2023}
+\bibinfo{author}{\bibnamefont{Egedal}, \bibfnamefont{J.}},
+  \bibinfo{author}{\bibfnamefont{H.}~\bibnamefont{Gurram}},
+  \bibinfo{author}{\bibfnamefont{S.}~\bibnamefont{Greess}},
+  \bibinfo{author}{\bibfnamefont{W.}~\bibnamefont{Daughton}}, \bibnamefont{and}
+  \bibinfo{author}{\bibfnamefont{A.}~\bibnamefont{Lê}}. \bibinfo{year}{2023}.
+\newblock \bibinfo{title}{The force balance of electrons during kinetic
+  anti-parallel magnetic reconnection}.
+\newblock \emph{\bibinfo{journal}{Physics of Plasmas}}
+  \bibinfo{volume}{30}(\bibinfo{number}{6}):\penalty0 \bibinfo{pages}{062106}.
+
+\bibitem[{\citenamefont{Egedal et~al.}(2013)\citenamefont{Egedal, Le, and
+  Daughton}}]{Egedal_Le_Daughton_2013}
+\bibinfo{author}{\bibnamefont{Egedal}, \bibfnamefont{Jan}},
+  \bibinfo{author}{\bibfnamefont{Ari} \bibnamefont{Le}}, \bibnamefont{and}
+  \bibinfo{author}{\bibfnamefont{William} \bibnamefont{Daughton}}.
+  \bibinfo{year}{2013}.
+\newblock \bibinfo{title}{A review of pressure anisotropy caused by electron
+  trapping in collisionless plasma, and its implications for magnetic
+  reconnection}.
+\newblock \emph{\bibinfo{journal}{Physics of Plasmas}}
+  \bibinfo{volume}{20}(\bibinfo{number}{6}):\penalty0 \bibinfo{pages}{061201}.
+
 \bibitem[{\citenamefont{Endrizzi}(2021)}]{Endrizzi_2021}
 \bibinfo{author}{\bibnamefont{Endrizzi}, \bibfnamefont{Douglass~A.}}
   \bibinfo{year}{2021}.
@@ -122,6 +159,25 @@
   in plasmas: what can we measure and how can we achieve reliable results?}
 \newblock \emph{\bibinfo{journal}{Journal of Physics D: Applied Physics}}
   \bibinfo{volume}{44}(\bibinfo{number}{23}):\penalty0 \bibinfo{pages}{233001}.
+
+\bibitem[{\citenamefont{Gradney et~al.}(2023)\citenamefont{Gradney, Egedal,
+  Barnhill, Flores-García, Greess, Kuchta, Olson, Wallace, Yu, and
+  Forest}}]{Gradney_Egedal_Barnhill_Flores-García_Greess_Kuchta_Olson_Wallace_Yu_Forest_2023}
+\bibinfo{author}{\bibnamefont{Gradney}, \bibfnamefont{P.}},
+  \bibinfo{author}{\bibfnamefont{J.}~\bibnamefont{Egedal}},
+  \bibinfo{author}{\bibfnamefont{I.}~\bibnamefont{Barnhill}},
+  \bibinfo{author}{\bibfnamefont{R.}~\bibnamefont{Flores-García}},
+  \bibinfo{author}{\bibfnamefont{S.}~\bibnamefont{Greess}},
+  \bibinfo{author}{\bibfnamefont{C.}~\bibnamefont{Kuchta}},
+  \bibinfo{author}{\bibfnamefont{J.}~\bibnamefont{Olson}},
+  \bibinfo{author}{\bibfnamefont{J.}~\bibnamefont{Wallace}},
+  \bibinfo{author}{\bibfnamefont{X.}~\bibnamefont{Yu}}, \bibnamefont{and}
+  \bibinfo{author}{\bibfnamefont{C.}~\bibnamefont{Forest}}.
+  \bibinfo{year}{2023}.
+\newblock \bibinfo{title}{Implementation of a drive cylinder for low
+  collisional experiments on magnetic reconnection}.
+\newblock \emph{\bibinfo{journal}{Review of Scientific Instruments}}
+  \bibinfo{volume}{94}(\bibinfo{number}{12}):\penalty0 \bibinfo{pages}{123503}.
 
 \bibitem[{\citenamefont{Gradney}(2025)}]{Gradney_2025}
 \bibinfo{author}{\bibnamefont{Gradney}, \bibfnamefont{Paul}}.
@@ -226,6 +282,50 @@
   in a collisionless, maxwellian plasma at rest}.
 \newblock \bibinfo{type}{Dissertation/thesis}, \bibinfo{school}{University of
   Toronto (Canada)}, \bibinfo{address}{Canada -- Ontario, CA}.
+
+\bibitem[{\citenamefont{Le et~al.}(2009)\citenamefont{Le, Egedal, Daughton,
+  Fox, and Katz}}]{Le_Egedal_Daughton_Fox_Katz_2009}
+\bibinfo{author}{\bibnamefont{Le}, \bibfnamefont{A.}},
+  \bibinfo{author}{\bibfnamefont{J.}~\bibnamefont{Egedal}},
+  \bibinfo{author}{\bibfnamefont{W.}~\bibnamefont{Daughton}},
+  \bibinfo{author}{\bibfnamefont{W.}~\bibnamefont{Fox}}, \bibnamefont{and}
+  \bibinfo{author}{\bibfnamefont{N.}~\bibnamefont{Katz}}. \bibinfo{year}{2009}.
+\newblock \bibinfo{title}{Equations of state for collisionless guide-field
+  reconnection}.
+\newblock \emph{\bibinfo{journal}{Physical Review Letters}}
+  \bibinfo{volume}{102}(\bibinfo{number}{8}):\penalty0 \bibinfo{pages}{085001}.
+
+\bibitem[{\citenamefont{Le et~al.}(2010)\citenamefont{Le, Egedal, Fox, Katz,
+  Vrublevskis, Daughton, and
+  Drake}}]{Le_Egedal_Fox_Katz_Vrublevskis_Daughton_Drake_2010}
+\bibinfo{author}{\bibnamefont{Le}, \bibfnamefont{A.}},
+  \bibinfo{author}{\bibfnamefont{J.}~\bibnamefont{Egedal}},
+  \bibinfo{author}{\bibfnamefont{W.}~\bibnamefont{Fox}},
+  \bibinfo{author}{\bibfnamefont{N.}~\bibnamefont{Katz}},
+  \bibinfo{author}{\bibfnamefont{A.}~\bibnamefont{Vrublevskis}},
+  \bibinfo{author}{\bibfnamefont{W.}~\bibnamefont{Daughton}}, \bibnamefont{and}
+  \bibinfo{author}{\bibfnamefont{J.~F.} \bibnamefont{Drake}}.
+  \bibinfo{year}{2010}.
+\newblock \bibinfo{title}{Equations of state in collisionless magnetic
+  reconnection}.
+\newblock \emph{\bibinfo{journal}{Physics of Plasmas}}
+  \bibinfo{volume}{17}(\bibinfo{number}{5}):\penalty0 \bibinfo{pages}{055703}.
+
+\bibitem[{\citenamefont{Le et~al.}(2013)\citenamefont{Le, Egedal, Ohia,
+  Daughton, Karimabadi, and
+  Lukin}}]{Le_Egedal_Ohia_Daughton_Karimabadi_Lukin_2013}
+\bibinfo{author}{\bibnamefont{Le}, \bibfnamefont{A.}},
+  \bibinfo{author}{\bibfnamefont{J.}~\bibnamefont{Egedal}},
+  \bibinfo{author}{\bibfnamefont{O.}~\bibnamefont{Ohia}},
+  \bibinfo{author}{\bibfnamefont{W.}~\bibnamefont{Daughton}},
+  \bibinfo{author}{\bibfnamefont{H.}~\bibnamefont{Karimabadi}},
+  \bibnamefont{and} \bibinfo{author}{\bibfnamefont{V.~S.} \bibnamefont{Lukin}}.
+  \bibinfo{year}{2013}.
+\newblock \bibinfo{title}{Regimes of the electron diffusion region in magnetic
+  reconnection}.
+\newblock \emph{\bibinfo{journal}{Physical Review Letters}}
+  \bibinfo{volume}{110}(\bibinfo{number}{13}):\penalty0
+  \bibinfo{pages}{135004}.
 
 \bibitem[{\citenamefont{Mausbach}(1997)}]{Mausbach_1997}
 \bibinfo{author}{\bibnamefont{Mausbach}, \bibfnamefont{Michael}}.
@@ -433,6 +533,14 @@
 \newblock \emph{\bibinfo{journal}{Annual Review of Astronomy and Astrophysics}}
   \bibinfo{volume}{47}(\bibinfo{number}{1}):\penalty0
   \bibinfo{pages}{291--332}.
+
+\bibitem[{\citenamefont{Zweibel and Yamada}(2016)}]{Zweibel_Yamada_2016}
+---------. \bibinfo{year}{2016}.
+\newblock \bibinfo{title}{Perspectives on magnetic reconnection}.
+\newblock \emph{\bibinfo{journal}{Proceedings of the Royal Society A:
+  Mathematical, Physical and Engineering Sciences}}
+  \bibinfo{volume}{472}(\bibinfo{number}{2196}):\penalty0
+  \bibinfo{pages}{20160479}.
 
 \bibitem[{\citenamefont{Zwolak et~al.}(2007)\citenamefont{Zwolak, Boggs, and
   Watson}}]{Zwolak_et_al_2007}
