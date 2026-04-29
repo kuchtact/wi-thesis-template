@@ -1436,4 +1436,782 @@ Package pdftex.def Info: chapter_pressure_wave/figures/dB_B_and_x_line_shock_pre
 [17 <./chapter_pressure_wave/figures/dB_B_and_x_line_shock_pressure_flux.png>]
 <chapter_pressure_wave/figures/example_speed_probe_panels.png, id=2243, 462.528pt x 346.896pt>
 File: chapter_pressure_wave/figures/example_speed_probe_panels.png Graphic file (type png)
-<use chapter_pressure_wave/figures/example_speed_probe_panels.
+<use chapter_pressure_wave/figures/example_speed_probe_panels.png>
+Package pdftex.def Info: chapter_pressure_wave/figures/example_speed_probe_panels.png  used on input line 37.
+(pdftex.def)             Requested size: 383.0pt x 287.26195pt.
+
+
+[18 <./chapter_pressure_wave/figures/example_speed_probe_panels.png>]
+<chapter_pressure_wave/figures/Greess_2022_fig_3.png, id=2254, 1349.04pt x 757.83125pt>
+File: chapter_pressure_wave/figures/Greess_2022_fig_3.png Graphic file (type png)
+<use chapter_pressure_wave/figures/Greess_2022_fig_3.png>
+Package pdftex.def Info: chapter_pressure_wave/figures/Greess_2022_fig_3.png  used on input line 56.
+(pdftex.def)             Requested size: 383.0pt x 215.15157pt.
+
+
+[19]
+
+[20 <./chapter_pressure_wave/figures/Greess_2022_fig_3.png>]
+
+[21]
+
+[22]
+
+[23]
+
+[24]
+
+[25]
+
+[26]
+
+[27]
+
+[28]
+<chapter_pressure_wave/figures/v_and_bdot_w_simulation_setup.png, id=2373, 483.4863pt x 216.81pt>
+File: chapter_pressure_wave/figures/v_and_bdot_w_simulation_setup.png Graphic file (type png)
+<use chapter_pressure_wave/figures/v_and_bdot_w_simulation_setup.png>
+Package pdftex.def Info: chapter_pressure_wave/figures/v_and_bdot_w_simulation_setup.png  used on input line 321.
+(pdftex.def)             Requested size: 383.0pt x 171.7544pt.
+
+
+[29]
+
+[30 <./chapter_pressure_wave/figures/v_and_bdot_w_simulation_setup.png>]
+
+LaTeX Warning: No positions in optional float specifier.
+               Default added (so using `tbp') on input line 353.
+
+<chapter_pressure_wave/figures/example_bdot_traces.png, id=2394, 433.62pt x 722.7pt>
+File: chapter_pressure_wave/figures/example_bdot_traces.png Graphic file (type png)
+<use chapter_pressure_wave/figures/example_bdot_traces.png>
+Package pdftex.def Info: chapter_pressure_wave/figures/example_bdot_traces.png  used on input line 355.
+(pdftex.def)             Requested size: 296.1876pt x 493.64665pt.
+
+
+[31]
+
+[32 <./chapter_pressure_wave/figures/example_bdot_traces.png>]
+
+[33]
+
+[34]
+<chapter_pressure_wave/figures/brb_cad_drive_cylinder.png, id=2421, 238.491pt x 216.81pt>
+File: chapter_pressure_wave/figures/brb_cad_drive_cylinder.png Graphic file (type png)
+<use chapter_pressure_wave/figures/brb_cad_drive_cylinder.png>
+Package pdftex.def Info: chapter_pressure_wave/figures/brb_cad_drive_cylinder.png  used on input line 424.
+(pdftex.def)             Requested size: 238.4904pt x 216.80946pt.
+<chapter_pressure_wave/figures/wave_density_vs_probe_density.png, id=2422, 238.491pt x 216.81pt>
+File: chapter_pressure_wave/figures/wave_density_vs_probe_density.png Graphic file (type png)
+<use chapter_pressure_wave/figures/wave_density_vs_probe_density.png>
+Package pdftex.def Info: chapter_pressure_wave/figures/wave_density_vs_probe_density.png  used on input line 433.
+(pdftex.def)             Requested size: 238.4904pt x 216.80946pt.
+
+
+[35]
+
+[36 <./chapter_pressure_wave/figures/brb_cad_drive_cylinder.png> <./chapter_pressure_wave/figures/wave_density_vs_probe_density.png>]
+<chapter_pressure_wave/figures/bdot_w_r_cuts.png, id=2439, 361.35pt x 289.08pt>
+File: chapter_pressure_wave/figures/bdot_w_r_cuts.png Graphic file (type png)
+<use chapter_pressure_wave/figures/bdot_w_r_cuts.png>
+Package pdftex.def Info: chapter_pressure_wave/figures/bdot_w_r_cuts.png  used on input line 452.
+(pdftex.def)             Requested size: 361.34912pt x 289.07928pt.
+<chapter_pressure_wave/figures/two_fluid_velocity.png, id=2447, 361.35pt x 289.08pt>
+File: chapter_pressure_wave/figures/two_fluid_velocity.png Graphic file (type png)
+<use chapter_pressure_wave/figures/two_fluid_velocity.png>
+Package pdftex.def Info: chapter_pressure_wave/figures/two_fluid_velocity.png  used on input line 461.
+(pdftex.def)             Requested size: 361.34912pt x 289.07928pt.
+
+
+[37])
+
+[38 <./chapter_pressure_wave/figures/bdot_w_r_cuts.png>]
+
+[39 <./chapter_pressure_wave/figures/two_fluid_velocity.png>]
+
+[40]
+\openout2 = `chapter_te_probe/te_probe.aux'.
+
+ (./chapter_te_probe/te_probe.tex
+
+LaTeX Warning: No positions in optional float specifier.
+               Default added (so using `tbp') on input line 18.
+
+
+
+[41
+
+
+
+
+]
+
+[42]
+
+[43]
+
+[44]
+<chapter_te_probe/figures/probe_shaft_cad.png, id=2496, 1509.64pt x 335.2525pt>
+File: chapter_te_probe/figures/probe_shaft_cad.png Graphic file (type png)
+<use chapter_te_probe/figures/probe_shaft_cad.png>
+Package pdftex.def Info: chapter_te_probe/figures/probe_shaft_cad.png  used on input line 88.
+(pdftex.def)             Requested size: 383.0pt x 85.05087pt.
+
+
+[45 <./chapter_te_probe/figures/probe_shaft_cad.png>]
+<./chapter_te_probe/figures/annotated_te_image.png, id=2506, 1740.5025pt x 764.8575pt>
+File: ./chapter_te_probe/figures/annotated_te_image.png Graphic file (type png)
+<use ./chapter_te_probe/figures/annotated_te_image.png>
+Package pdftex.def Info: ./chapter_te_probe/figures/annotated_te_image.png  used on input line 124.
+(pdftex.def)             Requested size: 383.0pt x 168.30417pt.
+
+
+[46]
+<chapter_te_probe/figures/Plastic Body v2.pdf, id=2517, 794.97pt x 614.295pt>
+File: chapter_te_probe/figures/Plastic Body v2.pdf Graphic file (type pdf)
+<use chapter_te_probe/figures/Plastic Body v2.pdf>
+Package pdftex.def Info: chapter_te_probe/figures/Plastic Body v2.pdf  used on input line 139.
+(pdftex.def)             Requested size: 383.0pt x 295.9643pt.
+
+
+[47 <./chapter_te_probe/figures/annotated_te_image.png>]
+
+[48 <./chapter_te_probe/figures/Plastic Body v2.pdf>]
+<chapter_te_probe/figures/te_mach_effect.pdf, id=2554, 250.78465pt x 139.99806pt>
+File: chapter_te_probe/figures/te_mach_effect.pdf Graphic file (type pdf)
+<use chapter_te_probe/figures/te_mach_effect.pdf>
+Package pdftex.def Info: chapter_te_probe/figures/te_mach_effect.pdf  used on input line 168.
+(pdftex.def)             Requested size: 250.78403pt x 139.99771pt.
+
+
+[49]
+
+[50 <./chapter_te_probe/figures/te_mach_effect.pdf>]
+
+[51]
+
+[52]
+<chapter_te_probe/figures/Old_biasing_circuit_cropped.pdf, id=2593, 230.97209pt x 466.73273pt>
+File: chapter_te_probe/figures/Old_biasing_circuit_cropped.pdf Graphic file (type pdf)
+<use chapter_te_probe/figures/Old_biasing_circuit_cropped.pdf>
+Package pdftex.def Info: chapter_te_probe/figures/Old_biasing_circuit_cropped.pdf  used on input line 251.
+(pdftex.def)             Requested size: 230.97151pt x 466.73158pt.
+
+
+[53]
+
+[54 <./chapter_te_probe/figures/Old_biasing_circuit_cropped.pdf>]
+<chapter_te_probe/figures/New_biasing_circuit_cropped.pdf, id=2613, 1690.10425pt x 1194.98447pt>
+File: chapter_te_probe/figures/New_biasing_circuit_cropped.pdf Graphic file (type pdf)
+<use chapter_te_probe/figures/New_biasing_circuit_cropped.pdf>
+Package pdftex.def Info: chapter_te_probe/figures/New_biasing_circuit_cropped.pdf  used on input line 286.
+(pdftex.def)             Requested size: 383.0pt x 270.79271pt.
+<chapter_te_probe/figures/new_biasing_circuit_image_top.jpeg, id=2614, 2055.68pt x 1541.76pt>
+File: chapter_te_probe/figures/new_biasing_circuit_image_top.jpeg Graphic file (type jpg)
+<use chapter_te_probe/figures/new_biasing_circuit_image_top.jpeg>
+Package pdftex.def Info: chapter_te_probe/figures/new_biasing_circuit_image_top.jpeg  used on input line 295.
+(pdftex.def)             Requested size: 181.92441pt x 136.4234pt.
+<chapter_te_probe/figures/new_biasing_circuit_image_front.jpeg, id=2615, 2055.68pt x 1541.76pt>
+File: chapter_te_probe/figures/new_biasing_circuit_image_front.jpeg Graphic file (type jpg)
+<use chapter_te_probe/figures/new_biasing_circuit_image_front.jpeg>
+Package pdftex.def Info: chapter_te_probe/figures/new_biasing_circuit_image_front.jpeg  used on input line 301.
+(pdftex.def)             Requested size: 181.92441pt x 136.4234pt.
+
+Overfull \hbox (2.13904pt too wide) in paragraph at lines 347--348
+\LY1/qpl/b/n/12 (-20) 3.3.1.2.2 Prob-lems[][] \LY1/qpl/m/n/12 (-20) Al-though this sys-tem works won-der-fully to re-motely
+ []
+
+
+
+[55]
+
+[56 <./chapter_te_probe/figures/New_biasing_circuit_cropped.pdf>]
+
+[57 <./chapter_te_probe/figures/new_biasing_circuit_image_top.jpeg> <./chapter_te_probe/figures/new_biasing_circuit_image_front.jpeg>]
+\absvshift=\dimen366
+\absvshift=\dimen367
+
+
+[58]
+\absvshift=\dimen368
+\absvshift=\dimen369
+
+
+[59]
+
+[60]
+<chapter_te_probe/figures/single_ended_bias_board.jpeg, id=2655, 1541.76pt x 2055.68pt>
+File: chapter_te_probe/figures/single_ended_bias_board.jpeg Graphic file (type jpg)
+<use chapter_te_probe/figures/single_ended_bias_board.jpeg>
+Package pdftex.def Info: chapter_te_probe/figures/single_ended_bias_board.jpeg  used on input line 422.
+(pdftex.def)             Requested size: 325.55234pt x 434.05807pt.
+
+Overfull \hbox (5.93828pt too wide) in paragraph at lines 439--462
+ [] 
+ []
+
+
+
+[61]
+
+[62 <./chapter_te_probe/figures/single_ended_bias_board.jpeg>]
+
+[63]
+
+[64]
+
+[65]
+
+[66]
+
+[67]
+
+[68]
+
+[69]
+
+[70]
+
+[71]
+
+[72]
+
+[73]
+
+[74]
+
+[75]
+
+[76]
+
+[77]
+<chapter_te_probe/figures/te_E_field_effect.pdf, id=2795, 97.78928pt x 183.102pt>
+File: chapter_te_probe/figures/te_E_field_effect.pdf Graphic file (type pdf)
+<use chapter_te_probe/figures/te_E_field_effect.pdf>
+Package pdftex.def Info: chapter_te_probe/figures/te_E_field_effect.pdf  used on input line 814.
+(pdftex.def)             Requested size: 97.78902pt x 183.10155pt.
+
+
+[78]
+<chapter_te_probe/figures/experimental_e_field_effect.png, id=2805, 433.62pt x 216.81pt>
+File: chapter_te_probe/figures/experimental_e_field_effect.png Graphic file (type png)
+<use chapter_te_probe/figures/experimental_e_field_effect.png>
+Package pdftex.def Info: chapter_te_probe/figures/experimental_e_field_effect.png  used on input line 825.
+(pdftex.def)             Requested size: 383.0pt x 191.50797pt.
+
+
+[79 <./chapter_te_probe/figures/te_E_field_effect.pdf>]
+
+[80 <./chapter_te_probe/figures/experimental_e_field_effect.png>]
+
+[81]
+
+[82]
+
+[83]
+
+[84]
+<chapter_te_probe/figures/experimental_fit_example.png, id=2854, 433.62pt x 216.81pt>
+File: chapter_te_probe/figures/experimental_fit_example.png Graphic file (type png)
+<use chapter_te_probe/figures/experimental_fit_example.png>
+Package pdftex.def Info: chapter_te_probe/figures/experimental_fit_example.png  used on input line 928.
+(pdftex.def)             Requested size: 383.0pt x 191.50797pt.
+
+
+[85 <./chapter_te_probe/figures/experimental_fit_example.png>]
+
+[86]
+
+[87]
+<chapter_te_probe/figures/isat_comparison.png, id=2871, 433.62pt x 505.89pt>
+File: chapter_te_probe/figures/isat_comparison.png Graphic file (type png)
+<use chapter_te_probe/figures/isat_comparison.png>
+Package pdftex.def Info: chapter_te_probe/figures/isat_comparison.png  used on input line 979.
+(pdftex.def)             Requested size: 383.0pt x 446.85191pt.
+
+
+LaTeX Warning: Float too large for page by 79.6019pt on input line 982.
+
+<chapter_te_probe/figures/TREX_cell_vs_ACQ.png, id=2876, 1733.47626pt x 646.415pt>
+File: chapter_te_probe/figures/TREX_cell_vs_ACQ.png Graphic file (type png)
+<use chapter_te_probe/figures/TREX_cell_vs_ACQ.png>
+Package pdftex.def Info: chapter_te_probe/figures/TREX_cell_vs_ACQ.png  used on input line 988.
+(pdftex.def)             Requested size: 383.0pt x 142.8134pt.
+)
+
+[88]
+
+[89 <./chapter_te_probe/figures/isat_comparison.png>]
+
+[90 <./chapter_te_probe/figures/TREX_cell_vs_ACQ.png>]
+\openout2 = `chapter_pa_probe/pa_probe.aux'.
+
+ (./chapter_pa_probe/pa_probe.tex
+
+[91
+
+
+
+
+]
+
+[92]
+
+[93]
+
+[94]
+
+[95]
+<chapter_pa_probe/figures/pa_feed_thru.jpeg, id=2929, 1541.76pt x 2055.68pt>
+File: chapter_pa_probe/figures/pa_feed_thru.jpeg Graphic file (type jpg)
+<use chapter_pa_probe/figures/pa_feed_thru.jpeg>
+Package pdftex.def Info: chapter_pa_probe/figures/pa_feed_thru.jpeg  used on input line 95.
+(pdftex.def)             Requested size: 191.5pt x 255.32828pt.
+<chapter_pa_probe/figures/full_probe_cropped.jpg, id=2930, 2055.68pt x 813.0375pt>
+File: chapter_pa_probe/figures/full_probe_cropped.jpg Graphic file (type jpg)
+<use chapter_pa_probe/figures/full_probe_cropped.jpg>
+Package pdftex.def Info: chapter_pa_probe/figures/full_probe_cropped.jpg  used on input line 103.
+(pdftex.def)             Requested size: 383.0pt x 151.47649pt.
+<chapter_pa_probe/figures/cad_body_image.png, id=2932, 184.2885pt x 165.4983pt>
+File: chapter_pa_probe/figures/cad_body_image.png Graphic file (type png)
+<use chapter_pa_probe/figures/cad_body_image.png>
+Package pdftex.def Info: chapter_pa_probe/figures/cad_body_image.png  used on input line 113.
+(pdftex.def)             Requested size: 184.28804pt x 165.49788pt.
+
+
+[96]
+
+[97 <./chapter_pa_probe/figures/pa_feed_thru.jpeg> <./chapter_pa_probe/figures/full_probe_cropped.jpg>]
+<chapter_pa_probe/figures/cad_tip_image.png, id=2944, 86.94081pt x 180.675pt>
+File: chapter_pa_probe/figures/cad_tip_image.png Graphic file (type png)
+<use chapter_pa_probe/figures/cad_tip_image.png>
+Package pdftex.def Info: chapter_pa_probe/figures/cad_tip_image.png  used on input line 131.
+(pdftex.def)             Requested size: 86.94058pt x 180.67455pt.
+
+
+[98 <./chapter_pa_probe/figures/cad_body_image.png>]
+
+[99 <./chapter_pa_probe/figures/cad_tip_image.png>]
+<chapter_pa_probe/figures/bias_polarity_switch_circuit.pdf, id=2961, 270.52147pt x 245.94818pt>
+File: chapter_pa_probe/figures/bias_polarity_switch_circuit.pdf Graphic file (type pdf)
+<use chapter_pa_probe/figures/bias_polarity_switch_circuit.pdf>
+Package pdftex.def Info: chapter_pa_probe/figures/bias_polarity_switch_circuit.pdf  used on input line 217.
+(pdftex.def)             Requested size: 270.5208pt x 245.94757pt.
+
+
+[100]
+
+[101]
+
+[102 <./chapter_pa_probe/figures/bias_polarity_switch_circuit.pdf>]
+<chapter_pa_probe/figures/cap_bank_picture.png, id=2981, 260.31654pt x 284.0211pt>
+File: chapter_pa_probe/figures/cap_bank_picture.png Graphic file (type png)
+<use chapter_pa_probe/figures/cap_bank_picture.png>
+Package pdftex.def Info: chapter_pa_probe/figures/cap_bank_picture.png  used on input line 244.
+(pdftex.def)             Requested size: 260.3159pt x 284.0204pt.
+
+
+[103 <./chapter_pa_probe/figures/cap_bank_picture.png>]
+
+[104]
+Overfull \hbox (7.54288pt too wide) in paragraph at lines 339--340
+ [][] 
+ []
+
+
+
+[105]
+
+[106]
+
+[107]
+Overfull \hbox (0.78911pt too wide) in paragraph at lines 382--383
+\LY1/qpl/b/n/12 (-20) 4.3.2.3.1 Types of grounds on the ACQ[][] \LY1/qpl/m/n/12 (-20) The ACQ2X06 dig-i-tiz-ers (where
+ []
+
+<chapter_pa_probe/figures/simple_pa_circuit_no_page.pdf, id=3022, 694.5172pt x 262.57028pt>
+File: chapter_pa_probe/figures/simple_pa_circuit_no_page.pdf Graphic file (type pdf)
+<use chapter_pa_probe/figures/simple_pa_circuit_no_page.pdf>
+Package pdftex.def Info: chapter_pa_probe/figures/simple_pa_circuit_no_page.pdf  used on input line 390.
+(pdftex.def)             Requested size: 383.0pt x 144.79872pt.
+
+
+[108]
+
+[109 <./chapter_pa_probe/figures/simple_pa_circuit_no_page.pdf>]
+Overfull \hbox (15.19423pt too wide) in paragraph at lines 422--423
+ \LY1/qpl/b/n/12 (-20) 4.3.2.4.2.2 Many re-lays[] \LY1/qpl/m/n/12 (-20) Each tip needs it's core mea-sure-ments swapped
+ []
+
+<chapter_pa_probe/figures/swap_box_image.png, id=3038, 278.9622pt x 209.1012pt>
+File: chapter_pa_probe/figures/swap_box_image.png Graphic file (type png)
+<use chapter_pa_probe/figures/swap_box_image.png>
+Package pdftex.def Info: chapter_pa_probe/figures/swap_box_image.png  used on input line 430.
+(pdftex.def)             Requested size: 278.96152pt x 209.10068pt.
+
+
+[110]
+<chapter_pa_probe/figures/core_path_swapping_circuit.png, id=3048, 273.9033pt x 182.69856pt>
+File: chapter_pa_probe/figures/core_path_swapping_circuit.png Graphic file (type png)
+<use chapter_pa_probe/figures/core_path_swapping_circuit.png>
+Package pdftex.def Info: chapter_pa_probe/figures/core_path_swapping_circuit.png  used on input line 437.
+(pdftex.def)             Requested size: 273.90262pt x 182.6981pt.
+
+
+[111 <./chapter_pa_probe/figures/swap_box_image.png> <./chapter_pa_probe/figures/core_path_swapping_circuit.png>]
+<chapter_pa_probe/figures/example_core_swap_effect.png, id=3057, 1505.625pt x 1013.7875pt>
+File: chapter_pa_probe/figures/example_core_swap_effect.png Graphic file (type png)
+<use chapter_pa_probe/figures/example_core_swap_effect.png>
+Package pdftex.def Info: chapter_pa_probe/figures/example_core_swap_effect.png  used on input line 448.
+(pdftex.def)             Requested size: 383.0pt x 257.8859pt.
+
+
+[112 <./chapter_pa_probe/figures/example_core_swap_effect.png>]
+Overfull \hbox (59.48189pt too wide) detected at line 474
+[]
+ []
+
+
+
+[113]
+
+[114]
+<chapter_pa_probe/figures/example_raw_signal_trace_with_capacitive_coupling.png, id=3077, 545.6385pt x 359.9046pt>
+File: chapter_pa_probe/figures/example_raw_signal_trace_with_capacitive_coupling.png Graphic file (type png)
+<use chapter_pa_probe/figures/example_raw_signal_trace_with_capacitive_coupling.png>
+Package pdftex.def Info: chapter_pa_probe/figures/example_raw_signal_trace_with_capacitive_coupling.png  used on input line 517.
+(pdftex.def)             Requested size: 383.0pt x 252.62894pt.
+
+
+[115 <./chapter_pa_probe/figures/example_raw_signal_trace_with_capacitive_coupling.png>]
+
+[116]
+
+LaTeX Warning: Float too large for page by 1.94113pt on input line 617.
+
+
+
+[117]
+
+[118]
+
+[119]
+
+[120]
+<chapter_pa_probe/figures/minimum_velocity_handdrawn.png, id=3123, 1474.50874pt x 782.925pt>
+File: chapter_pa_probe/figures/minimum_velocity_handdrawn.png Graphic file (type png)
+<use chapter_pa_probe/figures/minimum_velocity_handdrawn.png>
+Package pdftex.def Info: chapter_pa_probe/figures/minimum_velocity_handdrawn.png  used on input line 680.
+(pdftex.def)             Requested size: 294.89653pt x 156.58223pt.
+
+
+[121 <./chapter_pa_probe/figures/minimum_velocity_handdrawn.png>]
+<chapter_pa_probe/figures/projected_area.pdf, id=3131, 462.52798pt x 346.89601pt>
+File: chapter_pa_probe/figures/projected_area.pdf Graphic file (type pdf)
+<use chapter_pa_probe/figures/projected_area.pdf>
+Package pdftex.def Info: chapter_pa_probe/figures/projected_area.pdf  used on input line 706.
+(pdftex.def)             Requested size: 370.02287pt x 277.51718pt.
+
+
+[122]
+
+[123 <./chapter_pa_probe/figures/projected_area.pdf>]
+Overfull \hbox (27.87pt too wide) detected at line 742
+[][][]\U/zeur/m/n/12 ^^@[] \U/zeus/m/n/12 ½ [][] \U/zeur/m/n/12 d'[] [] [][] d^^R[] [][] dx [][] dv v[] [][][]h[]\U/zeus/m/n/12 ¨\U/zeur/m/n/12 x\U/zeus/m/n/12 ©\U/zeur/m/n/12 v[]f[]\U/zeus/m/n/12 ¨\U/zeur/m/n/12 v\LY1/qpl/m/n/12 , \U/zeur/m/n/12 ^^R[]\LY1/qpl/m/n/12 , \U/zeur/m/n/12 '[]\U/zeus/m/n/12 ©
+ []
+
+
+
+[124]
+<chapter_pa_probe/figures/example_core_particle_flux.png, id=3178, 469.755pt x 289.08pt>
+File: chapter_pa_probe/figures/example_core_particle_flux.png Graphic file (type png)
+<use chapter_pa_probe/figures/example_core_particle_flux.png>
+Package pdftex.def Info: chapter_pa_probe/figures/example_core_particle_flux.png  used on input line 750.
+(pdftex.def)             Requested size: 383.0pt x 235.69295pt.
+
+
+[125 <./chapter_pa_probe/figures/example_core_particle_flux.png>]
+
+[126]
+<chapter_pa_probe/figures/theoretical_pa_radar_plots.png, id=3191, 505.89pt x 289.08pt>
+File: chapter_pa_probe/figures/theoretical_pa_radar_plots.png Graphic file (type png)
+<use chapter_pa_probe/figures/theoretical_pa_radar_plots.png>
+Package pdftex.def Info: chapter_pa_probe/figures/theoretical_pa_radar_plots.png  used on input line 771.
+(pdftex.def)             Requested size: 383.0pt x 218.86057pt.
+
+
+[127 <./chapter_pa_probe/figures/theoretical_pa_radar_plots.png>]
+
+[128]
+<chapter_pa_probe/figures/pa_ion_attraction.png, id=3206, 112.30759pt x 130.44736pt>
+File: chapter_pa_probe/figures/pa_ion_attraction.png Graphic file (type png)
+<use chapter_pa_probe/figures/pa_ion_attraction.png>
+Package pdftex.def Info: chapter_pa_probe/figures/pa_ion_attraction.png  used on input line 804.
+(pdftex.def)             Requested size: 112.3073pt x 130.44702pt.
+
+
+[129 <./chapter_pa_probe/figures/pa_ion_attraction.png>]
+
+[130]
+
+[131]
+
+[132]
+<chapter_pa_probe/figures/t_averaging_comparison.pdf, id=3253, 363.3575pt x 174.6525pt>
+File: chapter_pa_probe/figures/t_averaging_comparison.pdf Graphic file (type pdf)
+<use chapter_pa_probe/figures/t_averaging_comparison.pdf>
+Package pdftex.def Info: chapter_pa_probe/figures/t_averaging_comparison.pdf  used on input line 897.
+(pdftex.def)             Requested size: 363.3566pt x 174.65207pt.
+
+
+[133 <./chapter_pa_probe/figures/t_averaging_comparison.pdf>]
+
+[134]
+
+[135]
+
+[136]
+
+[137]
+<chapter_pa_probe/figures/PA_example_time_alignment.png, id=3313, 462.528pt x 493.6041pt>
+File: chapter_pa_probe/figures/PA_example_time_alignment.png Graphic file (type png)
+<use chapter_pa_probe/figures/PA_example_time_alignment.png>
+Package pdftex.def Info: chapter_pa_probe/figures/PA_example_time_alignment.png  used on input line 1015.
+(pdftex.def)             Requested size: 383.0pt x 408.74982pt.
+
+
+LaTeX Warning: Float too large for page by 26.9998pt on input line 1018.
+
+<chapter_pa_probe/figures/PA_time_alignment_over_many_shots.png, id=3314, 514.5624pt x 590.4459pt>
+File: chapter_pa_probe/figures/PA_time_alignment_over_many_shots.png Graphic file (type png)
+<use chapter_pa_probe/figures/PA_time_alignment_over_many_shots.png>
+Package pdftex.def Info: chapter_pa_probe/figures/PA_time_alignment_over_many_shots.png  used on input line 1022.
+(pdftex.def)             Requested size: 383.0pt x 439.49983pt.
+
+LaTeX Warning: Float too large for page by 43.24982pt on input line 1025.
+
+
+
+[138]
+
+[139 <./chapter_pa_probe/figures/PA_example_time_alignment.png>]
+
+[140 <./chapter_pa_probe/figures/PA_time_alignment_over_many_shots.png>]
+
+[141]
+<chapter_pa_probe/figures/example_lightsaber_measurements.png, id=3343, 433.62pt x 216.81pt>
+File: chapter_pa_probe/figures/example_lightsaber_measurements.png Graphic file (type png)
+<use chapter_pa_probe/figures/example_lightsaber_measurements.png>
+Package pdftex.def Info: chapter_pa_probe/figures/example_lightsaber_measurements.png  used on input line 1067.
+(pdftex.def)             Requested size: 383.0pt x 191.50797pt.
+
+
+[142]
+
+[143 <./chapter_pa_probe/figures/example_lightsaber_measurements.png>]
+<chapter_pa_probe/figures/shell_fit_screen_grab.png, id=3359, 1481.535pt x 945.5325pt>
+File: chapter_pa_probe/figures/shell_fit_screen_grab.png Graphic file (type png)
+<use chapter_pa_probe/figures/shell_fit_screen_grab.png>
+Package pdftex.def Info: chapter_pa_probe/figures/shell_fit_screen_grab.png  used on input line 1093.
+(pdftex.def)             Requested size: 383.0pt x 244.43317pt.
+
+
+[144]
+
+[145 <./chapter_pa_probe/figures/shell_fit_screen_grab.png>]
+
+[146])
+
+[147]
+\openout2 = `chapter_conclusion/conclusion.aux'.
+
+ (./chapter_conclusion/conclusion.tex)
+
+[148
+
+
+
+
+]
+
+
+pdfTeX warning (ext4): destination with the same identifier (name{page.148}) has been already used, duplicate ignored
+<to be read again> 
+                   \relax 
+l.75 \begin{colophon}
+                      [148
+
+
+] (./backmatter/colophon.tex)
+
+[149
+
+] (./dissertation.bbl
+bibitemlist
+
+Underfull \hbox (badness 2970) in paragraph at lines 29--36
+\LY1/qpl/m/n/12 (+20) waves.  \LY1/qpl/m/it/12 (+20) Jour-nal of Geo-phys-i-cal Re-search: Space Physics \LY1/qpl/m/n/12 (+20) 117(A12).
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 29--36
+[]$\LY1/lmtt/m/n/12 https : / / agupubs-[]onlinelibrary-[]wiley-[]com . ezproxy . library . wisc .
+ []
+
+
+
+[150
+
+]
+
+[151]
+
+[152]
+
+[153]
+
+[154])
+
+[155]
+\tf@toc=\write7
+\openout7 = `dissertation.toc'.
+
+\tf@lot=\write8
+\openout8 = `dissertation.lot'.
+
+\tf@lof=\write9
+\openout9 = `dissertation.lof'.
+
+ (./dissertation.aux (./frontmatter/frontmatter.aux) (./chapter_introduction/introduction.aux) (./chapter_pressure_wave/pressure_wave.aux) (./chapter_te_probe/te_probe.aux) (./chapter_pa_probe/pa_probe.aux) (./chapter_conclusion/conclusion.aux))
+ ***********
+LaTeX2e <2025-06-01> patch level 1
+L3 programming layer <2020/03/25>
+ ***********
+
+
+LaTeX Warning: Label(s) may have changed. Rerun to get cross-references right.
+
+
+Package rerunfilecheck Warning: File `dissertation.out' has changed.
+(rerunfilecheck)                Rerun to get outlines right
+(rerunfilecheck)                or use package `bookmark'.
+
+Package rerunfilecheck Info: Checksums for `dissertation.out':
+(rerunfilecheck)             Before: 2030A817A7BE944281C8EF37FB766521;54978
+(rerunfilecheck)             After:  D8BF6552139A6D3E5B14EE95A7ED9DBE;52492.
+ ) 
+Here is how much of TeX's memory you used:
+ 56306 strings out of 467797
+ 1280626 string characters out of 5431809
+ 1980498 words of memory out of 5000000
+ 83257 multiletter control sequences out of 15000+600000
+ 706717 words of font info for 264 fonts, out of 8000000 for 9000
+ 1141 hyphenation exceptions out of 8191
+ 89i,16n,94p,1660b,1087s stack positions out of 10000i,1000n,20000p,200000b,200000s
+
+pdfTeX warning (dest): name{subparagraph.1.3.2.1.2.3} has been referenced but does not exist, replaced by a fixed one
+
+
+pdfTeX warning (dest): name{subparagraph.1.3.2.1.2.4} has been referenced but does not exist, replaced by a fixed one
+
+
+pdfTeX warning (dest): name{figure.caption.78} has been referenced but does not exist, replaced by a fixed one
+
+
+pdfTeX warning (dest): name{figure.caption.60} has been referenced but does not exist, replaced by a fixed one
+
+
+pdfTeX warning (dest): name{figure.caption.56} has been referenced but does not exist, replaced by a fixed one
+
+
+pdfTeX warning (dest): name{figure.caption.46} has been referenced but does not exist, replaced by a fixed one
+
+
+pdfTeX warning (dest): name{figure.caption.44} has been referenced but does not exist, replaced by a fixed one
+
+
+pdfTeX warning (dest): name{figure.caption.39} has been referenced but does not exist, replaced by a fixed one
+
+
+pdfTeX warning (dest): name{figure.caption.35} has been referenced but does not exist, replaced by a fixed one
+
+
+pdfTeX warning (dest): name{figure.caption.21} has been referenced but does not exist, replaced by a fixed one
+
+
+pdfTeX warning (dest): name{table.caption.61} has been referenced but does not exist, replaced by a fixed one
+
+
+pdfTeX warning (dest): name{table.caption.57} has been referenced but does not exist, replaced by a fixed one
+
+
+pdfTeX warning (dest): name{table.caption.47} has been referenced but does not exist, replaced by a fixed one
+
+
+pdfTeX warning (dest): name{table.caption.45} has been referenced but does not exist, replaced by a fixed one
+
+
+pdfTeX warning (dest): name{table.caption.40} has been referenced but does not exist, replaced by a fixed one
+
+
+pdfTeX warning (dest): name{table.caption.36} has been referenced but does not exist, replaced by a fixed one
+
+
+pdfTeX warning (dest): name{table.caption.22} has been referenced but does not exist, replaced by a fixed one
+
+
+pdfTeX warning (dest): name{table.caption.18} has been referenced but does not exist, replaced by a fixed one
+
+
+pdfTeX warning (dest): name{section*.81} has been referenced but does not exist, replaced by a fixed one
+
+
+pdfTeX warning (dest): name{paragraph.1.3.2.4.2} has been referenced but does not exist, replaced by a fixed one
+
+
+pdfTeX warning (dest): name{paragraph.1.3.2.4.1} has been referenced but does not exist, replaced by a fixed one
+
+
+pdfTeX warning (dest): name{subsubsection.1.3.2.4} has been referenced but does not exist, replaced by a fixed one
+
+
+pdfTeX warning (dest): name{paragraph.1.3.2.3.3} has been referenced but does not exist, replaced by a fixed one
+
+
+pdfTeX warning (dest): name{paragraph.1.3.2.3.2} has been referenced but does not exist, replaced by a fixed one
+
+
+pdfTeX warning (dest): name{paragraph.1.3.2.3.1} has been referenced but does not exist, replaced by a fixed one
+
+
+pdfTeX warning (dest): name{subsubsection.1.3.2.3} has been referenced but does not exist, replaced by a fixed one
+
+
+pdfTeX warning (dest): name{paragraph.1.3.2.2.2} has been referenced but does not exist, replaced by a fixed one
+
+
+pdfTeX warning (dest): name{paragraph.1.3.2.2.1} has been referenced but does not exist, replaced by a fixed one
+
+
+pdfTeX warning (dest): name{subsubsection.1.3.2.2} has been referenced but does not exist, replaced by a fixed one
+
+
+pdfTeX warning (dest): name{paragraph.1.3.2.1.3} has been referenced but does not exist, replaced by a fixed one
+
+
+pdfTeX warning (dest): name{paragraph.1.3.2.1.2} has been referenced but does not exist, replaced by a fixed one
+
+
+pdfTeX warning (dest): name{paragraph.1.3.2.1.1} has been referenced but does not exist, replaced by a fixed one
+
+
+pdfTeX warning (dest): name{subsubsection.1.3.2.1} has been referenced but does not exist, replaced by a fixed one
+
+</usr/local/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmbsy10.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmex10.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi7.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmr12.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmr7.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy7.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/euler/euex10.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/euler/eufm10.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/euler/eufm7.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/euler/eurb10.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/euler/eurm10.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/euler/eurm7.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/euler/eusm10.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/euler/eusm7.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/lm/lmtt12.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/symbols/msam10.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/symbols/msbm10.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/tex-gyre/qplb.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/tex-gyre/qplr.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/tex-gyre/qplri.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/urw/helvetic/uhvr8a.pfb>
+Output written on dissertation.pdf (181 pages, 37600480 bytes).
+PDF statistics:
+ 3683 PDF objects out of 4296 (max. 8388607)
+ 3292 compressed objects within 33 object streams
+ 776 named destinations out of 1000 (max. 500000)
+ 49447 words of extra memory for PDF output out of 51595 (max. 10000000)
+
