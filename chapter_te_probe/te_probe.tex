@@ -1,19 +1,14 @@
 \chapter{Multi-tip Langmuir Probe}
 \label{sch:multitip_probe}
 
-\section{What's a Langmuir probe}
+\section{Langmuir probes}
 \label{sse:multitip_langmuir_what}
 
-% TODO: space out the below references for this section.
-% Hershkowitz: \cite{Hershkowitz_1989}
-% Hutchinson: \cite{Hutchinson_2002}
-% Olson: \cite{Olson_2020}
-
-Plasma diagnostics make a broad phylogenetic tree ranging from the variety of plasma parameters they can measure to their size and complexity. In the Big Red Ball we prefer simplicity and cheapness to some of the wilder diagnostic varieties so a common probe that we use is a Langmuir probe.
+There exist a wide variety of plasma diagnostics that depend on measurable plasma parameters and size, complexity, and cost. Since our plasmas are relatively cool and short lived we are able to use probe based diagnostics and for the measurement of bulk plasma parameters, Langmuir probes have been chosen for this experiment.
 
 \subsection{Basic Construction}
 
-These Langmuir probes are quite basic in construction. At it's simplest, a conductor is placed in contact with the plasma and a voltage is applied relative to ground which we will call the probe voltage, $V_{\text{probe}}$. This will locally perturb the plasma and collect a current, $I_\text{probe}$, which can be seen in figure \ref{fig:simple_langmuir_probe}. If $V_\text{probe} < V_\text{plasma}$, an electric field is formed that repells electrons and attracts ions and the inverse for $V_\text{probe} > V_\text{plasma}$.
+A Langmuir probe consists of a conductor placed in contact with the plasma. The wire is biased to a voltage applied relative to ground which we will call the probe voltage, $V_{\text{probe}}$. This will locally perturb the plasma which attracts or repels ions or electrons and thus collects a current, $I_\text{probe}$, which can be seen in figure \ref{fig:simple_langmuir_probe}. If $V_\text{probe} < V_\text{plasma}$, an electric field is formed that repels electrons and attracts ions and the inverse for $V_\text{probe} > V_\text{plasma}$.
 
 \begin{figure}[]
     \centering
@@ -25,96 +20,72 @@ These Langmuir probes are quite basic in construction. At it's simplest, a condu
     \label{fig:simple_langmuir_probe}
 \end{figure}
 
-Langmuir probes have been developed to work in a very wide range of plasma parameter configurations that well encompass the plasma parameters TREX achieves (see table \ref{tab:lab_vs_space_parameters}).
+% Langmuir probes have been developed to work in a very wide range of plasma parameter configurations that well encompass the plasma parameters TREX achieves (see table \ref{tab:lab_vs_space_parameters}).
 % TODO: Add references of other langmuir probes.
 
-\subsection{Extracting Plasma Parameters}
+% \subsection{Extracting Plasma Parameters}
 
-The most challenging part of these probes is the conversion of measured current to plasma parameters. Since we are trying to get a local measurement of the plasma parameters and we are also perturbing the plasma locally by touching it with a probe, we need to create a theory that correctly takes into account that perturbation such that we can get the plasma parameters. This often consists of a fitting procedure where the difference between the theoretical and experimental I-V curves is minimized.
+Although these probes are relatively easy to construct, their perturbative nature leads to many difficulties in extracting the local plasma parameters. This often consists of a fitting procedure where the difference between the theoretical and experimental I-V curves is minimized.
 
-Additionally, many a probe theory is purpose built for plasmas with no magnetic field. As we are studying magnetic reconnection in which there are in fact magnetic fields, this could change the I-V characteristic in unexpected ways. We'll discuss below why these effects are not very impactful and in future sections describe the theories we use for extracting the plasma parameters.
+% Additionally, many probe theories are purpose built for plasmas with no magnetic field. As we are studying magnetic reconnection in which there are in fact magnetic fields, this could change the I-V characteristic in unexpected ways. We'll discuss below why these effects are not very impactful and in future sections describe the theories we use for extracting the plasma parameters.
 
 \subsection{Plasma Perturbation}
 
-A problem often found in highly magnetized plasma devices is the long range perturbation to the plasma by the probe. In the Big Red Ball there are times where we have a relatively strong field and times when we don't so let's examine both cases.
+Since we are inserting a physical probe into the plasma, as compared to passive system like spectroscopy or an active system using lasers which are minimally perturbative, the probe itself and the electric fields generated around the probe will change the plasma that is being measured. The size of this effect and how it changes the I-V curve depends on the magnetic field.
 
-\subsubsection{Unmagnetized Perturbation}
+% \subsubsection{Unmagnetized Perturbation}
 
-Let's examine this from an unmagnetized starting point. In this configuration, the probe collects nearly isotropically to an extent limited by the Debye length which creates a sheath around the probe and operates to shield the electric field caused by the difference between $V_\text{probe}$ and $V_\text{plasma}$. This length scale is very short and plasma can easily refill the sheath in this unmagnetized system.
+Given low or no magnetic field, the probe collects nearly isotropically to an extent limited by the Debye length which creates a sheath around the probe and operates to shield the electric field caused by the difference between $V_\text{probe}$ and $V_\text{plasma}$. This length scale is very short and plasma can easily refill the sheath in this unmagnetized system. Although the sheath is perturbative, the effect drops off quickly and goes like $1 / x^2$ where $x$ is the radius of a sphere centered at the probe.
 
-\subsubsection{Magnetic Field Effects}
-Now in a highly magnetized system (gyroradius far smaller than probe length scale) the plasma interacting with the probe comes from a flux tube approximately the size of the probe area projected into the magnetic field direction. Because of this, the probe can start ``emptying out'' the flux tube because of the difficulty of plasma to diffuse across field lines into the flux tube. This means the extend of the probe perturbation is far longer.
+% \subsubsection{Magnetic Field Effects}
+
+In a highly magnetized system (gyroradius far smaller than probe length scale) the plasma interacting with the probe comes from a flux tube approximately the size of the probe area projected into the magnetic field direction. Because of this, the probe can start ``emptying out'' the flux tube because of the long time scales of cross field diffusion compared to the thermal streaming along the field line. This means the extent of the probe perturbation is far longer and is localized to the flux tube dropping off like $1 / x$ where $x$ is the distance along the tube.
 
 \subsubsection{Perturbations in our System}
 
-We are quite lucky in that our system geometry reduces the impacts of flux tube emptying and the plasmas we are studying are often relatively unmagnetized.
+Our system geometry reduces the impacts of flux tube emptying and the plasmas we are studying are often relatively unmagnetized. This is true because of geometric and magnetic field factors.
 
-\paragraph{Geometric Considerations}
-The TREX experiment is (often) cylindrically symmetric and our probes are placed in different toroidal planes (see figure \ref{fig:brb_cad_rendering} for coordinate system reference). This means that without any toroidal field, any emptying only occurs in the plane of the probe which may still affect the probe I-V characteristic but is not affecting other probes measurements in a significant manner. When we do have a toroidal field, we also often have non-uniform $B_r$ and $B_z$ which means the flux tube passes through many different plasma parameters. This may help to average out any flux tube emptying because at different points along the flux tube more plasma may be able to enter the tube than just what is expected at the probe causing a reduced perturbation length.
+% \paragraph{Geometric Considerations}
+The TREX experiment is cylindrically symmetric and our probes are placed in different toroidal planes (see figure \ref{fig:brb_cad_rendering} for coordinate system reference). This means that without any toroidal field, any emptying only occurs in the plane of the probe which may still affect the probe I-V characteristic but is not affecting other probe's measurements in a significant manner. When we do have a toroidal field, we also often have non-uniform $B_r$ and $B_z$ which means the flux tube passes through many different plasma parameters and can vary in cross-sectional area. This may help to average out any flux tube emptying because at different points along the flux tube more plasma may be able to enter the tube than just what is expected at the probe causing a reduced perturbation length.
 
-\paragraph{Magnetic Field Considerations}
-As we have magnetic fields in our system, we do need to worry about these flux tube effects. Fortunately, our magnetic field are relatively small and in the region we are often most interested in (where reconnection is occurring) the magnetic field is far smaller than the initial background field. We characterize this smallness by the ratio of the gyroradius to the radius of the probe area which is on the order of ??? (see \ref{tab:multitip_length_scales}).
-% TODO: Figure out what the ratio of the probe area to gyroradius is.
-
-% \begin{table}
-%     \centering
-%     \begin{tabular}{|l|r|r|}
-        
-%     \end{tabular}
-%     \caption{Langmuir probe characteristic scales.}
-%     \label{tab:langmuir_probe_plasma_scales}
-% \end{table} % TODO: I don't think I need this table since I have a table lower down.
+As we have magnetic fields in our system, we do need to worry about these flux tube effects. Fortunately, our magnetic field are relatively small and near the x-point during reconnection the magnetic field is far smaller than the initial background field. We characterize this smallness by the ratio of the gyroradius to the radius of the probe area which is on the order of 5-10 in the worst case (see \ref{tab:multitip_length_scales}).
 
 \section{Hardware}
 
-There has been a long and storied history of probe building on the Big Red Ball expecially for the development of multi-tip Langmuir probes. For some more information about our probes, see \cite{Olson_2020}.
+% The BRB and TREX require certain considerations due to the machines size, at 3 m in diameter, and the duration of the experiment, which is on the order of 1 \textmu s. This has led to multiple generations of probes and in this section we will discuss the most recent developments \cite{Olson_2020}.
 
-\subsection{Physical Constraints}
-
-Our Langmuir probes need to satisfy a number of requirements.
+Our Langmuir probes must satisfy a number of requirements:
 \begin{itemize}
     \item \textbf{Length}: The probe is attached to a port on the surface of the machine. This means it starts at a spherical radius of 1.5 m and must be inserted from there. Thus the insertable length should be fairly long and must be stable. This is described in \ref{sss:multitip_shaft_components}.
-    \item \textbf{Material}: We want our probe to survive the plasma exposure and not affect our vacuum pressure via offgassing. We also don't want to have to worry about secondary electron emission. We discuss this in \ref{sss:multitip_tip_components}.
-    \item \textbf{Probe Size}: We want to measure the plasma locally so our probe body needs to be small relative to the plasma gradients. It also needs to be able to fit through ball joints that can be mounted to the machine that have a radius of ???. These considerations are taken into account in \ref{sss:multitip_tip_components}.
+    \item \textbf{Material}: We want our probe to survive the plasma exposure and not affect our vacuum pressure via outgassing. We also don't want to have to worry about secondary electron emission. We discuss this in \ref{sss:multitip_tip_components}.
+    \item \textbf{Probe Size}: We want to measure the plasma locally so our probe body needs to be small relative to the plasma gradients. It also needs to be able to fit through ball joints that can be mounted to the machine that have a radius of 2.2 cm. These considerations are taken into account in \ref{sss:multitip_tip_components}.
 \end{itemize}
 
 \subsection{Shaft Components}
 \label{sss:multitip_shaft_components}
 
-For our probe to reach everywhere we want and also actually be in the position we desire we need a long shaft with a sufficient amount of support to be accurate to a few centimeters. Why a few centimeters? Our plasma dynamics are reproducible but not to such an extreme that a centimeter is noticeably different. Also it's difficult with the probe length to achieve too much better.
+The probe must be able to move and reach to the center of the device (which is 3 m in diameter) while also being accurate to a few centimeters. This accuracy length scale is set by our plasma dynamics which are reproducible to the order of centimeters.
 
 \begin{figure}
     \centering
     \includegraphics[width=\textwidth]{chapter_te_probe/figures/probe_shaft_cad.png}
-    \caption[*Probe Shaft CAD Diagram]{Three stage probe shaft with an outer and inner garage and the main stainless steel shaft that connects to the probe.}
+    \caption[*Probe Shaft CAD Diagram]{A CAD diagram of a three stage probe shaft with an outer and inner garage and the main stainless steel to alumina shaft that connects to the probe. Reproduced from \cite{Olson_2020}.}
     \label{fig:probe_shaft_cad}
 \end{figure}
 
-\subsubsection{Garages}
+As can be seen in figure \ref{fig:probe_shaft_cad}, the probe shaft is a multistage system. Each stage consists of stainless steel tubing where connections between different stages are made using quick-connect high-vacuum sliding seals. We mount the probe to the machine using a flange on the outer garage or a ball joint (as seen in the figure). Then we can move each garage independently to insert the probe a desired length.
 
-As can be seen in figure \ref{fig:probe_shaft_cad}, the probe shaft is a multistage system. Each stage consists of some tubing where connections between different stages are made using quick-connect high-vacuum fittings (like \href{https://www.mcmaster.com/3486N32}{part 3486N32 from McMaster-Carr}).
+% \subsubsection{Shaft materials}
 
-We mount the probe to the machine using a flange on the outer garage or a ball joint (as seen in the figure). Then we can move each garage independently to insert the probe a desired length.
+% We need to sufficiently support our probe and the shafts themselves so we use stainless steel until we enter the plasma region in which we change to alumina.
 
-\subsubsection{Shaft materials}
+For the shafts, stainless steel is vacuum safe, tolerant to plasma interaction, and can support the weight of the structure easily without excessive flexing. Unfortunately, as a conductor, it will act as a long Langmuir probe that will create a ray in the machine at a single potential. This will perturb the plasma much more significantly than using an insulator. To that end we use alumina, a high temperature ceramic who's surface will accumulate charge such that it will be left at the floating potential (the potential at which the ion and electron currents balance). This helps to perturb the plasma less as there is no net current to the shaft and thus will be less perturbative.
 
-We need to sufficiently support our probe and the shafts themselves so we use stainless steel until we enter the plasma region in which we change to alumina.
+At the end of the probe shaft, we use stainless steel tubing to connect from the alumina to the probe body. This is to reduce the overall size of the shaft in perturbing the plasma at the probe and extends 10 cm between alumina and probe body.
 
-For the shafts, stainless steel is vacuum safe, tolerant to plasma interaction, and can support the weight of the structure easily without excessive flexing. Unfortunately, as a conductor, it will act as a long Langmuir probe that will create a ray in the machine at a single potential. This will perturb the plasma much more significantly than using an insulator.
+Each shaft/garage, is held in place by the sliding vacuum seal that connects it to it's larger garage. As this is only a single point of contact, we have used centering collets that allow the inner shaft/garage to move while being held in place by the outer garage. These can be both machined or 3D printed. When 3D printed we can make these to also hold the o-rings needed to seal the outer garage.
 
-To that end we use alumina, a high temperature ceramic who's surface will accumulate charge such that it'll be left at the floating potential (the potential at which the ion and electron currents balance). This helps to perturb the plasma less as there is no net current to the shaft and thus the plasma should (hopefully) be less perturbed.
-
-Right near the end of the probe shaft, we use stainless steel tubing to connect from the alumina to the probe body. This is to reduce the overall size of the shaft in perturbing the plasma at the probe and is only for ~10 cm of length.
-
-\subsubsection{Centering Collet}
-
-Each shaft/garage, is held in place by the sliding vacuum seal that connects it to it's larger garage. Unfortunately this gives only a single point of contact for making the shafts concentric. This would cause excessive drooping of the probe and may be so bad as to cause the probe to hit the edge of the machine when being inserted/removed.
-
-To fix this issue, we have used centering collets that allow the inner shaft/garage to move while being held in place by the outer garage. These can be both machined or 3D printed. When 3D printed we can make these to also hold the o-rings so they are double-acting.
-
-\subsubsection{Feed-thru}
-
-We need some way to extract the signals from the probe tip. Because of the construction of our probe and for simplicity purposes, the probe shaft is at vacuum pressure. Thus we attach a feed-thru to the end of the can from figure \ref{fig:probe_shaft_cad}. This is constructed using two DB-25 hermetically sealed connectors where we solder the wires directly to the vacuum side of the can and then can easily move and connect the probe externally.
+The probe shaft is at vacuum pressure and thus we attach a feedthrough to the end of the can from figure \ref{fig:probe_shaft_cad}. This feedthrough carries the plasma current hitting the probe tips between the high vacuum BRB internals to an external connector constructed using two hermetically sealed DB-25 connectors.
 
 \subsection{Tip Components}
 \label{sss:multitip_tip_components}
@@ -122,18 +93,14 @@ We need some way to extract the signals from the probe tip. Because of the const
 \begin{figure}
     \centering
     \includegraphics[width=\textwidth]{./chapter_te_probe/figures/annotated_te_image.png}
-    \caption[*Picture of multi-tip Langmuir Probe]{Picture of the end of the multi-tip Langmuir probe. Image from \cite{Gradney_2025}.}
+    \caption[*Picture of multi-tip Langmuir Probe]{Picture of the end of the multi-tip Langmuir probe. The leftmost cylinder is the stainless steel tubing that connects the alumina shaft to the 3D printed probe body. The probe body has 16 individual Langmuir probes that are shielded using PTFE. A 3-axis B-dot coil is attached at the right to measure the local changes in magnetic field. Image reproduced from \cite{Gradney_2025}.}
     \label{fig:multitip_image}
 \end{figure}
 
 \subsubsection{Probe body}
 \label{ss2:multitip_probe_body}
 
-Our probe does not need to withstand extreme heat fluxes and our vacuum conditions don't need to be perfect so we are lucky enough to be able to use a 3D printed probe body.
-
-This is constructed using stereolithography which gives a sufficient resolution for the probe. Additionally the plastic used holds up well in vacuum. The body must connect to two different diameter stainless steel tubes (as can be seen in figure \ref{fig:multitip_image}). Thus we use two annuli whose inner/outer radii match the tubing.
-
-The tubing exists to connect the probe to the main shaft holding it up and also a small B-dot coil which is discussed in \ref{sss:multitip_bdot}.
+The probe body is constructed using stereolithography which gives a high resolution print necessary for the friction fit Molybdenum tips. Additionally, this plastic does not noticeable affect vacuum conditions and is resilient to the short heat fluxes received during a shot. The body must connect to two different diameter stainless steel tubes (as can be seen in figure \ref{fig:multitip_image}) and thus we use an annulus with inner/outer radii matching the two tubes. One tube connects the probe to the alumina shaft and the other connects a 3-axis B-dot coil.
 
 \begin{figure}
     \includegraphics[width=\textwidth]{chapter_te_probe/figures/Plastic Body v2.pdf}
@@ -143,58 +110,48 @@ The tubing exists to connect the probe to the main shaft holding it up and also 
 
 \subsubsection{Tip material + size}
 
-To collect current, we use 16 separate tips which each sample a point on the IV curve. We make these tips out of Molybdenum which requires us to connect the tips to the signal wire using a friction fit.
+To collect current, we use 16 separate tips at different voltages which each sample a point on the IV curve. We make these tips out of Molybdenum which requires us to connect the tips to the signal wire using a friction fit. Secondary electron emission from molybdenum is quite small as compared to many metals \cite{Dekker_1958} which simplifies the IV-characteristic interpretation \cite{Hershkowitz_1989}. Additionally, as a refractory metal, molybdenum will not melt nor sputter at the high temperatures the probe tips may get to as they collect current.
 
-\paragraph{Why use Mo}
-Secondary electron emission from molybdenum is quite small as compared to many metals \cite{Dekker_1958} which helps with IV-characteristic interpretation \cite{Hershkowitz_1989}. Additionally, as a refractory metal, molybdenum will not melt nor sputter at the high temperatures the probe tips may get to as they collect current.
+We expect the current to the tips to be on the order of $1 \, \text{kA}/\text{m}^2$. We measure the current across a `sense' resistor (as discussed in \ref{sss:multitip_probe_circuit}) and to keep power dissipation minimal we set the size to be approximately 10 mm$^2$ such that the current is on the order of 10 mA. This amount of current is sufficiently large such that our signal-to-noise ratio is large.
 
-\paragraph{Size considerations}
-We expect the current to the tips to be on the order of $1 \, \text{kA}/\text{m}^2$. We measure the current across a `sense' resistor (as discussed thoroughly in \ref{sss:multitip_probe_circuit}) but we don't want to have to use high power resistors for this. Thus we choose our current to be on the order of 10 mA which is feasible by having a tip area on the order of 10 mm$^2$. This amount of current also gives a reasonable signal-to-noise ratio.
+We protect each tip from the base of the probe body using polytetrafluoroethylene (PTFE)/Teflon. Teflon does outgas in a vacuum but because of it's small size is minimally damaging and works well as an insulator.
 
-Unfortunately, the probe is not all that cylindrical which means that the idealized probe theories we use are not as precise as we may have hoped. Future probe designs could use longer and smaller diameter tips to avoid this issue.
+We could potentially shorten each tip so the collecting area extends all the way to the probe body. Unfortunately because of the increased size of the body this can cause shadowing effects where tips on one side of the probe have a different IV-characteristic than those on the other. This `shadowing' is caused by plasma flow parallel to the tip direction which gets intercepted by the probe body.
 
-\subsubsection{Tip Shielding}
-
-We protect each tip from the base of the probe body using PTFE/teflon. Teflon isn't great in a vacuum environment because of offgassing but does the trick and is cheap and easy to use. % TODO: Is this true?
-After inserting the tip into the probe body we push the teflon on and apply a small amount of vacuum-safe epoxy at the base to hold the shielding in place.
-
-\paragraph{Why shield at all?} We could potentially shorten each tip so the collecting area extends all the way to the probe body. Unfortunately because of the increased size of the body this can cause shadowing effects where tips on one side of the probe have a different IV-characteristic than those on the other. This `shadowing' is caused by plasma flow parallel to the tip direction whcih gets intercepted by the probe body.
-
-\paragraph{First order mach effects to avoid}
-Another reason to shield the probe is to avoid mach effects that would cause different IV-characteristics for tips on opposite sides. As can be seen in figure \ref{fig:multitip_mach_effect}, in an ideal mach probe the ions are prevented from easily accessing the ``shadowed'' side of the probe (right side) because of their inertia. If we shrink the probe body and increase the distance the tip is from the probe the mach effect is reduced because ion inertia is not sufficient to prevent collection. This is only approximate though and we sometimes do see effects that could be caused by shadowing. For an in depth discussion of mach probes we refer the interested reader to \cite{Chung_2012}.
+Another reason to shield the tips is to avoid Mach effects that would cause different IV-characteristics for tips on opposite sides. As can be seen in figure \ref{fig:multitip_mach_effect}, in an ideal Mach probe the ions are prevented from easily accessing the ``shadowed'' side of the probe (right side) because of their inertia. If we shrink the probe body and increase the distance the tip is from the probe the Mach effect is reduced because ion inertia is not sufficient to prevent collection. This is preventative measure helps to reduce shadowing but during extreme flows may still be present. For an in depth discussion of Mach probes we refer the interested reader to \cite{Chung_2012}.
 
 \begin{figure}
     \centering
     \includegraphics{chapter_te_probe/figures/te_mach_effect.pdf}
-    \caption[*Mach Effect Diagram]{Simplified cartoon of the expected Mach effect for the multitip probe. The black arrows in the top figures are the approximate paths ions take due to the electric fields around the probe. The grey shaded region is where the ion density is significantly diminished. The left probe is a classic Mach probe geometry and the right probe is the multitip probe whose geometry is purpose built to avoid this Mach effect. Figure inspired by \cite{Merlino_D'Angelo_1987}, Fig. 10.}
+    \caption[*Mach Effect Diagram]{Simplified diagram of the expected Mach effect for the multi-tip probe. The black arrows in the top figures are the approximate paths ions take due to the electric fields around the probe. The grey shaded region is where the ion density is significantly diminished. The left probe is a classic Mach probe geometry and the right probe is the multi-tip probe whose geometry is purpose built to avoid this Mach effect. Figure inspired by \cite{Merlino_D'Angelo_1987}, Fig. 10.}
     \label{fig:multitip_mach_effect}
 \end{figure}
 
 \subsection{B-dot Coils}
 \label{sss:multitip_bdot}
 
-Since we don't know the exact location of the probe and the plasma is not perfectly reproducable, it's especially useful to have measurements we can compare to other diagnostics to locate the probe in space and around the reconnection region. To do this we use hand wound three axis Bdot coils that can measure the change in magnetic field near the tips.
+Since we don't know the exact location of the probe and the plasma is not perfectly reproducible, it's useful to have measurements we can compare to other diagnostics to locate the probe in space and around the reconnection region. We do this using hand wound 3-axis B-dot coils that can measure the change in magnetic field near the tips.
 
 \subsubsection{Size Considerations}
 
-Through past trial and error and many a day spent hand winding coils for past students, we've found a reasonable vector area magnitude to use for the B-dot coils. During reconnection the largest $\partial_t \vb{B}$ is on the order of 10 kT/s. Thus, from Faraday's law,
+During reconnection the largest $\partial_t \vb{B}$ is on the order of 10 kT/s. Thus, from Faraday's law,
 \begin{equation}
     \mathcal{E} = \vb{A} \cdot \partial_t \vb{B}
 \end{equation}
 where $\mathcal{E}$ is the electromotive force and $\vb{A}$ is the vector area of the coil \cite{Jackson_1999}. % TODO: Check this reference.
-This means that for a signal of ~1 V we are looking for a cross-sectional area of $10^{-4}$ m$^2$.
+This means that for a signal of ~1 V we are looking for a cross-sectional area of $10^{-4}$ m$^2$. This area also leads to a measured voltage that is approximately proportional to the field frequency which simplifies field reconstruction.
 
-Using a 3D-printed B-dot body (seen in right in figure \ref{fig:multitip_image}) we wrap wire around a square shaped center six times giving an area of $\sim 5 \times 10^{-5}$ m$^2$. Although smaller than that required for a 1 V measurement, this makes sure the signal doesn't become too large should some kind of resonance exist in the circuit.
+Using a 3D-printed B-dot body (seen at right in figure \ref{fig:multitip_image}), we wrap wire around a square shaped center six times giving an area of $\sim 5 \times 10^{-5}$ m$^2$. Although smaller than that required for a 1 V measurement, this makes sure the signal doesn't become too large should some kind of resonance exist in the circuit.
 
 \subsubsection{Noise Reduction}
 
-Since common mode noise can relatively easily couple to the coils, we use twisted pair for each wrapping direction. This gives us two circuits that have nearly opposite vector area, $\vb{A}_1 \approx -\vb{A}_2$, such that we can subtract the two measurements and thus remove common mode contributions. We will discuss this more in \ref{ss2:multitip_bdot_signal_interp}.
+Since common mode noise can relatively easily couple to the coils, we use twisted pair for each wrapping direction. This gives us two circuits that have nearly opposite vector area, $\vb{A}_1 \approx -\vb{A}_2$, such that we can subtract the two measurements and thus remove common mode contributions.
 
 \subsection{Length Scales}
 
 Table \ref{tab:multitip_length_scales} contains all information that helps us decide on our Langmuir probe theory and signal interpretation. There are a few key features to note that let us validate the use of finite area B-dot coils and multiple tips.
 
-Our ion and electron gyroradii are both relatively large compared to the probe tips and B-dot coils. This means that if we assume the plasma is relatively uniform in a flux tube, the entire probe is sampling a quite uniform plasma. % TODO: Are there other scales to lookinto to account for uniformity (or lack thereof?)
+Our ion and electron gyroradii are both relatively large compared to the probe tips and B-dot coils. This means that if we assume the plasma is relatively uniform in a flux tube, the entire probe is sampling a uniform plasma. % TODO: Are there other scales to look into to account for uniformity (or lack thereof?)
 
 \begin{table}
 \begin{center}
@@ -228,53 +185,54 @@ Our ion and electron gyroradii are both relatively large compared to the probe t
     \hline
 \end{tabular}
 \end{center}
-\caption[*Multitip Langmuir Probe Length Scales]{Length scales of the multitip probe. All lengths are in meters and are approximate. For the interested reader and for the energy relaxation length, please refer to \cite{Demidov_Ratynskaia_Rypdal_2002} for Langmuir probe relevant physics of these scales. These parameters were calculated with $n = 10^{18}$ m$^{-3}$, $T_e = 20$ eV, $T_i = 0.1 \times T_e$, and $B = 10^{-4}$ T. For the mean free paths we have chosen the frequency that gives the shortest length.}
+\caption[*Multi-tip Langmuir Probe Length Scales]{Length scales of the multi-tip probe. All lengths are in meters and are approximate. The energy relaxation length and a discussion of the relevance of these scales is found in \cite{Demidov_Ratynskaia_Rypdal_2002}. These parameters were calculated with $n = 10^{18}$ m$^{-3}$, $T_e = 20$ eV, $T_i = 0.1 \times T_e$, and $B = 10^{-4}$ T. For the mean free paths we have chosen the frequency that gives the shortest length.}
 \label{tab:multitip_length_scales}
 \end{table}
 
 \section{Circuitry}
 
-The multitip Langmuir probe consists of a number of circuits that work together to give us some nice measurements. Here we enumerate their operation methods, upgrades, signal extraction, and calibration techniques.
+The multi-tip Langmuir probe consists of three circuits used for biasing the tips, measuring the probe current, and measuring the changing magnetic field.
 
 \subsection{Bias Source}
 
-We have thus far had two different circuits that we've used for biasing each tip relative to the laboratory ground. The first, made by Jan Egedal while at VTF is manually controlled, while the second, made by me is remotely operated. We'll discuss how they work and their pros and cons.
+We have thus far had two different circuits that we've used for biasing each tip relative to the laboratory ground. The first, made by Jan Egedal while at VTF is manually controlled, while the second is remotely operated.
 
 \subsubsection{Manually Controlled}
 
-Our previous setup consisted of multiple electrolytic capacitors who's voltage is set by a series of resistors that split the voltage between the negative power supply ($V_-$), ground, and the postivie power supply ($V_+$).
+Our previous setup consisted of multiple electrolytic capacitors who's voltage is set by a series of resistors that split the voltage between the negative power supply ($V_-$), ground, and the positive power supply ($V_+$).
 
-\paragraph{Principles of operation}
+% \paragraph{Principles of operation}
 
 \begin{figure}
   \centering
   \includegraphics{chapter_te_probe/figures/Old_biasing_circuit_cropped.pdf}
-  \caption[*Old Multitip Biasing Circuit]{Old biasing circuit for the multitip Langmuir probe.}
+  \caption[*Old Multi-tip Biasing Circuit]{Old biasing circuit for the multi-tip Langmuir probe.}
   \label{fig:multitip_old_bias_circuit}
 \end{figure}
 
-Figure \ref{fig:multitip_old_bias_circuit} shows a 4 tip biasing circuit (our circuit uses 16 tips but we have simplified it). The `rails' (which are the maximum and minimum voltage of the circuit) are set by power sources at $V_+$ and $V_-$ which are biased relative to the ground input connection labeled \texttt{Jgnd}. A series of resistors splits the voltage between the rails and we choose one of the tips to be at laboratory ground. This lets us set the maximum and minimum voltage along with setting how many tips are positively/negatively biased. Also, moving the ground changes the voltage separation between tips so we can get higher resolution. The voltage separation charges the respective capacitors for each tip to a bias voltage, $V_b = \texttt{Vb}$. The capacitors exist to keep the bias voltage of each tip nearly constant during an experimental shot.
+Figure \ref{fig:multitip_old_bias_circuit} shows the biasing circuit simplified to a four tip configuration. The `rails' (which are the maximum and minimum voltage of the circuit) are set by power sources at $V_+$ and $V_-$ which are biased relative to the ground input connection labeled \texttt{Jgnd}. A series of resistors splits the voltage between the rails and one tip is set to laboratory ground. These three parameters let us set the maximum and minimum voltage along with the voltage difference between each positively/negatively biased tip. The voltage separation charges each tip's capacitor to a bias voltage, $V_b = \texttt{Vb}$, which exist to keep the bias voltage constant during an experimental shot.
 
-Now let's calculate the bias for each tip. Let $i, j \in \{1, \dots, N\}$ be the index of the tip and the index of the ground connection respectively. Then,
+Let $i, j \in \{1, \dots, N\}$ be the index of the tip and the index of the ground connection respectively. Then the bias voltage is
 \begin{equation}
     V_{bi} = \begin{cases}
-        \frac{V_+}{j} (j - i) & \text{if } j \geq i \\
-        \frac{V_-}{N + 1 - j} (i - j) & \text{if } j < i % TODO: fix equation
+        \frac{V_-}{j} (j - i) & \text{if } j \geq i \\
+        \frac{V_+}{N + 1 - j} (i - j) & \text{if } j < i
     \end{cases}
 \end{equation}
 where $V_{bi}$ is the bias voltage for tip $i$.
 
-\paragraph{The good, the bad, and the ugly}
+% \paragraph{The good, the bad, and the ugly}
 
-Because of the simplicity of this system, it has proven to work relatively well since it's been built. Unfortunately since most of it's components are free-standing and the wired connections undergo some movement during travel and assembly, various solder joints are prone to breaking. Additionally because of the need to manually flip the polarity of each electrolytic capacitor using a switch mounted to a board and also move the ground via a banana connection, it is infeasible to remotely operate the bias supply. Additionally this circuit has no protection against setting the tip voltages extremely far apart which may cause arcing between wires or tips.
+Since most of this circuits components are free-standing and the wired connections undergo some movement during travel and assembly, various solder joints are prone to breaking. Additionally because of the need to manually flip the polarity of each electrolytic capacitor using a switch mounted to a board and move the ground via a banana connection, it is infeasible to remotely operate the bias supply. This circuit also has no protection against setting the tip voltages extremely far apart which may cause arcing between wires or tips.
 
 \subsubsection{Remote Controlled}
+\label{ss2:multitip_remote_bias}
 
 We've upgraded the previous setup by allowing the bias to be remotely controlled. This is done by removing the switches needed in the past setup and instead having one power supply set the voltage of the most negative tip and the other power supply set the maximum bias voltage difference between tips.
 
-\paragraph{Principles of operation}
+% \paragraph{Principles of operation}
 
-This system operates by having a large capacitor that is set to some negative voltage relative to ground. Then, all the other individual capacitors for each tip has it's negative terminal set to the output of the large capacitor. Thus we can change the bias of all the tips by the same amount by changing the negative bias. The splitting of the bias voltage is similar to the previous setup where the voltage from the positive power supply is split using a series of resistors. The circuit schematic and images of the circuit can be seen in figures \ref{fig:multitip_new_bias_schematic} and \ref{fig:multitip_new_bias_image} respectively.
+This system operates by having a large capacitor that is set to some negative voltage relative to ground, $V_-$. Each tip's capacitor is biased relative to the output of a large capacitor whose voltage is $V_-$. Thus we can change the bias of all the tips by the same amount by changing the negative bias. The splitting of the bias voltage is similar to the previous setup where the voltage from the positive power supply is split using a series of resistors. The circuit schematic and images of the circuit can be seen in figures \ref{fig:multitip_new_bias_schematic} and \ref{fig:multitip_new_bias_image} respectively.
 
 We can write out the individual tip biases mathematically as
 \begin{equation}
@@ -284,7 +242,7 @@ where $V_{bi}$ is the tip bias, $V_+ \geq 0$ and $V_- \leq 0$ are the applied bi
 
 \begin{figure}
     \includegraphics[width=\linewidth]{chapter_te_probe/figures/New_biasing_circuit_cropped.pdf}
-    \caption[*New Multitip Biasing Circuit]{Circuit diagram of the new biasing setup. The left side consists of capacitors with reverse voltage protection diodes. Each capacitor is separated from the next by a resistor. At the bottom is the large capacitor for setting the negative voltage and it's diode \& discharge resistor. The top right are connections necessary for dividing down the bias voltage for measurement and the bottom left are ribbon cable connections for applying voltage to the tips.}
+    \caption[*New Multi-tip Biasing Circuit]{Circuit diagram of the new biasing setup. The left side consists of capacitors with reverse voltage protection diodes. Each capacitor is separated from the next by a resistor. At the bottom is the large capacitor for setting the negative voltage and it's diode \& discharge resistor. The top right are connections necessary for dividing down the bias voltage for measurement and the bottom left are ribbon cable connections for applying voltage to the tips.}
     \label{fig:multitip_new_bias_schematic}
 \end{figure}
 
@@ -302,7 +260,7 @@ where $V_{bi}$ is the tip bias, $V_+ \geq 0$ and $V_- \leq 0$ are the applied bi
   \caption{Front view}
   \label{fig:multitip_new_bias_front}
 \end{subfigure}
-\caption[*New Multitip Bias Circuitry Image]{An image of the circuitry for the new bias power supply. In panel \ref{fig:multitip_new_bias_top}: the top left is a fan for cooling the charging resistor hidden beneath a heat sink in black, the bottom left shows the negative capacitor that sets the ground of the rest of the circuit, the top right black cylinders are the individual tip capacitors and white rectangles are high power resistors for the voltage division, bottom right are connections to the front panel. In panel \ref{fig:multitip_new_bias_front}: the top left is the fan power, the red and black banana connections are to the power supplies, the rainbow ribbon cable is the connection to send bias to the tip circuit, the bottom right black cable is for measurement of the bias voltage, and the green banana is a connection to the laboratory ground.}
+\caption[*New Multi-tip Bias Circuitry Image]{An image of the circuitry for the new bias power supply. In panel \ref{fig:multitip_new_bias_top}: the top left is a fan for cooling the charging resistor hidden beneath a heat sink in black, the bottom left shows the negative capacitor that sets the ground of the rest of the circuit, the top right black cylinders are the individual tip capacitors and white rectangles are high power resistors for the voltage division, and bottom right are connections to the front panel. In panel \ref{fig:multitip_new_bias_front}: the top left connection is the fan power, the red and black banana connections are to the power supplies, the rainbow ribbon cable is the connection to send bias to the tip circuit, the bottom right black cable is for measurement of the bias voltage, and the green banana is a connection to the laboratory ground.}
 \label{fig:multitip_new_bias_image}
 \end{figure}
 
@@ -340,28 +298,24 @@ where $V_{bi}$ is the tip bias, $V_+ \geq 0$ and $V_- \leq 0$ are the applied bi
             \hline
         \end{tabular}
     \end{center}
-    \caption[*Multitip Bias Circuit Component Values]{Bias circuit component values}
+    \caption[*Multi-tip Bias Circuit Component Values]{Bias circuit component values}
 \end{table}
 
-\paragraph{Problems}
-Although this system works wonderfully to remotely control the bias such that we don't have to be running up and down the stairs all day long, it does come with it's own set of issues.
+% \paragraph{Problems}
+During running when the probe was at low radius and $V_- = -225$ V, the positive power supply broke and a short to ground was formed internal to the power supply between the negative and ground banana connection terminals. We believe this was due to a transient effect that sent the positive power supply more than 300 V from ground which is outside the safe operating regime. Additionally the 10 W discharge resistor initially used for discharging the negative capacitor burned out because the power load was higher than expected. This has been replaced with a large carborundum resistor that can handle 50 W.
 
-During running when the probe was at low radius and $V_- = -225$ V, the positive power supply broke and a short to ground was formed internal to the power supply between the negative and ground bananda connection terminals. This was most likely due to some transient that sent the positive power supply more than 300 V from ground which the power supply can not do.
-
-Additionally the 10 W discharge resistor initially used for discharging the negative capacitor burned out because the power load was higher than expected. We replaced it with a large carborundum resistor that can handle 50 W.
-
-\paragraph{Calibration}
-\label{spg:multitip_bias_calibration}
-Calibration of the supply consists of two things:
+% \paragraph{Calibration}
+% \label{spg:multitip_bias_calibration}
+Calibration of the supply consists of two stages:
 \begin{itemize}
-    \item The power supplies are remotely controlled through LabView which communicates with a CompactRIO analog output module that sends an isolated control voltage to the power supply. This output signal has a voltage offset and is not a perfect conversion between set voltage and output voltage that can be corrected by a multiplicative factor. We can do both these corrections by setting a voltage in LabView and seeing what voltage the power supply is outputting. This is just a problem of fitting a straight line with an offset.
-    \item We also need to calibrate the measurement of the bias voltage. Since the digitizers have an internal offset voltage and there is a resistor divider between bias and measurement we must correct for both of those. This is similarly a case of measuring the output bias voltage and correcting the digitizer measurement to match that value.
+    \item The power supplies are remotely controlled through LabView which communicates with a CompactRIO analog output module that sends an isolated control voltage to the power supply. This output signal has a voltage offset and is not a one-to-one conversion between set voltage and output voltage. We can correct for these issues by setting a voltage in LabView and measuring the power supply output voltage. A linear fit is done to find the offset and multiplicative factor.
+    \item Since the digitizers have an internal offset voltage and there is a resistor divider between bias and measurement we must correct for both of these effects. This is similarly a case of measuring the output bias voltage using a multimeter and correcting the digitizer measurement to match that value.
 \end{itemize}
 
 \subsection{Probe Circuit}
 \label{sss:multitip_probe_circuit}
 
-Now that we can apply a voltage to the tip, we need some way to measure the current to the probe. We do this using a commonly used circuit setup with a few additions for our setup which can be seen in figure \ref{fig:multitip_simple_tip_circuit}.
+We measure the current to the probe using a series of resistors and capacitors which can be seen in figure \ref{fig:multitip_simple_tip_circuit}.
 
 \begin{figure}
   \centering
@@ -382,13 +336,13 @@ Now that we can apply a voltage to the tip, we need some way to measure the curr
     ;
   % \path (dig-Vlab.west) \coord(dig-Vlab.west);
   \end{circuitikz}
-  \caption[*Tip Signal Circuit]{Circuit for a single tip on the multitip probe. We can reduce the circuit contained in the red dashed rectangle to the red circuit using the equation for a voltage divider.}
+  \caption[*Tip Signal Circuit]{Circuit for a single tip on the multi-tip probe. We can reduce the circuit contained in the red dashed rectangle to the red circuit using the equation for a voltage divider. The resistances are the sense resistance ($R_s$), wire resistance ($R_w$), the divider resistances ($R_1$ and $R_2$), the internal digitizer resistance ($R_D$), and the grouped divider resistance ($R_d$). The tip is set to a bias voltage ($V_b$) which changes as current through the sense resistor ($I_s$) and from the probe ($I_p$) shift the probe voltage ($V_p$). Current traveling towards the digitizer ($I_d$), which is limited to high frequency components because of the capacitor, is measured by a differential amplifier internal to the digitizer ($V_D$ or $V_d$).}
   \label{fig:multitip_simple_tip_circuit}
 \end{figure}
 
-\subsubsection{Principles of operation}
+% \subsubsection{Principles of operation}
 
-We apply the bias at the node labeled $V_b$. When the probe pulls current from the plasma, $I_p$, this changes the tip voltage and pulls the voltage closer to the floating potential since there is a voltage drop across the sense resistor, $R_s$. The capacitor and resistor divider RC times acts to shield the DC component of the probe bias voltage. The voltage difference across the sense resistor is measured by a digitizer which sees $V_D$ but that resistor divider can be simplified to a measured voltage of $V_d$. We want the probe voltage, $V_p$, and the probe current, $I_p$, to fit the plasma parameters.
+We apply the bias voltage from the aforementioned circuits at the node labeled $V_b$. When the probe pulls current from the plasma, $I_p$, this changes the tip voltage and pulls the voltage closer to the floating potential since there is a voltage drop across the sense resistor, $R_s$. The capacitor and resistor divider RC times acts to shield the DC component of the probe bias voltage. The voltage difference across the sense resistor is measured by a digitizer which sees $V_D$ but that resistor divider can be simplified to a measured voltage of $V_d$. We want to find the probe voltage, $V_p$, and the probe current, $I_p$, to fit the plasma parameters.
 
 \begin{figure}
   \centering
@@ -413,26 +367,24 @@ We apply the bias at the node labeled $V_b$. When the probe pulls current from t
   \label{fig:multitip_tip_circuit_w_noise}
 \end{figure}
 
-\subsubsection{Single-ended measurement}
+% \subsubsection{Single-ended measurement}
 
-We've used the TREX cells in the past which are single ended digitizers that can sample between 2.5 MHz (32 channels) and 20 MHz (4 channels). These work pretty well for our lower frequency experiments like those with the drive coils. Unfortunately because of the high voltages and large currents, the ground of these digitizers can change a lot during a shot even if they are on isolation transformers to remove their reliance on the lab ground. This circuit can be seen in figure \ref{fig:multitip_single_ended_circuit_image}.
+We've used the TREX cells in the past which are single ended digitizers that can sample between 2.5 MHz (32 channels) and 20 MHz (4 channels). These work well for lower frequency experiments like those with the drive coils. Unfortunately because of the high voltages and large currents, the ground of these digitizers can change a lot during a shot even if they are powered by isolation transformers to remove their reliance on the lab ground. This leads to a large amount of noise just after the drive coils are energized. This circuit can be seen in figure \ref{fig:multitip_single_ended_circuit_image}.
 
 \begin{figure}
     \centering
     \includegraphics[width=.85\textwidth]{chapter_te_probe/figures/single_ended_bias_board.jpeg}
-    \caption[*Multitip Single Ended Tip Board]{Image of circuit board used for single-ended measurements. The top ribbon connector is where the bias comes in. Just below that connector are multiple sense resistors. Often those are replaced with hand soldered higher power resistor networks. The pink rectangles on the right are the capacitors as can be seen in figure \ref{fig:multitip_simple_tip_circuit}. The resistor networks in black and light blue in the bottom right are a resistor divider prior to measurement whose signals leave out the tan connector at bottom left.}
+    \caption[*Multi-tip Single Ended Tip Board]{Image of circuit board used for single-ended measurements. The top ribbon connector is where the bias comes in. Just below that connector are multiple sense resistors. Often those are replaced with hand soldered higher power resistor networks. The pink rectangles on the right are the capacitors as can be seen in figure \ref{fig:multitip_simple_tip_circuit}. The resistor networks in black and light blue in the bottom right are a resistor divider prior to measurement whose signals leave out the tan connector at bottom left.}
     \label{fig:multitip_single_ended_circuit_image}
 \end{figure}
 
-\subsubsection{Differential measurement}
+% \subsubsection{Differential measurement}
 
-We've developed a new circuit board to make use of our D-TACQ digitizers which measure using a differential input. Instead of measuring between the digitizer ground and the resistor divider output, we instead duplicate all the circuit elements on the board meaning each tip has two sense resistors, two capacitors, and two resistor dividers. One of the circuits is still connected to the probe tip through it's wire but the other is only connected to the bias voltage input. Thus we can measure the difference between these two signals.
+To correct for the single ended measurement issues, we have developed a circuit board to make use of D-TACQ digitizers which measure using a differential input. Instead of measuring between the digitizer ground and the resistor divider output, we instead duplicate all the circuit elements on the board meaning each tip has two sense resistors, two capacitors, and two resistor dividers. One of the circuits is still connected to the probe tip through it's wire, the \textbf{signal circuit}, while the other is only connected to the bias voltage input, the \textbf{noise circuit}. Measuring the difference between these two signals removes much of the common mode noise that previously obfuscated the signal.
 
-This vastly improves the signal quality and helps to remove much of the noise we previously saw when the capacitor banks were triggered.
-
-\begin{figure}
-    \caption{Image of new circuit board}
-\end{figure}
+% \begin{figure}
+%     \caption{Image of new circuit board}
+% \end{figure}
 
 \begin{table}
     \begin{center}
@@ -463,64 +415,59 @@ This vastly improves the signal quality and helps to remove much of the noise we
     \caption{Multi-tip Langmuir probe circuit values for circuit elements seen in figure \ref{fig:multitip_simple_tip_circuit}.}
 \end{table}
 
-\subsubsection{Circuit Solution}
-\label{ss2:multitip_circuit_solution}
+% \subsubsection{Circuit Solution}
+% \label{ss2:multitip_circuit_solution}
 
-During a shot, noise is generated around the lab because of the high currents used to create the reversed magnetic field for reconnection. To remove this noise we use another circuit that has the same components but is not connected to a plasma facing tip which can be seen in figure \ref{fig:multitip_tip_circuit_w_noise}. We'll call this other circuit the \textbf{noise circuit} and the circuit that is connected to the tip the \textbf{signal circuit}. If there was no noise in the lab we would expect to measure no fluctuations on the noise circuit digitizer.
+% During a shot, noise is generated around the lab because of the high currents used to create the reversed magnetic field for reconnection. To remove this noise we use another circuit that has the same components but is not connected to a plasma facing tip which can be seen in figure \ref{fig:multitip_tip_circuit_w_noise}. We'll call this other circuit the \textbf{noise circuit} and the circuit that is connected to the tip the \textbf{signal circuit}. If there was no noise in the lab we would expect to measure no fluctuations on the noise circuit digitizer.
 
-In order to get the IV-curve needed for extracting out the plasma parameters we need to solve for the probe voltage and current. To do this, we'll take figure \ref{fig:multitip_tip_circuit_w_noise} as our model where we have modeled the noise as a fluctuating ground voltage\footnote{We've also tried modeling the noise using a fluctuating current that appears on both the probe signal and where a probe would attach in the noise circuit. This did not work as well as the ground voltage fluctation method though.}. This isn't a perfect model as it ignores other sources of noise from the digitizer or bias fluctuations (which it may actually account for) but it works well for our purposes. The capacitor in this circuit has nearly no time dependence over the shot so we treat it as having a constant voltage drop of $V_b$.
+In order to get the IV-curve needed for extracting out the plasma parameters we need to solve for the probe voltage and current. To do this, we'll take figure \ref{fig:multitip_tip_circuit_w_noise} as our model where we have modeled the noise as a fluctuating ground voltage\footnote{We've also tried modeling the noise using a fluctuating current that appears on both the probe signal and where a probe would attach in the noise circuit. This method had reduced noise removal and thus is not described further.}. This model ignores some sources of noise from the digitizer or bias fluctuations but it works well to increase the signal-to-noise ratio throughout the shot. In solving for the probe current and voltage, the capacitor voltage has nearly no time dependence during the shot so we treat it as having a constant voltage, $V_b$.
 
-\paragraph{How do we solve this}
-
-Using Kirkoff's laws we can construct a system of linear equations. Kirkoff's current law gives us two equations for the nodes in the signal and noise circuits and Kirkoff's voltage law gives six equations connecting any end node combination in each circuit. We solve these equations using \texttt{SymPy}, a symbolic math library in Python. These give the following:
+Using Kirchhoff's laws we can construct a system of linear equations. Kirchhoff's current law gives us two equations for the nodes in the signal and noise circuits and Kirchhoff's voltage law gives six equations connecting any end node combination in each circuit. We solve these equations using \texttt{SymPy}, a symbolic math library in Python. These give the following:
 \begin{align*}
-  I_{ps} =& \frac{1}{R_{ss}} [(R_{ds} + R_{ss}) I_{ds} - (R_{dn} + R_{sn}) I_{dn}] \\
+  I_{ps} =& \frac{1}{R_{ss}} [(R_{ds} + R_{ss}) I_{ds} - (R_{dn} + R_{sn}) I_{dn}], \\
   V_{ps} =& \frac{1}{R_{ss}} [(R_{ds} R_{ss} + R_{ds} R_{ws} + R_{ss} R_{ws}) I_{ds} \\
-  & \quad - (R_{dn} R_{ss} + R_{dn} R_{ws} + R_{sn} R_{ss} + R_{sn} R_{ws}) I_{dn}] + V_b \\
+  & \quad - (R_{dn} R_{ss} + R_{dn} R_{ws} + R_{sn} R_{ss} + R_{sn} R_{ws}) I_{dn}] + V_b. \\
 \end{align*}
-
 Since the digitizers are measuring the voltage output of the resistor divider we have replaced the measured voltages, $V_D$, with the currents, $I_d$, which is the total current flowing through the resistor divider. Since we know the measured voltage and the resistances of the divider and digitizer we can find the current using Fig. \ref{fig:multitip_simple_tip_circuit}:
-
 \begin{align*}
   R_d &= R_1 + (R_2^{-1} + R_D^{-1})^{-1}, \\
   V_D &= \frac{(R_2^{-1} + R_D^{-1})^{-1}}{R_d} V_d, \\
-  I_d &= \frac{V_d}{R_d}
+  I_d &= \frac{V_d}{R_d}.
 \end{align*}
-
 Thus our final equations for the probe voltage and current are
 \begin{align}
-  I_d(V_d) =& \frac{V_d}{R_d} = \frac{V_D}{\left(R_2^{-1} + R_D^{-1}\right)^{-1}} \label{eq:multitip_I_d}\\
-  I_{ps}(I_{ds}, I_{dn}) =& \frac{1}{R_{ss}} [(R_{ds} + R_{ss}) I_{ds} - (R_{dn} + R_{sn}) I_{dn}] \label{eq:multitip_I_p} \\
+  I_d(V_d) =& \frac{V_d}{R_d} = \frac{V_D}{\left(R_2^{-1} + R_D^{-1}\right)^{-1}} \label{eq:multitip_I_d},\\
+  I_{ps}(I_{ds}, I_{dn}) =& \frac{1}{R_{ss}} [(R_{ds} + R_{ss}) I_{ds} - (R_{dn} + R_{sn}) I_{dn}] \label{eq:multitip_I_p}, \\
   V_{ps}(I_{ds}, I_{dn}, V_b) =& \frac{1}{R_{ss}} [(R_{ds} R_{ss} + R_{ds} R_{ws} + R_{ss} R_{ws}) I_{ds} \label{eq:multitip_V_p} \\
-  & \quad - (R_{dn} R_{ss} + R_{dn} R_{ws} + R_{sn} R_{ss} + R_{sn} R_{ws}) I_{dn}] + V_b \notag
+  & \quad - (R_{dn} R_{ss} + R_{dn} R_{ws} + R_{sn} R_{ss} + R_{sn} R_{ws}) I_{dn}] + V_b \notag.
 \end{align}
 
-\paragraph{Assumptions}
+% \paragraph{Assumptions}
 
-Here we have assumed that all the noise is coming from a fluctuating ground which is an alright assumption as we do expect significant ground fluctuations that could easily change the measurement. We see less of these fluctuations during shots with no plasma which may mean part of this noise is coming from current drawn by the probe. It remains to be seen if there are better ways to model the common-mode noise or if we are accidentally removing bias voltage fluctuations that may be necessary for better IV-characteristic reconstructions.
+Here we have assumed that the noise is resulting from a fluctuating ground which is a reasonable assumption given that we expect significant ground fluctuations. We see fewer of these fluctuations during shots with no plasma which may mean some of this noise is due to plasma current to the probe. % It remains to be seen if there are better ways to model the common-mode noise or if we are accidentally removing bias voltage fluctuations that may be necessary for better IV-characteristic reconstructions.
 
-\subsubsection{Calibration}
-\label{ss2:multitip_calibration}
+% \subsubsection{Calibration}
+% \label{ss2:multitip_calibration}
 
-Try as we might, we can't perfectly manufacture these probes such that the areas of each tip are the same and the various resistances all match. The best way to calibrate this probe is using the plasma itself.
+Since each tip's area and circuit resistances is different, we calibrate those parameters using measurements of the plasma.
 
-\paragraph{Calibrating in Ion Saturation Regime}
+% \paragraph{Calibrating in Ion Saturation Regime}
 
-When the current to the probe is dominated by the ions, the IV-characteristic is very flat. By setting all tips to the same very negative bias voltage we measure different currents to each tip. The relative difference between measurements is nearly the same as the relative area difference between those tips.
+When the current to the probe is dominated by ions, the probe current is nearly independent of probe potential. By setting all tips to the same negative bias voltage we measure different currents to each tip. The ratio of measurement magnitudes between tips is proportional to the ratio of tip areas.
 
-\paragraph{Calibrating on the exponential}
+% \paragraph{Calibrating on the exponential}
 
-In the ion attracting regime but near the plasma potential, the shape of the IV-characteristic is approximately exponential. Since our initial plasma is very cold ($\sim4$ eV), the rise is very swift. Thus setting the tip potential to be near the plasma potential during the equilibrium plasma before the drive coils gives us the ability to calculate the wire resistance such that all the points on the IV-characteristic are at the same voltage.
+In the ion attracting regime but near the plasma potential, the shape of the IV-characteristic is approximately exponential. During the initial equilibrium for our cold plasma ($\sim4$ eV), tips at the same bias, $V_b$, should all have nearly the same probe voltage, $V_p$. Thus, setting the tip potential to be near the plasma potential during the equilibrium plasma before the drive coils gives us the ability to calculate the wire resistance such that all the points on the IV-characteristic are at the same voltage.
 
-\paragraph{Bayesian calibration}
+% \paragraph{Bayesian calibration}
 
-We can actually do both of these calibrations using Bayesian statistics where we solve for the probability of the area (or resistance) based on the current to the probe. By finding the probability of the measured current for some area assuming some amount of noise and then applying a prior that forces the area to be in some resonable range let's us find the most probable area. The same can be done for the resistance.
+We do both of these calibrations using Bayesian statistics where we solve for the probability of the area (or resistance) based on the current to the probe. By finding the probability of the measured current for some area assuming some amount of noise and then applying a prior that forces the area to be in some reasonable range let's us find the most probable area. The same can be done for the resistance.
 
-\paragraph{Calibration using pressure wave}
+% \paragraph{Calibration using pressure wave}
 
-Although we can calibrate the relative areas between probes we need some way to get the actual plasma parameters (not just the relative ones)! We do this using data from the previous chapter. Since that method works well to extract the initial density profile we can change the tip areas to best match those results.
+Using negatively biased tips we calibrate the tip areas relative to one another. To calibrate the absolute tip area we use the pressure wave. Since the wave method works well to extract the initial density profile we can change the tip areas to best match those results at all radii.
 
-\subsection{Bdot coils}
+\subsection{B-dot coils}
 
 \begin{figure}
 \centering
@@ -546,36 +493,32 @@ Although we can calibrate the relative areas between probes we need some way to 
 \draw (20.5,13) to[transmission line, bipoles/tline/width=3.75,l={twisted pair}] (26.75,13);
 \end{circuitikz}
 }%
-\caption[*Bdot coil circuit]{The Bdot coil circuit. The top left inductor and resistor and near the probe tip. The signals are extracted using twisted pair and then divided down before a differential measurement.}
+\caption[*B-dot coil circuit]{The B-dot coil circuit. The top left inductor and resistor and near the probe tip. The signals are extracted using twisted pair and then divided down before a differential measurement.}
 \label{fig:multitip_bdot_coil_circuit}
 \end{figure}
 
-The Bdot coils, while basic in theory, need some help to actually give physical results.
+The B-dot coils consist of two circuits for linearizing their response and keeping measurements in the bounds of digitizer measurement. Inside the stainless shaft connected to the probe, a circuit splits the wound twisted pair coils into separate coils with resistors across their inputs. A second circuit, outside the machine, divides down the voltage between the coil and ground to a reasonable level.
 
-\subsubsection{In-shaft circuit}
 
-Inside the stainless shaft connected to the probe, there is another circuit containing some resistors and various through holes. Since each coil wrap is really two coils (as they are wrapped using twisted pair) this is where those two coil signals are separated. The resistor is in place to improve the system response to high frequency.
-
-\subsubsection{Circuit model}
+% \subsubsection{Circuit model}
 
 We model the circuit using figure \ref{fig:multitip_bdot_coil_circuit}. The small resistor near the coil does not come into play for analyzing the signal. As of this writing we assume a linear response between fluctuating magnetic fields and measured voltage but a better solution would be measurement of the transfer function.
 
-\subsubsection{Calibration}
+% \subsubsection{Calibration}
 
-Although we could use a handheld coil for calibrating the areas and directions of this coil, it is far easier and more accurate to use the drive coils as a calibration source. Without plasma, we can model the expected magnetic field assuming they induce current in the BRB walls such that no field can escape (this is true since the BRB shell is made of aluminum and the induced currents have continuous paths). Using these modeled fields we can match the measurement to the expected field and by rotating the probe and moving the probe figure out the vector areas.
+We use the drive coils as our calibration source for this circuit. Without plasma, we model the expected magnetic field assuming they induce current in the BRB walls such that no field can escape. Using these modeled fields we can match the measurement to the expected field and by rotating and moving the probe measure the vector areas.
 
-\subsubsection{Signal Interpretation}
-\label{ss2:multitip_bdot_signal_interp}
+% \subsubsection{Signal Interpretation}
 
-Once we have the vector area of each coil, $\vb{A}_i$, we can now extract the Bdot signal. According to Faraday's law,
+Once we have the vector area of each coil, $\vb{A}_i$, we can now extract the B-dot signal. According to Faraday's law,
 \begin{equation}
-    \mathcal{E}_i = \vb{A}_i\cdot\dot{\vb{B}}.
+    \mathcal{E}_i = \vb{A}_i\cdot\dot{\vb{B}},
 \end{equation}
-Now we measure a signal, $S_i$, where
+where $\mathcal{E}_i$ is the voltage across the coil leads. Now we measure a signal, $S_i$, where
 \begin{equation}
     S_i = \frac{R_2}{R_1 + R_2} \mathcal{E}_i.
 \end{equation}
-Assuming the coils make a basis for $\mathbb{R}^3$, we can turn this into an inverse problem:
+Assuming the vector areas are non-singular, this can be written as
 \begin{align}
     \begin{bmatrix}
         S_1 \\
@@ -588,43 +531,43 @@ Assuming the coils make a basis for $\mathbb{R}^3$, we can turn this into an inv
         \vdots \\
         \vb{A}_6 \\
     \end{bmatrix} \cdot \dot{\vb{B}} \\
-    \vb{S} &= \vb{A} \cdot \dot{\vb{B}}
+    \vb{S} &= \vb{A} \cdot \dot{\vb{B}}.
 \end{align}
-Now $\dot{\vb{B}}$ is overdefined since we have six measurements and three field components so using linear least squares\footnote{We've also tried using generalized least squares (since coils made of the same twisted pair may have more correlated noise) but we did not see a significant improvement.} we can solve for $\dot{\vb{B}}$ and also the standard deviation of $\dot{\vb{B}}$. This is useful in understanding where we might expect error in our signals and whether we need to smooth signals to get rid of noise caused by the firing of the capacitor banks (which is sometimes needed).
+Now $\dot{\vb{B}}$ is overdetermined since we have six measurements and three field components so using linear least squares\footnote{We've also tried using generalized least squares (since coils made of the same twisted pair may have more correlated noise) but we did not see a significant improvement.} we can solve for $\dot{\vb{B}}$ and also the standard deviation of $\dot{\vb{B}}$. This is useful in understanding where we might expect error in our signals and whether we need to smooth signals to get rid of noise caused by the firing of the capacitor banks (which is sometimes needed).
 
 \section{Plasma Theory}
 
-The depth of theory needed to correctly understand Langmuir probes is near endless with a menagerie of exciting physical effects one could account for. I'm prone to dive a bit too deep into some of these various theories but after much literature review and some misteps we've come to a theory that seems to work relatively well for our results. Here I'll discuss the prior method using a very simple model and another method that gives much better results.
+There are many theories that have been developed and applied to Langmuir probes. Having applied a number of potential theories to our results we find that two theories stand out.
 
 \subsection{Simple Plasma Theory (Hutchinson)}
 \label{sss:multitip_hutchinson_theory}
 
-\cite{Hutchinson_2002} develops a simple model for the current to a Langmuir probe that we have used for a long time. It assumes that the ion current is constant and the electron current follows an exponential and only looks at the electron repelling region.
+\cite{Hutchinson_2002} develops a simple model for the current to a Langmuir probe that has in the past been used for analysis. This theory assumes that the ion current is constant and the electron current follows an exponential while only being valid for the $V_p < V_b$ regime.
 
-\subsubsection{Derivation}
-\label{ss2:multitip_hutchinson_derivation}
+% \subsubsection{Derivation}
+% \label{ss2:multitip_hutchinson_derivation}
 
-We won't reproduce the derivation here but will instead describe the physical interpretation.
+% We won't reproduce the derivation here but will instead describe the physical interpretation.
 
-The volume surrounding the probe is split into two regions: \textbf{the plasma} where the electric field is very small, quasineutrality holds, and the potential is near the plasma potential vs. \textbf{the sheath} where the ion electron charge densities are different and the electric field is largs such that the potential quickly jumps to the probe potential.
+The volume surrounding the probe is split into two regions: \textbf{the plasma} where the electric field is very small, quasineutrality holds, and the potential is near the plasma potential vs. \textbf{the sheath} where the ion electron charge densities are different and the electric field is large such that the potential quickly drops to the probe potential.
 
-The ion current is just modeled by how many ions randomly cross the plasma-sheath interface (the interface will be denoted by subscript $s$). If the ions are cold (i.e. negligible initial kinetic energy) then they will only get to the probe via their random motion. The speed of these ions is set by the voltage at which the interface appears which is where
+The ion current is modeled by how many ions randomly cross the plasma-sheath interface (the interface will be denoted by subscript $s$). If the ions are cold (i.e. negligible initial kinetic energy) then they will only get to the probe via their random motion. The speed of these ions is set by the voltage at which the interface appears which is where
 \begin{equation}
     V_s = -\frac{T_e}{2}.
 \end{equation}
-$V_s$ is the potential at the interface relative to the plasma potential and $T_e$ is in eV. Assuming the electrons are Boltzmann and quasineutrality holds at the interface then
+$V_s$ is the potential at the interface relative to the plasma potential and $T_e$ is in units of eV. Assuming the electrons are Boltzmann and quasineutrality holds at the interface then
 \begin{equation}
     n_{is} = n_{es} = n_\infty \exp\left(\frac{V_s}{T_e}\right).
 \end{equation}
-Now we can calculate the ion current as
+Now, the ion current is
 \begin{align}
     I_i &= A_s v_{is} n_{is} \\
     &= A_s \sqrt{-\frac{2eV_s}{m_i}} n_\infty \exp\left(\frac{V_s}{T_e}\right) \\
     &= \exp\left(-\frac{1}{2}\right) A_s n_\infty \sqrt{\frac{e T_e}{m_i}}.
 \end{align}
-We often assume that the sheath area is the same as the probe area since the Debye length is so short.
+We assume that the sheath area is the same as the probe area since the Debye length is so short in TREX.
 
-For the electron current, we are assuming they are Boltzmann and they will hit the probe due to random motion. Since they are repelled by the probe the density will be smaller than in the bulk plasma. We can write the electron current as
+For the electron current, we assume electrons are Boltzmann and will hit the probe due to random motion. Since they are repelled by the probe the density will be smaller than in the bulk plasma. We can write the electron current as
 \begin{equation}
     I_e = A_p \frac{1}{4} \sqrt{\frac{2 e T_e}{m_e}} n_\infty \exp\left(\frac{e (V_\text{probe} - V_\text{plasma})}{T_e}\right)
 \end{equation}
@@ -635,88 +578,83 @@ The total current to the probe for $V_\text{probe} < V_\text{plasma}$ is thus
     I = -n_\infty e A_p \sqrt{\frac{e T_e}{m_i}} \left[ \frac{1}{2} \sqrt{\frac{2 m_i}{\pi m_e}} \exp\left(\frac{V_\text{probe} - V_\text{plasma}}{T_e}\right) - \exp\left(-\frac{1}{2}\right)\right] % TODO: Where does the pi come from?
     \label{eq:multitip_hutchinson_model}
 \end{equation}
-where we've chosen the convention of ion current to the probe being positive and electron current being negative.
+where we have chosen the convention of ion current to the probe being positive.
 
-\subsubsection{Pros \& Cons}
+% \subsubsection{Pros \& Cons}
 
-This method has the benefit of being exceedingly simple to implement and often widely applicable. As long as the tips stay below the plasma potential this usually nicely matches our measurements. Unfortunately there's the catch, during a shot the plasma potential changes quickly by up to 100 or more volts. One option is to select only probe tips that look like they are below the plasma potential but this is both time consuming and prone to bias. Thus we look for a new method.
+This method has the benefit of being simple to implement and applicable to many plasmas. As long as the tip voltage is below the plasma potential this usually matches our measurements. During TREX, the plasma potential can change quickly by up to 100 or more volts and thus tips are sometimes in a valid regime for analysis and other times not. The user can manually select probe tips at each time point that appear as though they are below the plasma potential but this is both time consuming and prone to human error.
 
 \subsection{BRL}
 \label{sss:multitip_brl_theory}
 
-\cite{Laframboise_1966} created a model for the current to a cylindrical probe in a plasma with maxwellian ions and electrons that works for probe voltages above and below the plasma potential. Unfortunately, to my knowledge nobody has redone these calculations nor made a public repository with the code. To sidestep this issue we've used two simplifying approximations.
+\cite{Laframboise_1966} created a model for the current to a cylindrical probe in a plasma with Maxwellian ions and electrons that works for probe voltages above and below the plasma potential where collisions between particles are ignored. The ion and electron distribution functions are found self consistently and iteratively evolved until convergence. This theory requires some simplification to be numerically tractable for application to probe data.
 
-For probe potential greater than plasma potential, i.e. electrons attracted, we follow along with appendix F of \cite{Laframboise_1966}. We assume the ions have zero temperature. Although we have no way currently to calculate the ion temperature it is an assumption we commonly make for plasmas from our plasma guns. Additionaly we assume we assume that the probe radius is far larger than the debye length. This approximation is valid for the initial plasma but can change throughout the shot. We also assume that all particles that touch the probe are absorbed by it.
+For probe potential greater than plasma potential, i.e. electrons attracted, we follow along with appendix F of \cite{Laframboise_1966}. We assume that in TREX the ions have zero temperature. Additionally, we assume we assume that the probe radius is far larger than the Debye length. This approximation is valid for the initial plasma but can change throughout the shot. We also assume that all particles that touch the probe are absorbed by it.
 
-Since the scale over which the potential changes is proportional to the debye length, we assume we have a planar probe. Thus Poisson's equation is given by
-
+Since the scale over which the potential changes is proportional to the Debye length, we assume we have a planar probe. Thus Poisson's equation is given by
 \begin{equation}
   \dv[2]{\varphi}{x} = -\frac{\rho}{\varepsilon}
   \label{eq:planar_poissons}
 \end{equation}
 
-Since the ions have zero temperature, they can not enter the $\varphi(x) > \varphi_0$ region and thus for the plasma charge density, $\rho(x)$, they can be ignored. Without loss of generality we'll set the plasma potential, $\varphi_0$, equal to 0. Since this region of electrons only plasma physically can't extend to infinity let's define $x = 0$ to be this boundary and let $x$ increase towards the probe.
+Since the ions have zero temperature, they can not enter the $\varphi(x) > \varphi_0$ region and thus for the plasma charge density, $\rho(x)$, they can be ignored. Without loss of generality we'll set the plasma potential, $\varphi_0$, equal to 0. Since this region of electron only plasma physically can not extend to infinity we define $x = 0$ to be this boundary and let $x$ increase towards the probe.
 
-As this is a one-dimensional system then we have three conserved quantities. $v_y$ and $v_z$ which denote the transverse velocity will not be changed by the potential and the kinetic energy in the $x$ direction along with the electrostatic potential, $E_x = m v_x^2/2 + e\varphi(x)$. $e$ is the elementary charge. As all electrons will be absorbed by the probe, we will only have flow into the $\varphi(x) > 0$ region. Thus our distribution function looks like
+This is a one-dimensional system so we have three conserved quantities. $v_y$ and $v_z$ which denote the transverse velocity will not be changed by the potential and the kinetic energy in the $x$ direction along with the electrostatic potential in eV, $E_x = m / e v_x^2/2 + \varphi(x)$. $e$ is the elementary charge. As all electrons will be absorbed by the probe, we will only have flow into the $\varphi(x) > 0$ region. Thus our distribution function is given by
 \begin{equation}
   f(x, E_x, E_t) = \begin{cases}
-    n_0 \left(\frac{m}{2\pi kT}\right)^{3/2} \exp(-\frac{E_x(x)}{kT}) \exp(-\frac{E_t}{kT}) & v_x > 0 \\
+    n_0 \left(\frac{m e}{2\pi T}\right)^{3/2} \exp(-\frac{E_x(x)}{T}) \exp(-\frac{E_t}{T}) & v_x > 0 \\
     0 & v_x < 0
-  \end{cases}
+  \end{cases}.
   \label{eq:planar_distribution_function}
 \end{equation}
 We can now write the density as
 \begin{align*}
   n(x) =& \int_0^\infty dv_x \int_{-\infty}^\infty dv_y \int_{-\infty}^\infty dv_z f(x, E_x, E_t) \\
   =& \int_0^\infty \dv{v_x}{E_x} dE_x \int_{-\infty}^\infty dv_y \int_{-\infty}^\infty dv_z f(x, E_x, E_t) \\
-  =& n_0 \left(\frac{m}{2\pi kT}\right)^{3/2} \int_0^\infty \frac{\exp(-\frac{E_x(x)}{kT})}{\sqrt{2m (E_x - e\varphi(x))}} dE_x \\
-  & \int_{-\infty}^\infty \exp(-\frac{mv_y^2}{2kT}) dv_y \int_{-\infty}^\infty \exp(-\frac{mv_z^2}{2kT}) dv_z \\
-  =& n_0 \sqrt{\frac{m}{2\pi kT}} \int_0^\infty \frac{\exp(-\frac{E_x(x)}{kT})}{\sqrt{2m (E_x - e\varphi(x))}} dE_x
+  =& n_0 \left(\frac{m e}{2\pi T}\right)^{3/2} \int_0^\infty \frac{\exp(-\frac{E_x(x)}{T})}{\sqrt{2m (E_x - \varphi(x))}} dE_x \\
+  & \int_{-\infty}^\infty \exp(-\frac{m e v_y^2}{2T}) dv_y \int_{-\infty}^\infty \exp(-\frac{m e v_z^2}{2T}) dv_z \\
+  =& n_0 \sqrt{\frac{m e}{2\pi T}} \int_0^\infty \frac{\exp(-\frac{E_x(x)}{T})}{\sqrt{2m (E_x - \varphi(x))}} dE_x.
 \end{align*}
-
-Let's define $\eta = n(x) / n_0$ where $n_0$ is the number density at infinity. Let's also define $\chi(x) = e\varphi(x) / kT$ and $\beta = E_x / kT$ as the normalized potential and energy respectively. Thus we can write the normalized density as
+Let $\eta = n(x) / n_0$ where $n_0$ is the number density at infinity, $\chi(x) = \varphi(x) / T$ is the normalized potential, and $\beta = E_x / T$ is the normalized energy. Thus we can write the normalized density as
 \begin{align}
   \eta(x) &= \frac{1}{2\sqrt{\pi}} \int_{0}^{\infty} \frac{\exp(-\beta)}{\sqrt{\beta - \chi(x)}} d\beta \nonumber \\
-  &= \frac{e^{-\chi(x)}}{2} (1 - \erf(\sqrt{-\chi(x)})) \label{eq:planar_normalized_density}
+  &= \frac{e^{-\chi(x)}}{2} (1 - \erf(\sqrt{-\chi(x)})) \label{eq:planar_normalized_density}.
 \end{align}
-
-Using our now normalized quantities, let's plug them into Poisson's equation \ref{eq:planar_poissons} to find
+Using our now normalized quantities and Poisson's equation \ref{eq:planar_poissons} we find
 \begin{align}
   \frac{\varepsilon kT}{e}\dv[2]{\chi}{x} &= e \eta(x) \nonumber \\
   \lambda_D^2 \dv[2]{\chi}{x} &= \eta(\chi(x)) \nonumber \\
   \dv[2]{\chi}{s} &= \eta(\chi(s))
   \label{eq:planar_normalized_poissons}
 \end{align}
-where $s = x / \lambda_D$ and $\lambda_D = \sqrt{\varepsilon k T / n_0 e}$ is the Debye length in the undisturbed plasma.
+where $s = x / \lambda_D$ and $\lambda_D = \sqrt{\varepsilon T / n_0 e}$ is the Debye length in the undisturbed plasma.
 
-Since the potential is zero at the sheath boundary and the derivative is smooth, $\chi(0) = 0$ and $d_s \chi(0) = 0$. For all $s > 0$, the density of electrons should be non-zero, i.e. we should never achieve a full vacuum except at infinity. Thus,
+Since the potential is zero at the sheath boundary and the derivative is smooth, $\chi(0) = 0$ and $\dv*{\chi}{s}(0) = 0$. For all $s > 0$, the density of electrons should be non-zero, i.e. we should never achieve a full vacuum except at infinity. Thus,
 \begin{equation*}
-  \dv[2]{\chi}{s}(s) > 0, \, \dv{\chi}{s}(0) = 0 \Rightarrow \dv{\chi}{s}(s) > 0 \Rightarrow \left(\dv{\chi}{s}\right)^{-1} = \dv{s}{\chi}
+  \dv[2]{\chi}{s}(s) > 0, \, \dv{\chi}{s}(0) = 0 \Rightarrow \dv{\chi}{s}(s) > 0 \Rightarrow \left(\dv{\chi}{s}\right)^{-1} = \dv{s}{\chi}.
 \end{equation*}
-
-This means
+This implies
 \begin{align*}
   \dv[2]{\chi}{s} &= \dv{}{s} \left(\dv{s}{\chi}\right)^{-1} \\
   &= \dv{\chi}{s} \dv{}{\chi} \left(\dv{s}{\chi}\right)^{-1} \\
   \eta(\chi) &= -\left(\dv{s}{\chi}\right)^{-3} \dv[2]{s}{\chi}\\
   \Rightarrow \int_{0}^{\chi} \eta(\chi') d\chi' &= \frac{1}{2} \left(\dv{s}{\chi}\right)^{-2} \\
   \Rightarrow \dv{s}{\chi} &= \frac{1}{2 \int_{0}^{\chi} \eta(\chi') d\chi'} \\
-  \Rightarrow s(\chi) &= \int_{0}^{\chi} \frac{d\chi'}{2 \int_{0}^{\chi'} \eta(\chi'') d\chi''}
+  \Rightarrow s(\chi) &= \int_{0}^{\chi} \frac{d\chi'}{2 \int_{0}^{\chi'} \eta(\chi'') d\chi''}.
 \end{align*}
-
-This integral can be evaluated numerically. Thus we can pass a probe potential, $\chi$, and after integrating get the distance from the probe to the start of the sheath.
+Thus we can pass a probe potential, $\chi$, and after integrating get the distance from the probe to the start of the sheath.
 
 Since all particles that enter the sheath are collected, from equation \ref{eq:planar_distribution_function}, then we need only find how the surface area of the sheath changes for different potentials. Letting $I_0$ be the current collected from the electrons when the probe is at the plasma potential then the current to the probe is
 \begin{equation}
-  I(\chi) = I_0 \left(1 + \frac{\lambda_D}{R_p} s(\chi)\right)^2
+  I(\chi) = I_0 \left(1 + \frac{\lambda_D}{R_p} s(\chi)\right)^2.
   \label{eq:planar_probe_current}
 \end{equation}
 
-Now that we have a model for the current to the probe for the electron attracted region, we move on to modeling the current to the probe for the ion attracted region. There has been much more work put into this region from Steinbr\"{u}chel et al. \cite{Steinbrüchel_1990} \cite{Karamcheti_Steinbrüchel_1999}, Mausbach \cite{Mausbach_1997}, and Chen \cite{Chen_1965}. Steinbr\"{u}chel fitted a model of the form
+Now that we have a model for the current to the probe for the electron attracted region, we move on to modeling the current to the probe for the ion attracted region. Compared to the electron attracting regime, there has been much more work done to parametrize \cite{Laframboise_1966}. \cite{Steinbrüchel_1990} and \cite{Karamcheti_Steinbrüchel_1999} fit a model of the form
 \begin{equation*}
   I = I_{i0} a (-\chi)^b + I_{e0} \exp(\chi) \quad \chi < 0
 \end{equation*}
-where $a$ and $b$ were fit to the data given by Laframboise. Mausbach used
+where $a$ and $b$ were fit to the data given by Laframboise. \cite{Mausbach_1997} used
 \begin{equation*}
   I = \begin{cases}
     I_{i0} a_i (b_i - \chi)^{c_i} + I_{e0} \exp(\chi) \quad & \chi < 0 \\
@@ -730,9 +668,9 @@ Unfortunately neither of these correctly predict the ion current to the probe fo
   I &= I_{i0} i(\chi) + I_{e0} \exp(\chi) \\
 \frac{1}{i^4} &= \frac{1}{\left(A \chi^B\right)^4} + \frac{1}{\left(C \chi^D\right)^4}
 \end{align*}
-where $A$, $B$, $C$, and $D$ are functions of $\xi \equiv R_p / \lambda_D$. We will reproduce the work from Chen here for the sake of completeness
+where $A$, $B$, $C$, and $D$ are functions of $\xi \equiv R_p / \lambda_D$. We will reproduce the work from Chen here for sake of completeness
 
-$ABCD$ are defined in two different regimes. For large $\xi$ ($\xi > 3$),
+$ABCD$ are defined in two different regimes. For large $\xi > 3$,
 \begin{align*}
   A, B, D(\xi) &= a + b(\xi-c)^d \exp[-f(\xi-c)^g] \\
   C &= a + b \exp[-c \ln(\xi - d)] + f(1-g \ln \xi).
@@ -770,84 +708,75 @@ The values for $a,\,b,\,c,\,d,\,f,$ and $g$ are given in table \ref{tab:chen_val
 
 \subsection{Effect of electric fields}
 
-Electric fields during reconnection can change the average plasma potential all of the tips see which is extracted by fitting the plasma theory to the tip measurements. The effect of these electric fields is non-local because the measured plasma potential is integrated along the path of the probe shaft.
+Electric fields during reconnection can change the average plasma potential all of the tips see which is extracted by fitting the plasma theory to the tip measurements. The effect of these electric fields is non-local because the measured plasma potential is integrated along the path of the probe shaft. Electric fields may also have a local effect directly measurable by the difference in measurement between tips on one side of the probe vs. the other (see figure \ref{fig:multitip_image}).
 
-This isn't all though; electric fields can also have a local effect directly measurable by the difference in measurement between tips on one side of the probe vs. the other (see figure \ref{fig:multitip_image}).
+% During reconnection we expect the magnetic field to be quickly changing along the axis of the machine as the $z$ directed field reconnects. Since we are dealing with a plasma we expect small static electric fields because of quasineutrality. Also, since the system is toroidally periodic there can be no net static field in the $\phi$ direction.
 
-\subsubsection{Where does the electric field come from}
+% \paragraph{Inductive Fields}
 
-There are two types of electric field to worry about:
-
-During reconnection we expect the magnetic field to be quickly changing along the axis of the machine as the $z$ directed field reconnects. Since we are dealing with a plasma we expect small static electric fields because of quasineutrality. Also, since the system is toroidally periodic there can be no net static field in the $\phi$ direction.
-
-\paragraph{Inductive Fields}
-
-These are generated by the change in magnetic field as the experiment progresses. Let's discuss what each direction magnetic field change can create:
+Inductive electric fields are generated by the change in magnetic field as the experiment progresses. A change in a directed magnetic field leads to the following effects:
 \begin{itemize}
-    \item $z$: This is the field that changes most during the experiment because it is reconnecting. Because of toroidal symmetry, the most general closed loop we can construct are annulus arcs. Because of that same symmetry the changing $z$ field will create a negligible $r$ directed electric field but can create toroidal electric fields (in fact the drive coils generate an immense toroidal electric field to drive reconnection).
-    \item $r$: This field can create either a $z$ or $\phi$ directed electric field. The $\phi$ electric field can be generated but once again, because of symmetry, the closed loop on the boundary of a cylinder arc causes $E_z$ to be minimal. One other detriment to $E_z$ is the small magnitudes of $B_r$ which can form in the outflow region of reconnection but are not large.
-    \item $\phi$: The source of $\phi$ field can come from two places: a guide field that is frozen into the plasma (see \ref{ss2:initial_toroidal_field}) or the hall fields when the ions and electrons decouple (see \ref{ss2:hall_reconnection}). This allows for the formation of both $r$ and $z$ electric fields but because of the often small magnitude of $B_\phi$ we don't expect too large of fields.
+    \item $z$: This is the field that changes most during the experiment because it is reconnecting. Because of toroidal symmetry, the most general closed loop we can construct are annulus arcs with electric fields in the $r$ and $\phi$ directions. Because of toroidal symmetry the changing $z$ field will create a negligible $r$ directed electric field but can create toroidal electric fields (the drive coils generate an immense toroidal electric field to drive reconnection).
+    \item $r$: This field can create either a $z$ or $\phi$ directed electric field. The $\phi$ electric field can be generated but, because of symmetry, the closed loop on the boundary of a cylinder arc causes $E_z$ to be minimal. One other detriment to $E_z$ is the small magnitudes of $B_r$ which can form in the outflow region of reconnection but are often smaller than $B_z$.
+    \item $\phi$: The source of $\phi$ field can come from two places: a guide field that is frozen into the plasma (see \ref{sss:experiment_timeline}) or the hall fields when the ions and electrons decouple (see \ref{ss2:hall_reconnection}). This allows for the formation of both $r$ and $z$ electric fields but because of the often small magnitude of $B_\phi$ we don't expect large field generation.
 \end{itemize}
 
-\paragraph{Static Fields}
+Since our plasmas are often quasineutral, static electric fields should be small. Additionally, because of toroidal symmetry there can be no net static electric field in the $\phi$ direction because if $E_\phi \neq 0$ this would force the electrostatic potential to be multivalued which is physically impossible.
 
-Since our plasmas are often quasineutral we don't expect too huge of static electric fields. Additionally, because of toroidal symmetry there can be no net static electric field in the $\phi$ direction because if there was a net electric field this would force the electrostatic potential to be multivalued which is physically impossible. We do have a couple places where it can appear though.
+As discussed in \ref{ss2:intro_PA_generation}, a trapping potential forms that changes the shape of the flux tube as it moves towards the x-point during reconnection. This potential is on the order of a few $T_e$ \cite{Egedal_Daughton_Drake_Katz_Lê_2009} which gives an electric field in our device on the order of 100 V/m. Note that this trapping potential forms to create electric fields in the $rz$-plane.
 
-As discussed in \ref{ss2:intro_PA_generation}, a trapping potential forms that changes the shape of the flux tube as it moves towards the x-point during reconnection. This potential is on the order of a few $T_e$ \cite{Egedal_Daughton_Drake_Katz_Lê_2009} which gives an electric field in our device on the order of ??? V/m. % TODO: How big is this electric field?
-This trapping potential forms to create electric fields in the $rz$-plane.
-
-During the pressure wave, the low inertia of the electrons let's them speed up far faster than the ions. This acceleration occurs as the wavefront passes the plasma. This generates an ambipolar % TODO: Check I'm using ambipolar right here
+During the pressure wave, the low inertia of the electrons let's them speed up far faster than the ions. This acceleration occurs as the wavefront passes plasma at a given radius which generates an ambipolar % TODO: Check I'm using ambipolar right here
 electric field in the $+r$ direction that slows the electrons and accelerates ions to enforce quasineutrality.
 
-\subparagraph{What is the expected static magnitude}
-% TODO: Add derivation of expected field magnitude from Jan discussion.
-\subsubsection{What does it do to the tip measurements}
+% \subparagraph{What is the expected static magnitude}
 
-Let's first understand what we expect to happen and then look at some measurements.
 
-\paragraph{Theoretical understanding}
+% TODO: Add derivation of expected field magnitude from Jan discussion. Jan's derivation gave a toroidal electric field, not a electrostatic field so should talk to him more. For now will ignore this part.
+% \subsubsection{What does it do to the tip measurements}
+
+% \paragraph{Theoretical understanding}
 
 Figure \ref{fig:multitip_e_field_diagram} shows what we expect the electric field to do to the tip biases. Any electric field, whether it be inductive or static, can cause the tip voltages to be different than what we expect from the circuit model.
 
 \begin{figure}
     \centering
     \includegraphics{chapter_te_probe/figures/te_E_field_effect.pdf}
-    \caption[*Multitip Electric Field Diagram]{The expected effect of an electric field on the probe measurements. The tips are separated across the probe body by a distance $2d$. There is an electric field of magnitude $E$ pointed along the direction of the tips. If both tips are set to a bias $V_b$, the electric field will change the left tip to be at $V_b - E d$ and the right tip will be at $V_b + E d$.}
+    \caption[*Multi-tip Electric Field Diagram]{The expected effect of an electric field on the probe measurements. The tips are separated across the probe body by a distance $2d$. There is an electric field of magnitude $E$ pointed along the direction of the tips. If both tips are set to a bias $V_b$, the electric field will change the tip voltages such that $V_\mathrm{left} = V_b - E d$ and $V_\mathrm{right} = V_b + E d$.}
     \label{fig:multitip_e_field_diagram}
 \end{figure}
 
-\paragraph{Physical reality}
+% \paragraph{Physical reality}
 
-We can see a measurement from a shot where the probe tips were pointed in the $\phi$ direction (and thus seeing the effect of $E_\phi$) in figure \ref{fig:multitip_e_field_effect}. It can be seen that tips on one side of the probe are shifted compared to tips on the other side (even and odd numbering can be seen in \ref{fig:multitip_image}).
+We can see a measurement from a shot where the probe tips were pointed in the $\phi$ direction in figure \ref{fig:multitip_e_field_effect}. It can be seen that tips on one side of the probe are shifted compared to tips on the other side (numbering convention given by \ref{fig:multitip_image}).
 
 \begin{figure}
     \centering
     \includegraphics[width=\textwidth]{chapter_te_probe/figures/experimental_e_field_effect.png}
-    \caption[*Multitip Electric Field Effect]{Example JV-characteristic showing the splitting of tips that are on one side of the probe vs. the other (even vs. odd). It can be seen that the even numbered tips are moved to a negative bias relative to the odd numbered tips. The actual plasma potential is at the midpoint of the shifts left and right.}
+    \caption[*Multi-tip Electric Field Effect]{Example JV-characteristic showing the splitting of tips that are on one side of the probe vs. the other (even vs. odd). It can be seen that the even numbered tips are moved to a negative bias relative to the odd numbered tips. The actual plasma potential is at the midpoint of the shifts left and right.}
     \label{fig:multitip_e_field_effect}
 \end{figure}
 
 \subsection{Minimum measurable density}
 \label{sss:multitip_min_density}
 
-Since we have many tips next to each other, we may need to worry about them interfering with each other and changing the IV-characteristic. This interference is directly related to the Debye length.
+As the plasma density drops at higher radii, the Debye length increases such that the electric fields around neighboring probes may begin to overlap.
 
-\subsubsection{What's the Debye Length}
+% \subsubsection{What's the Debye Length}
 
-The Debye length is the distance at which electric fields are shielded in a plasma and goes as
-\begin{equation}
-    \lambda_D = \sqrt{\frac{\epsilon_0 T_e}{n e}}.
-    \label{eq:debye_length}
-\end{equation}
-Electric fields drop exponentially like $E = A \exp(x / \lambda_D)$ because the electrons and ions are somewhat free to move and will quickly remove any static electric field. Inductive fields on the other hand stick around and instead cause the plasma and it's frozen in magnetic field to move.
+% The Debye length is the distance at which electric fields are shielded in a plasma and goes as
+% \begin{equation}
+%     \lambda_D = \sqrt{\frac{\epsilon_0 T_e}{n e}}.
+%     \label{eq:debye_length}
+% \end{equation}
+% Electric fields drop exponentially like $E = A \exp(x / \lambda_D)$ because the electrons and ions are somewhat free to move and will quickly remove any static electric field. Inductive fields on the other hand stick around and instead cause the plasma and it's frozen in magnetic field to move.
 
-\subsubsection{Sheath scale}
+% \subsubsection{Sheath scale}
 
-As discussed in \ref{ss2:multitip_hutchinson_derivation}, one way to model a Langmuir probe is to use a sheath-plasma interface where quasineutrality holds in the plasma but electrons and ions separate inside the sheath. Although not all Langmuir theories have it (e.g. BRL), this interface is usually present to some approximation. The distance at which this sheath appears is often on the order of 10 $\lambda_D$.
+As discussed in \ref{sss:multitip_hutchinson_theory}, a Langmuir probe can be modeled using a sheath-plasma interface where quasineutrality holds in the plasma but electrons and ions separate inside the sheath and electric fields become large. Although not all Langmuir theories use this model (e.g. BRL), this interface is usually present to some approximation. The distance at which this sheath appears is often on the order of 10 $\lambda_D$.
 
-\subsubsection{Tip-tip sheath overlap}
+% \subsubsection{Tip-tip sheath overlap}
 
-If we have sheaths of neighboring tips that overlap (either because of high temperature of low density from equation \ref{eq:debye_length}) this could change the IV-characteristic that we measure. Often once we have high temperatures the density is high enough such that the Debye length is far smaller than the tip separation (see table \ref{tab:multitip_length_scales}) so we won't worry about temperature effects. Instead, early in the shot when the density can be low the sheaths can start to overlap. Assuming the sheath length is $20 \times \lambda_D$, this gives a minimum measurable density of
+If we have sheaths of neighboring tips that overlap (either because of high temperature of low density) this could change the IV-characteristic that we measure. Often once we have high temperatures the density is high enough such that the Debye length is far smaller than the tip separation (see table \ref{tab:multitip_length_scales}) so we will not consider those effects here. Early in the shot when the density can be low, the sheaths can start to overlap. Assuming the sheath length is $20 \times \lambda_D$, this gives a minimum measurable density of
 \begin{align}
     x &= 20 \lambda_D \\
     &= 20 \sqrt{\frac{\epsilon_0 T_e}{n_\text{min} e}} \\
@@ -858,62 +787,58 @@ where we've set $T_e = 4$ eV which is often what is seen in the initial equilibr
 
 \section{Curve Fitting}
 
-Once we have measurements of the probe voltage and current we can extract the plasma parameters. This is done using some sort of fitting routine.
+Once we have measurements of the probe voltage and current we can extract the plasma parameters. This is done using a fitting routine that compares a model of the Langmuir probe response to the data measured by the probe.
 
-A commonly used fitting routine is by subtracting off the ion current in the ion attracted regime and then fitting the exponential in log space using a straight line. This works quite well in swept Langmuir probe applications where you have many points on the IV-characteristic and there is not much noise.
+Plasma parameters are commonly fit by subtracting off the ion current in the ion attracted regime and then fitting the exponential in log space using a straight line. This works quite well in swept Langmuir probe applications where many points exist along the IV-characteristic and there signal-to-noise ratio is very large. Our system doesn't fit either of these criteria so we have used some alternative methods.
 
-Our system doesn't fit those criteria at all so we need to try some other options.
-
-\subsection{Least squares Fitting}
+% \subsection{Least squares Fitting}
 
 Least squares has often been used in our lab because of it's simplicity. This fitting routine operates by minimizing the squared error in $J$ between the function to fit, $J(V)$, and the samples, $(V_i, J_i)$.
 
-\subsubsection{Benefits}
+% \subsubsection{Benefits}
 
-Least squares is very quick to solve and thus analyzing many data points is no issue. Additionally, it is extremely easy to implement as just abaout any programming language offers this as an initial form of model fitting.
+Least squares is very quick to solve and thus analyzing the IV-characteristic during the entire shot is very quick. Additionally, it is extremely easy to implement as many programming language offer this as a pre-written method.
 
-\subsubsection{Issues}
+% \subsubsection{Issues}
 
-Unfortunately it's ease also has it's issues. Since it is only minimizing error in the $J$ direction it does not account for errors in measurement that also cause errors in $V$. This is especially problematic when using Hutchinson's model and the probe is collecting in the electron saturation region. Since Hutchinson's model does not account for this component it artificially raises the electron temperature and this is especially visible when only minimizing the error in $J$. Least squares also often uses a simple method for finding a `best fit'. This means that if the fit starts with a bad initial guess it may end at a suboptimal fit.
+This method does dome with a number of drawbacks. Since it is only minimizing error in the $J$ direction it does not account for errors in measurement that also cause errors in $V$. This is especially problematic when using Hutchinson's model and the probe is collecting in the electron saturation region. Since Hutchinson's model does not account for this component it artificially raises the electron temperature and this is especially visible when only minimizing the error in $J$. Least squares also often uses a simple method for finding a `best fit'. This means that if the fit starts with a bad initial guess it may end at a suboptimal fit.
 
-\subsection{ODR}
-\label{sss:multitip_odr}
+% \subsection{ODR}
+% \label{sss:multitip_odr}
 
-To correctly model the errors in our circuit we use Orthogonal Distance Regression (implemented by \cite{Boggs_Byrd_Rogers_Schnabel}).
+To correctly model the errors in our circuit we use orthogonal distance regression (implemented by \cite{Boggs_Byrd_Rogers_Schnabel}) which allows us to model the errors we expect to have in our measurements of the probe current and voltage.
 
-\subsubsection{What does error look like in our signals}
+% \subsubsection{What does error look like in our signals}
 
-We use three different measurements for calculating the probe current and voltage and multiple parameters that we set for the circuit. Although these parameters need calibration we don't account for errors in them and instead set them to some static value for all shots.
+We use three different measurements for calculating the probe current and voltage and multiple parameters that we set for the circuit (circuit resistances and tip areas). Although these parameters are derived from data and are not exact, we don't account for errors in them and instead set them to their calibrated values.
 
-Our measured parameters are $V_{ds}$, $V_{dn}$, and $V_b$ which can be seen in equations \ref{eq:multitip_I_d}-\ref{eq:multitip_V_p}. Errors in our $V_b$ measurement will only cause errors in $V_p$ whereas $V_{ds}$ and $V_{dn}$ will cause shifts mostly along a line that goes like
+Our measured parameters are $V_{ds}$, $V_{dn}$, and $V_b$ which can be seen in equations \ref{eq:multitip_I_d}-\ref{eq:multitip_V_p}. Errors in our $V_b$ measurement will only cause errors in $V_p$ whereas $V_{ds}$ and $V_{dn}$ will cause shifts mostly along a line given by
 \begin{equation*}
     \Delta_I = \frac{R_d + R_s}{R_d R_s + R_d R_w + R_s R_w} \Delta_V.
 \end{equation*}
 
-\subsubsection{How does ODR take that into account}
+% \subsubsection{How does ODR take that into account}
 
-Instead of passing the final values to fit, $(V_i, J_i)$, we instead pass the raw measurements, $(V_{Dsi}, V_{Dni}, V_{bi})$. Then we are trying to fit the model defined by
+Instead of passing the final values to fit, $(V_i, J_i)$, orthogonal distance regression (ODR) uses the raw measurements, $(V_{Dsi}, V_{Dni}, V_{bi})$. Then we fit the model defined by
 \begin{align*}
     0 &\approx f(n, T_e, V_p; \vb{V}_{Ds}, \vb{V}_{Dn}, \vb{V}_{b}) \\
     &= J_p^\text{theory}(V_p^\text{circuit}(\vb{V}_{Ds}, \vb{V}_{Dn}, \vb{V}_{b}), n, T_e, V_p) - J_p^\text{circuit}(\vb{V}_{Ds}, \vb{V}_{Dn}).
 \end{align*}
-Here the superscript defines whether we are using the plasma model (which depends on the plasma parameters to fit) or the circuit model (which depends on the circuit parameters and measurements). We've converted everything to current density as that removes ambiguity with dividing the probe current by the relative areas between tips.
+Here the superscript defines whether we are using the plasma model (which depends on the plasma parameters to fit) or the circuit model (which depends on the circuit parameters and measurements).
 
 Now as ODR tries to fit this model, it'll allow error in all of our measured values which correctly reconstructs the errors we might expect from our measurements.
 
-\subsubsection{How to apply parameter bounds}
+% \subsubsection{How to apply parameter bounds}
 
-More recent iterations of ODR have methods of applying bounds \cite{Zwolak_et_al_2007}. Unfortunately because of dependency issues between MDSPlus (our experiments data storage system) and \href{https://pypi.org/project/odrpack/}{\texttt{odrpack}} we use a different method for applying bounds.
+To reduce spurious solutions we want to set bounds on the various plasma parameters and remove potentially unphysical solutions like negative temperatures and densities. More recent iterations of ODR have methods of applying bounds \cite{Zwolak_et_al_2007}. Unfortunately because of dependency issues between MDSPlus (our experiments data storage system) and \href{https://pypi.org/project/odrpack/}{\texttt{odrpack}} we use a different method for applying bounds.
 
-\paragraph{Why apply bounds}
+% \paragraph{Why apply bounds}
 
-It's not clear that we necessarily need bounds for the parameters we are trying to fit. Why not let the plasma parameters wander to wherever they best match the data? Well, if we did that we would get a lot of spurious solutions that wouldn't be continuous in time and also potentially unphysical (what does a negative density mean? a negative temperature? what if the fit temperature is $10^{10}$ eV?).
+% \paragraph{Our method}
 
-\paragraph{Our method}
+We know that physically the density and temperature should both be greater than zero. An easy way to do this is to instead fit the logarithm of those parameters. Then, no matter the final fit value, when converted to a physical number these parameters will be greater than zero.
 
-We know that physically the density and temperature should both be greater than zero. An easy way to do this is to instead fit the logarithm of those parameters. Then no matter what the final fit value is, when converted to a physical number it will be positive.
-
-Sometimes we want to set both upper and lower bounds instead of just lower bounds. To do this we fit a parameter $x$ for the plasma parameter $y$ where
+To remove bad fits when the temperature or density may exceed expected limits, we may set both upper and lower bounds. To do this we fit a parameter $x$ for the plasma parameter $y$ where
 \begin{equation*}
     y = y_\text{min} + (y_\text{max} - y_\text{min}) \left(\frac{1}{2} + \frac{1}{\pi}\arctan\left(x\right)\right).
 \end{equation*}
@@ -921,52 +846,48 @@ Thus no matter the final fit value of $x$, the plasma parameter stays within the
 
 \subsection{Monte-carlo Fitting}
 
-The dream of many (or at least me) is an algorithm that always finds the global minimum to a given function. Since not all dreams come real we use a simple method that will do instead.
-
 \begin{figure}
     \centering
     \includegraphics[width=\textwidth]{chapter_te_probe/figures/experimental_fit_example.png}
-    \caption[*Multitip Fit Example]{Example fit for using Chen's IV-characteristic and Orthogonal Distance Regression.}
+    \caption[*Multi-tip Fit Example]{Example fit for using Chen's IV-characteristic and Orthogonal Distance Regression. The blue circles are measurements from each tip annotated with the tip number where red x's are broken tips. The initial guess of plasma parameters gives the pale green IV-characteristic while the blue solid and dashed lines are potential plasma parameter solutions using local minimization. The best fit is the solid blue line that follows the trend of the data points. The red lines between the scatter points and the solid blue line show the error between measurement and theory.}
     \label{fig:multitip_example_fit}
 \end{figure}
 
-\subsubsection{Global vs. local minima}
+% \subsubsection{Global vs. local minima}
 
-What do I mean by a global minimum though and why does it matter. As can be seen in figure \ref{fig:multitip_example_fit}, the dashed blue lines are `local' optimums to the fitting function. That is the fitting function thinks it has found the correct solution and stops fitting. An example of this is Newton's methon for a function with many bumps. A starting point may or may not lead to the global minimum and could instead be stuck elsewhere. As can be seen from the figure some of those solutions are really bad (like the ones that are nearly horizontal lines).
+Both ODR and least squares use local minimizers that attempt to reduce the error between the model and the data as much as possible. As can be seen in figure \ref{fig:multitip_example_fit}, the dashed blue lines are `local' optimums to the fitting function. That is, the fitting function has converged to a solution and is done fitting. As can be seen from the figure some of those solutions are not representative of the measured data.
 
-\subsubsection{A simple solution}
+% \subsubsection{A simple solution}
 
-A bad starting point can lead to a bad solution so let's do something simple: let's take lots of starting points! Although we may get some attrocious solutions, some of them will match much better with the data and we can choose the best option.
+Many of these local minima are due to bad initial guesses so we fit each time point many times using many different initial parameter guesses. Although some may converge to solutions that don't fit the data, some will match very well and using the most similar solution should give us the most accurate plasma parameters.
 
-\subsubsection{How do we sample initial conditions}
+% \subsubsection{How do we sample initial conditions}
 
-We start the procedure with a best initial guess. This is often whatever the previous fitting result is because the plasma should be somewhat similar to the plasma 0.1 microseconds ago. Now we choose some amount that the plasma may have changed by (i.e. the density could be an order of magnitude smaller or an order of magnitude higher). Now we have starting parameter bounds on $n$, $T_e$, and $V_\text{plasma}$. We choose some number of starting points $N$. Now we use latin hypercube sampling which tries to well sample the space of possibilities without overlapping parameter choices.
+To choose initial guesses we use the fitting result for the previous time point as the plasma differentiably evolved from this prior state. Assuming the plasma has changed some amount from this state (i.e. the density could be an order of magnitude smaller or an order of magnitude higher), we set parameter bounds on initial guesses for $n$, $T_e$, and $V_\text{plasma}$. Having chosen a number of starting points $N$ we use latin hypercube sampling which samples this bounded rectangle of possibilities uniformly.
 
-\subsubsection{Choosing the best answer}
+% \subsubsection{Choosing the best answer}
 
-Now that we have $N$ possible solutions we just look for the solution that minimizes the measurement error the most. Simple as can be.
+% \subsubsection{More robust methods for getting global minimums}
 
-\subsubsection{More robust methods for getting global minimums}
+% Another option than our simple multiple starting point method is something like differential evolution which samples many starting points and iteratively finds regions where fits end up better and better. Although we could implement this it would be very slow but should you have infinite computing time, let me know how it goes!
 
-Another option than our simple multiple starting point method is something like differential evolution which samples many starting points and iteratively finds regions where fits end up better and better. Although we could implement this it would be very slow but should you have infinite computing time, let me know how it goes!
+% \subsection{Combining multiple shots}
 
-\subsection{Combining multiple shots}
+% During the course of a shot, the plasma potential can jump by more than 150 V and for optimal fitting we want to sample many points near the exponential for each time point. We can not do this in each shot so we sample regions of the IV-characteristic between multiple shots.
 
-During the course of a shot, the plasma potential can jump by more than 150 V. We want to sample many points near the exponential which we want all the tips to have similar $V_\text{probe}$. Thus our solution is to combine multiple shots where the probe tips are shifted by some amount each shot so for one shot we can handle low $V_\text{plasma}$ and for another we can deal with high $V_\text{plasma}$.
+% % \subsubsection{Using some time points from each shot}
 
-\subsubsection{Using some time points from each shot}
+% One option for this method is to look at each shot with the same experimental parameters and the probe at some location and select time regions to use. This helps to not smooth over transient plasma features that may not be temporally reproducible but requires the user to select which shot to use for each time point. This can cause unphysical jumps in plasma parameters while also using only 16 data points for each fit.
 
-One option for this method is to look at each shot with the same experimental parameters and the probe at some location and select time regions to use. This is nice in that you aren't averaging over multiple shots but can make the plasma parameters jump from one solution to another. Also you are losing potential data that could be useful in getting a more accurate fit.
+% % \subsubsection{Combining all IV points and fitting that}
 
-\subsubsection{Combining all IV points and fitting that}
+% Another option is to combine multiple shots and fit all the tip measurements at once. This has the advantage of getting more accurate fits and a more continuous plasma parameter solution both of which are desirable.
 
-Another option is to combine multiple shots and fit all the tip measurements from all the tips at once. This has the advantage of getting more accurate fits and a more continuous plasma parameter solution both of which are desirable.
-
-There are two issues with this:
-\begin{itemize}
-    \item Lack of reproducibility smears out the curve leading to eronious plasma parameter solutions. This is difficult to deal with in either case as one arbitrarily chooses one shot and the other tries to combine them in a potentially strange manner.
-    \item Our triggering method is quite accurate but has a standard deviation on the order of a couple tenths of microseconds. This requires some timing alignment which we will go into in \ref{ss2:pa_timing_alignment}.
-\end{itemize}
+% There are two issues with this:
+% \begin{itemize}
+%     \item Lack of reproducibility smears out the curve leading to erroneous plasma parameter solutions. This is difficult to deal with in either case as one arbitrarily chooses one shot and the other tries to combine them in a potentially strange manner.
+%     \item Our triggering method is quite accurate but has a standard deviation on the order of a couple tenths of microseconds. This requires some timing alignment which we will go into in \ref{ss2:pa_timing_alignment}.
+% \end{itemize}
 
 \section{Results}
 
@@ -977,7 +898,7 @@ BRL helps significantly in better measuring low plasma densities because of two 
 \begin{figure}
     \centering
     \includegraphics[width=\textwidth]{chapter_te_probe/figures/isat_comparison.png}
-    \caption[Langmuir Ion Saturation Current vs. Pressure Wave Profile]{Here we show the effect of just using the measured ion saturation current as a function of the density vs. using the BRL modeled ion saturation current (see \ref{sss:multitip_brl_theory}). The top plot shows the pressure wave density profile in orange. The blue scatter points are the measured ion saturation currents and the green are the plasma densities. The middle plot shows the tip radius and how large the Debye length (derived from the pressure wave) is in comparison along with the electron mean free path, $\lambda_e$, which is always large. The bottom plot shows the expected IV-characteristic for varoius radii and the BRL effect can be seen as a change in the expected ion saturation current for different plasma potentials (this effect is not taken into account for the simple Hutchinson model from \ref{sss:multitip_hutchinson_theory}).}
+    \caption[Langmuir Ion Saturation Current vs. Pressure Wave Profile]{Here we show the effect of just using the measured ion saturation current as a function of the density vs. using the BRL modeled ion saturation current (see \ref{sss:multitip_brl_theory}). The top plot shows the pressure wave density profile in orange. The blue scatter points are the measured ion saturation currents and the green are the plasma densities. The middle plot shows the tip radius and how large the Debye length (derived from the pressure wave) is in comparison along with the electron mean free path, $\lambda_e$, which is always large. The bottom plot shows the expected IV-characteristic for various radii and the BRL effect can be seen as a change in the expected ion saturation current for different plasma potentials (this effect is not taken into account for the simple Hutchinson model from \ref{sss:multitip_hutchinson_theory}).}
     \label{fig:isat_comparison}
 \end{figure}
 
@@ -990,7 +911,7 @@ BRL helps significantly in better measuring low plasma densities because of two 
   \label{fig:multitip_trex_vs_dtacq}
 \end{figure}
 
-An example of the comparison between the single ended digitizers and the differential digitizers can be seen in figure \ref{fig:multitip_trex_vs_dtacq}. The initial oscillations and noise that occur due to the drive cap bank discharging affect the TREX cells a lot causing very large error bars on the plasma fits whereas this effect is much smaller for the differential measurements.
+An example of the comparison between the single ended digitizers and the differential digitizers can be seen in figure \ref{fig:multitip_trex_vs_dtacq}. The initial oscillations and noise that occur due to the drive cap bank discharging affect the TREX cells to a significant extent causing large error bars on the plasma fits. This effect is much smaller for the differential measurements.
 
 % \subsection{Extracting electric fields}
 

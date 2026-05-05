@@ -1,4 +1,4 @@
-\begin{wb-bib}{41}
+\begin{wb-bib}{43}
 \expandafter\ifx\csname natexlab\endcsname\relax\def\natexlab#1{#1}\fi
 \expandafter\ifx\csname bibnamefont\endcsname\relax
   \def\bibnamefont#1{#1}\fi
@@ -150,6 +150,29 @@
 \newblock \emph{\bibinfo{title}{Ideal mhd}}.
 \newblock \bibinfo{address}{New York}:\@ \bibinfo{publisher}{Cambridge
   University Press}.
+
+\bibitem[{\citenamefont{Gekelman et~al.}(2016)\citenamefont{Gekelman, Pribyl,
+  Lucky, Drandell, Leneman, Maggs, Vincena, Van~Compernolle, Tripathi, Morales,
+  Carter, Wang, and
+  DeHaas}}]{Gekelman_Pribyl_Lucky_Drandell_Leneman_Maggs_Vincena_Van_Compernolle_Tripathi_Morales_et_al_2016}
+\bibinfo{author}{\bibnamefont{Gekelman}, \bibfnamefont{W.}},
+  \bibinfo{author}{\bibfnamefont{P.}~\bibnamefont{Pribyl}},
+  \bibinfo{author}{\bibfnamefont{Z.}~\bibnamefont{Lucky}},
+  \bibinfo{author}{\bibfnamefont{M.}~\bibnamefont{Drandell}},
+  \bibinfo{author}{\bibfnamefont{D.}~\bibnamefont{Leneman}},
+  \bibinfo{author}{\bibfnamefont{J.}~\bibnamefont{Maggs}},
+  \bibinfo{author}{\bibfnamefont{S.}~\bibnamefont{Vincena}},
+  \bibinfo{author}{\bibfnamefont{B.}~\bibnamefont{Van~Compernolle}},
+  \bibinfo{author}{\bibfnamefont{S.~K.~P.} \bibnamefont{Tripathi}},
+  \bibinfo{author}{\bibfnamefont{G.}~\bibnamefont{Morales}},
+  \bibinfo{author}{\bibfnamefont{T.~A.} \bibnamefont{Carter}},
+  \bibinfo{author}{\bibfnamefont{Y.}~\bibnamefont{Wang}}, \bibnamefont{and}
+  \bibinfo{author}{\bibfnamefont{T.}~\bibnamefont{DeHaas}}.
+  \bibinfo{year}{2016}.
+\newblock \bibinfo{title}{The upgraded large plasma device, a machine for
+  studying frontier basic plasma physics}.
+\newblock \emph{\bibinfo{journal}{Review of Scientific Instruments}}
+  \bibinfo{volume}{87}(\bibinfo{number}{2}):\penalty0 \bibinfo{pages}{025105}.
 
 \bibitem[{\citenamefont{Godyak and Demidov}(2011)}]{Godyak_Demidov_2011}
 \bibinfo{author}{\bibnamefont{Godyak}, \bibfnamefont{V~A}}, \bibnamefont{and}
@@ -512,6 +535,19 @@
   Vacuum, Surfaces, and Films}}
   \bibinfo{volume}{8}(\bibinfo{number}{3}):\penalty0
   \bibinfo{pages}{1663--1667}.
+
+\bibitem[{\citenamefont{Wetherton et~al.}(2022)\citenamefont{Wetherton, Egedal,
+  Le, and Daughton}}]{Wetherton_Egedal_Le_Daughton_2022}
+\bibinfo{author}{\bibnamefont{Wetherton}, \bibfnamefont{Blake~A.}},
+  \bibinfo{author}{\bibfnamefont{Jan} \bibnamefont{Egedal}},
+  \bibinfo{author}{\bibfnamefont{Ari} \bibnamefont{Le}}, \bibnamefont{and}
+  \bibinfo{author}{\bibfnamefont{William} \bibnamefont{Daughton}}.
+  \bibinfo{year}{2022}.
+\newblock \bibinfo{title}{Generation of a strong parallel electric field and
+  embedded electron jet in the exhaust of moderate guide field reconnection}.
+\newblock \emph{\bibinfo{journal}{Geophysical Research Letters}}
+  \bibinfo{volume}{49}(\bibinfo{number}{14}):\penalty0
+  \bibinfo{pages}{e2022GL098907}.
 
 \bibitem[{\citenamefont{Yamada et~al.}(2010)\citenamefont{Yamada, Kulsrud, and
   Ji}}]{Yamada_Kulsrud_Ji_2010}
